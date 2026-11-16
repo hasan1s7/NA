@@ -1,0 +1,20 @@
+PASS Acceptance does not opt learners into departmental reporting
+PASS Reporting choice defaults off
+PASS Owner still cannot open an ungranted individual record
+PASS Named reviewer alone cannot open owner summary
+PASS Four opted-in learners release no cohort count
+PASS Five opt-ins release a coarse cohort band
+PASS Rubric-review support is explained without mastery
+PASS Summary omits learner identifiers and raw answers
+PASS Unsupported filtering cannot create a drilldown
+PASS A successful retry does not replace first-response evidence
+PASS Publishing a rubric does not silently revise support evidence
+PASS Explicit reassessments change the group support explanation
+PASS Original and corrected assessments both replay
+PASS Withdrawing alone removes eligibility from future summaries
+PASS Withdrawal does not revoke accepted individual review
+PASS Rejoining leaves reporting off and advances the choice revision
+PASS A stale opt-in cannot revive reporting after rejoin
+PASS The ordinary reader stays available
+PASS Institutional summary stays independent of unavailable council
+19 checks passed. Report: ../../evidence/department-http.json

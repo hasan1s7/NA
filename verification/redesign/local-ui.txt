@@ -1,0 +1,11 @@
+PASS Opening the default graph never falsely reports a saved card
+PASS Incomplete concatenation does not create a card
+PASS Incomplete composition offers editing rather than an endless retry
+PASS Complete assembly is saved only as a labeled Reference draft
+PASS Exact-bank concatenate uses the real sense ID
+PASS Background sync preserves the reader input node and pasted draft
+PASS Settings and all nineteen feature-tree nodes render without the inherited missing-helper crash
+PASS Settings exposes persisted memory stats
+PASS Confirmed clear removes memory but retains the provider-attempt counter
+PASS Memory dialog fits a phone viewport
+PASS No uncaught page errors

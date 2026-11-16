@@ -1,0 +1,22 @@
+{
+  "passed": 15,
+  "checks": [
+    "Fresh real process serves health and correct version",
+    "Existing route serves rebuilt application: /",
+    "Existing route serves rebuilt application: /read",
+    "Existing route serves rebuilt application: /words",
+    "Existing route serves rebuilt application: /library",
+    "Existing route serves rebuilt application: /review",
+    "Existing route serves rebuilt application: /friends",
+    "Existing route serves rebuilt application: /settings",
+    "Service worker and app build IDs agree",
+    "Existing account registration works",
+    "Real API persists a word with context, note, reading and chosen image",
+    "Duplicate request does not duplicate the saved word",
+    "Sign-in works after process restart",
+    "Context, private note, reading, image and schedule survive server restart",
+    "Existing account privacy remains enforced after signout"
+  ],
+  "failure": null,
+  "boundary": "Real loopback HTTP and server-restart persistence. No browser/DB/API fixtures.\nUses --ready with already-installed requirements to avoid downloading dependencies.\nThis is not a native browser, audio, extension or provider test.\n"
+}

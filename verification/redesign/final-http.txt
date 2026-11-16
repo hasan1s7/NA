@@ -1,0 +1,15 @@
+PASS Fresh real process serves health and correct version
+PASS Existing route serves rebuilt application: /
+PASS Existing route serves rebuilt application: /read
+PASS Existing route serves rebuilt application: /words
+PASS Existing route serves rebuilt application: /library
+PASS Existing route serves rebuilt application: /review
+PASS Existing route serves rebuilt application: /friends
+PASS Existing route serves rebuilt application: /settings
+PASS Service worker and app build IDs agree
+PASS Existing account registration works
+PASS Real API persists a word with context, note, reading and chosen image
+PASS Duplicate request does not duplicate the saved word
+PASS Sign-in works after process restart
+PASS Context, private note, reading, image and schedule survive server restart
+PASS Existing account privacy remains enforced after signout

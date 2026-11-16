@@ -1,0 +1,1618 @@
+
+> nabu-translate-remember@1.11.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: guest data and cloud snapshots are isolated
+ok 1 - guest data and cloud snapshots are isolated
+  ---
+  duration_ms: 37.400046
+  type: 'test'
+  ...
+# Subtest: cloud failure never falls back to a local successful write
+ok 2 - cloud failure never falls back to a local successful write
+  ---
+  duration_ms: 10.995415
+  type: 'test'
+  ...
+# Subtest: expired account locks storage until an explicit mode change
+ok 3 - expired account locks storage until an explicit mode change
+  ---
+  duration_ms: 5.272666
+  type: 'test'
+  ...
+# Subtest: late cloud response is rejected after account switch
+ok 4 - late cloud response is rejected after account switch
+  ---
+  duration_ms: 0.479826
+  type: 'test'
+  ...
+# Subtest: a cancelled translation makes no cloud write
+ok 5 - a cancelled translation makes no cloud write
+  ---
+  duration_ms: 0.539506
+  type: 'test'
+  ...
+# Subtest: account reviews use server endpoint, not client-supplied schedules
+ok 6 - account reviews use server endpoint, not client-supplied schedules
+  ---
+  duration_ms: 1.244147
+  type: 'test'
+  ...
+# Subtest: cloud import strips internal identity and preserves the imported schedule
+ok 7 - cloud import strips internal identity and preserves the imported schedule
+  ---
+  duration_ms: 0.787754
+  type: 'test'
+  ...
+# Subtest: large imports are bounded to fifty cards per request
+ok 8 - large imports are bounded to fifty cards per request
+  ---
+  duration_ms: 3.031087
+  type: 'test'
+  ...
+# Subtest: account translation cache is erased across account changes
+ok 9 - account translation cache is erased across account changes
+  ---
+  duration_ms: 0.827402
+  type: 'test'
+  ...
+# Subtest: clear account library does not clear guest words
+ok 10 - clear account library does not clear guest words
+  ---
+  duration_ms: 8.794335
+  type: 'test'
+  ...
+# Subtest: online account adapter preserves the selected practice skill
+ok 11 - online account adapter preserves the selected practice skill
+  ---
+  duration_ms: 0.747658
+  type: 'test'
+  ...
+# Subtest: translation and history commit together without an explicit save action
+ok 12 - translation and history commit together without an explicit save action
+  ---
+  duration_ms: 34.29152
+  type: 'test'
+  ...
+# Subtest: rapid repeated saves produce one card and one history entry
+ok 13 - rapid repeated saves produce one card and one history entry
+  ---
+  duration_ms: 89.759369
+  type: 'test'
+  ...
+# Subtest: duplicate lookup preserves schedule, notes, text edits and identity
+ok 14 - duplicate lookup preserves schedule, notes, text edits and identity
+  ---
+  duration_ms: 55.956359
+  type: 'test'
+  ...
+# Subtest: legacy card is linked in place, not duplicated or reset
+ok 15 - legacy card is linked in place, not duplicated or reset
+  ---
+  duration_ms: 42.712664
+  type: 'test'
+  ...
+# Subtest: a legacy homograph cannot collapse two different graph meanings
+ok 16 - a legacy homograph cannot collapse two different graph meanings
+  ---
+  duration_ms: 40.817167
+  type: 'test'
+  ...
+# Subtest: reopening an archived translation restores it without resetting review
+ok 17 - reopening an archived translation restores it without resetting review
+  ---
+  duration_ms: 61.627492
+  type: 'test'
+  ...
+# Subtest: a stale async translation creates neither a card nor a history record
+ok 18 - a stale async translation creates neither a card nor a history record
+  ---
+  duration_ms: 24.772658
+  type: 'test'
+  ...
+# Subtest: storage write failure rolls back both stores and retry succeeds
+ok 19 - storage write failure rolls back both stores and retry succeeds
+  ---
+  duration_ms: 31.790644
+  type: 'test'
+  ...
+# Subtest: same translation from cloud or manual input does not duplicate a graph card
+ok 20 - same translation from cloud or manual input does not duplicate a graph card
+  ---
+  duration_ms: 37.136056
+  type: 'test'
+  ...
+# Subtest: history remains bounded while saved vocabulary is retained
+ok 21 - history remains bounded while saved vocabulary is retained
+  ---
+  duration_ms: 550.311313
+  type: 'test'
+  ...
+# Subtest: reverse translations have independent schedules
+ok 22 - reverse translations have independent schedules
+  ---
+  duration_ms: 48.093069
+  type: 'test'
+  ...
+# Subtest: each bank component is exactly tripled, not just the overall count
+ok 23 - each bank component is exactly tripled, not just the overall count
+  ---
+  duration_ms: 3.485102
+  type: 'test'
+  ...
+# Subtest: all legacy concept IDs, senses and spellings survive unchanged
+ok 24 - all legacy concept IDs, senses and spellings survive unchanged
+  ---
+  duration_ms: 4.54061
+  type: 'test'
+  ...
+# Subtest: 24 new word topics contain 25 distinct entries each
+ok 25 - 24 new word topics contain 25 distinct entries each
+  ---
+  duration_ms: 1.91407
+  type: 'test'
+  ...
+# Subtest: unlimited search exposes all 1026 entries beyond the old thousand-row cap
+ok 26 - unlimited search exposes all 1026 entries beyond the old thousand-row cap
+  ---
+  duration_ms: 36.225405
+  type: 'test'
+  ...
+# Subtest: entry-type filters are exhaustive and mutually exclusive
+ok 27 - entry-type filters are exhaustive and mutually exclusive
+  ---
+  duration_ms: 1.159893
+  type: 'test'
+  ...
+# Subtest: search finds source idioms even when two other languages are selected
+ok 28 - search finds source idioms even when two other languages are selected
+  ---
+  duration_ms: 36.662667
+  type: 'test'
+  ...
+# Subtest: three expressions are supplied in every source language
+ok 29 - three expressions are supplied in every source language
+  ---
+  duration_ms: 1.620638
+  type: 'test'
+  ...
+# Subtest: Spanish inverted punctuation and outer quotation marks do not block exact lookup
+ok 30 - Spanish inverted punctuation and outer quotation marks do not block exact lookup
+  ---
+  duration_ms: 0.774069
+  type: 'test'
+  ...
+# Subtest: new expression meanings never silently replace the meaning with the literal image
+ok 31 - new expression meanings never silently replace the meaning with the literal image
+  ---
+  duration_ms: 1.132902
+  type: 'test'
+  ...
+# Subtest: new phrases and expressions have complete usage, examples, replies and honest provenance
+ok 32 - new phrases and expressions have complete usage, examples, replies and honest provenance
+  ---
+  duration_ms: 1.926198
+  type: 'test'
+  ...
+# Subtest: new homographs retain separate card identities and senses
+ok 33 - new homographs retain separate card identities and senses
+  ---
+  duration_ms: 0.506552
+  type: 'test'
+  ...
+# Subtest: expanded records keep backup identity without exporting private progress in a share
+ok 34 - expanded records keep backup identity without exporting private progress in a share
+  ---
+  duration_ms: 4.067498
+  type: 'test'
+  ...
+# Subtest: new cards have independent identities and due schedules
+ok 35 - new cards have independent identities and due schedules
+  ---
+  duration_ms: 5.007358
+  type: 'test'
+  ...
+# Subtest: all six UN languages are selectable
+ok 36 - all six UN languages are selectable
+  ---
+  duration_ms: 0.179215
+  type: 'test'
+  ...
+# Subtest: card validation rejects same-language cards
+ok 37 - card validation rejects same-language cards
+  ---
+  duration_ms: 0.450001
+  type: 'test'
+  ...
+# Subtest: card validation rejects unsupported languages and empty sides
+ok 38 - card validation rejects unsupported languages and empty sides
+  ---
+  duration_ms: 0.177804
+  type: 'test'
+  ...
+# Subtest: card validation enforces sizes and control-character rules
+ok 39 - card validation enforces sizes and control-character rules
+  ---
+  duration_ms: 0.193999
+  type: 'test'
+  ...
+# Subtest: tags are deduplicated and private text is retained locally
+ok 40 - tags are deduplicated and private text is retained locally
+  ---
+  duration_ms: 0.850327
+  type: 'test'
+  ...
+# Subtest: identity handles canonical Unicode, case, and whitespace
+ok 41 - identity handles canonical Unicode, case, and whitespace
+  ---
+  duration_ms: 0.380113
+  type: 'test'
+  ...
+# Subtest: different meanings are not incorrectly deduplicated
+ok 42 - different meanings are not incorrectly deduplicated
+  ---
+  duration_ms: 0.156765
+  type: 'test'
+  ...
+# Subtest: deck names do not allow duplicated learning items
+ok 43 - deck names do not allow duplicated learning items
+  ---
+  duration_ms: 0.387708
+  type: 'test'
+  ...
+# Subtest: reverse cards start fresh with a separate review schedule
+ok 44 - reverse cards start fresh with a separate review schedule
+  ---
+  duration_ms: 0.569493
+  type: 'test'
+  ...
+# Subtest: new card four buttons have explicit learning intervals
+ok 45 - new card four buttons have explicit learning intervals
+  ---
+  duration_ms: 0.297432
+  type: 'test'
+  ...
+# Subtest: Good twice graduates a new card to a one-day review
+ok 46 - Good twice graduates a new card to a one-day review
+  ---
+  duration_ms: 0.101567
+  type: 'test'
+  ...
+# Subtest: Again in learning resets the learning step but not review lapse count
+ok 47 - Again in learning resets the learning step but not review lapse count
+  ---
+  duration_ms: 0.126015
+  type: 'test'
+  ...
+# Subtest: review ratings increase monotonically
+ok 48 - review ratings increase monotonically
+  ---
+  duration_ms: 0.19098
+  type: 'test'
+  ...
+# Subtest: a review lapse enters relearning and preserves historical reps
+ok 49 - a review lapse enters relearning and preserves historical reps
+  ---
+  duration_ms: 0.084121
+  type: 'test'
+  ...
+# Subtest: relearning Good graduates conservatively
+ok 50 - relearning Good graduates conservatively
+  ---
+  duration_ms: 0.06259
+  type: 'test'
+  ...
+# Subtest: scheduler never mutates its input
+ok 51 - scheduler never mutates its input
+  ---
+  duration_ms: 0.104531
+  type: 'test'
+  ...
+# Subtest: invalid grades are rejected
+ok 52 - invalid grades are rejected
+  ---
+  duration_ms: 0.178203
+  type: 'test'
+  ...
+# Subtest: long review sequences keep intervals and ease bounded
+ok 53 - long review sequences keep intervals and ease bounded
+  ---
+  duration_ms: 2.018334
+  type: 'test'
+  ...
+# Subtest: due queue excludes archived and future cards
+ok 54 - due queue excludes archived and future cards
+  ---
+  duration_ms: 0.394305
+  type: 'test'
+  ...
+# Subtest: relearning takes priority over review and new items
+ok 55 - relearning takes priority over review and new items
+  ---
+  duration_ms: 0.284583
+  type: 'test'
+  ...
+# Subtest: daily new-word cap counts distinct introduced cards
+ok 56 - daily new-word cap counts distinct introduced cards
+  ---
+  duration_ms: 8.020538
+  type: 'test'
+  ...
+# Subtest: new-word limit never suppresses overdue reviews
+ok 57 - new-word limit never suppresses overdue reviews
+  ---
+  duration_ms: 0.187882
+  type: 'test'
+  ...
+# Subtest: statistics do not invent mastery or activity
+ok 58 - statistics do not invent mastery or activity
+  ---
+  duration_ms: 0.436946
+  type: 'test'
+  ...
+# Subtest: streaks can continue from yesterday without claiming today was studied
+ok 59 - streaks can continue from yesterday without claiming today was studied
+  ---
+  duration_ms: 0.169097
+  type: 'test'
+  ...
+# Subtest: activity day uses the local date rather than the UTC date
+ok 60 - activity day uses the local date rather than the UTC date
+  ---
+  duration_ms: 0.188533
+  type: 'test'
+  ...
+# Subtest: chunking preserves UTF-8 text without exceeding provider byte limit
+ok 61 - chunking preserves UTF-8 text without exceeding provider byte limit
+  ---
+  duration_ms: 1.56078
+  type: 'test'
+  ...
+# Subtest: long unspaced Chinese and emoji text round-trips across chunks
+ok 62 - long unspaced Chinese and emoji text round-trips across chunks
+  ---
+  duration_ms: 3.224287
+  type: 'test'
+  ...
+# Subtest: sharing contains neither private notes nor progress
+ok 63 - sharing contains neither private notes nor progress
+  ---
+  duration_ms: 0.348086
+  type: 'test'
+  ...
+# Subtest: Unicode word links round-trip safely
+ok 64 - Unicode word links round-trip safely
+  ---
+  duration_ms: 0.809044
+  type: 'test'
+  ...
+# Subtest: tampered and oversized links are rejected
+ok 65 - tampered and oversized links are rejected
+  ---
+  duration_ms: 0.36665
+  type: 'test'
+  ...
+# Subtest: prototype-like payload properties cannot inject new fields
+ok 66 - prototype-like payload properties cannot inject new fields
+  ---
+  duration_ms: 0.227742
+  type: 'test'
+  ...
+# Subtest: HTML is escaped, not interpreted
+ok 67 - HTML is escaped, not interpreted
+  ---
+  duration_ms: 0.146038
+  type: 'test'
+  ...
+# Subtest: CSV parser understands quoted commas and newlines
+ok 68 - CSV parser understands quoted commas and newlines
+  ---
+  duration_ms: 0.4351
+  type: 'test'
+  ...
+# Subtest: CSV parser does not erase hashtag lines inside quoted context
+ok 69 - CSV parser does not erase hashtag lines inside quoted context
+  ---
+  duration_ms: 0.334515
+  type: 'test'
+  ...
+# Subtest: unclosed quoted imports fail instead of silently corrupting data
+ok 70 - unclosed quoted imports fail instead of silently corrupting data
+  ---
+  duration_ms: 0.239395
+  type: 'test'
+  ...
+# Subtest: Anki TSV export can be imported with supplied language defaults
+ok 71 - Anki TSV export can be imported with supplied language defaults
+  ---
+  duration_ms: 0.933123
+  type: 'test'
+  ...
+# Subtest: import rejects a bad row before returning any cards
+ok 72 - import rejects a bad row before returning any cards
+  ---
+  duration_ms: 0.192376
+  type: 'test'
+  ...
+# Subtest: JSON backups restore schedules and full review history
+ok 73 - JSON backups restore schedules and full review history
+  ---
+  duration_ms: 1.175548
+  type: 'test'
+  ...
+# Subtest: backup cannot restore secrets or arbitrary provider URLs
+ok 74 - backup cannot restore secrets or arbitrary provider URLs
+  ---
+  duration_ms: 0.809837
+  type: 'test'
+  ...
+# Subtest: malformed scheduler state, counters, and algorithm are rejected
+ok 75 - malformed scheduler state, counters, and algorithm are rejected
+  ---
+  duration_ms: 0.429338
+  type: 'test'
+  ...
+# Subtest: unsupported backup versions are not silently imported
+ok 76 - unsupported backup versions are not silently imported
+  ---
+  duration_ms: 0.160371
+  type: 'test'
+  ...
+# Subtest: all provided starter examples are valid cards
+ok 77 - all provided starter examples are valid cards
+  ---
+  duration_ms: 0.134228
+  type: 'test'
+  ...
+# Subtest: TSV quotation marks survive an export/import round trip
+ok 78 - TSV quotation marks survive an export/import round trip
+  ---
+  duration_ms: 0.138521
+  type: 'test'
+  ...
+# Subtest: quoted tab inside a CSV field is not mistaken for its delimiter
+ok 79 - quoted tab inside a CSV field is not mistaken for its delimiter
+  ---
+  duration_ms: 0.222781
+  type: 'test'
+  ...
+# Subtest: Anki tags with whitespace are converted into portable underscore tags
+ok 80 - Anki tags with whitespace are converted into portable underscore tags
+  ---
+  duration_ms: 0.110345
+  type: 'test'
+  ...
+# Subtest: reverse cards do not mislabel directional examples or literal wording
+ok 81 - reverse cards do not mislabel directional examples or literal wording
+  ---
+  duration_ms: 0.172666
+  type: 'test'
+  ...
+# Subtest: connection origin permits HTTPS or loopback but rejects insecure remote
+ok 82 - connection origin permits HTTPS or loopback but rejects insecure remote
+  ---
+  duration_ms: 1.346065
+  type: 'test'
+  ...
+# Subtest: capture includes editable context and note, not progress claims
+ok 83 - capture includes editable context and note, not progress claims
+  ---
+  duration_ms: 0.525866
+  type: 'test'
+  ...
+# Subtest: source opt-out and media offset are respected
+ok 84 - source opt-out and media offset are respected
+  ---
+  duration_ms: 0.159284
+  type: 'test'
+  ...
+# Subtest: blank, oversized or same-language captures fail before network
+ok 85 - blank, oversized or same-language captures fail before network
+  ---
+  duration_ms: 0.276462
+  type: 'test'
+  ...
+# Subtest: idempotency fingerprint excludes save ID but includes context edits
+ok 86 - idempotency fingerprint excludes save ID but includes context edits
+  ---
+  duration_ms: 0.419318
+  type: 'test'
+  ...
+# Subtest: backend calls are credentialless, no redirects, and bearer-only
+ok 87 - backend calls are credentialless, no redirects, and bearer-only
+  ---
+  duration_ms: 30.842325
+  type: 'test'
+  ...
+# Subtest: extension cannot request arbitrary server routes or methods
+ok 88 - extension cannot request arbitrary server routes or methods
+  ---
+  duration_ms: 1.948188
+  type: 'test'
+  ...
+# Subtest: provider errors preserve actionable message
+ok 89 - provider errors preserve actionable message
+  ---
+  duration_ms: 3.273177
+  type: 'test'
+  ...
+# Subtest: non-JSON response is not accepted as a saved capture
+ok 90 - non-JSON response is not accepted as a saved capture
+  ---
+  duration_ms: 1.533123
+  type: 'test'
+  ...
+# Subtest: extension manifest has no passive content scripts, history or external message access
+ok 91 - extension manifest has no passive content scripts, history or external message access
+  ---
+  duration_ms: 33.007443
+  type: 'test'
+  ...
+# Subtest: worker rejects messages from visited pages or different extensions
+ok 92 - worker rejects messages from visited pages or different extensions
+  ---
+  duration_ms: 5.721503
+  type: 'test'
+  ...
+# Subtest: worker capture is explicit and stores only selected excerpt fixture
+ok 93 - worker capture is explicit and stores only selected excerpt fixture
+  ---
+  duration_ms: 2.788574
+  type: 'test'
+  ...
+# Subtest: worker never overwrites an unsaved capture unless deliberately replaced
+ok 94 - worker never overwrites an unsaved capture unless deliberately replaced
+  ---
+  duration_ms: 4.792877
+  type: 'test'
+  ...
+# Subtest: worker sends configured credential only to controlled API helper
+ok 95 - worker sends configured credential only to controlled API helper
+  ---
+  duration_ms: 3.392528
+  type: 'test'
+  ...
+# Subtest: YouTube source retains the video ID but drops tracking tokens
+ok 96 - YouTube source retains the video ID but drops tracking tokens
+  ---
+  duration_ms: 0.474465
+  type: 'test'
+  ...
+# Subtest: transliteration is available for non-Latin-script terms
+ok 97 - transliteration is available for non-Latin-script terms
+  ---
+  duration_ms: 1.342521
+  type: 'test'
+  ...
+# Subtest: compose can concatenate known terms without pretending to be a full sentence translator
+ok 98 - compose can concatenate known terms without pretending to be a full sentence translator
+  ---
+  duration_ms: 8.172623
+  type: 'test'
+  ...
+# Subtest: compose reports unknown or ambiguous segments explicitly
+ok 99 - compose reports unknown or ambiguous segments explicitly
+  ---
+  duration_ms: 0.34189
+  type: 'test'
+  ...
+# Subtest: feature decision tree exports a connected rooted tree
+ok 100 - feature decision tree exports a connected rooted tree
+  ---
+  duration_ms: 1.201144
+  type: 'test'
+  ...
+# Subtest: unfinished or ambiguous composition cannot auto-save into the library
+ok 101 - unfinished or ambiguous composition cannot auto-save into the library
+  ---
+  duration_ms: 0.667662
+  type: 'test'
+  ...
+# Subtest: exactly 1026 complete concepts and 132 language directions
+ok 102 - exactly 1026 complete concepts and 132 language directions
+  ---
+  duration_ms: 2.737884
+  type: 'test'
+  ...
+# Subtest: all 135,432 directed translations and round trips preserve the intended concept
+ok 103 - all 135,432 directed translations and round trips preserve the intended concept
+  ---
+  duration_ms: 558.919293
+  type: 'test'
+  ...
+# Subtest: all authored aliases resolve to the same sense
+ok 104 - all authored aliases resolve to the same sense
+  ---
+  duration_ms: 0.962231
+  type: 'test'
+  ...
+# Subtest: every concept participates in one connected topic/semantic graph
+ok 105 - every concept participates in one connected topic/semantic graph
+  ---
+  duration_ms: 231.033893
+  type: 'test'
+  ...
+# Subtest: ambiguous light, orange, fish, and work never choose silently
+ok 106 - ambiguous light, orange, fish, and work never choose silently
+  ---
+  duration_ms: 0.499157
+  type: 'test'
+  ...
+# Subtest: non-English homographs remain sense-aware
+ok 107 - non-English homographs remain sense-aware
+  ---
+  duration_ms: 0.210759
+  type: 'test'
+  ...
+# Subtest: no English-pivot fallback or unrequested translation of unknown words
+ok 108 - no English-pivot fallback or unrequested translation of unknown words
+  ---
+  duration_ms: 0.333314
+  type: 'test'
+  ...
+# Subtest: normalization handles punctuation, decomposed accents and Arabic vocalization
+ok 109 - normalization handles punctuation, decomposed accents and Arabic vocalization
+  ---
+  duration_ms: 0.278592
+  type: 'test'
+  ...
+# Subtest: Turkish case normalization uses the Turkish locale
+ok 110 - Turkish case normalization uses the Turkish locale
+  ---
+  duration_ms: 0.848904
+  type: 'test'
+  ...
+# Subtest: lookup rejects same-language pairs, bad languages and wrong sense IDs
+ok 111 - lookup rejects same-language pairs, bad languages and wrong sense IDs
+  ---
+  duration_ms: 0.753142
+  type: 'test'
+  ...
+# Subtest: search can discover all scripts but fuzzy search never becomes automatic translation
+ok 112 - search can discover all scripts but fuzzy search never becomes automatic translation
+  ---
+  duration_ms: 90.465178
+  type: 'test'
+  ...
+# Subtest: each concept has all eleven target-language neighbors
+ok 113 - each concept has all eleven target-language neighbors
+  ---
+  duration_ms: 93.497373
+  type: 'test'
+  ...
+# Subtest: sense identity separates visually identical cards and preserves user edits
+ok 114 - sense identity separates visually identical cards and preserves user edits
+  ---
+  duration_ms: 0.430378
+  type: 'test'
+  ...
+# Subtest: concept identity survives a full backup and reverse cards use independent directions
+ok 115 - concept identity survives a full backup and reverse cards use independent directions
+  ---
+  duration_ms: 5.948847
+  type: 'test'
+  ...
+# Subtest: share payload still excludes private notes, schedules and internal graph metadata
+ok 116 - share payload still excludes private notes, schedules and internal graph metadata
+  ---
+  duration_ms: 0.243521
+  type: 'test'
+  ...
+# Subtest: large translation cards are saved without silent truncation; sharing stays bounded
+ok 117 - large translation cards are saved without silent truncation; sharing stays bounded
+  ---
+  duration_ms: 0.441668
+  type: 'test'
+  ...
+# Subtest: route translate has meaningful paths and static hashes
+ok 118 - route translate has meaningful paths and static hashes
+  ---
+  duration_ms: 2.953065
+  type: 'test'
+  ...
+# Subtest: route reader has meaningful paths and static hashes
+ok 119 - route reader has meaningful paths and static hashes
+  ---
+  duration_ms: 0.595256
+  type: 'test'
+  ...
+# Subtest: route graph has meaningful paths and static hashes
+ok 120 - route graph has meaningful paths and static hashes
+  ---
+  duration_ms: 0.55934
+  type: 'test'
+  ...
+# Subtest: route library has meaningful paths and static hashes
+ok 121 - route library has meaningful paths and static hashes
+  ---
+  duration_ms: 0.654613
+  type: 'test'
+  ...
+# Subtest: route review has meaningful paths and static hashes
+ok 122 - route review has meaningful paths and static hashes
+  ---
+  duration_ms: 0.308473
+  type: 'test'
+  ...
+# Subtest: route exchange has meaningful paths and static hashes
+ok 123 - route exchange has meaningful paths and static hashes
+  ---
+  duration_ms: 0.190248
+  type: 'test'
+  ...
+# Subtest: route settings has meaningful paths and static hashes
+ok 124 - route settings has meaningful paths and static hashes
+  ---
+  duration_ms: 0.157892
+  type: 'test'
+  ...
+# Subtest: root API resolution https://nabu.example/
+ok 125 - root API resolution https://nabu.example/
+  ---
+  duration_ms: 0.530213
+  type: 'test'
+  ...
+# Subtest: root API resolution https://nabu.example/review
+ok 126 - root API resolution https://nabu.example/review
+  ---
+  duration_ms: 0.804518
+  type: 'test'
+  ...
+# Subtest: root API resolution https://nabu.example/w/bonjour-fr-en-AbCdEf0123456789
+ok 127 - root API resolution https://nabu.example/w/bonjour-fr-en-AbCdEf0123456789
+  ---
+  duration_ms: 0.797027
+  type: 'test'
+  ...
+# Subtest: Pages subdirectory API resolution stays in that app
+ok 128 - Pages subdirectory API resolution stays in that app
+  ---
+  duration_ms: 0.26493
+  type: 'test'
+  ...
+# Subtest: API path rejects //other
+ok 129 - API path rejects //other
+  ---
+  duration_ms: 0.389044
+  type: 'test'
+  ...
+# Subtest: API path rejects ../x
+ok 130 - API path rejects ../x
+  ---
+  duration_ms: 0.097088
+  type: 'test'
+  ...
+# Subtest: API path rejects x/../config
+ok 131 - API path rejects x/../config
+  ---
+  duration_ms: 0.07678
+  type: 'test'
+  ...
+# Subtest: API path rejects x/%2e%2e/config
+ok 132 - API path rejects x/%2e%2e/config
+  ---
+  duration_ms: 0.168694
+  type: 'test'
+  ...
+# Subtest: API path rejects https://evil
+ok 133 - API path rejects https://evil
+  ---
+  duration_ms: 0.08624
+  type: 'test'
+  ...
+# Subtest: API path rejects x?token=abc
+ok 134 - API path rejects x?token=abc
+  ---
+  duration_ms: 0.068999
+  type: 'test'
+  ...
+# Subtest: API path rejects x\#frag
+ok 135 - API path rejects x\#frag
+  ---
+  duration_ms: 0.070655
+  type: 'test'
+  ...
+# Subtest: readable short slug recognized; arbitrary and damaged URLs rejected
+ok 136 - readable short slug recognized; arbitrary and damaged URLs rejected
+  ---
+  duration_ms: 0.411266
+  type: 'test'
+  ...
+# Subtest: legacy sharing formats retain their exact payload
+ok 137 - legacy sharing formats retain their exact payload
+  ---
+  duration_ms: 1.699889
+  type: 'test'
+  ...
+# Subtest: native origin rejects http://nabu.example
+ok 138 - native origin rejects http://nabu.example
+  ---
+  duration_ms: 0.242862
+  type: 'test'
+  ...
+# Subtest: native origin rejects https://person:secret@nabu.example
+ok 139 - native origin rejects https://person:secret@nabu.example
+  ---
+  duration_ms: 0.258655
+  type: 'test'
+  ...
+# Subtest: native origin rejects https://nabu.example/api
+ok 140 - native origin rejects https://nabu.example/api
+  ---
+  duration_ms: 0.116359
+  type: 'test'
+  ...
+# Subtest: native origin rejects https://nabu.example/?x=1
+ok 141 - native origin rejects https://nabu.example/?x=1
+  ---
+  duration_ms: 0.085158
+  type: 'test'
+  ...
+# Subtest: native origin rejects https://nabu.example/\#x
+ok 142 - native origin rejects https://nabu.example/\#x
+  ---
+  duration_ms: 0.071901
+  type: 'test'
+  ...
+# Subtest: native origin rejects https://hasan1s7.github.io
+ok 143 - native origin rejects https://hasan1s7.github.io
+  ---
+  duration_ms: 0.073596
+  type: 'test'
+  ...
+# Subtest: native origin rejects javascript:alert(1)
+ok 144 - native origin rejects javascript:alert(1)
+  ---
+  duration_ms: 0.093252
+  type: 'test'
+  ...
+# Subtest: native origin rejects https://localhost
+ok 145 - native origin rejects https://localhost
+  ---
+  duration_ms: 0.079818
+  type: 'test'
+  ...
+# Subtest: native origin accepts HTTPS and explicit offline-only mode
+ok 146 - native origin accepts HTTPS and explicit offline-only mode
+  ---
+  duration_ms: 0.14374
+  type: 'test'
+  ...
+# Subtest: native incoming links cannot redirect to another host or expose arbitrary pages
+ok 147 - native incoming links cannot redirect to another host or expose arbitrary pages
+  ---
+  duration_ms: 0.684869
+  type: 'test'
+  ...
+# Subtest: native transport maps only allowed headers and origin; cookie never returned to JS
+ok 148 - native transport maps only allowed headers and origin; cookie never returned to JS
+  ---
+  duration_ms: 37.425832
+  type: 'test'
+  ...
+# Subtest: native transport rejects every request without a configured secure backend
+ok 149 - native transport rejects every request without a configured secure backend
+  ---
+  duration_ms: 0.295052
+  type: 'test'
+  ...
+# Subtest: native transport forbids traversal, external URLs, auth and unrelated headers
+ok 150 - native transport forbids traversal, external URLs, auth and unrelated headers
+  ---
+  duration_ms: 1.222988
+  type: 'test'
+  ...
+# Subtest: native JSON HTTP errors keep status and structured message
+ok 151 - native JSON HTTP errors keep status and structured message
+  ---
+  duration_ms: 0.839911
+  type: 'test'
+  ...
+# Subtest: native audio becomes a Blob-compatible response
+ok 152 - native audio becomes a Blob-compatible response
+  ---
+  duration_ms: 1.550654
+  type: 'test'
+  ...
+# Subtest: native HTTP redirects and off-origin replies are refused
+ok 153 - native HTTP redirects and off-origin replies are refused
+  ---
+  duration_ms: 0.669459
+  type: 'test'
+  ...
+# Subtest: native cancellation does not hang waiting for plugin acknowledgment
+ok 154 - native cancellation does not hang waiting for plugin acknowledgment
+  ---
+  duration_ms: 0.9661
+  type: 'test'
+  ...
+# Subtest: already cancelled native requests do not cross the bridge
+ok 155 - already cancelled native requests do not cross the bridge
+  ---
+  duration_ms: 0.427555
+  type: 'test'
+  ...
+# Subtest: mobile config never loads a remote document or relaxes transport security
+ok 156 - mobile config never loads a remote document or relaxes transport security
+  ---
+  duration_ms: 0.555363
+  type: 'test'
+  ...
+# Subtest: manifest is retained and every install icon exists
+ok 157 - manifest is retained and every install icon exists
+  ---
+  duration_ms: 12.293036
+  type: 'test'
+  ...
+# Subtest: native file export waits for explicit share and cleans only its private cache files
+ok 158 - native file export waits for explicit share and cleans only its private cache files
+  ---
+  duration_ms: 36.328125
+  type: 'test'
+  ...
+# Subtest: letter transliteration preserves empty/Latin states honestly
+ok 159 - letter transliteration preserves empty/Latin states honestly
+  ---
+  duration_ms: 2.580406
+  type: 'test'
+  ...
+# Subtest: Russian transliteration does not invent stress
+ok 160 - Russian transliteration does not invent stress
+  ---
+  duration_ms: 0.815161
+  type: 'test'
+  ...
+# Subtest: Arabic preserves written vowel uncertainty
+ok 161 - Arabic preserves written vowel uncertainty
+  ---
+  duration_ms: 0.468681
+  type: 'test'
+  ...
+# Subtest: Hangul transliteration states assimilation limitation
+ok 162 - Hangul transliteration states assimilation limitation
+  ---
+  duration_ms: 0.217531
+  type: 'test'
+  ...
+# Subtest: Japanese refuses unreliable automatic kanji readings
+ok 163 - Japanese refuses unreliable automatic kanji readings
+  ---
+  duration_ms: 0.110714
+  type: 'test'
+  ...
+# Subtest: Chinese stored aid remains explicitly approximate
+ok 164 - Chinese stored aid remains explicitly approximate
+  ---
+  duration_ms: 0.120961
+  type: 'test'
+  ...
+# Subtest: source capture excludes URL credentials and tracking query
+ok 165 - source capture excludes URL credentials and tracking query
+  ---
+  duration_ms: 0.796427
+  type: 'test'
+  ...
+# Subtest: new media fields survive core card serialization and reverse clears reading
+ok 166 - new media fields survive core card serialization and reverse clears reading
+  ---
+  duration_ms: 3.679393
+  type: 'test'
+  ...
+# Subtest: bundled clip art has source, license, and distinct safe image data
+ok 167 - bundled clip art has source, license, and distinct safe image data
+  ---
+  duration_ms: 0.510764
+  type: 'test'
+  ...
+# Subtest: recording success stops tracks and produces reviewable blob
+ok 168 - recording success stops tracks and produces reviewable blob
+  ---
+  duration_ms: 16.735795
+  type: 'test'
+  ...
+# Subtest: denied permission gives guidance and no recording
+ok 169 - denied permission gives guidance and no recording
+  ---
+  duration_ms: 1.663555
+  type: 'test'
+  ...
+# Subtest: tab selection without audio is rejected and tracks are stopped
+ok 170 - tab selection without audio is rejected and tracks are stopped
+  ---
+  duration_ms: 0.68783
+  type: 'test'
+  ...
+# Subtest: unsupported browser media format is actionable
+ok 171 - unsupported browser media format is actionable
+  ---
+  duration_ms: 0.488506
+  type: 'test'
+  ...
+# Subtest: late permission after cancellation cannot start recording
+ok 172 - late permission after cancellation cannot start recording
+  ---
+  duration_ms: 0.387275
+  type: 'test'
+  ...
+# Subtest: stale stop cannot terminate a new recording
+ok 173 - stale stop cannot terminate a new recording
+  ---
+  duration_ms: 0.510629
+  type: 'test'
+  ...
+# Subtest: recording refuses overlap and supports retry after stop
+ok 174 - recording refuses overlap and supports retry after stop
+  ---
+  duration_ms: 3.894455
+  type: 'test'
+  ...
+# Subtest: oversize recording stops, errors and never returns a ready blob
+ok 175 - oversize recording stops, errors and never returns a ready blob
+  ---
+  duration_ms: 1.390223
+  type: 'test'
+  ...
+# Subtest: source track ending stops the recording
+ok 176 - source track ending stops the recording
+  ---
+  duration_ms: 1.652413
+  type: 'test'
+  ...
+# Subtest: missing recording capability is not a dead action
+ok 177 - missing recording capability is not a dead action
+  ---
+  duration_ms: 0.274997
+  type: 'test'
+  ...
+# Subtest: ninety everyday phrases cover all twelve languages and English glosses
+ok 178 - ninety everyday phrases cover all twelve languages and English glosses
+  ---
+  duration_ms: 2.279704
+  type: 'test'
+  ...
+# Subtest: thirty-six expressions include three sources from every supported language
+ok 179 - thirty-six expressions include three sources from every supported language
+  ---
+  duration_ms: 1.609622
+  type: 'test'
+  ...
+# Subtest: all 396 source-idiom directions have separate literal and natural target text
+ok 180 - all 396 source-idiom directions have separate literal and natural target text
+  ---
+  duration_ms: 1.556821
+  type: 'test'
+  ...
+# Subtest: literal glosses are explicitly English, even with another target language
+ok 181 - literal glosses are explicitly English, even with another target language
+  ---
+  duration_ms: 0.241408
+  type: 'test'
+  ...
+# Subtest: a piece of cake is not mistranslated as food in the natural meaning field
+ok 182 - a piece of cake is not mistranslated as food in the natural meaning field
+  ---
+  duration_ms: 0.282933
+  type: 'test'
+  ...
+# Subtest: smart apostrophes from phones resolve without losing sense identity
+ok 183 - smart apostrophes from phones resolve without losing sense identity
+  ---
+  duration_ms: 0.251746
+  type: 'test'
+  ...
+# Subtest: reverse translation into idiom origin returns its plain meaning, not fabricated literal text
+ok 184 - reverse translation into idiom origin returns its plain meaning, not fabricated literal text
+  ---
+  duration_ms: 0.262259
+  type: 'test'
+  ...
+# Subtest: unlisted expressions are never assigned invented literal translations
+ok 185 - unlisted expressions are never assigned invented literal translations
+  ---
+  duration_ms: 0.178293
+  type: 'test'
+  ...
+# Subtest: new manual cards keep legacy Learning default; references remain explicit
+ok 186 - new manual cards keep legacy Learning default; references remain explicit
+  ---
+  duration_ms: 4.629206
+  type: 'test'
+  ...
+# Subtest: reference cards never enter any review mode
+ok 187 - reference cards never enter any review mode
+  ---
+  duration_ms: 2.953507
+  type: 'test'
+  ...
+# Subtest: archived cards never enter practice
+ok 188 - archived cards never enter practice
+  ---
+  duration_ms: 0.317448
+  type: 'test'
+  ...
+# Subtest: each practice mode maintains independent scheduling evidence
+ok 189 - each practice mode maintains independent scheduling evidence
+  ---
+  duration_ms: 0.440956
+  type: 'test'
+  ...
+# Subtest: production review does not silently advance recognition
+ok 190 - production review does not silently advance recognition
+  ---
+  duration_ms: 0.34749
+  type: 'test'
+  ...
+# Subtest: older review cannot overwrite a newer skill review
+ok 191 - older review cannot overwrite a newer skill review
+  ---
+  duration_ms: 0.168927
+  type: 'test'
+  ...
+# Subtest: unknown skill or invalid rating is rejected
+ok 192 - unknown skill or invalid rating is rejected
+  ---
+  duration_ms: 0.449777
+  type: 'test'
+  ...
+# Subtest: cloze hides exact source occurrence and retains context
+ok 193 - cloze hides exact source occurrence and retains context
+  ---
+  duration_ms: 1.771516
+  type: 'test'
+  ...
+# Subtest: cloze does not mistake a substring inside another word for the answer
+ok 194 - cloze does not mistake a substring inside another word for the answer
+  ---
+  duration_ms: 1.398377
+  type: 'test'
+  ...
+# Subtest: cloze escapes regular expression punctuation
+ok 195 - cloze escapes regular expression punctuation
+  ---
+  duration_ms: 1.817417
+  type: 'test'
+  ...
+# Subtest: cloze supports Chinese without whitespace boundaries
+ok 196 - cloze supports Chinese without whitespace boundaries
+  ---
+  duration_ms: 0.631264
+  type: 'test'
+  ...
+# Subtest: unsupported listening and unavailable cloze are not queued
+ok 197 - unsupported listening and unavailable cloze are not queued
+  ---
+  duration_ms: 0.468368
+  type: 'test'
+  ...
+# Subtest: daily introduction limit does not count reviews of old cards
+ok 198 - daily introduction limit does not count reviews of old cards
+  ---
+  duration_ms: 1.668999
+  type: 'test'
+  ...
+# Subtest: daily introduction limit still allows other skills on an introduced card
+ok 199 - daily introduction limit still allows other skills on an introduced card
+  ---
+  duration_ms: 2.248861
+  type: 'test'
+  ...
+# Subtest: collection filter and due times constrain all practice modes
+ok 200 - collection filter and due times constrain all practice modes
+  ---
+  duration_ms: 0.518389
+  type: 'test'
+  ...
+# Subtest: backup roundtrip preserves rich fields, modes and schedules
+ok 201 - backup roundtrip preserves rich fields, modes and schedules
+  ---
+  duration_ms: 2.021471
+  type: 'test'
+  ...
+# Subtest: sharing excludes private notes and individual learning state
+ok 202 - sharing excludes private notes and individual learning state
+  ---
+  duration_ms: 0.350182
+  type: 'test'
+  ...
+# Subtest: self-rated evidence separates immediate and delayed recall
+ok 203 - self-rated evidence separates immediate and delayed recall
+  ---
+  duration_ms: 0.324953
+  type: 'test'
+  ...
+# Subtest: legacy logs remain recognition evidence
+ok 204 - legacy logs remain recognition evidence
+  ---
+  duration_ms: 0.366763
+  type: 'test'
+  ...
+# Subtest: all phrase records contain draft provenance, usage and multilingual examples
+ok 205 - all phrase records contain draft provenance, usage and multilingual examples
+  ---
+  duration_ms: 1.670732
+  type: 'test'
+  ...
+# Subtest: 2D map defaults to five prioritized translations and supports all eleven
+ok 206 - 2D map defaults to five prioritized translations and supports all eleven
+  ---
+  duration_ms: 2.462692
+  type: 'test'
+  ...
+# Subtest: Russian idiom has meaningful grammatical components, not arbitrary nearby phrases
+ok 207 - Russian idiom has meaningful grammatical components, not arbitrary nearby phrases
+  ---
+  duration_ms: 1.552073
+  type: 'test'
+  ...
+# Subtest: 2D coordinates are readable and 3D projection responds to rotation and tilt
+ok 208 - 2D coordinates are readable and 3D projection responds to rotation and tilt
+  ---
+  duration_ms: 0.416809
+  type: 'test'
+  ...
+# Subtest: graph palette preserves Nabu greens, lime and sand
+ok 209 - graph palette preserves Nabu greens, lime and sand
+  ---
+  duration_ms: 0.143765
+  type: 'test'
+  ...
+# Subtest: speech cache isolates accounts
+ok 210 - speech cache isolates accounts
+  ---
+  duration_ms: 1.474781
+  type: 'test'
+  ...
+# Subtest: speech cache isolates languages and models
+ok 211 - speech cache isolates languages and models
+  ---
+  duration_ms: 0.28157
+  type: 'test'
+  ...
+# Subtest: speech cache preserves diacritics and normalizes equivalent Unicode
+ok 212 - speech cache preserves diacritics and normalizes equivalent Unicode
+  ---
+  duration_ms: 0.345592
+  type: 'test'
+  ...
+# Subtest: speed changes reuse the same generated recording
+ok 213 - speed changes reuse the same generated recording
+  ---
+  duration_ms: 0.191072
+  type: 'test'
+  ...
+# Subtest: new media policy allows private blobs, not remote provider connections
+ok 214 - new media policy allows private blobs, not remote provider connections
+  ---
+  duration_ms: 19.903271
+  type: 'test'
+  ...
+# Subtest: speech implementation has bounded cache and does not persist audio
+ok 215 - speech implementation has bounded cache and does not persist audio
+  ---
+  duration_ms: 4.42911
+  type: 'test'
+  ...
+# Subtest: shipping index has no external JS/CSS startup dependencies
+ok 216 - shipping index has no external JS/CSS startup dependencies
+  ---
+  duration_ms: 25.048726
+  type: 'test'
+  ...
+# Subtest: index and repair exact scripts/styles are authorized by SHA-256 CSP
+ok 217 - index and repair exact scripts/styles are authorized by SHA-256 CSP
+  ---
+  duration_ms: 17.498286
+  type: 'test'
+  ...
+# Subtest: application and independent startup guard parse as classic scripts
+ok 218 - application and independent startup guard parse as classic scripts
+  ---
+  duration_ms: 42.605403
+  type: 'test'
+  ...
+# Subtest: openStore preserves the original database name and version
+ok 219 - openStore preserves the original database name and version
+  ---
+  duration_ms: 12.701684
+  type: 'test'
+  ...
+# Subtest: simultaneous open calls share one pending request
+ok 220 - simultaneous open calls share one pending request
+  ---
+  duration_ms: 6.94194
+  type: 'test'
+  ...
+# Subtest: unavailable IndexedDB is a recoverable, explicit error
+ok 221 - unavailable IndexedDB is a recoverable, explicit error
+  ---
+  duration_ms: 3.821687
+  type: 'test'
+  ...
+# (node:3420) ExperimentalWarning: The MockTimers API is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: blocked upgrades reject and close a later successful connection
+ok 222 - blocked upgrades reject and close a later successful connection
+  ---
+  duration_ms: 2.685855
+  type: 'test'
+  ...
+# Subtest: open timeout rejects without deleting or resetting any database
+ok 223 - open timeout rejects without deleting or resetting any database
+  ---
+  duration_ms: 3.758326
+  type: 'test'
+  ...
+# Subtest: failed open can retry successfully without fallback storage
+ok 224 - failed open can retry successfully without fallback storage
+  ---
+  duration_ms: 6.153079
+  type: 'test'
+  ...
+# Subtest: versionchange closes connection and next open gets a new connection
+ok 225 - versionchange closes connection and next open gets a new connection
+  ---
+  duration_ms: 7.930989
+  type: 'test'
+  ...
+# Subtest: worker install only accepts the matching self-contained release
+ok 226 - worker install only accepts the matching self-contained release
+  ---
+  duration_ms: 32.528499
+  type: 'test'
+  ...
+# Subtest: worker navigation checks the network instead of pinning a stale shell
+ok 227 - worker navigation checks the network instead of pinning a stale shell
+  ---
+  duration_ms: 5.41885
+  type: 'test'
+  ...
+# Subtest: worker retains an offline fallback for the self-contained app
+ok 228 - worker retains an offline fallback for the self-contained app
+  ---
+  duration_ms: 2.662831
+  type: 'test'
+  ...
+# Subtest: worker does not intercept repair, API, other paths, or translations
+ok 229 - worker does not intercept repair, API, other paths, or translations
+  ---
+  duration_ms: 1.819932
+  type: 'test'
+  ...
+# Subtest: worker activation prunes only its own shell paths
+ok 230 - worker activation prunes only its own shell paths
+  ---
+  duration_ms: 3.107598
+  type: 'test'
+  ...
+# Subtest: repair unregisters only this Nabu path, never the origin root or other apps
+ok 231 - repair unregisters only this Nabu path, never the origin root or other apps
+  ---
+  duration_ms: 2.31099
+  type: 'test'
+  ...
+# Subtest: repair removes only Nabu shell requests and then navigates home
+ok 232 - repair removes only Nabu shell requests and then navigates home
+  ---
+  duration_ms: 1.718798
+  type: 'test'
+  ...
+# Subtest: repair and worker do not call database deletion or browser-data reset APIs
+ok 233 - repair and worker do not call database deletion or browser-data reset APIs
+  ---
+  duration_ms: 4.048417
+  type: 'test'
+  ...
+# Subtest: worker supports clean routes and short-word shells offline without caching API snapshots
+ok 234 - worker supports clean routes and short-word shells offline without caching API snapshots
+  ---
+  duration_ms: 2.620516
+  type: 'test'
+  ...
+# Subtest: offline writes persist per account and never change guest cards
+ok 235 - offline writes persist per account and never change guest cards
+  ---
+  duration_ms: 52.94223
+  type: 'test'
+  ...
+# Subtest: a warm cache is not called synced until the server is checked
+ok 236 - a warm cache is not called synced until the server is checked
+  ---
+  duration_ms: 27.330057
+  type: 'test'
+  ...
+# Subtest: reconfigure reopens pending work without an HTTP fetch
+ok 237 - reconfigure reopens pending work without an HTTP fetch
+  ---
+  duration_ms: 26.132774
+  type: 'test'
+  ...
+# Subtest: no cached library produces a clear offline error, not an empty account
+ok 238 - no cached library produces a clear offline error, not an empty account
+  ---
+  duration_ms: 3.304306
+  type: 'test'
+  ...
+# Subtest: reconnect drains outbox and marks a confirmed snapshot synced
+ok 239 - reconnect drains outbox and marks a confirmed snapshot synced
+  ---
+  duration_ms: 37.853931
+  type: 'test'
+  ...
+# Subtest: lost acknowledgment retries the same operation without duplicate data
+ok 240 - lost acknowledgment retries the same operation without duplicate data
+  ---
+  duration_ms: 48.171938
+  type: 'test'
+  ...
+# Subtest: network failure preserves local edits and original operation IDs
+ok 241 - network failure preserves local edits and original operation IDs
+  ---
+  duration_ms: 36.043535
+  type: 'test'
+  ...
+# Subtest: IndexedDB write failure never reports a successful local save
+ok 242 - IndexedDB write failure never reports a successful local save
+  ---
+  duration_ms: 21.369144
+  type: 'test'
+  ...
+# Subtest: sequential offline edits keep revisions and order
+ok 243 - sequential offline edits keep revisions and order
+  ---
+  duration_ms: 64.596673
+  type: 'test'
+  ...
+# Subtest: offline skill reviews and undo keep recognition schedule independent
+ok 244 - offline skill reviews and undo keep recognition schedule independent
+  ---
+  duration_ms: 69.206476
+  type: 'test'
+  ...
+# Subtest: stale server revision blocks queue and does not overwrite other device
+ok 245 - stale server revision blocks queue and does not overwrite other device
+  ---
+  duration_ms: 38.825423
+  type: 'test'
+  ...
+# Subtest: explicit server resolution retains a recovery audit of discarded queue
+ok 246 - explicit server resolution retains a recovery audit of discarded queue
+  ---
+  duration_ms: 50.274718
+  type: 'test'
+  ...
+# Subtest: explicit retry rebases dependent edits after user selects overwrite
+ok 247 - explicit retry rebases dependent edits after user selects overwrite
+  ---
+  duration_ms: 64.781213
+  type: 'test'
+  ...
+# Subtest: authentication error locks status without deleting pending data
+ok 248 - authentication error locks status without deleting pending data
+  ---
+  duration_ms: 26.483622
+  type: 'test'
+  ...
+# Subtest: rate limit pauses rather than permanently blocking valid changes
+ok 249 - rate limit pauses rather than permanently blocking valid changes
+  ---
+  duration_ms: 47.206175
+  type: 'test'
+  ...
+# Subtest: server validation errors keep exact rejected payload exportable
+ok 250 - server validation errors keep exact rejected payload exportable
+  ---
+  duration_ms: 33.46055
+  type: 'test'
+  ...
+# Subtest: switching users never exposes another account queue
+ok 251 - switching users never exposes another account queue
+  ---
+  duration_ms: 29.901369
+  type: 'test'
+  ...
+# Subtest: late response after account switch cannot overwrite new account cache
+ok 252 - late response after account switch cannot overwrite new account cache
+  ---
+  duration_ms: 31.988072
+  type: 'test'
+  ...
+# Subtest: concurrent queue transactions retain both edits
+ok 253 - concurrent queue transactions retain both edits
+  ---
+  duration_ms: 30.525704
+  type: 'test'
+  ...
+# Subtest: duplicate server identity remaps dependent card references
+ok 254 - duplicate server identity remaps dependent card references
+  ---
+  duration_ms: 52.519836
+  type: 'test'
+  ...
+# Subtest: account forget removes only that account data and remembered identity
+ok 255 - account forget removes only that account data and remembered identity
+  ---
+  duration_ms: 41.813379
+  type: 'test'
+  ...
+# Subtest: guest cleanup preserves queued account work
+ok 256 - guest cleanup preserves queued account work
+  ---
+  duration_ms: 38.850455
+  type: 'test'
+  ...
+# Subtest: forgetting cache after account reset can retain remembered identity
+ok 257 - forgetting cache after account reset can retain remembered identity
+  ---
+  duration_ms: 22.818591
+  type: 'test'
+  ...
+# Subtest: Web Locks keep two tabs from sending the same offline operation concurrently
+ok 258 - Web Locks keep two tabs from sending the same offline operation concurrently
+  ---
+  duration_ms: 57.258534
+  type: 'test'
+  ...
+# Subtest: a change saved during network acknowledgment remains in the flush queue
+ok 259 - a change saved during network acknowledgment remains in the flush queue
+  ---
+  duration_ms: 54.252535
+  type: 'test'
+  ...
+# Subtest: invalid initial server snapshot is not cached: missing collections
+ok 260 - invalid initial server snapshot is not cached: missing collections
+  ---
+  duration_ms: 6.112451
+  type: 'test'
+  ...
+# Subtest: invalid initial server snapshot is not cached: invalid card record
+ok 261 - invalid initial server snapshot is not cached: invalid card record
+  ---
+  duration_ms: 5.707808
+  type: 'test'
+  ...
+# Subtest: invalid initial server snapshot is not cached: invalid review record
+ok 262 - invalid initial server snapshot is not cached: invalid review record
+  ---
+  duration_ms: 5.789121
+  type: 'test'
+  ...
+# Subtest: invalid initial server snapshot is not cached: invalid history record
+ok 263 - invalid initial server snapshot is not cached: invalid history record
+  ---
+  duration_ms: 5.562333
+  type: 'test'
+  ...
+# Subtest: malformed sync acknowledgment cannot discard queued work or replace the confirmed cache
+ok 264 - malformed sync acknowledgment cannot discard queued work or replace the confirmed cache
+  ---
+  duration_ms: 36.443975
+  type: 'test'
+  ...
+# Subtest: malformed refresh leaves the last confirmed cards readable
+ok 265 - malformed refresh leaves the last confirmed cards readable
+  ---
+  duration_ms: 20.387559
+  type: 'test'
+  ...
+# Subtest: invalid duplicate ID mapping cannot retire a pending operation
+ok 266 - invalid duplicate ID mapping cannot retire a pending operation
+  ---
+  duration_ms: 29.022811
+  type: 'test'
+  ...
+# Subtest: malformed conflict refresh preserves all pending edits
+ok 267 - malformed conflict refresh preserves all pending edits
+  ---
+  duration_ms: 36.182554
+  type: 'test'
+  ...
+1..267
+# tests 267
+# suites 0
+# pass 267
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2798.586058

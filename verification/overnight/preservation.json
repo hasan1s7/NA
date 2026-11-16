@@ -1,0 +1,141 @@
+{
+  "baselineArchiveSha256": "52695f940faeb5903a1339088ad9479a0475fa9555a8708b916c8226c51861aa",
+  "criticalFiles": [
+    {
+      "path": "Start-Nabu.cmd",
+      "sha256": "4bf39e3e3b5cdaa08b3f0f62b2692a6996cab0bbb5661677a0a90b0c83676ec7",
+      "baselineIdentical": true
+    },
+    {
+      "path": "Start-Nabu.command",
+      "sha256": "7aaab54a1d406a8ca30518682becdb9814d0d6d72ef0950b99e9ad27caaff27e",
+      "baselineIdentical": true
+    },
+    {
+      "path": "start-local.sh",
+      "sha256": "7aaab54a1d406a8ca30518682becdb9814d0d6d72ef0950b99e9ad27caaff27e",
+      "baselineIdentical": true
+    },
+    {
+      "path": "start_local.py",
+      "sha256": "ff1ba3ce901b0ed4d1bd1d8377fd15761230ad5271dea3c172f0aed58afb6620",
+      "baselineIdentical": true
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "19cc346a4a93ec55958468cfd7785754450fb9219b6be9c60be22bb2d0e183c2",
+      "baselineIdentical": true
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "dc9413199455edb134b02a22c48ae824a43988b602577b95a39d4a9a6e21f04b",
+      "baselineIdentical": true
+    },
+    {
+      "path": "requirements-speech.txt",
+      "sha256": "73db0637bf757258a576cc251cc8ac5b21d1d2218477fac55a4925fe05bb7bad",
+      "baselineIdentical": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "7c58bd5b6c421c0196ecae769a92f769b153e8b9aaa1706916acaccd1d2597ab",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-scribe.js",
+      "sha256": "5f195b9ebdd4f712e81c399380e9075877e2aa926dcb200e8f8ae7a657c84244",
+      "baselineIdentical": true
+    },
+    {
+      "path": "language_services.py",
+      "sha256": "ea0cd2c32da0c4071da99bab3f88eaac370efa1936fc29755864a0018e09eaa4",
+      "baselineIdentical": true
+    },
+    {
+      "path": "media_services.py",
+      "sha256": "bafe9f65d9f165c3370b7ff82f6734585806e82e5c0a5578cd013348d17fc8c3",
+      "baselineIdentical": true
+    },
+    {
+      "path": "translation_memory.py",
+      "sha256": "e51affccca2cb92bbf84a18947ac03ccd9b02a074e01970f6ce8a2b24a779bfc",
+      "baselineIdentical": true
+    },
+    {
+      "path": "intents.py",
+      "sha256": "2accc77b92a842870f943755b5016c1023e7fc7fe4f59e64a3b53bc9d954d2ac",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-transliteration.js",
+      "sha256": "db8495bca8bb5e3355428e608bbe949820d34a3cfbb8a0fb75f538d61c018721",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-media.js",
+      "sha256": "349b93c16ebd38620475026364d22d0ce50f244cd88da210b0d12b87a380018a",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-graph.js",
+      "sha256": "eafa09ceea6755ceddf912c76cf49240af0b82ddb0585e8b2d9a7e466d1a55f6",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-graph-kernel.js",
+      "sha256": "35a2d31dc269a86643ec3c901b27f0c043b84627ca110213c848f8b4ae1a7dc2",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-learner-model.js",
+      "sha256": "63a00836044a7ddbae1f84a52996ece6004bb7dcc5680e5fa4e3b5ecbdb4e19a",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-learner-observations.js",
+      "sha256": "0a8f112e92564dacaaee07ccedd0237525a418d3034daff7f9bd3cd8da4eb693",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-learner-policy.js",
+      "sha256": "51af58113785bf16114b2abb087dc8aee89cdcc599af65bbe46402f61879f112",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-learner-tasks.js",
+      "sha256": "a2646fbf94806abcafd16c4eda3fb03ddb969018668622b7144a94df62ef2e4a",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-intents.js",
+      "sha256": "017029e12714f3615db36f1f70eece81aa27b7ca1636bd69bce5ad0ece51643c",
+      "baselineIdentical": true
+    },
+    {
+      "path": "public/nabu-intent-store.js",
+      "sha256": "a9d9db94007de103c67d7ff1dadd1601fd69090194d3d1353577941118bc47bf",
+      "baselineIdentical": true
+    },
+    {
+      "path": "data/wordgraph-source.json",
+      "sha256": "75882a01c47252814d758c8b840012b66b47b872d1097c4b1dce6e8aa941d77d",
+      "baselineIdentical": true
+    }
+  ],
+  "missingBaselineFiles": [],
+  "languages": [
+    "English",
+    "Arabic",
+    "Chinese",
+    "French",
+    "Russian",
+    "Spanish",
+    "Turkish",
+    "German",
+    "Korean",
+    "Japanese",
+    "Italian",
+    "Portuguese"
+  ],
+  "interpretation": "Byte comparison establishes preservation of these files, not native-platform runtime coverage."
+}

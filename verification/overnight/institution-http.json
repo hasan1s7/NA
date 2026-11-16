@@ -1,0 +1,30 @@
+{
+  "release": "1.17.0",
+  "passed": 23,
+  "checks": [
+    "Actual local launcher reports Nabu 1.17.0",
+    "department: reviewer cannot inspect before acceptance",
+    "department: duplicate offline delivery creates one result",
+    "department: visible source is recorded as assistance",
+    "department: no mastery claim is manufactured",
+    "company: reviewer cannot inspect before acceptance",
+    "company: duplicate offline delivery creates one result",
+    "company: visible source is recorded as assistance",
+    "company: no mastery claim is manufactured",
+    "One learner has two organization memberships",
+    "Department cannot access company assignments",
+    "Company cannot access department assignments",
+    "Private vocabulary stays out of institutional libraries",
+    "Publishing a correction does not silently overwrite a result",
+    "Explicit reassessment retains the original and corrected results",
+    "Authorized reviewer reconstructs both results exactly",
+    "Historical assignment remains pinned to original source",
+    "Missing council provider reports unavailable",
+    "Normal reader and saved vocabulary remain available",
+    "Leaving a workspace rejects even identical old submissions",
+    "Leaving does not remove personal vocabulary or the other workspace",
+    "Rejoining does not resurrect old reporting grants",
+    "Audit omits raw learner responses"
+  ],
+  "scope": "Real loopback HTTP through the local launcher; fictional accounts; temporary SQLite; no external provider calls; no browser layout claim."
+}

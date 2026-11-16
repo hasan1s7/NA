@@ -1,0 +1,16 @@
+{
+  "passed": 10,
+  "checks": [
+    "2D default",
+    "5 prioritized translation nodes",
+    "all 11 alternate languages can be displayed",
+    "3D optional toggle",
+    "3D rotation control",
+    "graph translation node selection",
+    "mobile visual capture",
+    "Russian idiom shows four grammatical components",
+    "long labels are bounded",
+    "Russian expression graph captured in 2D and 3D"
+  ],
+  "errors": []
+}

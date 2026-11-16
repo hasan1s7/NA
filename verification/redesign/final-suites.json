@@ -1,0 +1,72 @@
+{
+  "completed": 11,
+  "expected": 11,
+  "results": [
+    {
+      "name": "final-js",
+      "command": "npm test",
+      "exit": 1,
+      "seconds": 4.17
+    },
+    {
+      "name": "final-redesign-ui",
+      "command": "python tests/redesign_browser.py",
+      "exit": 0,
+      "seconds": 13.93
+    },
+    {
+      "name": "final-accessibility",
+      "command": "python tests/redesign_accessibility.py",
+      "exit": 0,
+      "seconds": 8.39
+    },
+    {
+      "name": "final-media-ui",
+      "command": "python tests/media_browser.py",
+      "exit": 0,
+      "seconds": 12.81
+    },
+    {
+      "name": "final-local-ui",
+      "command": "python tests/local_release_browser.py",
+      "exit": 0,
+      "seconds": 8.24
+    },
+    {
+      "name": "final-spatial-ui",
+      "command": "python tests/spatial_browser.py",
+      "exit": 0,
+      "seconds": 6.18
+    },
+    {
+      "name": "final-existing-ui",
+      "command": "npm run test:ui",
+      "exit": 0,
+      "seconds": 56.9
+    },
+    {
+      "name": "final-extension-ui",
+      "command": "python tests/extension_browser.py",
+      "exit": 0,
+      "seconds": 5.58
+    },
+    {
+      "name": "final-extension-options",
+      "command": "python tests/extension_options_browser.py",
+      "exit": 0,
+      "seconds": 2.89
+    },
+    {
+      "name": "final-http",
+      "command": "python tests/redesign_http.py",
+      "exit": 0,
+      "seconds": 6.14
+    },
+    {
+      "name": "final-python",
+      "command": "python -m pytest -q",
+      "exit": 0,
+      "seconds": 101.95
+    }
+  ]
+}

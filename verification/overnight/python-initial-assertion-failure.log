@@ -1,0 +1,47 @@
+...........................F............................................ [ 13%]
+........................................................................ [ 27%]
+........................................................................ [ 41%]
+........................................................................ [ 55%]
+........................................................................ [ 68%]
+........................................................................ [ 82%]
+........................................................................ [ 96%]
+..................                                                       [100%]
+=================================== FAILURES ===================================
+_ test_five_consenting_learners_release_coarse_assisted_category_without_private_fields _
+
+pilot = (<fastapi.applications.FastAPI object at 0x7fc3bc6b7140>, <starlette.testclient.TestClient object at 0x7fc3b9cab830>, ...140>, <starlette.testclient.TestClient object at 0x7fc3bcb6dee0>, <function pilot.<locals>.add at 0x7fc3b9815c60>, ...)
+
+    def test_five_consenting_learners_release_coarse_assisted_category_without_private_fields(pilot):
+        _, owner, _, _, _, add, learners, assignments, _ = pilot
+        add()
+        put(learners[0], card(note='SECRET personal note', front='privateword'))
+        report = summary(owner)
+        assert report['status'] == 'available'
+        assert report['participantBand'] == {'lower': 5, 'upper': 9, 'label': '5–9'}
+        assert released(report) == {'assisted_evidence': {'lower': 5, 'upper': 9, 'label': '5–9'}}
+        assert report['learnerModelUpdated'] is False and report['conditionsVerified'] is False
+        assert 'differential privacy' in report['notice']
+        serialized = json.dumps(report)
+        for forbidden in ['SECRET', 'privateword', 'Take your time', 'PRIVATE learning objective', 'learnerId', 'assignmentId', 'occurredAt', 'createdAt', 'response', 'assessments']:
+            # Static human explanations can contain the word response; structural keys/raw values cannot.
+            if forbidden == 'response':
+                assert '"response"' not in serialized
+            else:
+>               assert forbidden not in serialized
+E               assert 'assessments' not in '{"schemaVer...ied": false}'
+E                 
+E                 'assessments' is contained here:
+E                 ?           ^^^^^^^^^^^^^
+E                   ir latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.", "learnerModelUpdated": false, "conditionsVerified": false}
+E                 ?           ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_department_support.py:112: AssertionError
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/starlette/testclient.py:45
+  /workspace/scratch/1c91899ad34c/overnight117/app/Nabu-1.17/.venv/lib/python3.12/site-packages/starlette/testclient.py:45: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_department_support.py::test_five_consenting_learners_release_coarse_assisted_category_without_private_fields
+1 failed, 521 passed, 1 warning in 184.70s (0:03:04)

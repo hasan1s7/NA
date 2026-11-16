@@ -1,0 +1,31 @@
+PASS Empty reader explains the required input rather than doing nothing
+PASS Reading replaces the editor and preserves exact source text
+PASS Dictionary meaning uses existing bank with truthful context qualification
+PASS Original sentence is exact, highlighted, and not an invented example
+PASS Lookup does not create a card or schedule silently
+PASS Lookup leaves the original reader DOM intact
+PASS No unrelated illustration or image placeholder appears
+PASS Failed save retains the word, context and reachable retry
+PASS Retry confirms actual stored source and reference-only mode
+PASS Confirmed saved status is not a pointless Save button
+PASS Slow save is pending and duplicate submission is guarded
+PASS A double save creates one actual book card
+PASS Missing matching voice is explicitly reported in reachable controls
+PASS Replay and Stop invoke existing voice implementation (fixture)
+PASS Selecting another word stops old pronunciation
+PASS Phone panel is a native focus-managed dialog
+PASS Escape restores focus to the selected source word
+PASS Keyboard reopens the panel and Return restores reading
+PASS Phone has no horizontal overflow
+PASS Manual meaning keeps selection and source, saves and returns to same reader
+PASS Older delayed response never replaces the most recent word
+PASS Mixed Arabic and Latin text retains direction and original context
+PASS Latin words in Arabic retain left-to-right word order
+PASS Arabic phone layout has no overflow
+PASS 200% CSS zoom reflows without horizontal scrolling
+PASS Reduced motion removes animated transitions
+PASS Confirmed account save reaches the actual SQLite backend
+PASS A fresh UI mount loads server-confirmed source metadata
+PASS Saved library reflows on phone
+PASS Word bank reflows on phone
+PASS No uncaught browser exception across all checks

@@ -1,0 +1,105 @@
+{
+  "passed": 35,
+  "checks": [
+    "Computed visible text contrast: quick-lookup",
+    "Visible action handlers exist: quick-lookup",
+    "Computed visible text contrast: empty-reader",
+    "Visible action handlers exist: empty-reader",
+    "Selecting a word preserves a manually scrolled reading position",
+    "Passive updates retain document node and manual scroll",
+    "Returning restores the actual clicked late word",
+    "Highlighted phrase uses the original selection and sentence",
+    "Computed visible text contrast: long-definition-desktop",
+    "Visible action handlers exist: long-definition-desktop",
+    "Reading and panel fit 1024px width",
+    "Computed visible text contrast: long-definition-1024",
+    "Visible action handlers exist: long-definition-1024",
+    "Reading and panel fit 768px width",
+    "Computed visible text contrast: long-definition-768",
+    "Visible action handlers exist: long-definition-768",
+    "Reading and panel fit 390px width",
+    "Computed visible text contrast: long-definition-390",
+    "Visible action handlers exist: long-definition-390",
+    "Reading and panel fit 320px width",
+    "Computed visible text contrast: long-definition-320",
+    "Visible action handlers exist: long-definition-320",
+    "Nested note editor returns to original word sheet with saved note",
+    "Phone reading fits at 200% CSS zoom",
+    "Computed visible text contrast: word-bank",
+    "Visible action handlers exist: word-bank",
+    "Empty word-bank filter has a working reset",
+    "Computed visible text contrast: library",
+    "Visible action handlers exist: library",
+    "Computed visible text contrast: settings",
+    "Visible action handlers exist: settings",
+    "Settings fit 390px width",
+    "Settings fit 320px width",
+    "Visible buttons and links have accessible text or names",
+    "No uncaught browser errors in edge-case checks"
+  ],
+  "contrast": [
+    {
+      "screen": "quick-lookup",
+      "checked": 59,
+      "failures": [],
+      "minimum": 4.94
+    },
+    {
+      "screen": "empty-reader",
+      "checked": 29,
+      "failures": [],
+      "minimum": 4.81
+    },
+    {
+      "screen": "long-definition-desktop",
+      "checked": 30,
+      "failures": [],
+      "minimum": 4.95
+    },
+    {
+      "screen": "long-definition-1024",
+      "checked": 29,
+      "failures": [],
+      "minimum": 4.95
+    },
+    {
+      "screen": "long-definition-768",
+      "checked": 4,
+      "failures": [],
+      "minimum": 5.34
+    },
+    {
+      "screen": "long-definition-390",
+      "checked": 4,
+      "failures": [],
+      "minimum": 5.34
+    },
+    {
+      "screen": "long-definition-320",
+      "checked": 4,
+      "failures": [],
+      "minimum": 5.34
+    },
+    {
+      "screen": "word-bank",
+      "checked": 64,
+      "failures": [],
+      "minimum": 4.6
+    },
+    {
+      "screen": "library",
+      "checked": 41,
+      "failures": [],
+      "minimum": 4.95
+    },
+    {
+      "screen": "settings",
+      "checked": 50,
+      "failures": [],
+      "minimum": 4.81
+    }
+  ],
+  "pageErrors": [],
+  "failure": null,
+  "boundary": "Focused reflow, keyboard, RTL and computed contrast checks, not a complete WCAG audit.\nUses shipping bundle with explicit existing URL/storage/fetch fixtures. No native zoom claim.\n"
+}

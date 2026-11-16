@@ -1,0 +1,309 @@
+{
+  "checks": 71,
+  "results": [
+    {
+      "path": "public/nabu-clipart.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-sync.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-core.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-feature-tree.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-media.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-app.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-sw.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-graph.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-word-tools.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-store.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-links.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-speech.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-reading-ui.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-account-store.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-spatial-graph.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/nabu-media.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/sidepanel.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/common.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/options.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/background.js",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "social.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "translation_memory.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "upgrades.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "media_services.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "language_services.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "server.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "word_links.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "backup_service.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "start_local.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/build_graph.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/expand_bank.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/verify_offsite_backup.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/restore_database.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/build_icons.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/backup_database.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/check_providers.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/build_standalone.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/evaluate_fsrs.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/build_media_catalogue.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/setup_speech.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/configure_native.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tools/backup_status.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/next_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/redesign_http.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_media_services.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/extension_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/bank_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/extension_options_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_operations.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/hosted_accounts.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_release_audit.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_word_links.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/social_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_language_services.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_local_launcher.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_server.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_backups.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/spatial_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/pages_package_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_social.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_upgrades.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/media_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/redesign_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/local_release_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/browser_smoke.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/local_http_smoke.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_translation_memory.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/mobile_links_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/redesign_accessibility.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/startup_browser.py",
+      "syntax": "pass"
+    },
+    {
+      "path": "tests/test_native_config.py",
+      "syntax": "pass"
+    }
+  ]
+}

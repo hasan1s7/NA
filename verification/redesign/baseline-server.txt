@@ -1,0 +1,14 @@
+
+Nabu 1.9.0 - local testing
+Open: http://127.0.0.1:8765/
+Database: /mnt/data/nabu-redesign-test/baseline.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [1228]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53908 - "GET /api/health HTTP/1.1" 200 OK

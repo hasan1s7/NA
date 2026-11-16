@@ -1,0 +1,42 @@
+Installing Nabu dependencies (internet is needed for this first setup)...
+WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Requirement already satisfied: fastapi==0.128.2 in /opt/pyvenv/lib/python3.13/site-packages (from -r /mnt/data/nabu_redesign/nabu/requirements.txt (line 1)) (0.128.2)
+Requirement already satisfied: uvicorn==0.48.0 in /opt/pyvenv/lib/python3.13/site-packages (from -r /mnt/data/nabu_redesign/nabu/requirements.txt (line 2)) (0.48.0)
+Requirement already satisfied: httpx==0.28.1 in /opt/pyvenv/lib/python3.13/site-packages (from -r /mnt/data/nabu_redesign/nabu/requirements.txt (line 3)) (0.28.1)
+Requirement already satisfied: boto3==1.43.18 in /opt/pyvenv/lib/python3.13/site-packages (from -r /mnt/data/nabu_redesign/nabu/requirements.txt (line 4)) (1.43.18)
+Requirement already satisfied: cryptography==46.0.4 in /opt/pyvenv/lib/python3.13/site-packages (from -r /mnt/data/nabu_redesign/nabu/requirements.txt (line 5)) (46.0.4)
+Requirement already satisfied: starlette<0.51.0,>=0.40.0 in /opt/pyvenv/lib/python3.13/site-packages (from fastapi==0.128.2->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 1)) (0.50.0)
+Requirement already satisfied: pydantic>=2.7.0 in /opt/pyvenv/lib/python3.13/site-packages (from fastapi==0.128.2->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 1)) (2.13.5)
+Requirement already satisfied: typing-extensions>=4.8.0 in /opt/pyvenv/lib/python3.13/site-packages (from fastapi==0.128.2->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 1)) (4.16.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in /opt/pyvenv/lib/python3.13/site-packages (from fastapi==0.128.2->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 1)) (0.4.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /opt/pyvenv/lib/python3.13/site-packages (from fastapi==0.128.2->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 1)) (0.0.4)
+Requirement already satisfied: click>=7.0 in /opt/pyvenv/lib/python3.13/site-packages (from uvicorn==0.48.0->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 2)) (8.1.8)
+Requirement already satisfied: h11>=0.8 in /opt/pyvenv/lib/python3.13/site-packages (from uvicorn==0.48.0->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 2)) (0.16.0)
+Requirement already satisfied: anyio in /opt/pyvenv/lib/python3.13/site-packages (from httpx==0.28.1->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 3)) (4.13.0)
+Requirement already satisfied: certifi in /opt/pyvenv/lib/python3.13/site-packages (from httpx==0.28.1->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 3)) (2026.5.20)
+Requirement already satisfied: httpcore==1.* in /opt/pyvenv/lib/python3.13/site-packages (from httpx==0.28.1->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 3)) (1.0.9)
+Requirement already satisfied: idna in /opt/pyvenv/lib/python3.13/site-packages (from httpx==0.28.1->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 3)) (3.17)
+Requirement already satisfied: botocore<1.44.0,>=1.43.18 in /opt/pyvenv/lib/python3.13/site-packages (from boto3==1.43.18->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 4)) (1.43.18)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /opt/pyvenv/lib/python3.13/site-packages (from boto3==1.43.18->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 4)) (1.1.0)
+Requirement already satisfied: s3transfer<0.19.0,>=0.18.0 in /opt/pyvenv/lib/python3.13/site-packages (from boto3==1.43.18->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 4)) (0.18.0)
+Requirement already satisfied: cffi>=2.0.0 in /opt/pyvenv/lib/python3.13/site-packages (from cryptography==46.0.4->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 5)) (2.0.0)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /opt/pyvenv/lib/python3.13/site-packages (from botocore<1.44.0,>=1.43.18->boto3==1.43.18->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 4)) (2.9.0.post0)
+Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in /opt/pyvenv/lib/python3.13/site-packages (from botocore<1.44.0,>=1.43.18->boto3==1.43.18->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 4)) (2.7.0)
+Requirement already satisfied: six>=1.5 in /opt/pyvenv/lib/python3.13/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.44.0,>=1.43.18->boto3==1.43.18->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 4)) (1.17.0)
+Requirement already satisfied: pycparser in /opt/pyvenv/lib/python3.13/site-packages (from cffi>=2.0.0->cryptography==46.0.4->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 5)) (3.0)
+Requirement already satisfied: annotated-types>=0.6.0 in /opt/pyvenv/lib/python3.13/site-packages (from pydantic>=2.7.0->fastapi==0.128.2->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 1)) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in /opt/pyvenv/lib/python3.13/site-packages (from pydantic>=2.7.0->fastapi==0.128.2->-r /mnt/data/nabu_redesign/nabu/requirements.txt (line 1)) (2.46.5)
+
+Nabu 1.11.0 - local testing
+Open: http://127.0.0.1:8768/
+Database: /mnt/data/nabu-redesign-test/installed-launch.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [10294]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8768 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52754 - "GET /api/health HTTP/1.1" 200 OK

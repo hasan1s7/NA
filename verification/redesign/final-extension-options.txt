@@ -1,0 +1,8 @@
+PASS Connection page shows installation-specific extension ID (fixture)
+PASS Insecure remote server is rejected before credential transmission
+PASS Permission denial leaves no stored token
+PASS Server rejects invalid connection without storing credential
+PASS Successful connection saves account scope, clears visible secret and old drafts
+PASS Requested host permission matches only the configured origin
+PASS Explicit disconnect removes credentials and explains server revocation
+PASS No uncaught connection-page errors

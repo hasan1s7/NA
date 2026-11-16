@@ -1,0 +1,33 @@
+{
+  "width": 390,
+  "scroll": 399,
+  "elements": [
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "button secondary",
+      "text": " Edit text",
+      "width": 197.6875,
+      "right": 398.578125,
+      "display": "flex"
+    },
+    {
+      "tag": "DIV",
+      "id": "toast",
+      "cls": "toast",
+      "text": "Context, note and media preferences saved.",
+      "width": 490,
+      "right": 440,
+      "display": "flex"
+    },
+    {
+      "tag": "SPAN",
+      "id": "",
+      "cls": "",
+      "text": "Context, note and media preferences saved.",
+      "width": 414,
+      "right": 402,
+      "display": "block"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> nabu-translate-remember@1.17.0 mobile:prepare
+> node tools/prepare_mobile.mjs
+
+Built 1928554 bytes; app scripts/styles use exact SHA-256 CSP hashes.
+Bundled mobile app prepared. Offline-only build: accounts require NABU_API_ORIGIN.
