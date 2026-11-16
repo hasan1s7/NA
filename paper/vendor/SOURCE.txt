@@ -1,0 +1,6 @@
+Unmodified official ICML 2026 style files.
+Source confirmed from https://icml.cc/Conferences/2026/AuthorInstructions
+Archive URL: https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip
+Archive SHA-256: 8b29290f5828e176debb57ea9cc00252502973d55ea561a2f18a7f0a326bfc6c
+Original file headers and notices are preserved.
+Vendored files: icml2026.sty, icml2026.bst, algorithm.sty, algorithmic.sty, fancyhdr.sty.

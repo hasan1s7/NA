@@ -1,0 +1,33 @@
+/* Intent controls inherit the existing reading workspace's colors and inputs. */
+.intent-panel{border:1px solid var(--line);border-radius:12px;background:var(--white);padding:16px 20px;margin-block-end:24px;overflow-wrap:anywhere}
+.intent-summary{display:flex;gap:20px;align-items:center;justify-content:space-between}
+.intent-summary>div{min-width:0;flex:1}.intent-summary>.text-button{flex-shrink:0}
+.intent-summary .eyebrow{font-size:9px;margin:0 0 5px;letter-spacing:1.1px;color:var(--muted)}
+.intent-headline{font-size:15px;font-weight:550;line-height:1.6;margin:0}
+.intent-destination,.intent-team-objective{font-size:12px;line-height:1.65;color:var(--muted);margin-block:6px 0}
+.intent-team-objective{border-inline-start:2px solid var(--line);padding-inline-start:10px}
+.intent-quick-skip{font-size:12px;margin-block-start:6px}
+#intent-message{font-size:12px;color:var(--green);line-height:1.7}
+#intent-message:empty,#intent-error:empty{display:none}
+.intent-manager{margin-block-start:16px;border-block-start:1px solid var(--line);padding-block-start:16px}
+.intent-form>label{font-size:14px;font-weight:550;display:block;margin-block-end:8px}
+.intent-form>textarea{min-height:76px;resize:vertical;line-height:1.65}
+.intent-form .small-print{font-size:12px;line-height:1.7;margin-block:10px}
+.intent-details{margin-block:14px}.intent-details>summary{cursor:pointer;color:var(--green);font-size:13px;padding-block:8px;min-height:32px}
+.intent-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px;margin-block:14px}
+.intent-fields .form-field{margin:0;min-width:0}.intent-fields input,.intent-fields select,.intent-fields textarea{width:100%;box-sizing:border-box}
+.intent-fields small{display:block;font-size:11px;color:var(--muted);margin-block-start:5px}
+.intent-choices{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:0;min-width:0}
+.intent-choices legend{font-size:13px;padding-inline:4px}
+.intent-choices label{display:inline-flex;gap:5px;align-items:center;font-size:12px;min-height:34px;margin-inline-end:14px}
+.intent-choices input{width:16px;height:16px;accent-color:var(--green)}
+.intent-records{list-style:none;margin:8px 0 18px;padding:0}.intent-record{border-block-end:1px solid var(--line);padding-block:12px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;align-items:center}
+.intent-record>div:first-child{flex:1;min-width:180px;font-size:13px}.intent-record small{display:block;color:var(--muted);font-size:11px;margin-block-start:3px}
+.intent-record .button-row{gap:5px 12px;flex-wrap:wrap}.intent-record .text-button{font-size:12px;min-height:36px}
+.intent-manager h3{font-size:13px;font-weight:600;margin-block:18px 5px}
+.intent-scope{display:flex;align-items:center;gap:12px;margin-block-end:14px;flex-wrap:wrap}.intent-scope label{font-size:12px}.intent-scope .select{max-width:300px}
+#intent-team-form{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-block:14px}#intent-team-form .input{flex:1;min-width:150px}
+.intent-delete-confirm{flex-basis:100%;font-size:12px;background:var(--sand);border-radius:8px;padding:12px}.intent-delete-confirm p{margin-block:0 8px}
+.intent-panel :focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+@media(max-width:760px){.intent-panel{padding:14px 16px;margin-block-end:20px}.intent-summary{gap:8px}.intent-summary>.text-button{max-width:105px;font-size:12px}.intent-headline{font-size:14px}.intent-fields{grid-template-columns:1fr}.intent-scope .select{max-width:100%;flex:1}.intent-record{display:block}.intent-record>.button-row{margin-block-start:8px}.intent-form .input{font-size:16px}.intent-form>.button-row{flex-wrap:wrap}}
+@media(forced-colors:active){.intent-panel,.intent-choices{border-color:ButtonText}}

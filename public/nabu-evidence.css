@@ -1,0 +1,8 @@
+.evidence-panel{margin-block:1.25rem;border-block-start:1px solid var(--line,#dce4dc);padding-block:1rem;max-width:100%;overflow-wrap:anywhere}
+.evidence-panel>summary{cursor:pointer;font-weight:600;color:var(--green,#24624f)}
+.evidence-panel p,.evidence-dialog p,.evidence-check p{line-height:1.65}
+.evidence-ledger{padding-inline-start:1.35rem;margin-block:1rem}.evidence-ledger>li{margin-block-end:1.2rem}.evidence-ledger p{margin-block:.35rem}.evidence-ledger code{font-size:.75rem;overflow-wrap:anywhere}
+.evidence-ledger details{font-size:.875rem}.evidence-options{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;margin-block:1rem}.evidence-options p{flex-basis:100%;margin:0}
+.evidence-dialog details,.evidence-check details{margin-block:1rem}.evidence-dialog details .text-button{display:block;text-align:start;min-height:44px}.evidence-check>button{margin-block-start:1rem}.evidence-check input[type=text],.evidence-check input:not([type]){width:100%;box-sizing:border-box}
+.evidence-check h2[dir=auto]{line-height:1.65}.evidence-panel .button-row,.evidence-check .button-row,.evidence-dialog .button-row{flex-wrap:wrap}
+@media(max-width:600px){.evidence-panel .button-row>*{min-height:44px}.evidence-check .button-row>*{flex:1 1 100%}.evidence-options{align-items:flex-start}.evidence-ledger{padding-inline-start:1.15rem}}
