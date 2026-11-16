@@ -1,0 +1,52 @@
+name: Deploy Nabu Pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/**'
+      - 'data/**'
+      - 'tools/**'
+      - 'tests/**'
+      - 'package.json'
+      - '.github/workflows/nabu-pages.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: nabu-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install existing development dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Build bundled application
+        run: npm run build
+      - name: JavaScript regression tests
+        run: npm test
+      - name: DOM and palette regression tests
+        run: npm run test:dom
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Nabu
+        id: deployment
+        uses: actions/deploy-pages@v4
