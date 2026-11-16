@@ -1,0 +1,7 @@
+PASS Authored ambiguity is surfaced only after an in-context lookup
+PASS Two plausible structures remain visible and movement is selected as the next informative test
+PASS Movement updates sentence-level relative support toward the instrumental analysis
+PASS Coordination can remain explicitly inconclusive instead of forcing a parse
+PASS Syntax diagnostics never mutate learner cards or review evidence
+PASS Structure lens remains usable in the mobile word sheet
+PASS No uncaught browser errors

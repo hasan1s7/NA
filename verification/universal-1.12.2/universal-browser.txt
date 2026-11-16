@@ -1,0 +1,6 @@
+PASS Selecting a word surfaces a checked phrase from the same passage
+PASS Phrase opens one short meaning with secondary detail behind Read more
+PASS Original passage stays untouched
+PASS Phrase support remains usable as the mobile sheet
+PASS Japanese phrase discovery works without spaces
+PASS No uncaught browser errors

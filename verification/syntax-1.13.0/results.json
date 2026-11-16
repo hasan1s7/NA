@@ -1,0 +1,18 @@
+{
+  "passed": 7,
+  "checks": [
+    "Authored ambiguity is surfaced only after an in-context lookup",
+    "Two plausible structures remain visible and movement is selected as the next informative test",
+    "Movement updates sentence-level relative support toward the instrumental analysis",
+    "Coordination can remain explicitly inconclusive instead of forcing a parse",
+    "Syntax diagnostics never mutate learner cards or review evidence",
+    "Structure lens remains usable in the mobile word sheet",
+    "No uncaught browser errors"
+  ],
+  "errors": [],
+  "screenshots": [
+    "structure-lens-desktop.png",
+    "structure-lens-phone.png"
+  ],
+  "boundary": "Focused UI verification for Nabu 1.13 structural ambiguity support.\nUses the repository's existing IndexedDB/fetch fixtures and actual FastAPI/SQLite.\nThis verifies the authored structure-lens interaction, not general parsing ability.\n"
+}

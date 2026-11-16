@@ -1,0 +1,17 @@
+{
+  "passed": 6,
+  "checks": [
+    "Selecting a word surfaces a checked phrase from the same passage",
+    "Phrase opens one short meaning with secondary detail behind Read more",
+    "Original passage stays untouched",
+    "Phrase support remains usable as the mobile sheet",
+    "Japanese phrase discovery works without spaces",
+    "No uncaught browser errors"
+  ],
+  "errors": [],
+  "screenshots": [
+    "spanish-phrase-desktop.png",
+    "spanish-phrase-phone.png"
+  ],
+  "boundary": "Focused UI verification for Nabu 1.12.2 universal word + phrase support.\nUses the repository's explicit URL/IndexedDB/fetch fixtures with actual FastAPI/SQLite.\nThis is not native browser persistence, audible speech, or deployed hosting evidence.\n"
+}

@@ -1,0 +1,23 @@
+PASS Documented launcher starts packaged version 1.13.0
+PASS Shipping route /explore
+PASS Shipping route /read?content=a-little-later&version=1
+PASS Shipping route /words
+PASS Shipping route /library
+PASS Shipping route /review
+PASS Shipping route /settings
+PASS Text and progress path needs no provider setup
+PASS Private progress rejects anonymous reads
+PASS Existing signup preserved
+PASS Existing card API saves source, note, reading, image and schedule
+PASS All seven progress event kinds persist in account database
+PASS Lost-acknowledgment retry keeps exactly one event per ID
+PASS Changed payload with reused ID is refused
+PASS A stale different-account tab cannot write
+PASS Existing CSRF protection applies to progress
+PASS Practice created no hidden cards or schedule changes
+PASS Existing login survives process restart
+PASS Exact source version, position, preference and practice survive restart
+PASS Original saved word metadata and schedule survive restart
+PASS Signing out removes access to private progress
+PASS Second account cannot see first account progress
+PASS Existing SQLite backup includes private content progress
