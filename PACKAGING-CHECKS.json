@@ -1,0 +1,22 @@
+{
+  "release": "1.17.0",
+  "build": "nabu-workspaces-1.17-20261115-r2",
+  "rootFolder": "Nabu-1.17",
+  "privateDataExcluded": true,
+  "launchers": [
+    "Start-Nabu.cmd",
+    "Start-Nabu.command",
+    "start-local.sh",
+    "start_local.py"
+  ],
+  "verifiedPlatform": "Linux loopback HTTP and DOM fixtures",
+  "nativePlatformsUntested": [
+    "Windows",
+    "macOS",
+    "iOS",
+    "Android"
+  ],
+  "noExternalDeployment": true,
+  "currentVerification": "docs/VERIFICATION_OVERNIGHT.md",
+  "preservation": "verification/overnight/preservation.json"
+}

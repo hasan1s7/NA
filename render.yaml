@@ -1,0 +1,34 @@
+# One paid Render web service with a persistent SQLite disk.
+# Review Render's current price before accepting the deployment. This file creates
+# no resource until you explicitly deploy it through your Render account.
+services:
+  - type: web
+    name: nabu
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    disk:
+      name: nabu-database
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NABU_HOST
+        value: 0.0.0.0
+      - key: NABU_BACKUP_ENABLED
+        value: "true"
+      - key: NABU_DB
+        value: /var/data/nabu.sqlite3
+      - key: NABU_OPEN_SIGNUP
+        value: "true"
+      - key: NABU_TRANSLATION_DAILY_CHARS
+        value: "50000"
+      - key: NABU_SPEECH_DAILY_CHARS
+        value: "10000"
+      - key: NABU_SPEECH_USER_DAILY_CHARS
+        value: "3000"
+# NABU_ORIGIN defaults to the platform-provided RENDER_EXTERNAL_URL.
+# For a custom domain, set NABU_ORIGIN to its exact https:// origin (no path).
+# Add DeepL / ElevenLabs keys privately in Environment; they are optional.

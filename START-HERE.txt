@@ -1,0 +1,12 @@
+NABU 1.17
+
+Extract the entire archive.
+Windows: double-click Start-Nabu.cmd.
+macOS: open Start-Nabu.command, or run bash start-local.sh.
+Linux: run bash start-local.sh.
+Requires Python 3.11+; first setup needs internet for the existing pinned dependencies.
+Open http://127.0.0.1:8000/explore and keep the terminal open.
+
+Read START_HERE.md before upgrading. Preserve your .data, .env.local, browser profile and exact origin.
+New backend: Settings & data > Workspaces & assignments > Open workspaces.
+Release scope, tests and limitations are in docs/RELEASE_NOTES_1.17.md and docs/VERIFICATION_1.17.md.

@@ -1,0 +1,60 @@
+{
+  "name": "nabu-translate-remember",
+  "version": "1.17.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "serve": "python start_local.py",
+    "build": "python tools/build_content.py && python tools/expand_bank.py && python tools/build_graph.py && python tools/build_media_catalogue.py && python tools/build_standalone.py",
+    "test:ui": "python tests/startup_browser.py && python tests/next_browser.py && python tests/bank_browser.py && python tests/mobile_links_browser.py",
+    "test:hosted": "python tests/browser_smoke.py",
+    "test:api": "python -m pytest -q",
+    "mobile:sync": "npm run mobile:prepare && npx --no-install cap sync && node tools/configure_native.mjs",
+    "mobile:ios": "npx --no-install cap open ios",
+    "mobile:android": "npx --no-install cap open android",
+    "mobile:prepare": "node tools/prepare_mobile.mjs",
+    "mobile:release": "node tools/prepare_mobile.mjs --release",
+    "mobile:init": "node tools/native_projects.mjs",
+    "mobile:doctor": "node tools/mobile_doctor.mjs",
+    "start": "python start_local.py",
+    "serve:static": "python -m http.server 8080 --directory public",
+    "test:media": "node --test tests/media.test.mjs tests/extension.test.mjs && python -m pytest tests/test_media_services.py -q && python tests/media_browser.py && python tests/extension_browser.py && python tests/extension_options_browser.py",
+    "test:redesign": "node --test tests/reading-ui.test.mjs && python tests/redesign_browser.py && python tests/redesign_accessibility.py && python tests/redesign_http.py",
+    "test:meaning": "node --test tests/illustrations.test.mjs tests/transliteration.test.mjs && python -m pytest -q tests/test_meaning_tools.py && python tests/meaning_tools_browser.py",
+    "test:explore": "node --test tests/content.test.mjs tests/content-store.test.mjs && python -m pytest -q tests/test_content_progress.py && python tests/explore_browser.py && python tests/explore_http.py",
+    "test:syntax": "node --test tests/syntax-interventions.test.mjs && python tests/syntax_browser.py",
+    "test:intents": "node --test tests/intents.test.mjs tests/intent-store.test.mjs && python -m pytest -q tests/test_intents.py",
+    "test:intent-ui": "node --test tests/intent-ui.dom.mjs",
+    "test:next-step": "node --test tests/next-step.test.mjs tests/structure.test.mjs && python -m pytest -q tests/test_next_step_inputs.py",
+    "test:next-step-ui": "node --test tests/next-step-ui.dom.mjs tests/next-step-bundle.dom.mjs",
+    "test:evidence": "node --test tests/observations.test.mjs tests/evidence-tasks-policy.test.mjs tests/evidence-evaluation.test.mjs tests/content.test.mjs tests/content-store.test.mjs && python -m pytest -q tests/test_evidence_events.py",
+    "test:evidence-ui": "node --test tests/evidence-ui.dom.mjs tests/evidence-bundle.dom.mjs",
+    "evaluate:evidence": "node tools/evaluate_evidence.mjs --output docs/evidence-evaluation",
+    "demo:evidence": "node tools/evidence_episode_demo.mjs",
+    "test:graph": "node --test tests/graph-kernel.test.mjs tests/structure-query.test.mjs tests/next-step-graph.test.mjs tests/graph-evaluation.test.mjs",
+    "evaluate:graph": "node tools/evaluate_graph.mjs --output docs/graph-evaluation",
+    "test:learner": "node --test tests/learner-*.test.mjs",
+    "test:learner-ui": "node --test tests/learner-ui.dom.mjs tests/learner-bundle.dom.mjs",
+    "evaluate:learner": "node tools/evaluate_learner.mjs --output docs/learner-evaluation/results.json",
+    "test:scribe": "node --test tests/scribe.test.mjs tests/scribe-bundle.dom.mjs && python -m pytest -q tests/test_scribe_release.py",
+    "test:dom": "node --test --test-concurrency=1 tests/*.dom.mjs",
+    "test:institutions": "python -m pytest -q tests/test_institutions.py && node --test tests/assignment-outbox.test.mjs tests/institutions.dom.mjs"
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.0.0",
+    "esbuild": "0.25.0",
+    "jsdom": "31.0.1"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.0.0",
+    "@capacitor/ios": "8.0.0",
+    "@capacitor/android": "8.0.0",
+    "@capacitor/app": "8.0.0",
+    "@capacitor/share": "8.0.0",
+    "@capacitor/filesystem": "8.0.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "appId": "app.nabu.learn",
+  "appName": "Nabu",
+  "webDir": "mobile/www",
+  "loggingBehavior": "none",
+  "server": {"hostname": "localhost", "androidScheme": "https", "iosScheme": "capacitor", "cleartext": false},
+  "ios": {"contentInset": "never"},
+  "android": {"allowMixedContent": false, "webContentsDebuggingEnabled": false},
+  "plugins": {"CapacitorHttp": {"enabled": false}, "CapacitorCookies": {"enabled": false}}
+}

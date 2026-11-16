@@ -1,0 +1,29 @@
+# Exact changes: Nabu 1.12.0 to 1.12.1
+
+- `+` `CHANGED_FILES_1.12.1.md`
+- `M` `CHANGES.md`
+- `M` `CONTENT_AUTHORING.md`
+- `M` `FEATURE_STATUS.md`
+- `M` `HANDOFF.md`
+- `M` `MVP_1.12_REPORT.md`
+- `M` `README.md`
+- `M` `RUN_NABU_1.12.md`
+- `M` `START_HERE.md`
+- `M` `chrome-extension/manifest.json`
+- `M` `data/explore.json`
+- `M` `package.json`
+- `M` `public/index.html`
+- `M` `public/nabu-content-catalogue.js`
+- `M` `public/nabu-sw.js`
+- `M` `server.py`
+- `M` `start_local.py`
+- `M` `tests/content.test.mjs`
+- `M` `tests/explore_http.py`
+- `M` `tests/redesign_http.py`
+- `M` `tools/build_standalone.py`
+- `M` `verification/mvp112/browser-results.json`
+- `M` `verification/mvp112/explore-desktop.png`
+- `M` `verification/mvp112/final/explore-http-server.txt`
+- `M` `verification/mvp112/final/explore-http.json`
+- `M` `verification/mvp112/reader-200-percent-css.png`
+- `M` `verification/mvp112/reader-context-phone-rtl.png`

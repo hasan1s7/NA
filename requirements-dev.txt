@@ -1,0 +1,7 @@
+pytest>=8,<10
+playwright>=1.50,<2
+# Optional research-only FSRS replay; intentionally not installed in production:
+# fsrs==6.3.0
+
+# Needed only to regenerate the current approximate draft transliterations.
+Unidecode==1.4.0

@@ -1,0 +1,3 @@
+# Optional local speech-to-text only. Install into Nabu's existing .venv.
+# Model weights are an explicit separate download (tools/setup_speech.py).
+faster-whisper==1.2.1
