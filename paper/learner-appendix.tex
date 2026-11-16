@@ -1,0 +1,158 @@
+\clearpage
+\appendix
+\section{What Contrasts Can Identify in a Small Submodel}
+
+It is helpful to distinguish a likelihood that becomes more informative from
+one that identifies every latent mechanism. Consider a static, noise-free
+submodel of one learner, one form, and one response mode. Let \(b\) be the
+base-recall probability, \(p\) the pattern-execution probability, and \(r\)
+the whole-form memory probability. Let the three tasks have exact population
+response probabilities
+\begin{equation}
+ p_B=b,\qquad
+ p_C=r+(1-r)p,\qquad
+ p_F=r+(1-r)bp .
+\end{equation}
+Here \(B\) is base recall, \(C\) supplies the base and asks for the derived
+form, and \(F\) supplies only the lexical action and form category.
+If \(b\ne1\) and \(r\ne1\), the stipulated model permits
+\begin{equation}
+ r=\frac{p_F-bp_C}{1-b},\qquad
+ p=\frac{p_C-r}{1-r}.
+\end{equation}
+This algebra explains why changing the tested ingredients can help.
+It also exposes boundaries. When \(b\) is close to one, separating the memory
+route from the pattern route is ill-conditioned. If all three response
+probabilities are noisy estimates, the algebra need not yield admissible
+probabilities without an appropriate likelihood. Different response modes
+cannot be substituted for each other in these equations. A recognition
+success is not an observation of \(p_B\) for production.
+
+The full implemented model adds contextual, word, language, temporal, and
+hierarchical variation; its generic diagnostic flags do not claim the above
+three-equation identification result applies automatically. A different base
+with the same bounded pattern supplies additional contrast while retaining
+its own word memory and lexical knowledge.
+
+\section{Why Inactive Coefficients Can Be Collapsed}
+
+Partition the Gaussian effect vector into coefficients \(\theta_A\) that
+appear in the accepted likelihood and coefficients \(\theta_U\) that do not.
+Conditional on the variance groups, the declared prior factors over
+coefficients. Therefore
+\begin{equation}
+\begin{split}
+ p(\theta_A,\tau^2\mid D)
+ &\propto p(D\mid\theta_A)\,
+          p(\theta_A\mid\tau^2)\,p(\tau^2)\\
+ &\quad\cdot\int p(\theta_U\mid\tau^2)\,d\theta_U\\
+ &=p(D\mid\theta_A)\,
+          p(\theta_A\mid\tau^2)\,p(\tau^2).
+\end{split}
+\end{equation}
+The equality holds up to normalization. Sampling this marginal posterior
+avoids adding many unobserved catalogue
+effects to the variance-Gibbs transition. For a retained
+\((\theta_A,\tau^2)\), drawing \(\theta_U\) from its conditional Gaussian
+prior reconstructs a draw from the full posterior. The same reconstruction
+is used across all task predictions for that draw; unrelated marginal
+prediction arrays are never independently shuffled before computing EVSI.
+
+The active set is defined by the accepted likelihood, not merely by a task
+being present in the catalogue. Variance groups with no active coefficients
+remain prior-only. Such labels distinguish a learned shared ability from a
+group variance that has evidence elsewhere, and from a wholly untouched
+prior. The export preserves all three cases.
+
+\section{Reproduction and Artifact Layout}
+
+The package retains the original graph, reader, account store, and backend.
+The new pure modules separate tasks, audited input, posterior inference,
+and decisions. The live UI writes through the existing content-event API.
+No additional runtime package or external model provider is needed for
+inference. Python and browser development dependencies are used only for
+existing application hosting, testing, or paper generation.
+
+\begin{table*}[h]
+\caption{Implementation entry points and the contract each owns.}
+\centering\small
+\begin{tabular}{@{}p{.43\textwidth}p{.51\textwidth}@{}}
+\toprule
+Artifact & Responsibility \\
+\midrule
+\artifact{public/nabu-learner-tasks.js} &
+Versioned task conditions, answer rules, component map, exposure identities,
+source integrity gates. \\
+\artifact{public/nabu-learner-observations.js} &
+Actor-scoped evidence admission, conditioned tasks, exposure reconciliation,
+bounded audit witnesses. \\
+\artifact{public/nabu-learner-model.js} &
+Hierarchical likelihood, collapsed sampling, prediction, hyperparameters,
+diagnostics, explicit cohort API. \\
+\artifact{public/nabu-learner-policy.js} &
+Validated support effects, posterior loss, binary EVSI, budget and work bounds. \\
+\artifact{public/nabu-learner-ui.js} &
+Goal selection, live task delivery, idempotent writes, cancellation,
+posterior refresh and export. \\
+\artifact{tools/evaluate_learner.mjs} &
+Independent reference calculation and seeded synthetic decision/prediction
+report. \\
+\artifact{docs/LEARNER_VERIFICATION.md} &
+Recorded test outcomes and concrete limits of the execution environment. \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Run the implementation and verification commands from the package root:
+\begin{verbatim}
+python start_local.py
+npm test
+python -m pytest -q
+npm run test:learner
+npm run evaluate:learner
+python tools/build_standalone.py
+\end{verbatim}
+The DOM suites require the pinned jsdom development dependency, installed by
+\texttt{npm install}; an existing installation can be selected with
+\texttt{NABU\_TEST\_JSDOM}. The corresponding commands are
+\texttt{npm run test:learner-ui} and the existing evidence, intent, and
+next-step UI scripts. This test dependency is not shipped in the application's
+runtime bundle.
+
+Generate figures and the current paper from saved results:
+{\footnotesize
+\begin{verbatim}
+python tools/build_learner_paper_figures.py
+python tools/build_paper.py \
+  --paper nabu-learner
+\end{verbatim}
+}
+The figure manifest records the numerical report hash. The shipping HTML is
+rebuilt with exact script and style hashes and a matching service-worker build
+identity. The delivery manifest records file hashes for the release package
+and paper. Earlier papers and baseline evaluation tools are preserved as
+historical artifacts, not presented as results of this new learner model.
+
+\section{Privacy and Practical Boundaries}
+
+The current actor and selected team context delimit usable events. Separate
+people are not pooled merely because their accounts belong to one team.
+The cohort API is an explicit analytical facility whose caller must supply
+authorized data and scope. A downloaded model record contains that actor's
+scoped evidence and inferred posterior; it is an intentional user action,
+not automatic telemetry.
+
+The existing API accepts authenticated client observations. It does not
+proctor performance or verify that a person answered unaided outside the
+interface. Exact references and exposure controls make a record interpretable;
+they cannot prevent all unrecorded help. The authored 30-minute exposure
+window is a conservative operational rule, not an estimated forgetting time
+or a claim that responses become statistically independent at its boundary.
+
+Hint events are committed before displaying the cue. If the action is
+cancelled while the save is pending, that event conservatively records
+possibly supplied support even though the cue may never appear. This can
+exclude a later response for the session. The present schema also lacks
+the exact selected cue identity, so replay uses the union of maintained
+possible cues for that task. Neither case is treated as proof of unaided
+success.

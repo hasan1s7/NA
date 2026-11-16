@@ -1,0 +1,598 @@
+
+> nabu-translate-remember@1.2.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: translation and history commit together without an explicit save action
+ok 1 - translation and history commit together without an explicit save action
+  ---
+  duration_ms: 53.439858
+  type: 'test'
+  ...
+# Subtest: rapid repeated saves produce one card and one history entry
+ok 2 - rapid repeated saves produce one card and one history entry
+  ---
+  duration_ms: 131.722566
+  type: 'test'
+  ...
+# Subtest: duplicate lookup preserves schedule, notes, text edits and identity
+ok 3 - duplicate lookup preserves schedule, notes, text edits and identity
+  ---
+  duration_ms: 86.70001
+  type: 'test'
+  ...
+# Subtest: legacy card is linked in place, not duplicated or reset
+ok 4 - legacy card is linked in place, not duplicated or reset
+  ---
+  duration_ms: 63.121126
+  type: 'test'
+  ...
+# Subtest: a legacy homograph cannot collapse two different graph meanings
+ok 5 - a legacy homograph cannot collapse two different graph meanings
+  ---
+  duration_ms: 52.848229
+  type: 'test'
+  ...
+# Subtest: reopening an archived translation restores it without resetting review
+ok 6 - reopening an archived translation restores it without resetting review
+  ---
+  duration_ms: 65.899175
+  type: 'test'
+  ...
+# Subtest: a stale async translation creates neither a card nor a history record
+ok 7 - a stale async translation creates neither a card nor a history record
+  ---
+  duration_ms: 18.660576
+  type: 'test'
+  ...
+# Subtest: storage write failure rolls back both stores and retry succeeds
+ok 8 - storage write failure rolls back both stores and retry succeeds
+  ---
+  duration_ms: 35.200923
+  type: 'test'
+  ...
+# Subtest: same translation from cloud or manual input does not duplicate a graph card
+ok 9 - same translation from cloud or manual input does not duplicate a graph card
+  ---
+  duration_ms: 43.375936
+  type: 'test'
+  ...
+# Subtest: history remains bounded while saved vocabulary is retained
+ok 10 - history remains bounded while saved vocabulary is retained
+  ---
+  duration_ms: 624.096868
+  type: 'test'
+  ...
+# Subtest: reverse translations have independent schedules
+ok 11 - reverse translations have independent schedules
+  ---
+  duration_ms: 46.514726
+  type: 'test'
+  ...
+# Subtest: new cards have independent identities and due schedules
+ok 12 - new cards have independent identities and due schedules
+  ---
+  duration_ms: 6.628093
+  type: 'test'
+  ...
+# Subtest: all six UN languages are selectable
+ok 13 - all six UN languages are selectable
+  ---
+  duration_ms: 0.300193
+  type: 'test'
+  ...
+# Subtest: card validation rejects same-language cards
+ok 14 - card validation rejects same-language cards
+  ---
+  duration_ms: 2.010526
+  type: 'test'
+  ...
+# Subtest: card validation rejects unsupported languages and empty sides
+ok 15 - card validation rejects unsupported languages and empty sides
+  ---
+  duration_ms: 0.263198
+  type: 'test'
+  ...
+# Subtest: card validation enforces sizes and control-character rules
+ok 16 - card validation enforces sizes and control-character rules
+  ---
+  duration_ms: 0.3777
+  type: 'test'
+  ...
+# Subtest: tags are deduplicated and private text is retained locally
+ok 17 - tags are deduplicated and private text is retained locally
+  ---
+  duration_ms: 0.833198
+  type: 'test'
+  ...
+# Subtest: identity handles canonical Unicode, case, and whitespace
+ok 18 - identity handles canonical Unicode, case, and whitespace
+  ---
+  duration_ms: 0.418672
+  type: 'test'
+  ...
+# Subtest: different meanings are not incorrectly deduplicated
+ok 19 - different meanings are not incorrectly deduplicated
+  ---
+  duration_ms: 0.208675
+  type: 'test'
+  ...
+# Subtest: deck names do not allow duplicated learning items
+ok 20 - deck names do not allow duplicated learning items
+  ---
+  duration_ms: 0.564683
+  type: 'test'
+  ...
+# Subtest: reverse cards start fresh with a separate review schedule
+ok 21 - reverse cards start fresh with a separate review schedule
+  ---
+  duration_ms: 0.672545
+  type: 'test'
+  ...
+# Subtest: new card four buttons have explicit learning intervals
+ok 22 - new card four buttons have explicit learning intervals
+  ---
+  duration_ms: 0.422909
+  type: 'test'
+  ...
+# Subtest: Good twice graduates a new card to a one-day review
+ok 23 - Good twice graduates a new card to a one-day review
+  ---
+  duration_ms: 0.1922
+  type: 'test'
+  ...
+# Subtest: Again in learning resets the learning step but not review lapse count
+ok 24 - Again in learning resets the learning step but not review lapse count
+  ---
+  duration_ms: 0.144288
+  type: 'test'
+  ...
+# Subtest: review ratings increase monotonically
+ok 25 - review ratings increase monotonically
+  ---
+  duration_ms: 0.257859
+  type: 'test'
+  ...
+# Subtest: a review lapse enters relearning and preserves historical reps
+ok 26 - a review lapse enters relearning and preserves historical reps
+  ---
+  duration_ms: 0.108364
+  type: 'test'
+  ...
+# Subtest: relearning Good graduates conservatively
+ok 27 - relearning Good graduates conservatively
+  ---
+  duration_ms: 0.082324
+  type: 'test'
+  ...
+# Subtest: scheduler never mutates its input
+ok 28 - scheduler never mutates its input
+  ---
+  duration_ms: 0.122375
+  type: 'test'
+  ...
+# Subtest: invalid grades are rejected
+ok 29 - invalid grades are rejected
+  ---
+  duration_ms: 0.19171
+  type: 'test'
+  ...
+# Subtest: long review sequences keep intervals and ease bounded
+ok 30 - long review sequences keep intervals and ease bounded
+  ---
+  duration_ms: 1.628209
+  type: 'test'
+  ...
+# Subtest: due queue excludes archived and future cards
+ok 31 - due queue excludes archived and future cards
+  ---
+  duration_ms: 0.27776
+  type: 'test'
+  ...
+# Subtest: relearning takes priority over review and new items
+ok 32 - relearning takes priority over review and new items
+  ---
+  duration_ms: 0.137758
+  type: 'test'
+  ...
+# Subtest: daily new-word cap counts distinct introduced cards
+ok 33 - daily new-word cap counts distinct introduced cards
+  ---
+  duration_ms: 9.773387
+  type: 'test'
+  ...
+# Subtest: new-word limit never suppresses overdue reviews
+ok 34 - new-word limit never suppresses overdue reviews
+  ---
+  duration_ms: 0.302787
+  type: 'test'
+  ...
+# Subtest: statistics do not invent mastery or activity
+ok 35 - statistics do not invent mastery or activity
+  ---
+  duration_ms: 0.315426
+  type: 'test'
+  ...
+# Subtest: streaks can continue from yesterday without claiming today was studied
+ok 36 - streaks can continue from yesterday without claiming today was studied
+  ---
+  duration_ms: 0.227313
+  type: 'test'
+  ...
+# Subtest: activity day uses the local date rather than the UTC date
+ok 37 - activity day uses the local date rather than the UTC date
+  ---
+  duration_ms: 0.291059
+  type: 'test'
+  ...
+# Subtest: chunking preserves UTF-8 text without exceeding provider byte limit
+ok 38 - chunking preserves UTF-8 text without exceeding provider byte limit
+  ---
+  duration_ms: 3.043996
+  type: 'test'
+  ...
+# Subtest: long unspaced Chinese and emoji text round-trips across chunks
+ok 39 - long unspaced Chinese and emoji text round-trips across chunks
+  ---
+  duration_ms: 15.638769
+  type: 'test'
+  ...
+# Subtest: sharing contains neither private notes nor progress
+ok 40 - sharing contains neither private notes nor progress
+  ---
+  duration_ms: 0.50313
+  type: 'test'
+  ...
+# Subtest: Unicode word links round-trip safely
+ok 41 - Unicode word links round-trip safely
+  ---
+  duration_ms: 1.017607
+  type: 'test'
+  ...
+# Subtest: tampered and oversized links are rejected
+ok 42 - tampered and oversized links are rejected
+  ---
+  duration_ms: 0.240834
+  type: 'test'
+  ...
+# Subtest: prototype-like payload properties cannot inject new fields
+ok 43 - prototype-like payload properties cannot inject new fields
+  ---
+  duration_ms: 0.107102
+  type: 'test'
+  ...
+# Subtest: HTML is escaped, not interpreted
+ok 44 - HTML is escaped, not interpreted
+  ---
+  duration_ms: 0.136056
+  type: 'test'
+  ...
+# Subtest: CSV parser understands quoted commas and newlines
+ok 45 - CSV parser understands quoted commas and newlines
+  ---
+  duration_ms: 2.915703
+  type: 'test'
+  ...
+# Subtest: CSV parser does not erase hashtag lines inside quoted context
+ok 46 - CSV parser does not erase hashtag lines inside quoted context
+  ---
+  duration_ms: 0.408828
+  type: 'test'
+  ...
+# Subtest: unclosed quoted imports fail instead of silently corrupting data
+ok 47 - unclosed quoted imports fail instead of silently corrupting data
+  ---
+  duration_ms: 0.122505
+  type: 'test'
+  ...
+# Subtest: Anki TSV export can be imported with supplied language defaults
+ok 48 - Anki TSV export can be imported with supplied language defaults
+  ---
+  duration_ms: 0.592665
+  type: 'test'
+  ...
+# Subtest: import rejects a bad row before returning any cards
+ok 49 - import rejects a bad row before returning any cards
+  ---
+  duration_ms: 3.776302
+  type: 'test'
+  ...
+# Subtest: JSON backups restore schedules and full review history
+ok 50 - JSON backups restore schedules and full review history
+  ---
+  duration_ms: 0.969464
+  type: 'test'
+  ...
+# Subtest: backup cannot restore secrets or arbitrary provider URLs
+ok 51 - backup cannot restore secrets or arbitrary provider URLs
+  ---
+  duration_ms: 0.571213
+  type: 'test'
+  ...
+# Subtest: malformed scheduler state, counters, and algorithm are rejected
+ok 52 - malformed scheduler state, counters, and algorithm are rejected
+  ---
+  duration_ms: 0.442318
+  type: 'test'
+  ...
+# Subtest: unsupported backup versions are not silently imported
+ok 53 - unsupported backup versions are not silently imported
+  ---
+  duration_ms: 0.174734
+  type: 'test'
+  ...
+# Subtest: all provided starter examples are valid cards
+ok 54 - all provided starter examples are valid cards
+  ---
+  duration_ms: 0.13918
+  type: 'test'
+  ...
+# Subtest: TSV quotation marks survive an export/import round trip
+ok 55 - TSV quotation marks survive an export/import round trip
+  ---
+  duration_ms: 0.159661
+  type: 'test'
+  ...
+# Subtest: quoted tab inside a CSV field is not mistaken for its delimiter
+ok 56 - quoted tab inside a CSV field is not mistaken for its delimiter
+  ---
+  duration_ms: 0.093972
+  type: 'test'
+  ...
+# Subtest: Anki tags with whitespace are converted into portable underscore tags
+ok 57 - Anki tags with whitespace are converted into portable underscore tags
+  ---
+  duration_ms: 0.105449
+  type: 'test'
+  ...
+# Subtest: exactly 300 complete concepts and 132 language directions
+ok 58 - exactly 300 complete concepts and 132 language directions
+  ---
+  duration_ms: 2.101412
+  type: 'test'
+  ...
+# Subtest: all 39,600 directed translations and round trips preserve the intended concept
+ok 59 - all 39,600 directed translations and round trips preserve the intended concept
+  ---
+  duration_ms: 210.756826
+  type: 'test'
+  ...
+# Subtest: all authored aliases resolve to the same sense
+ok 60 - all authored aliases resolve to the same sense
+  ---
+  duration_ms: 0.911386
+  type: 'test'
+  ...
+# Subtest: every concept participates in one connected topic/semantic graph
+ok 61 - every concept participates in one connected topic/semantic graph
+  ---
+  duration_ms: 53.875841
+  type: 'test'
+  ...
+# Subtest: ambiguous light, orange, fish, and work never choose silently
+ok 62 - ambiguous light, orange, fish, and work never choose silently
+  ---
+  duration_ms: 0.423009
+  type: 'test'
+  ...
+# Subtest: non-English homographs remain sense-aware
+ok 63 - non-English homographs remain sense-aware
+  ---
+  duration_ms: 0.255896
+  type: 'test'
+  ...
+# Subtest: no English-pivot fallback or unrequested translation of unknown words
+ok 64 - no English-pivot fallback or unrequested translation of unknown words
+  ---
+  duration_ms: 18.590581
+  type: 'test'
+  ...
+# Subtest: normalization handles punctuation, decomposed accents and Arabic vocalization
+ok 65 - normalization handles punctuation, decomposed accents and Arabic vocalization
+  ---
+  duration_ms: 0.341295
+  type: 'test'
+  ...
+# Subtest: Turkish case normalization uses the Turkish locale
+ok 66 - Turkish case normalization uses the Turkish locale
+  ---
+  duration_ms: 0.298481
+  type: 'test'
+  ...
+# Subtest: lookup rejects same-language pairs, bad languages and wrong sense IDs
+ok 67 - lookup rejects same-language pairs, bad languages and wrong sense IDs
+  ---
+  duration_ms: 0.641438
+  type: 'test'
+  ...
+# Subtest: search can discover all scripts but fuzzy search never becomes automatic translation
+ok 68 - search can discover all scripts but fuzzy search never becomes automatic translation
+  ---
+  duration_ms: 19.749631
+  type: 'test'
+  ...
+# Subtest: each concept has all eleven target-language neighbors
+ok 69 - each concept has all eleven target-language neighbors
+  ---
+  duration_ms: 19.740778
+  type: 'test'
+  ...
+# Subtest: sense identity separates visually identical cards and preserves user edits
+ok 70 - sense identity separates visually identical cards and preserves user edits
+  ---
+  duration_ms: 0.248675
+  type: 'test'
+  ...
+# Subtest: concept identity survives a full backup and reverse cards use independent directions
+ok 71 - concept identity survives a full backup and reverse cards use independent directions
+  ---
+  duration_ms: 10.897534
+  type: 'test'
+  ...
+# Subtest: share payload still excludes private notes, schedules and internal graph metadata
+ok 72 - share payload still excludes private notes, schedules and internal graph metadata
+  ---
+  duration_ms: 0.245301
+  type: 'test'
+  ...
+# Subtest: large translation cards are saved without silent truncation; sharing stays bounded
+ok 73 - large translation cards are saved without silent truncation; sharing stays bounded
+  ---
+  duration_ms: 0.573266
+  type: 'test'
+  ...
+# Subtest: speech cache isolates accounts
+ok 74 - speech cache isolates accounts
+  ---
+  duration_ms: 1.091017
+  type: 'test'
+  ...
+# Subtest: speech cache isolates languages and models
+ok 75 - speech cache isolates languages and models
+  ---
+  duration_ms: 0.164278
+  type: 'test'
+  ...
+# Subtest: speech cache preserves diacritics and normalizes equivalent Unicode
+ok 76 - speech cache preserves diacritics and normalizes equivalent Unicode
+  ---
+  duration_ms: 0.217779
+  type: 'test'
+  ...
+# Subtest: speed changes reuse the same generated recording
+ok 77 - speed changes reuse the same generated recording
+  ---
+  duration_ms: 0.108074
+  type: 'test'
+  ...
+# Subtest: new media policy allows private blobs, not remote provider connections
+ok 78 - new media policy allows private blobs, not remote provider connections
+  ---
+  duration_ms: 14.227192
+  type: 'test'
+  ...
+# Subtest: speech implementation has bounded cache and does not persist audio
+ok 79 - speech implementation has bounded cache and does not persist audio
+  ---
+  duration_ms: 4.349668
+  type: 'test'
+  ...
+# Subtest: shipping index has no external JS/CSS startup dependencies
+ok 80 - shipping index has no external JS/CSS startup dependencies
+  ---
+  duration_ms: 11.748334
+  type: 'test'
+  ...
+# Subtest: index and repair exact scripts/styles are authorized by SHA-256 CSP
+ok 81 - index and repair exact scripts/styles are authorized by SHA-256 CSP
+  ---
+  duration_ms: 16.249491
+  type: 'test'
+  ...
+# Subtest: application and independent startup guard parse as classic scripts
+ok 82 - application and independent startup guard parse as classic scripts
+  ---
+  duration_ms: 10.262722
+  type: 'test'
+  ...
+# Subtest: openStore preserves the original database name and version
+ok 83 - openStore preserves the original database name and version
+  ---
+  duration_ms: 23.061722
+  type: 'test'
+  ...
+# Subtest: simultaneous open calls share one pending request
+ok 84 - simultaneous open calls share one pending request
+  ---
+  duration_ms: 2.766377
+  type: 'test'
+  ...
+# Subtest: unavailable IndexedDB is a recoverable, explicit error
+ok 85 - unavailable IndexedDB is a recoverable, explicit error
+  ---
+  duration_ms: 3.317078
+  type: 'test'
+  ...
+# (node:3501) ExperimentalWarning: The MockTimers API is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: blocked upgrades reject and close a later successful connection
+ok 86 - blocked upgrades reject and close a later successful connection
+  ---
+  duration_ms: 3.05341
+  type: 'test'
+  ...
+# Subtest: open timeout rejects without deleting or resetting any database
+ok 87 - open timeout rejects without deleting or resetting any database
+  ---
+  duration_ms: 3.636281
+  type: 'test'
+  ...
+# Subtest: failed open can retry successfully without fallback storage
+ok 88 - failed open can retry successfully without fallback storage
+  ---
+  duration_ms: 2.869092
+  type: 'test'
+  ...
+# Subtest: versionchange closes connection and next open gets a new connection
+ok 89 - versionchange closes connection and next open gets a new connection
+  ---
+  duration_ms: 2.983935
+  type: 'test'
+  ...
+# Subtest: worker install only accepts the matching self-contained release
+ok 90 - worker install only accepts the matching self-contained release
+  ---
+  duration_ms: 35.532182
+  type: 'test'
+  ...
+# Subtest: worker navigation checks the network instead of pinning a stale shell
+ok 91 - worker navigation checks the network instead of pinning a stale shell
+  ---
+  duration_ms: 7.846278
+  type: 'test'
+  ...
+# Subtest: worker retains an offline fallback for the self-contained app
+ok 92 - worker retains an offline fallback for the self-contained app
+  ---
+  duration_ms: 3.028693
+  type: 'test'
+  ...
+# Subtest: worker does not intercept repair, API, other paths, or translations
+ok 93 - worker does not intercept repair, API, other paths, or translations
+  ---
+  duration_ms: 4.767809
+  type: 'test'
+  ...
+# Subtest: worker activation prunes only its own shell paths
+ok 94 - worker activation prunes only its own shell paths
+  ---
+  duration_ms: 3.196036
+  type: 'test'
+  ...
+# Subtest: repair unregisters only this Nabu path, never the origin root or other apps
+ok 95 - repair unregisters only this Nabu path, never the origin root or other apps
+  ---
+  duration_ms: 2.612675
+  type: 'test'
+  ...
+# Subtest: repair removes only Nabu shell requests and then navigates home
+ok 96 - repair removes only Nabu shell requests and then navigates home
+  ---
+  duration_ms: 8.017597
+  type: 'test'
+  ...
+# Subtest: repair and worker do not call database deletion or browser-data reset APIs
+ok 97 - repair and worker do not call database deletion or browser-data reset APIs
+  ---
+  duration_ms: 9.819416
+  type: 'test'
+  ...
+1..97
+# tests 97
+# suites 0
+# pass 97
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1372.570749

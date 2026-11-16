@@ -1,0 +1,41 @@
+PASS Clean boot with no backend, signup, demo data or startup modal
+PASS Five functional navigation destinations are present
+PASS Typing shows real vocabulary suggestions but does not save partial words
+PASS Enter translates and atomically auto-saves without a second click
+PASS There is no separate Save word button
+PASS All twelve language forms appear with a disabled source
+PASS Case and punctuation do not create duplicate cards
+PASS Clicking Arabic instantly creates the selected direction
+PASS Swap translates and saves the reverse direction
+PASS Arabic to Japanese works without English input or a provider request
+PASS Built-in translation makes zero translation-provider requests
+PASS Auto-saved words enter the existing review scheduler
+PASS Repeated translation preserves the completed review
+PASS Ambiguous meaning requires a choice, with no premature saved card
+PASS Selected illumination sense is translated and saved
+PASS Unknown text is not fabricated or saved
+PASS Unknown text offers adding a translation rather than a blocking consent error
+PASS Vocabulary browser exposes all 300 meanings
+PASS A stale selected graph card is cleared after unrelated input
+PASS Topic filter shows exactly fifteen meanings
+PASS Search narrows the actual multilingual graph
+PASS Selecting a graph row translates and saves it
+PASS Graph target switches use the same concept
+PASS Editing an auto-saved card updates in place and later lookups preserve it
+PASS Word sharing still works and does not leak private notes or review history
+PASS Looking up an archived word restores the same card
+PASS Failed auto-save stays visible and never displays a false saved state
+PASS Retry save persists the result once
+PASS Cloud translations are auto-saved through the same path
+PASS Cloud cache avoids a duplicate provider call and card
+PASS Explicit sentence context bypasses an unrelated built-in sense
+PASS A stale cloud response cannot replace or save over the next word
+PASS Cloud errors do not create library cards
+PASS Cloud voice retains one-time consent; graph lookup never auto-generates audio
+PASS Existing audio player decodes the test tone fixture (not a voice-quality test)
+PASS Last selected language pair persists in settings
+PASS Translator and all-language links fit a 390px screen
+PASS Vocabulary graph is usable on mobile without horizontal scrolling
+PASS Mobile library has no horizontal overflow
+PASS Destructive reset still requires explicit typed confirmation
+PASS No uncaught application errors during the full UI flow

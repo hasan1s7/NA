@@ -1,0 +1,1397 @@
+{
+  "schemaVersion": 1,
+  "evaluationVersion": "learner-synthetic-evaluation-v1",
+  "modelVersion": "nabu-hierarchical-learner-v1",
+  "policyVersion": "bayes-immediate-decision-v1",
+  "taskVersion": 1,
+  "seed": 140015,
+  "scenarioTimestamp": 1794657600000,
+  "sampler": {
+    "chains": 2,
+    "burnIn": 384,
+    "samples": 256,
+    "thin": 1,
+    "dynamics": false,
+    "seedPolicy": "Explicit seed derived from integer seed and scenario ID."
+  },
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "scope": "Synthetic authored outcomes and independent numerical references. No human learners, causal interventions, or measured educational benefit.",
+  "catalogue": {
+    "count": 93,
+    "languages": [
+      "ar",
+      "de",
+      "en",
+      "es",
+      "fr",
+      "it",
+      "ja",
+      "ko",
+      "pt",
+      "ru",
+      "tr",
+      "zh-CN"
+    ],
+    "evaluatedTaskIds": [
+      "learner:ar:write:reading",
+      "learner:es:write:reading",
+      "learner:en:write:reading",
+      "learner:es:write:pattern",
+      "learner:ar:write:retrieval",
+      "learner:ar:write:base-recall",
+      "learner:ar:open:pattern"
+    ],
+    "quality": "Authored mappings and references are not independent linguistic or psychometric validation."
+  },
+  "decisionCases": [
+    {
+      "id": "profitable-diagnostic",
+      "expected": {
+        "kind": "diagnostic",
+        "loss": 0.3,
+        "evsi": 0.5,
+        "net": 0.4
+      },
+      "observed": {
+        "primary": "probe",
+        "kind": "diagnostic",
+        "expectedLoss": 0.30000000000000004,
+        "evsi": 0.49999999999999994,
+        "netValue": 0.3999999999999999,
+        "diagnosticAvailable": true,
+        "branches": [
+          {
+            "outcome": "correct",
+            "probability": 0.5,
+            "bestActionId": "root-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.2,
+            "posteriorEffectiveSampleSize": 1,
+            "terminalAlternatives": [
+              {
+                "id": "root-help",
+                "expectedLoss": 0.2
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              },
+              {
+                "id": "pattern-help",
+                "expectedLoss": 1.2
+              }
+            ]
+          },
+          {
+            "outcome": "incorrect",
+            "probability": 0.5,
+            "bestActionId": "pattern-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.2,
+            "posteriorEffectiveSampleSize": 1,
+            "terminalAlternatives": [
+              {
+                "id": "pattern-help",
+                "expectedLoss": 0.2
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              },
+              {
+                "id": "root-help",
+                "expectedLoss": 1.2
+              }
+            ]
+          }
+        ]
+      },
+      "passed": true,
+      "milliseconds": 1.043818999999985
+    },
+    {
+      "id": "noisy-diagnostic",
+      "expected": {
+        "kind": "diagnostic",
+        "loss": 0.5,
+        "evsi": 0.3,
+        "net": 0.2
+      },
+      "observed": {
+        "primary": "probe",
+        "kind": "diagnostic",
+        "expectedLoss": 0.5,
+        "evsi": 0.29999999999999993,
+        "netValue": 0.19999999999999996,
+        "diagnosticAvailable": true,
+        "branches": [
+          {
+            "outcome": "correct",
+            "probability": 0.5,
+            "bestActionId": "root-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.4,
+            "posteriorEffectiveSampleSize": 1.4705882352941173,
+            "terminalAlternatives": [
+              {
+                "id": "root-help",
+                "expectedLoss": 0.4
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              },
+              {
+                "id": "pattern-help",
+                "expectedLoss": 1
+              }
+            ]
+          },
+          {
+            "outcome": "incorrect",
+            "probability": 0.5,
+            "bestActionId": "pattern-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.39999999999999997,
+            "posteriorEffectiveSampleSize": 1.4705882352941173,
+            "terminalAlternatives": [
+              {
+                "id": "pattern-help",
+                "expectedLoss": 0.39999999999999997
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              },
+              {
+                "id": "root-help",
+                "expectedLoss": 1
+              }
+            ]
+          }
+        ]
+      },
+      "passed": true,
+      "milliseconds": 0.479535000000169
+    },
+    {
+      "id": "uninformative-diagnostic",
+      "expected": {
+        "kind": "support",
+        "loss": 0.7,
+        "evsi": 0,
+        "net": -0.1
+      },
+      "observed": {
+        "primary": "pattern-help",
+        "kind": "support",
+        "expectedLoss": 0.7,
+        "evsi": 0,
+        "netValue": -0.09999999999999998,
+        "diagnosticAvailable": true,
+        "branches": [
+          {
+            "outcome": "correct",
+            "probability": 0.5,
+            "bestActionId": "pattern-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.7,
+            "posteriorEffectiveSampleSize": 2,
+            "terminalAlternatives": [
+              {
+                "id": "pattern-help",
+                "expectedLoss": 0.7
+              },
+              {
+                "id": "root-help",
+                "expectedLoss": 0.7
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              }
+            ]
+          },
+          {
+            "outcome": "incorrect",
+            "probability": 0.5,
+            "bestActionId": "pattern-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.7,
+            "posteriorEffectiveSampleSize": 2,
+            "terminalAlternatives": [
+              {
+                "id": "pattern-help",
+                "expectedLoss": 0.7
+              },
+              {
+                "id": "root-help",
+                "expectedLoss": 0.7
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              }
+            ]
+          }
+        ]
+      },
+      "passed": true,
+      "milliseconds": 0.31805099999996855
+    },
+    {
+      "id": "informative-no-action-change",
+      "expected": {
+        "kind": "support",
+        "loss": 0.05,
+        "evsi": 0,
+        "net": -0.1
+      },
+      "observed": {
+        "primary": "complete-help",
+        "kind": "support",
+        "expectedLoss": 0.05,
+        "evsi": 0,
+        "netValue": -0.10000000000000002,
+        "diagnosticAvailable": true,
+        "branches": [
+          {
+            "outcome": "correct",
+            "probability": 0.5,
+            "bestActionId": "complete-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.05,
+            "posteriorEffectiveSampleSize": 1,
+            "terminalAlternatives": [
+              {
+                "id": "complete-help",
+                "expectedLoss": 0.05
+              },
+              {
+                "id": "root-help",
+                "expectedLoss": 0.2
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              },
+              {
+                "id": "pattern-help",
+                "expectedLoss": 1.2
+              }
+            ]
+          },
+          {
+            "outcome": "incorrect",
+            "probability": 0.5,
+            "bestActionId": "complete-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.05,
+            "posteriorEffectiveSampleSize": 1,
+            "terminalAlternatives": [
+              {
+                "id": "complete-help",
+                "expectedLoss": 0.05
+              },
+              {
+                "id": "pattern-help",
+                "expectedLoss": 0.2
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              },
+              {
+                "id": "root-help",
+                "expectedLoss": 1.2
+              }
+            ]
+          }
+        ]
+      },
+      "passed": true,
+      "milliseconds": 0.1989810000000034
+    },
+    {
+      "id": "known-gap",
+      "expected": {
+        "kind": "support",
+        "loss": 0.2,
+        "evsi": 0,
+        "net": -0.1
+      },
+      "observed": {
+        "primary": "root-help",
+        "kind": "support",
+        "expectedLoss": 0.2,
+        "evsi": 0,
+        "netValue": -0.10000000000000003,
+        "diagnosticAvailable": true,
+        "branches": [
+          {
+            "outcome": "correct",
+            "probability": 1,
+            "bestActionId": "root-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.2,
+            "posteriorEffectiveSampleSize": 1,
+            "terminalAlternatives": [
+              {
+                "id": "root-help",
+                "expectedLoss": 0.2
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              },
+              {
+                "id": "pattern-help",
+                "expectedLoss": 1.2
+              }
+            ]
+          },
+          {
+            "outcome": "incorrect",
+            "probability": 0,
+            "bestActionId": null,
+            "expectedLoss": null,
+            "posteriorEffectiveSampleSize": null
+          }
+        ]
+      },
+      "passed": true,
+      "milliseconds": 0.14499000000000706
+    },
+    {
+      "id": "diagnostic-cost-break-even",
+      "expected": {
+        "kind": "support",
+        "loss": 0.7,
+        "evsi": 0.5,
+        "net": 0
+      },
+      "observed": {
+        "primary": "pattern-help",
+        "kind": "support",
+        "expectedLoss": 0.7,
+        "evsi": 0.49999999999999994,
+        "netValue": 0,
+        "diagnosticAvailable": true,
+        "branches": [
+          {
+            "outcome": "correct",
+            "probability": 0.5,
+            "bestActionId": "root-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.2,
+            "posteriorEffectiveSampleSize": 1,
+            "terminalAlternatives": [
+              {
+                "id": "root-help",
+                "expectedLoss": 0.2
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              },
+              {
+                "id": "pattern-help",
+                "expectedLoss": 1.2
+              }
+            ]
+          },
+          {
+            "outcome": "incorrect",
+            "probability": 0.5,
+            "bestActionId": "pattern-help",
+            "bestActionKind": "support",
+            "expectedLoss": 0.2,
+            "posteriorEffectiveSampleSize": 1,
+            "terminalAlternatives": [
+              {
+                "id": "pattern-help",
+                "expectedLoss": 0.2
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              },
+              {
+                "id": "root-help",
+                "expectedLoss": 1.2
+              }
+            ]
+          }
+        ]
+      },
+      "passed": true,
+      "milliseconds": 0.5985749999999825
+    },
+    {
+      "id": "sequential-budget",
+      "expected": {
+        "kind": "support",
+        "loss": 0.7,
+        "evsi": 0,
+        "net": -0.4
+      },
+      "observed": {
+        "primary": "pattern-help",
+        "kind": "support",
+        "expectedLoss": 0.7,
+        "evsi": 0,
+        "netValue": -0.40000000000000013,
+        "diagnosticAvailable": true,
+        "branches": [
+          {
+            "outcome": "correct",
+            "probability": 0.5,
+            "bestActionId": "continue",
+            "bestActionKind": "continue",
+            "expectedLoss": 1,
+            "posteriorEffectiveSampleSize": 1,
+            "terminalAlternatives": [
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              }
+            ]
+          },
+          {
+            "outcome": "incorrect",
+            "probability": 0.5,
+            "bestActionId": "continue",
+            "bestActionKind": "continue",
+            "expectedLoss": 1,
+            "posteriorEffectiveSampleSize": 1,
+            "terminalAlternatives": [
+              {
+                "id": "continue",
+                "expectedLoss": 1
+              }
+            ]
+          }
+        ]
+      },
+      "passed": true,
+      "milliseconds": 0.21952199999986988
+    },
+    {
+      "id": "no-practice",
+      "expected": {
+        "kind": "support",
+        "loss": 0.7,
+        "available": false
+      },
+      "observed": {
+        "primary": "pattern-help",
+        "kind": "support",
+        "expectedLoss": 0.7,
+        "evsi": null,
+        "netValue": null,
+        "diagnosticAvailable": false,
+        "branches": []
+      },
+      "passed": true,
+      "milliseconds": 0.34773600000016813
+    }
+  ],
+  "posteriorScenarios": {
+    "prior": {
+      "ar": {
+        "taskId": "learner:ar:write:reading",
+        "mean": 0.5041517064036145,
+        "lower": 0.343934020834596,
+        "upper": 0.7665058369694757,
+        "intervalLevel": 0.9,
+        "status": "prior-only",
+        "priorOnly": true,
+        "directCount": 0,
+        "evidenceCount": 0,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "prior-only",
+          "converged": null,
+          "truncated": false
+        }
+      },
+      "es": {
+        "taskId": "learner:es:write:reading",
+        "mean": 0.49610147782500813,
+        "lower": 0.3461188054403333,
+        "upper": 0.7637632387947088,
+        "intervalLevel": 0.9,
+        "status": "prior-only",
+        "priorOnly": true,
+        "directCount": 0,
+        "evidenceCount": 0,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "prior-only",
+          "converged": null,
+          "truncated": false
+        }
+      },
+      "en": {
+        "taskId": "learner:en:write:reading",
+        "mean": 0.4913658700070598,
+        "lower": 0.3423884622442835,
+        "upper": 0.742484515035842,
+        "intervalLevel": 0.9,
+        "status": "prior-only",
+        "priorOnly": true,
+        "directCount": 0,
+        "evidenceCount": 0,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "prior-only",
+          "converged": null,
+          "truncated": false
+        }
+      },
+      "vocabulary": {
+        "taskId": "learner:es:write:pattern",
+        "mean": 0.2142914222142711,
+        "lower": 0.044842962236033214,
+        "upper": 0.5275238425192417,
+        "intervalLevel": 0.9,
+        "status": "prior-only",
+        "priorOnly": true,
+        "directCount": 0,
+        "evidenceCount": 0,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "prior-only",
+          "converged": null,
+          "truncated": false
+        }
+      }
+    },
+    "arabicReadingEvidence": {
+      "ar": {
+        "taskId": "learner:ar:write:reading",
+        "mean": 0.7887828044363898,
+        "lower": 0.6790532151013488,
+        "upper": 0.8869376857817763,
+        "intervalLevel": 0.9,
+        "status": "direct-and-pooled",
+        "priorOnly": false,
+        "directCount": 24,
+        "evidenceCount": 24,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      },
+      "es": {
+        "taskId": "learner:es:write:reading",
+        "mean": 0.5245220081436324,
+        "lower": 0.34575202113857934,
+        "upper": 0.804309375870273,
+        "intervalLevel": 0.9,
+        "status": "inferred",
+        "priorOnly": false,
+        "directCount": 0,
+        "evidenceCount": 24,
+        "crossLanguageEventCount": 24,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      },
+      "en": {
+        "taskId": "learner:en:write:reading",
+        "mean": 0.5219208226016925,
+        "lower": 0.35629372893062533,
+        "upper": 0.7682574674467532,
+        "intervalLevel": 0.9,
+        "status": "inferred",
+        "priorOnly": false,
+        "directCount": 0,
+        "evidenceCount": 24,
+        "crossLanguageEventCount": 24,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      },
+      "vocabulary": {
+        "taskId": "learner:es:write:pattern",
+        "mean": 0.2196890138534258,
+        "lower": 0.05039745036862946,
+        "upper": 0.5159092465641825,
+        "intervalLevel": 0.9,
+        "status": "prior-only",
+        "priorOnly": true,
+        "directCount": 0,
+        "evidenceCount": 0,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      }
+    },
+    "opposingSpanishEvidence": {
+      "ar": {
+        "taskId": "learner:ar:write:reading",
+        "mean": 0.7937902443086088,
+        "lower": 0.6700132994633379,
+        "upper": 0.8890942914141187,
+        "intervalLevel": 0.9,
+        "status": "direct-and-pooled",
+        "priorOnly": false,
+        "directCount": 24,
+        "evidenceCount": 42,
+        "crossLanguageEventCount": 18,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      },
+      "es": {
+        "taskId": "learner:es:write:reading",
+        "mean": 0.35760087942287927,
+        "lower": 0.33465063823265584,
+        "upper": 0.406511214240979,
+        "intervalLevel": 0.9,
+        "status": "direct-and-pooled",
+        "priorOnly": false,
+        "directCount": 18,
+        "evidenceCount": 42,
+        "crossLanguageEventCount": 24,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      },
+      "en": {
+        "taskId": "learner:en:write:reading",
+        "mean": 0.5015494976614921,
+        "lower": 0.34207833201646304,
+        "upper": 0.761848845764631,
+        "intervalLevel": 0.9,
+        "status": "inferred",
+        "priorOnly": false,
+        "directCount": 0,
+        "evidenceCount": 42,
+        "crossLanguageEventCount": 42,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      },
+      "vocabulary": {
+        "taskId": "learner:es:write:pattern",
+        "mean": 0.2162697626919468,
+        "lower": 0.05594903910085653,
+        "upper": 0.49532071462012345,
+        "intervalLevel": 0.9,
+        "status": "prior-only",
+        "priorOnly": true,
+        "directCount": 0,
+        "evidenceCount": 0,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      }
+    },
+    "design": {
+      "arabicCorrect": 21,
+      "arabicTotal": 24,
+      "spanishCorrect": 0,
+      "spanishTotal": 18,
+      "separateEpisodes": true,
+      "dynamicsInComparison": false,
+      "interpretation": "The shared reading is a declared modeling hypothesis. Local forms retain separate effects. Opposing evidence tests that pooling is defeasible; it is not a causal negative-transfer experiment."
+    },
+    "heldoutSynthetic": {
+      "sourceTask": "learner:ar:write:reading",
+      "generatingProbability": 0.85,
+      "correct": 59,
+      "total": 64,
+      "prior": {
+        "n": 64,
+        "brier": 0.24651423438801218,
+        "logLoss": 0.6861754895042251
+      },
+      "posterior": {
+        "n": 64,
+        "brier": 0.08973501689494222,
+        "logLoss": 0.34020209093211284
+      },
+      "interpretation": "One generated held-out outcome sequence for a constant response probability. Descriptive proper scores, not a calibrated predictive benchmark."
+    },
+    "elapsedTime": {
+      "now": {
+        "taskId": "learner:ar:write:retrieval",
+        "mean": 0.6886878823182663,
+        "lower": 0.37160410034967156,
+        "upper": 0.910662841884731,
+        "intervalLevel": 0.9,
+        "status": "inferred",
+        "priorOnly": false,
+        "directCount": 0,
+        "evidenceCount": 40,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      },
+      "after30Days": {
+        "taskId": "learner:ar:write:retrieval",
+        "mean": 0.681345122512189,
+        "lower": 0.3571309293237311,
+        "upper": 0.9085749331674139,
+        "intervalLevel": 0.9,
+        "status": "inferred",
+        "priorOnly": false,
+        "directCount": 0,
+        "evidenceCount": 40,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      },
+      "interpretation": "A conditional forecast from the declared decay model. No retention benefit of practice was estimated."
+    }
+  },
+  "actualPosteriorDecision": {
+    "status": "ready",
+    "primary": {
+      "id": "authored-support-1",
+      "kind": "support",
+      "title": "For the supported sound Form I roots in this task set, the masculine singular passive participle follows مَفْعُول. This cue does not apply to every Arabic verb.",
+      "supportText": "For the supported sound Form I roots in this task set, the masculine singular passive participle follows مَفْعُول. This cue does not apply to every Arabic verb.",
+      "taskId": "learner:ar:write:retrieval",
+      "providedComponentIds": [
+        "pattern:ar:sound-form-I-passive-maful"
+      ],
+      "affectedTaskIds": [
+        "learner:ar:write:retrieval"
+      ],
+      "seconds": 20,
+      "cost": 0,
+      "effortCost": 0.04,
+      "available": true,
+      "blockedReasons": [],
+      "learningGain": null,
+      "retentionGain": null,
+      "forecastAt": 1794657620000,
+      "expectedTaskLoss": 0.1910465187224951,
+      "expectedLoss": 0.2310465187224948,
+      "utility": -0.2310465187224948,
+      "conditionalLossInterval": {
+        "level": 0.9,
+        "lower": 0.10087459488936243,
+        "upper": 0.562546437082046,
+        "meaning": "Posterior uncertainty in conditional expected loss, not a future-outcome interval."
+      },
+      "targetPredictions": [
+        {
+          "taskId": "learner:ar:write:retrieval",
+          "weight": 1,
+          "providedComponentIds": [
+            "pattern:ar:sound-form-I-passive-maful"
+          ],
+          "mean": 0.8089534812775052,
+          "lower": 0.47745356291795404,
+          "upper": 0.9391254051106376,
+          "intervalLevel": 0.9
+        }
+      ],
+      "recommended": true
+    },
+    "bestTerminal": {
+      "id": "authored-support-1",
+      "kind": "support",
+      "title": "For the supported sound Form I roots in this task set, the masculine singular passive participle follows مَفْعُول. This cue does not apply to every Arabic verb.",
+      "supportText": "For the supported sound Form I roots in this task set, the masculine singular passive participle follows مَفْعُول. This cue does not apply to every Arabic verb.",
+      "taskId": "learner:ar:write:retrieval",
+      "providedComponentIds": [
+        "pattern:ar:sound-form-I-passive-maful"
+      ],
+      "affectedTaskIds": [
+        "learner:ar:write:retrieval"
+      ],
+      "seconds": 20,
+      "cost": 0,
+      "effortCost": 0.04,
+      "available": true,
+      "blockedReasons": [],
+      "learningGain": null,
+      "retentionGain": null,
+      "forecastAt": 1794657620000,
+      "expectedTaskLoss": 0.1910465187224951,
+      "expectedLoss": 0.2310465187224948,
+      "utility": -0.2310465187224948,
+      "conditionalLossInterval": {
+        "level": 0.9,
+        "lower": 0.10087459488936243,
+        "upper": 0.562546437082046,
+        "meaning": "Posterior uncertainty in conditional expected loss, not a future-outcome interval."
+      },
+      "targetPredictions": [
+        {
+          "taskId": "learner:ar:write:retrieval",
+          "weight": 1,
+          "providedComponentIds": [
+            "pattern:ar:sound-form-I-passive-maful"
+          ],
+          "mean": 0.8089534812775052,
+          "lower": 0.47745356291795404,
+          "upper": 0.9391254051106376,
+          "intervalLevel": 0.9
+        }
+      ],
+      "recommended": true
+    },
+    "candidates": [
+      {
+        "id": "continue",
+        "kind": "continue",
+        "title": "Continue",
+        "supportText": null,
+        "taskId": null,
+        "providedComponentIds": [],
+        "affectedTaskIds": [],
+        "seconds": 0,
+        "cost": 0,
+        "effortCost": 0,
+        "available": true,
+        "blockedReasons": [],
+        "learningGain": null,
+        "retentionGain": null,
+        "forecastAt": 1794657600000,
+        "expectedTaskLoss": 0.6840908234534983,
+        "expectedLoss": 0.6840908234534983,
+        "utility": -0.6840908234534983,
+        "conditionalLossInterval": {
+          "level": 0.9,
+          "lower": 0.31927720148262273,
+          "upper": 0.9046529845212233,
+          "meaning": "Posterior uncertainty in conditional expected loss, not a future-outcome interval."
+        },
+        "targetPredictions": [
+          {
+            "taskId": "learner:ar:write:retrieval",
+            "weight": 1,
+            "providedComponentIds": [],
+            "mean": 0.31590917654650175,
+            "lower": 0.09534701547877666,
+            "upper": 0.6807227985173773,
+            "intervalLevel": 0.9
+          }
+        ],
+        "recommended": false
+      },
+      {
+        "id": "authored-support-0",
+        "kind": "support",
+        "title": "The base is كَتَبَ, meaning “put words into writing”.",
+        "supportText": "The base is كَتَبَ, meaning “put words into writing”.",
+        "taskId": "learner:ar:write:retrieval",
+        "providedComponentIds": [
+          "root:ar:write"
+        ],
+        "affectedTaskIds": [
+          "learner:ar:write:retrieval"
+        ],
+        "seconds": 20,
+        "cost": 0,
+        "effortCost": 0.04,
+        "available": true,
+        "blockedReasons": [],
+        "learningGain": null,
+        "retentionGain": null,
+        "forecastAt": 1794657620000,
+        "expectedTaskLoss": 0.6670091461082597,
+        "expectedLoss": 0.7070091461082603,
+        "utility": -0.7070091461082603,
+        "conditionalLossInterval": {
+          "level": 0.9,
+          "lower": 0.34862248788969846,
+          "upper": 0.9360144785560401,
+          "meaning": "Posterior uncertainty in conditional expected loss, not a future-outcome interval."
+        },
+        "targetPredictions": [
+          {
+            "taskId": "learner:ar:write:retrieval",
+            "weight": 1,
+            "providedComponentIds": [
+              "root:ar:write"
+            ],
+            "mean": 0.3329908538917398,
+            "lower": 0.1039855214439599,
+            "upper": 0.6913775121103015,
+            "intervalLevel": 0.9
+          }
+        ],
+        "recommended": false
+      },
+      {
+        "id": "authored-support-1",
+        "kind": "support",
+        "title": "For the supported sound Form I roots in this task set, the masculine singular passive participle follows مَفْعُول. This cue does not apply to every Arabic verb.",
+        "supportText": "For the supported sound Form I roots in this task set, the masculine singular passive participle follows مَفْعُول. This cue does not apply to every Arabic verb.",
+        "taskId": "learner:ar:write:retrieval",
+        "providedComponentIds": [
+          "pattern:ar:sound-form-I-passive-maful"
+        ],
+        "affectedTaskIds": [
+          "learner:ar:write:retrieval"
+        ],
+        "seconds": 20,
+        "cost": 0,
+        "effortCost": 0.04,
+        "available": true,
+        "blockedReasons": [],
+        "learningGain": null,
+        "retentionGain": null,
+        "forecastAt": 1794657620000,
+        "expectedTaskLoss": 0.1910465187224951,
+        "expectedLoss": 0.2310465187224948,
+        "utility": -0.2310465187224948,
+        "conditionalLossInterval": {
+          "level": 0.9,
+          "lower": 0.10087459488936243,
+          "upper": 0.562546437082046,
+          "meaning": "Posterior uncertainty in conditional expected loss, not a future-outcome interval."
+        },
+        "targetPredictions": [
+          {
+            "taskId": "learner:ar:write:retrieval",
+            "weight": 1,
+            "providedComponentIds": [
+              "pattern:ar:sound-form-I-passive-maful"
+            ],
+            "mean": 0.8089534812775052,
+            "lower": 0.47745356291795404,
+            "upper": 0.9391254051106376,
+            "intervalLevel": 0.9
+          }
+        ],
+        "recommended": true
+      },
+      {
+        "id": "root-diagnostic",
+        "kind": "diagnostic",
+        "title": "root-diagnostic",
+        "supportText": null,
+        "taskId": "learner:ar:write:base-recall",
+        "providedComponentIds": [],
+        "affectedTaskIds": [],
+        "seconds": 15,
+        "cost": 0,
+        "effortCost": 0.03,
+        "available": true,
+        "blockedReasons": [],
+        "learningGain": null,
+        "retentionGain": null,
+        "expectedLoss": 0.2610465187224952,
+        "utility": -0.2610465187224952,
+        "evsi": 0,
+        "netValue": -0.030000000000000387,
+        "delayAndConstraintPenalty": 0,
+        "expectedDownstreamLoss": 0.23104651872249515,
+        "baselineExpectedLoss": 0.2310465187224948,
+        "preObservationDownstreamLoss": 0.2310465187224948,
+        "predictiveCorrect": 0.8774757140939192,
+        "branches": [
+          {
+            "outcome": "correct",
+            "probability": 0.8774757140939192,
+            "bestActionId": "authored-support-1",
+            "bestActionKind": "support",
+            "expectedLoss": 0.22861066901106591,
+            "posteriorEffectiveSampleSize": 510.57553258211107,
+            "terminalAlternatives": [
+              {
+                "id": "authored-support-1",
+                "expectedLoss": 0.22861066901106591
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 0.6835304272999426
+              },
+              {
+                "id": "authored-support-0",
+                "expectedLoss": 0.7067388807462573
+              }
+            ]
+          },
+          {
+            "outcome": "incorrect",
+            "probability": 0.12252428590608117,
+            "bestActionId": "authored-support-1",
+            "bestActionKind": "support",
+            "expectedLoss": 0.24849121508742766,
+            "posteriorEffectiveSampleSize": 447.9075653225854,
+            "terminalAlternatives": [
+              {
+                "id": "authored-support-1",
+                "expectedLoss": 0.24849121508742766
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 0.6881041830203812
+              },
+              {
+                "id": "authored-support-0",
+                "expectedLoss": 0.7089446912923343
+              }
+            ]
+          }
+        ],
+        "canChangeDecision": false,
+        "decisionRelevant": false,
+        "recommended": false,
+        "reason": "Resolving this uncertainty does not improve the next modeled action."
+      },
+      {
+        "id": "pattern-diagnostic",
+        "kind": "diagnostic",
+        "title": "pattern-diagnostic",
+        "supportText": null,
+        "taskId": "learner:ar:open:pattern",
+        "providedComponentIds": [],
+        "affectedTaskIds": [],
+        "seconds": 15,
+        "cost": 0,
+        "effortCost": 0.03,
+        "available": true,
+        "blockedReasons": [],
+        "learningGain": null,
+        "retentionGain": null,
+        "expectedLoss": 0.26104651872249507,
+        "utility": -0.26104651872249507,
+        "evsi": 0,
+        "netValue": -0.030000000000000276,
+        "delayAndConstraintPenalty": 0,
+        "expectedDownstreamLoss": 0.23104651872249507,
+        "baselineExpectedLoss": 0.2310465187224948,
+        "preObservationDownstreamLoss": 0.2310465187224948,
+        "predictiveCorrect": 0.13654941387300976,
+        "branches": [
+          {
+            "outcome": "correct",
+            "probability": 0.13654941387300976,
+            "bestActionId": "authored-support-1",
+            "bestActionKind": "support",
+            "expectedLoss": 0.24370974780776616,
+            "posteriorEffectiveSampleSize": 426.8815942584562,
+            "terminalAlternatives": [
+              {
+                "id": "authored-support-1",
+                "expectedLoss": 0.24370974780776616
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 0.6805897377819871
+              },
+              {
+                "id": "authored-support-0",
+                "expectedLoss": 0.6995087666661585
+              }
+            ]
+          },
+          {
+            "outcome": "incorrect",
+            "probability": 0.8634505861269908,
+            "bestActionId": "authored-support-1",
+            "bestActionKind": "support",
+            "expectedLoss": 0.2290439067176904,
+            "posteriorEffectiveSampleSize": 509.4594346910139,
+            "terminalAlternatives": [
+              {
+                "id": "authored-support-1",
+                "expectedLoss": 0.2290439067176904
+              },
+              {
+                "id": "continue",
+                "expectedLoss": 0.6846444986771242
+              },
+              {
+                "id": "authored-support-0",
+                "expectedLoss": 0.7081952851104201
+              }
+            ]
+          }
+        ],
+        "canChangeDecision": false,
+        "decisionRelevant": false,
+        "recommended": false,
+        "reason": "Resolving this uncertainty does not improve the next modeled action."
+      }
+    ],
+    "assumptions": {
+      "targetLoss": "A normalized weighted average of immediate task failure probabilities.",
+      "effortCost": "Explicit action cost plus authored costPerSecond times authored seconds.",
+      "costPerSecond": 0.002,
+      "continueCost": 0,
+      "diagnosticHorizon": 1,
+      "diagnosticAssumption": "A new response follows the declared likelihood at diagnostic completion. During EVSI, opportunity counts and last-opportunity histories are held fixed; only wall-clock time advances. Joint posterior draws are reweighted without simulating a practice gain or resetting a history. A real accepted response updates histories on refit and may change the subsequent choice. The caller must exclude dependent immediate retries.",
+      "supportAssumption": "Supplying a named component bypasses that component only on explicitly affected tasks. It does not change knowledge or future retention."
+    },
+    "uncertainty": {
+      "inferenceStatus": "approximate-posterior",
+      "warnings": [
+        "Population hyperpriors are configured assumptions; no other learners were imported."
+      ],
+      "linguistic": "Task labels, mappings, and source review remain separate from posterior inference.",
+      "intervention": "Support supplies declared components for the immediate modeled task. No causal learning or retention effect is estimated."
+    },
+    "milliseconds": 34.925306999999975
+  },
+  "numericalReference": {
+    "reference": {
+      "method": "Independent composite Simpson integration over a standard-normal logit",
+      "successes": 8,
+      "failures": 2,
+      "steps": 12000,
+      "logitRange": [
+        -12,
+        12
+      ],
+      "mean": 0.7057783662579412,
+      "variance": 0.012907996260389631,
+      "lower": 0.5014999955000162,
+      "upper": 0.8732494198778592,
+      "intervalLevel": 0.9
+    },
+    "sampled": {
+      "taskId": "synthetic:logistic-normal",
+      "mean": 0.6977871192611614,
+      "lower": 0.49134739000318206,
+      "upper": 0.878555838758768,
+      "intervalLevel": 0.9,
+      "status": "direct-and-pooled",
+      "priorOnly": false,
+      "directCount": 10,
+      "evidenceCount": 10,
+      "crossLanguageEventCount": 0,
+      "diagnostics": {
+        "inferenceStatus": "approximate-posterior",
+        "converged": true,
+        "truncated": false
+      }
+    },
+    "absoluteErrors": {
+      "mean": 0.007991246996779777,
+      "lower": 0.010152605496834166,
+      "upper": 0.00530641888090877
+    },
+    "tolerances": {
+      "mean": 0.025,
+      "quantile": 0.06
+    },
+    "passed": true,
+    "fit": {
+      "milliseconds": 89.75066000000004,
+      "observations": 10,
+      "parameters": 1,
+      "draws": 1536,
+      "inferenceStatus": "approximate-posterior",
+      "converged": true,
+      "truncated": false,
+      "warnings": [
+        "Population hyperpriors are configured assumptions; no other learners were imported."
+      ],
+      "sampling": {
+        "iterations": 2304,
+        "retained": 1536,
+        "likelihoodEvaluations": 4980,
+        "sliceAccepted": 2304,
+        "sliceBoundHits": 0
+      }
+    }
+  },
+  "structuralChecks": [
+    {
+      "id": "direct-evidence-moves-exact-task",
+      "passed": true,
+      "prior": 0.5041517064036145,
+      "posterior": 0.7887828044363898
+    },
+    {
+      "id": "local-counterevidence-can-overcome-pooled-meaning",
+      "passed": true,
+      "pooled": 0.5245220081436324,
+      "withLocalCounterevidence": 0.35760087942287927
+    },
+    {
+      "id": "unobserved-local-vocabulary-not-credited",
+      "passed": true,
+      "prediction": {
+        "taskId": "learner:es:write:pattern",
+        "mean": 0.2196890138534258,
+        "lower": 0.05039745036862946,
+        "upper": 0.5159092465641825,
+        "intervalLevel": 0.9,
+        "status": "prior-only",
+        "priorOnly": true,
+        "directCount": 0,
+        "evidenceCount": 0,
+        "crossLanguageEventCount": 0,
+        "diagnostics": {
+          "inferenceStatus": "approximate-posterior",
+          "converged": true,
+          "truncated": false
+        }
+      }
+    },
+    {
+      "id": "elapsed-time-does-not-create-unaided-mastery",
+      "passed": true,
+      "now": 0.6886878823182663,
+      "after30Days": 0.681345122512189
+    },
+    {
+      "id": "decision-remains-a-decision-not-a-learning-claim",
+      "passed": true,
+      "primary": "authored-support-1"
+    }
+  ],
+  "fitDiagnostics": [
+    {
+      "id": "prior",
+      "milliseconds": 121.36183599999998,
+      "observations": 0,
+      "parameters": 29,
+      "draws": 512,
+      "inferenceStatus": "prior-only",
+      "converged": null,
+      "truncated": false,
+      "warnings": [
+        "No scored observations: all predictions are prior predictive and must not be labeled learned.",
+        "Population hyperpriors are configured assumptions; no other learners were imported."
+      ],
+      "sampling": {
+        "iterations": 1280,
+        "retained": 512,
+        "likelihoodEvaluations": 1282,
+        "sliceAccepted": 1280,
+        "sliceBoundHits": 0
+      }
+    },
+    {
+      "id": "arabic-reading-evidence",
+      "milliseconds": 97.44331400000004,
+      "observations": 24,
+      "parameters": 29,
+      "draws": 512,
+      "inferenceStatus": "approximate-posterior",
+      "converged": true,
+      "truncated": false,
+      "warnings": [
+        "Population hyperpriors are configured assumptions; no other learners were imported.",
+        "Some component abilities are observed only together; their separate attribution remains prior-sensitive."
+      ],
+      "sampling": {
+        "iterations": 1280,
+        "retained": 512,
+        "likelihoodEvaluations": 4127,
+        "sliceAccepted": 1280,
+        "sliceBoundHits": 0
+      }
+    },
+    {
+      "id": "opposing-spanish-evidence",
+      "milliseconds": 110.38078999999993,
+      "observations": 42,
+      "parameters": 29,
+      "draws": 512,
+      "inferenceStatus": "approximate-posterior",
+      "converged": true,
+      "truncated": false,
+      "warnings": [
+        "Population hyperpriors are configured assumptions; no other learners were imported.",
+        "Some component abilities are observed only together; their separate attribution remains prior-sensitive."
+      ],
+      "sampling": {
+        "iterations": 1280,
+        "retained": 512,
+        "likelihoodEvaluations": 4462,
+        "sliceAccepted": 1280,
+        "sliceBoundHits": 0
+      }
+    },
+    {
+      "id": "known-pattern-gap",
+      "milliseconds": 98.44975599999998,
+      "observations": 40,
+      "parameters": 29,
+      "draws": 512,
+      "inferenceStatus": "approximate-posterior",
+      "converged": true,
+      "truncated": false,
+      "warnings": [
+        "Population hyperpriors are configured assumptions; no other learners were imported."
+      ],
+      "sampling": {
+        "iterations": 1280,
+        "retained": 512,
+        "likelihoodEvaluations": 5300,
+        "sliceAccepted": 1280,
+        "sliceBoundHits": 0
+      }
+    },
+    {
+      "id": "elapsed-time-forecast",
+      "milliseconds": 174.63304900000003,
+      "observations": 40,
+      "parameters": 39,
+      "draws": 512,
+      "inferenceStatus": "approximate-posterior",
+      "converged": true,
+      "truncated": false,
+      "warnings": [
+        "Population hyperpriors are configured assumptions; no other learners were imported."
+      ],
+      "sampling": {
+        "iterations": 1280,
+        "retained": 512,
+        "likelihoodEvaluations": 4451,
+        "sliceAccepted": 1280,
+        "sliceBoundHits": 0
+      }
+    }
+  ],
+  "checks": {
+    "exactDecisions": 8,
+    "exactDecisionTotal": 8,
+    "structural": 5,
+    "structuralTotal": 5,
+    "numericalReference": true,
+    "passed": true
+  },
+  "limitations": [
+    "All observations in this report are synthetic; predictive accuracy and learning benefit on humans remain unmeasured.",
+    "The task mapping, guessing/slip values, priors, diagnostic durations, and effort costs are authored assumptions.",
+    "Posterior convergence and intervals are reported. A passing synthetic check does not establish psychological identifiability.",
+    "Cross-language sharing concerns an explicit reading alignment; no lexical knowledge is granted from a translation or graph neighbor.",
+    "Support predictions condition on supplied components. Learning gain and retention gain remain unknown.",
+    "Only one diagnostic followed by a terminal action is optimized; no long-horizon teaching policy is claimed.",
+    "Wall-clock timings depend on the environment; seeded numerical outputs can be reproduced with the same implementation and settings."
+  ],
+  "totalMilliseconds": 805.848829
+}

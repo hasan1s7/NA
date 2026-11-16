@@ -1,0 +1,26 @@
+{
+  "source": "docs/graph-evaluation/results.json",
+  "sourceSHA256": "36d53b926ab90e281b4117f8b9f7d1acee4fb1dbf395356ca036bc360f21c686",
+  "protocol": "typed-incidence-v1",
+  "seeds": [
+    11,
+    29,
+    47,
+    83,
+    101,
+    137,
+    173,
+    211,
+    257,
+    307,
+    359,
+    419
+  ],
+  "interpretation": "Repository measurements and synthetic structural-contract cases; no learner outcomes.",
+  "errorBars": "Sample SD of per-seed rates across 12 fixed seeds; not a human confidence interval.",
+  "files": [
+    "graph_conjunction.pdf",
+    "graph_representation.pdf",
+    "graph_budgets.pdf"
+  ]
+}

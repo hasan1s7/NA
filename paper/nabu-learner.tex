@@ -1,0 +1,422 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{placeins}
+\usepackage{url}
+\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage[preprint]{icml2026}
+\hypersetup{pdftitle={From Typed Language Structure to Bayesian Learner Decisions},pdfauthor={Anonymous Authors},pdfsubject={Nabu 1.15.0 implementation and synthetic verification; no human efficacy claim},colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue}
+\icmltitlerunning{Auditable Bayesian Learner Decisions}
+\icmlkeywords{hierarchical Bayes, language learning, value of information, provenance}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Nabu}{\textsc{Nabu}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\sig}{\operatorname{sigmoid}}
+\newcommand{\artifact}[1]{\nolinkurl{#1}}
+\input{learner-results}
+\makeatletter
+\renewcommand{\printAffiliationsAndNotice}[1]{%
+ \global\icml@noticeprintedtrue%
+ {\let\thefootnote\relax\footnotetext{\hspace*{-\footnotesep}%
+ Anonymous research and software draft, November 2026. Not submitted or peer
+ reviewed. Results concern executable contracts and synthetic cases, not human
+ learning efficacy.}}}
+\makeatother
+\begin{document}
+\twocolumn[
+\icmltitle{From Typed Language Structure to Bayesian Learner Decisions:\texorpdfstring{\\}{ }
+Auditable Hierarchies in Nabu}
+\begin{icmlauthorlist}
+\textbf{Anonymous Authors}
+\end{icmlauthorlist}
+\vskip 0.3in
+]
+\printAffiliationsAndNotice{}
+
+\begin{abstract}
+Typed linguistic relations can preserve the ingredients of a language task
+without identifying what a learner knows or which intervention is useful.
+We implement the missing inferential and decision layers in an existing
+multilingual reader. A versioned observation bridge admits only scoped,
+auditable first responses under declared task conditions. A crossed Bayesian
+model separates language, response mode, lexical base, morphological pattern,
+explicitly shared meaning, context, and whole-form memory; variance
+hyperparameters govern partial pooling. Its likelihood combines required
+components with an optional memory route, guessing, lapses, and observational
+time and practice terms. Bounded elliptical slice and variance-Gibbs sampling
+runs locally, with cancellation, diagnostics, and a distinct posterior
+namespace. A one-step decision rule compares immediate task failure and effort,
+and recommends a diagnostic only when its expected downstream decision value
+pays for its cost. The release includes \LearnerTasks{} new authored tasks in
+\LearnerLanguages{} languages and explicit mappings for \LearnerContrasts{}
+existing contrasts. Numerical reference checks, synthetic decision cases,
+provenance tests, and executable application tests examine the implemented
+contracts. This establishes a working, inspectable statistical architecture;
+it does not establish measurement validity, causal language transfer, or
+improved human learning.
+\end{abstract}
+
+\section{Problem and Contribution}
+
+A successful response to Arabic \emph{maktub} (written) is compatible with
+several explanations. A learner may retrieve a stored word, combine a lexical
+base with a familiar form pattern, use a recently supplied cue, or guess.
+Conversely, an unsuccessful response need not isolate one missing ingredient.
+An English or Spanish expression with a related meaning creates a further
+question: which part of the response could reasonably share evidence across
+languages?
+
+An implementation must answer these questions at different levels. Linguistic
+structure declares which relations and analyses are available. Observations
+record what was displayed, supplied, or answered. A statistical model assigns
+likelihoods to those observations. A decision model describes what an action
+would provide and what the learner values. Collapsing these levels makes
+graph connectivity look like competence, or uncertainty reduction look like
+learning benefit.
+
+The preceding \Nabu{} release supplied a typed incidence graph, source-qualified
+witnesses, an immutable observation ledger, and deterministic support rules.
+It deliberately left overall competence unknown. The present release adds a
+live Bayesian learner model and a decision interface while retaining that
+ledger. The contributions are an integrated, executable contract:
+
+\begin{enumerate}
+\item a versioned bridge from exact task observations to a crossed,
+conjunctive learner likelihood;
+\item local approximate posterior inference with learned pooling scales,
+explicit cross-language mappings, and separate response modes;
+\item a decision-relevant value-of-information calculation with actual
+support actions, time budgets, and a functional Continue action; and
+\item reproducible numerical and integration checks that expose the boundary
+between implemented inference and empirical educational claims.
+\end{enumerate}
+
+The statistical ingredients are established. The contribution is their
+auditable integration in a working language application, together with
+failure cases that distinguish structurally valid representations from
+statistically or causally justified conclusions.
+
+\section{Foundations and Observation Contract}
+
+\paragraph{Related mathematical ideas.}
+Conjunctive cognitive assessment models express the need for several
+components in one response \citep{junker2001cognitive}. Hierarchical Bayesian
+domain adaptation provides a useful precedent for sharing information while
+retaining domain-specific parameters \citep{finkel2009hierarchical}.
+Knowledge tracing addresses hidden learner state
+\citep{corbett1994knowledge}, while trainable repetition models explicitly
+represent recall over time \citep{settles2016trainable}. None of these
+connections establishes the validity of the present linguistic labels.
+We use them as modeling foundations, with separate numerical and application
+verification.
+
+\paragraph{Three persistent identities.}
+An event has an immutable event ID, an episode and attempt identity, and an
+exact task/source reference. The reference retains the task version,
+occurrence, reading, input and output modalities, scorer, rubric, analysis
+version, assistance flags, and account/team actor. A displayed word, a lookup,
+a skip, an authored correct response, and a posterior prediction remain
+different records. The original ledger continues to report
+\texttt{competence: null}; inferred probabilities live in a separate object.
+
+The bridge resolves the exact recorded task and scoring references. Unknown,
+changed, quarantined, future, ambiguous, duplicated, or unsupported records
+cannot silently enter the response likelihood. Only an unambiguous first
+response for an eligible task episode is admitted. Assisted responses remain
+auditable but normally do not update unaided performance. A deliberately
+conditioned task is an explicit exception: when the base meaning is supplied,
+an approved pattern task may inform only its remaining mapped components.
+It earns no unaided credit for that base.
+
+The live interface covers the source during a check, freezes the first
+submitted payload across storage retries, and records feedback separately.
+Reopening within a bounded session reconstructs prior help. An immediate
+answer repetition therefore cannot become a new independent trial by closing
+the dialog. Actor or team changes cancel pending inference and clear the
+visible posterior. These are operational controls, not proofs of psychological
+independence: unrecorded help and dependence between different questions remain
+possible.
+
+\paragraph{Declared task map.}
+Let task \(q\) specify language \(\ell_q\), mode \(m_q\), word identity \(w_q\),
+context \(x_q\), a required component set \(C_q\), and an optional whole-form
+memory route. Each component has an ID, a kind (meaning, lexical base, or
+pattern), and an optional, explicit transfer-group ID. A matching string or
+graph path does not create such a group. Task versions and analysis
+fingerprints make the declaration inspectable.
+
+The authored slice includes contrasting Arabic base recall, conditioned
+pattern application, full-form recall, and contextual meaning checks. English
+and Spanish lexical exceptions retain an item-memory route without joining a
+universal irregular-word rule. A small vocabulary slice spans twelve
+languages. Its production tasks require local lexical forms; its recognition
+tasks require a local form and a declared meaning. A shared concept therefore
+cannot by itself satisfy an unknown foreign form. Recognition and production
+have distinct parameters; recognizing a base does not count as recalling it.
+
+\section{Crossed Hierarchical Learner Model}
+\label{sec:model}
+
+\subsection{Effects and Partial Pooling}
+
+For learner \(u\), language \(\ell\), mode \(m\), component \(c\), word \(w\),
+and context \(x\), the default component logit is
+\begin{equation}
+\begin{split}
+\eta_{u q c}(t)={}&\mu_{\ell m}+a_{u\ell m}
+ +b_{u\ell c m}+v_{u\ell w m}+z_{u\ell x m}\\
+ &+\mathbf{1}_{g(c)\ne\varnothing}s_{u g(c)m}
+ +D_{u\ell m}(t;c)-d_q .
+\end{split}
+\label{eq:eta}
+\end{equation}
+Here \(g(c)\) is the pair (component kind, declared transfer-group ID), or
+\(\varnothing\) when no sharing is declared. Absent context terms are zero.
+Each named effect has a zero-centered
+Gaussian prior whose variance is shared by its kind and response mode.
+For variance group \(k\),
+\begin{equation}
+ \theta_j\mid \tau_k^2\sim\mathcal N(0,\tau_k^2),\qquad
+ \tau_k^2\sim\operatorname{IG}(\alpha_k,\beta_k).
+\label{eq:hierarchy}
+\end{equation}
+The default \(\alpha_k=3\) and
+\(\beta_k=(\alpha_k-1)s_k^2\) make the prior mean of the variance \(s_k^2\).
+The scales are explicit initial assumptions in the code. They are neither
+population estimates nor noninformative limits. Variance priors can materially
+affect sparse hierarchical inference \citep{gelman2006prior}; the export
+therefore records both prior settings and the sampled hyperparameters.
+
+Repeated evidence for one pattern updates the shared pattern variable and
+the posterior over its pooling variance. Word, root, language, and context
+effects allow systematic departures. Sparse tasks receive information through
+these variables; direct evidence can distinguish their local effects.
+This is partial pooling through a joint posterior, not a fixed weighted
+average of neighboring correctness counts.
+
+The shared term \(s_{ugm}\) is present only for a declared transfer group.
+Language-specific component effects remain in the same response logit.
+The model learns the relative variance of shared and local effects under that
+factor structure. It does not learn an unrestricted signed covariance matrix,
+infer equivalence from spelling, or discover a universal semantic ontology.
+The induced sharing is a modeling hypothesis with uncertainty.
+
+\paragraph{Authorized population layer.}
+By default the fit uses only the current actor's accepted observations.
+An explicit cohort API can add population-level means for the same named
+effects and learner-specific deviations. It requires a named population
+scope and explicit authorization flags. No live application action silently
+reads other learners' private events. A separate reusable calibration helper
+returns a moment-matched approximation to the cohort hyperposterior; the full
+joint fit remains available for research. Neither form constitutes human
+calibration without an appropriate dataset.
+
+\subsection{Conjunction and a Whole-Form Alternative}
+
+Let \(p_{uqc}(t)=\sig(\eta_{uqc}(t))\), and let
+\(r_{uq}(t)\) be the whole-form memory probability when that route is enabled.
+The memory logit has its own language-, mode-, and word-specific random
+effect, an optional context effect, and the same form of temporal covariates.
+The implemented success probability is
+\begin{equation}
+\begin{split}
+ A_{uq}(t)&=\prod_{c\in C_q}p_{uqc}(t),\\
+ I_{uq}(t)&=r_{uq}(t)+(1-r_{uq}(t))A_{uq}(t),\\
+ \pi_{uq}(t)&=g_q+(1-g_q-s_q)I_{uq}(t),\\
+ Y_{uq}(t)&\sim\operatorname{Bernoulli}(\pi_{uq}(t)).
+\end{split}
+\label{eq:likelihood}
+\end{equation}
+Here \(g_q\) is a guessing floor and \(s_q\) a lapse probability.
+An empty component set is permitted only for a memory task; in that case
+\(A_{uq}=0\), avoiding vacuous success. A disabled memory route has \(r_{uq}=0\).
+The current tasks declare nuisance values rather than estimating them from
+people: three-choice items use a \(1/3\) guessing floor, typed items use
+\(0.01\), and the lapse rate is \(0.05\).
+
+The conjunction encodes required ingredients within the modeled compositional
+route. The whole-form alternative explains why success need not establish
+every ingredient. Guessing and lapses further distinguish observed correctness
+from a deterministic knowledge label. The product is an explicit
+conditional-execution assumption; component response events have not been
+separately observed merely because the complete answer was correct.
+
+\begin{proposition}[One combined task does not identify its routes]
+In the simplified model with known nuisance terms, fixed component
+probabilities \(b,p\), and whole-form probability \(r\), repeated responses
+to the same combined task identify at most
+\(r+(1-r)bp\). They do not generally identify \(b,p,r\) separately.
+\end{proposition}
+\begin{proof}
+The Bernoulli likelihood depends on the triple only through that scalar.
+For \(r=0\), every pair with the same product \(bp\) has the same likelihood.
+Allowing \(r\) adds further equivalent triples. A proper prior can produce
+a proper posterior over them without making the likelihood one-to-one.
+\end{proof}
+
+Contrasts change the task map and may break this ambiguity. Base recall,
+pattern application with the base supplied, and full-form recall have
+different likelihoods. They do not automatically prove that a psychological
+decomposition is correct. The engine reports component identification as
+unestablished and flags components observed only together.
+
+\subsection{Time and Practice}
+
+For an accepted history of component opportunities, let \(n_c(t)\) be the
+number of prior responses and \(\Delta_c(t)\) days since its most recent
+accepted opportunity. The implemented association is
+\begin{equation}
+\begin{split}
+ D_{u\ell m}(t;c)={}&
+ \lambda_{u\ell m}\log(1+n_c(t))\\
+ &-\kappa_{u\ell m}\log(1+\Delta_c(t)),
+\end{split}
+\label{eq:time}
+\end{equation}
+where \(\kappa_{u\ell m}=\operatorname{softplus}(-3+\phi_{u\ell m})\).
+No prior opportunity gives zero lag and count. Memory has its own opportunity
+history; a response in Arabic does not reset the last-practice time of a
+Spanish lexical form. Histories are built in time order, excluding future
+events and episode duplicates.
+
+The practice coefficient is signed. The decay coefficient is nonnegative
+under this chosen response model. Both have hierarchical priors and remain
+prior-sensitive without varied repeated observations. This is an observational
+response model. A practice-count coefficient does not identify the causal
+effect of assigning practice, and its value is not used as a claimed learning
+gain in the decision layer.
+
+\section{Bounded Posterior Inference}
+
+Conditional on the variances, the latent effect vector has a Gaussian prior.
+The implementation uses elliptical slice sampling
+\citep{murray2010elliptical} for this vector and a Gibbs update for each
+variance group. Coefficients absent from the observed likelihood are
+analytically marginalized during fitting. If \(A_k\) is the active set for
+group \(k\), the update is
+\begin{equation}
+ \tau_k^2\mid\theta_A \sim
+ \operatorname{IG}\left(
+ \alpha_k+\frac{|A_k|}{2},
+ \beta_k+\frac12\sum_{j\in A_k}\theta_j^2
+ \right).
+\label{eq:gibbs}
+\end{equation}
+Inactive coefficients are then drawn conditionally on the retained variances
+when constructing each full posterior draw. The seeded implementation returns
+aligned joint draws and normalized weights.
+All response probabilities for a draw use the same latent vector. Preserving
+that alignment is necessary for downstream decision reweighting.
+
+The default engine runs two chains with 96 warm-up iterations and 64 retained
+draws per chain. Default candidate and history limits are 128 tasks and 256
+accepted observations; bounds are explicit and checked before or during
+fitting. The asynchronous API yields periodically and supports cancellation.
+The live interface performs one longer fit, with 384 warm-up iterations and
+256 retained draws per chain, if its first predictive chain check fails.
+It does not manufacture more evidence or alter observation weights when it
+spends more computation.
+
+Exports include chain diagnostics, effective sample estimates, caps reached,
+omitted observation IDs, the task map, hyperparameters, and posterior draws.
+The implemented diagnostics are lightweight predictive checks, not a
+certificate of convergence of every latent parameter. The paper and UI use
+the term approximate posterior accordingly. An unstable fit is displayed as
+provisional; the decision layer suppresses extra diagnostics from a fit whose
+convergence check explicitly fails. Numerical stability and model
+identifiability are separate questions.
+
+\section{Actions and Decision-Relevant Information}
+\label{sec:decision}
+
+Let \(T\) be selected target tasks with normalized weights \(\omega_q\).
+Continue has zero added time and cost. A support action declares which
+component it supplies, the exact affected tasks, its actual cue text, duration,
+and effort cost. A diagnostic names a real available task. Unsupported
+components, unavailable tasks, prohibited practice, and actions exceeding the
+budget are excluded before comparison.
+
+For a terminal action \(a\), a supplied component is set to one in the
+conditional task calculation only for its declared affected targets.
+The learner posterior is unchanged. If \(t_a\) is action duration and
+\(c_a\) its explicit effort cost, posterior risk is
+\begin{equation}
+ R(a\mid D)=c_a+
+ \sum_{q\in T}\omega_q
+ \E_{\theta\mid D}[1-\pi_q^{\,a}(\theta,t+t_a)].
+\label{eq:risk}
+\end{equation}
+The interface currently uses one chosen target and
+\(c_a=0.002\,t_a\), with time in seconds; the API permits explicit costs and
+multiple weighted targets. These units are authored utility assumptions.
+The criterion concerns immediate aided completion, not durable learning.
+
+For a binary diagnostic \(d\), the same joint posterior draws supply
+its predictive probability and the future action risks. For outcome
+\(y\in\{0,1\}\),
+\begin{equation}
+ w_j^{(y)}=
+ \frac{w_j\,\pi_d(\theta_j)^y[1-\pi_d(\theta_j)]^{1-y}}
+ {\sum_iw_i\,\pi_d(\theta_i)^y[1-\pi_d(\theta_i)]^{1-y}}.
+\label{eq:reweight}
+\end{equation}
+This is Bayes reweighting of the existing draws. It does not write either
+hypothetical response to the learner's ledger. The rollout is explicitly
+information-only: wall-clock time advances to diagnostic completion, but
+practice counts and last-opportunity histories stay fixed during the
+comparison. It assigns no benefit to a hypothetical practice opportunity
+or reset of a forgetting clock. An actual saved response and refit do update
+the history, so the subsequent live choice can also reflect those newly
+observed conditions. The preposterior comparison follows
+the expected-value-of-sample-information principle
+\citep{heath2018efficient}; our binary calculation enumerates outcomes and
+does not use that paper's moment-matching estimator.
+
+To isolate information from time and feasibility, let \(\mathcal A_d\)
+be the terminal actions still feasible after the diagnostic, evaluated at
+that same future time. Then
+\begin{equation}
+\begin{split}
+ \operatorname{EVSI}(d)
+ ={}&\min_{a\in\mathcal A_d}R_d(a\mid D)\\
+ &-\sum_yP(y\mid D,d)
+       \min_{a\in\mathcal A_d}R_d(a\mid D,y).
+\end{split}
+\label{eq:evsi}
+\end{equation}
+The complete diagnostic loss adds its effort cost to the expected downstream
+minimum. Comparison against the best action \emph{now} also accounts for the
+delay and loss of feasible actions. A diagnostic is recommended only when
+outcomes can change the terminal choice and the net improvement is positive.
+Ties favor fewer interruptions.
+
+\begin{proposition}[Information without a changed action]
+Under the same downstream time, feasible set, posterior, and loss,
+\(\operatorname{EVSI}(d)\ge0\). If one terminal action minimizes risk for every
+possible diagnostic outcome, EVSI is zero.
+\end{proposition}
+\begin{proof}
+For any fixed action, expected conditional risk equals its preposterior risk
+by total expectation. The expected minimum is no larger than the minimum
+of these expectations. If the same action attains every conditional minimum,
+the inequality is equality.
+\end{proof}
+
+Thus a check may reduce uncertainty while being worth no interruption.
+A diagnostic may also have positive EVSI but negative net value after its
+time cost. The implementation exports both quantities and both outcome
+branches. Continue remains available even when the posterior or action set
+is unusable.
+
+% Evaluation and appendices are maintained separately so generated results
+% can be checked without editing the model definition.
+\input{learner-evaluation}
+\bibliography{references}
+\bibliographystyle{icml2026}
+\input{learner-appendix}
+\end{document}
