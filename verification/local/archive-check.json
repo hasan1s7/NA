@@ -1,0 +1,42 @@
+{
+  "release": "1.9.0",
+  "scope": "Fresh extraction of the same staged source; final repack adds only evidence and refreshed file hashes.",
+  "archiveCRC": "pass",
+  "sourceManifestEntriesVerified": 223,
+  "builtPublicFilesIdentical": true,
+  "configCheckDidNotCreateDatabase": true,
+  "secretAndPopulatedDatabaseFilesExcluded": true,
+  "commands": [
+    {
+      "name": "build",
+      "command": "npm run build",
+      "exitCode": 0,
+      "seconds": 2.53
+    },
+    {
+      "name": "javascript",
+      "command": "npm test",
+      "exitCode": 0,
+      "seconds": 2.78
+    },
+    {
+      "name": "python",
+      "command": "/opt/pyvenv/bin/python -m pytest -q tests/test_translation_memory.py tests/test_local_launcher.py tests/test_native_config.py",
+      "exitCode": 0,
+      "seconds": 4.69
+    },
+    {
+      "name": "launcher",
+      "command": "/opt/pyvenv/bin/python start_local.py --ready --check",
+      "exitCode": 0,
+      "seconds": 0.93
+    },
+    {
+      "name": "http",
+      "command": "/opt/pyvenv/bin/python tests/local_http_smoke.py",
+      "exitCode": 0,
+      "seconds": 4.79
+    }
+  ],
+  "note": "Repeated checks do not add to the 629 distinct checks. Dependency setup used the installed pinned runtime; clean pip bootstrap and native browser navigation remain environment-blocked."
+}

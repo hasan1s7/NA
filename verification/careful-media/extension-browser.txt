@@ -1,0 +1,19 @@
+PASS Side panel connects through account-bound backend
+PASS Empty save has actionable feedback
+PASS Capture fills source context (Chrome selection fixture)
+PASS Exact bank lookup requires an explicit sense choice
+PASS Reading aid toggle changes visible state
+PASS Extension Listen invokes device voice (fixture)
+PASS Failed acknowledgment preserves text and retry
+PASS Retry creates one actual server card
+PASS Retry creates one encounter, not duplicate progress
+PASS Pending save prevents edits being mistaken for saved content
+PASS New note is a second private encounter with the same word
+PASS Open library targets configured Nabu app
+PASS Connection button opens options (Chrome fixture)
+PASS Recorder stops, previews audio, and explains missing local model
+PASS Discard releases recording and preview
+PASS Edited transcript requires a fresh meaning and source before save
+PASS Unknown vocabulary never fabricates a translation
+PASS Panel fits a narrow width
+PASS No uncaught panel errors

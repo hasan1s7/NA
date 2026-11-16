@@ -1,0 +1,7 @@
+
+> nabu-translate-remember@1.9.0 build
+> python tools/expand_bank.py && python tools/build_graph.py && python tools/build_standalone.py
+
+Expanded bank: 900 word meanings + 90 phrases + 36 expressions.
+Graph: 1026 meanings, 12312 forms, 135432 directed translation links.
+Built 1229684 bytes; app scripts/styles use exact SHA-256 CSP hashes.

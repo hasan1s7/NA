@@ -1,0 +1,4 @@
+{
+  "extensionLoaded": false,
+  "reason": "TimeoutError: service worker not observed"
+}

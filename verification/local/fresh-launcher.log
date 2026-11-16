@@ -1,0 +1,8 @@
+
+Nabu 1.9.0 - local testing
+Open: http://127.0.0.1:8000/
+Database: /mnt/data/nabu-archive-check-evidence/not-created.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Configuration OK. No database was created or modified.

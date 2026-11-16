@@ -1,0 +1,24 @@
+✔ offline queue requires explicit permissions from both parties (2.808836ms)
+✔ same ID is immutable and duplicates from concurrent tabs are idempotent (0.822698ms)
+✔ account and workspace boundaries apply to reads, retries and discards (0.586903ms)
+✔ network failure, revocation and malformed acknowledgements retain exact pending work (1.524223ms)
+✔ lost acknowledgement retry sends identical payload and removes only confirmed item (1.331133ms)
+✔ an acknowledgement from the wrong account or workspace is never accepted (0.968557ms)
+✔ switching accounts during a request preserves the old queue (7.660345ms)
+✔ persisted pending answers survive store reconstruction and scoped discard (0.672732ms)
+✔ quota failure preserves existing pending answers (45.801085ms)
+✔ an acknowledged ID with different answer content does not erase pending work (1.059324ms)
+✔ workspace is optional, escapes titles and exposes reporting terms before response (164.577417ms)
+✔ accepted Arabic source, submission, feedback and replay remain usable (68.662938ms)
+✔ failed online submission freezes its exact response and ID until successful retry (39.196874ms)
+✔ opted-in offline answer survives failure and can be retried through pending controls (20.330569ms)
+✔ account change clears workspace and ignores in-flight response (15.308844ms)
+✔ late workspace load cannot replace pending answers view (14.871996ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1397.55642

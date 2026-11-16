@@ -1,0 +1,24 @@
+PASS Actual local launcher reports Nabu 1.17.0
+PASS department: reviewer cannot inspect before acceptance
+PASS department: duplicate offline delivery creates one result
+PASS department: visible source is recorded as assistance
+PASS department: no mastery claim is manufactured
+PASS company: reviewer cannot inspect before acceptance
+PASS company: duplicate offline delivery creates one result
+PASS company: visible source is recorded as assistance
+PASS company: no mastery claim is manufactured
+PASS One learner has two organization memberships
+PASS Department cannot access company assignments
+PASS Company cannot access department assignments
+PASS Private vocabulary stays out of institutional libraries
+PASS Publishing a correction does not silently overwrite a result
+PASS Explicit reassessment retains the original and corrected results
+PASS Authorized reviewer reconstructs both results exactly
+PASS Historical assignment remains pinned to original source
+PASS Missing council provider reports unavailable
+PASS Normal reader and saved vocabulary remain available
+PASS Leaving a workspace rejects even identical old submissions
+PASS Leaving does not remove personal vocabulary or the other workspace
+PASS Rejoining does not resurrect old reporting grants
+PASS Audit omits raw learner responses
+23 checks passed. Report: /workspace/scratch/1c91899ad34c/work/Nabu-1.17/verification/1.17/institution-http.json

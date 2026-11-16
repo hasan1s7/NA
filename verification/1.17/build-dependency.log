@@ -1,0 +1,8 @@
+Collecting Unidecode==1.4.0
+  Downloading Unidecode-1.4.0-py3-none-any.whl.metadata (13 kB)
+Downloading Unidecode-1.4.0-py3-none-any.whl (235 kB)
+Installing collected packages: Unidecode
+Successfully installed Unidecode-1.4.0
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: python -m pip install --upgrade pip

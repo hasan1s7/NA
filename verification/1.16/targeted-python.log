@@ -1,0 +1,30 @@
+........................................................................ [ 52%]
+..............F.................................................         [100%]
+=================================== FAILURES ===================================
+___________ test_explore_route_is_real_application_and_no_paid_setup ___________
+
+env = (<fastapi.applications.FastAPI object at 0x7fd333736540>, <function env.<locals>.user at 0x7fd332b42980>, <starlette.testclient.TestClient object at 0x7fd346088680>)
+
+    def test_explore_route_is_real_application_and_no_paid_setup(env):
+        _,_,c=env;r=c.get('/explore');assert r.status_code==200
+>       assert 'Find something you want to understand' in r.text
+E       assert 'Find something you want to understand' in '<!doctype html>\n<html lang="en" data-nabu-build="nabu-scribe-1.16-20261115-r1">\n<head>\n  <meta charset="utf-8">\n ...{event.preventDefault();event.stopPropagation();event.currentTarget.click();}});\n\n})();</script>\n</body>\n</html>\n'
+E        +  where '<!doctype html>\n<html lang="en" data-nabu-build="nabu-scribe-1.16-20261115-r1">\n<head>\n  <meta charset="utf-8">\n ...{event.preventDefault();event.stopPropagation();event.currentTarget.click();}});\n\n})();</script>\n</body>\n</html>\n' = <Response [200 OK]>.text
+
+tests/test_content_progress.py:75: AssertionError
+=============================== warnings summary ===============================
+../../../../../opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14
+  /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14: PytestRemovedIn10Warning: _pytest.python.CallSpec2 has been renamed to CallSpec.
+  The CallSpec2 alias will be removed in pytest 10.
+  Update imports to use CallSpec instead.
+  See https://docs.pytest.org/en/stable/deprecations.html#callspec2-renamed
+    from _pytest.python import CallSpec2
+
+../../../../../opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_content_progress.py::test_explore_route_is_real_application_and_no_paid_setup
+1 failed, 135 passed, 2 warnings in 44.37s

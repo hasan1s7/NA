@@ -1,0 +1,20 @@
+PASS All 1026 entries counted while initial DOM is bounded to 60 rows
+PASS Show-more exposes the next batch without dropping data
+PASS Phrases filter includes all ninety entries and pagination terminates
+PASS Expressions filter includes all thirty-six source expressions
+PASS The last bank entry is searchable beyond the former thousand-entry cap
+PASS New word selection saves a Reference card and exposes twelve forms
+PASS New expression renders distinct natural meaning, literal wording, usage and provenance
+PASS New idiom detail fits a narrow viewport
+PASS Ordinary phrase English gloss is labeled, never presented as Japanese literal translation
+PASS New word bank powers reading lookup with a saved surrounding sentence
+PASS Reader fits mobile without horizontal scrolling
+PASS New reader entry becomes a five-minute sentence-completion review
+PASS Sentence-completion progress persists independently
+PASS Offline new-bank save is visibly pending, not falsely synced
+PASS Reconnect confirms the new-bank word in the actual server database
+PASS New phrase proposals remain pending until the collection owner approves
+PASS Approved expanded-bank phrase publishes without editing private schedules
+PASS Friends and collection controls fit mobile
+PASS Expanded-feature flows have no uncaught application errors
+TOTAL 19

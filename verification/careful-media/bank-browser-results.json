@@ -1,0 +1,143 @@
+{
+  "passed": 19,
+  "checks": [
+    "All 1026 entries counted while initial DOM is bounded to 60 rows",
+    "Show-more exposes the next batch without dropping data",
+    "Phrases filter includes all ninety entries and pagination terminates",
+    "Expressions filter includes all thirty-six source expressions",
+    "The last bank entry is searchable beyond the former thousand-entry cap",
+    "New word selection saves a Reference card and exposes twelve forms",
+    "New expression renders distinct natural meaning, literal wording, usage and provenance",
+    "New idiom detail fits a narrow viewport",
+    "Ordinary phrase English gloss is labeled, never presented as Japanese literal translation",
+    "New word bank powers reading lookup with a saved surrounding sentence",
+    "Reader fits mobile without horizontal scrolling",
+    "New reader entry becomes a five-minute sentence-completion review",
+    "Sentence-completion progress persists independently",
+    "Offline new-bank save is visibly pending, not falsely synced",
+    "Reconnect confirms the new-bank word in the actual server database",
+    "New phrase proposals remain pending until the collection owner approves",
+    "Approved expanded-bank phrase publishes without editing private schedules",
+    "Friends and collection controls fit mobile",
+    "Expanded-feature flows have no uncaught application errors"
+  ],
+  "pageErrors": [],
+  "captures": [
+    {
+      "file": "01-word-bank-desktop.png",
+      "title": "Expanded word bank and twelve linked language forms",
+      "sampleData": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "02-natural-literal-desktop.png",
+      "title": "Natural meaning versus literal wording with usage and an example",
+      "sampleData": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "03-natural-literal-mobile.png",
+      "title": "Idiom card on mobile",
+      "sampleData": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "04-phrase-breakdown-desktop.png",
+      "title": "A practical phrase with wording and language-specific usage",
+      "sampleData": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "05-context-reader-desktop.png",
+      "title": "Read a paragraph and save a selected word in context",
+      "sampleData": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "06-context-reader-mobile.png",
+      "title": "Contextual reading on mobile",
+      "sampleData": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "07-library-desktop.png",
+      "title": "Automatic Reference saves and an intentional Learning queue",
+      "sampleData": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "08-review-desktop.png",
+      "title": "Five-minute review using the learner's original sentence",
+      "sampleData": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "09-offline-queue-desktop.png",
+      "title": "A local save waiting honestly for synchronization",
+      "sampleData": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "10-shared-collection-desktop.png",
+      "title": "Contributor proposal with owner approval and private progress",
+      "sampleData": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "11-friends-desktop.png",
+      "title": "Friends, direct words, and shared collections",
+      "sampleData": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "12-friends-mobile.png",
+      "title": "Friends and shared libraries on mobile",
+      "sampleData": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "boundaries": [
+    "Actual bundled app HTML/CSS/JS",
+    "Actual local FastAPI and disposable SQLite",
+    "Explicit URL/history, fetch/TestClient cookie and in-memory IndexedDB fixtures",
+    "Fictional preview accounts, no real user data",
+    "No native navigation or hosted/offline durability validation"
+  ],
+  "liveProviderCalls": 0
+}

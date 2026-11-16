@@ -1,0 +1,18 @@
+{
+  "passed": 8,
+  "checks": [
+    "Fresh real HTTP server reports 1.10.0",
+    "/words serves new built screen and same-origin microphone policy",
+    "Authenticated HTTP account creates extension credential",
+    "Extension capture persists over actual HTTP",
+    "HTTP retry is idempotent and existing library reads same data",
+    "Captured context/notes remain account-readable",
+    "HTTP token revocation immediately rejects extension",
+    "Absent local ASR model is reported unavailable"
+  ],
+  "boundaries": [
+    "Temporary database and test account",
+    "HTTP requests, not a native browser test",
+    "No external provider calls"
+  ]
+}

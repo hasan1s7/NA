@@ -1,0 +1,35 @@
+{
+  "passed": 22,
+  "checks": [
+    "Side panel connects through account-bound backend",
+    "Empty save has actionable feedback",
+    "Capture fills source context (Chrome selection fixture)",
+    "Exact bank lookup requires an explicit sense choice",
+    "Reading aid toggle changes visible state",
+    "Extension Listen invokes device voice (fixture)",
+    "Failed acknowledgment preserves text and retry",
+    "Retry creates one actual server card",
+    "Retry creates one encounter, not duplicate progress",
+    "Pending save prevents edits being mistaken for saved content",
+    "New note is a second private encounter with the same word",
+    "Open library targets configured Nabu app",
+    "Connection button opens options (Chrome fixture)",
+    "Recorder stops, previews audio, and explains missing local model",
+    "Discard releases recording and preview",
+    "Edited transcript requires a fresh meaning and source before save",
+    "Unknown vocabulary never fabricates a translation",
+    "Extension uses the same Russian reading scheme as the app",
+    "Changing the selection removes stale reading output",
+    "Extension cannot fabricate a Japanese kanji reading",
+    "Panel fits a narrow width",
+    "No uncaught panel errors"
+  ],
+  "pageErrors": [],
+  "boundaries": [
+    "Real panel JS/DOM; imports bundled only for test",
+    "Chrome storage, messaging, selection, options and tab APIs are fixtures",
+    "Real extension-auth API and temporary SQLite",
+    "Audio and device voices are fixtures",
+    "No installed-extension, native permission prompt, model-accuracy or tab-audio compatibility claim"
+  ]
+}

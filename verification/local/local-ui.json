@@ -1,0 +1,17 @@
+{
+  "passed": 11,
+  "checks": [
+    "Opening the default graph never falsely reports a saved card",
+    "Incomplete concatenation does not create a card",
+    "Incomplete composition offers editing rather than an endless retry",
+    "Complete assembly is saved only as a labeled Reference draft",
+    "Exact-bank concatenate uses the real sense ID",
+    "Background sync preserves the reader input node and pasted draft",
+    "Settings and all nineteen feature-tree nodes render without the inherited missing-helper crash",
+    "Settings exposes persisted memory stats",
+    "Confirmed clear removes memory but retains the provider-attempt counter",
+    "Memory dialog fits a phone viewport",
+    "No uncaught page errors"
+  ],
+  "errors": []
+}

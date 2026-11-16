@@ -1,0 +1,34 @@
+{
+  "passed": 21,
+  "checks": [
+    "Words route selected in shipping router",
+    "Show meaning in context opens a real dictionary/context panel",
+    "Missing context produces visible instruction, not silent click",
+    "Transliteration show, use and hide controls change actual state",
+    "Context, note, reading and image persist in existing local store",
+    "Clip art image actually decodes",
+    "Device TTS invokes utterance with selected text (voice fixture)",
+    "Save failure keeps editable note and retry enabled",
+    "Retry saves the retained edit",
+    "Context dialog fits mobile width",
+    "Denied microphone has a visible error and retry",
+    "Record and stop create an audio preview and stop all tracks (media fixture)",
+    "Missing model disables transcription with explicit setup instructions",
+    "Edited transcript enters existing translator without auto-submitting",
+    "Account change clears retained recording and draft",
+    "Authenticated transcription response fills editable transcript (model stub)",
+    "Transcript correction survives transfer to translator",
+    "Connection UI creates real account-bound credential",
+    "Extension capture appears in existing library with private source, timestamp and note",
+    "Revoke UI invalidates actual token",
+    "No uncaught application errors"
+  ],
+  "pageErrors": [],
+  "boundaries": [
+    "Real bundled DOM with URL/history fixture",
+    "IndexedDB fixture: no native disk persistence tested",
+    "FastAPI TestClient + real temporary SQLite",
+    "Audio, voice and transcription model fixtures; no hardware or accuracy claim",
+    "Native Chromium localhost navigation blocked by environment policy"
+  ]
+}

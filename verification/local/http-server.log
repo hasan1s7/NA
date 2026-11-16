@@ -1,0 +1,62 @@
+
+Nabu 1.17 - local application
+Open: http://127.0.0.1:37155/explore
+Database: /tmp/nabu-http-check-qil8rxun/local.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [12]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:37155 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52704 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /server.py HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /.data/nabu.sqlite3 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "GET /translation_memory.py HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52712 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52716 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52712 - "POST /api/library/translations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52716 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "POST /api/friends HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52716 - "PATCH /api/friends/4401430a-df37-44a6-8f23-c367371cf733 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/friends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "POST /api/exchanges HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52716 - "GET /api/exchanges HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "POST /api/shared-libraries HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52716 - "GET /api/shared-libraries/4b001247-bcd4-41cb-802d-e85dbb878e56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "POST /api/library/cards/4676f894-7380-4d7b-b0f9-b8be00eedc22/review HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52712 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12]
+
+Nabu 1.17 - local application
+Open: http://127.0.0.1:37155/explore
+Database: /tmp/nabu-http-check-qil8rxun/local.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [14]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:37155 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52778 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52794 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52794 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "POST /api/recover HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52794 - "GET /api/session HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52818 - "POST /api/translate HTTP/1.1" 503 Service Unavailable
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14]

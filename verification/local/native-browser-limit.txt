@@ -1,0 +1,1 @@
+Attempted Chromium navigation to the actual loopback server. Page.goto failed with net::ERR_BLOCKED_BY_ADMINISTRATOR. No native browser persistence or service-worker success is claimed. Actual loopback HTTP was tested separately using httpx.

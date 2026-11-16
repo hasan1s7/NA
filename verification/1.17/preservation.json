@@ -1,0 +1,19 @@
+{
+  "byteIdenticalTo116": {
+    "requirements.txt": true,
+    "Start-Nabu.cmd": true,
+    "Start-Nabu.command": true,
+    "start-local.sh": true,
+    "public/nabu-graph.js": true,
+    "public/nabu-transliteration.js": true,
+    "public/nabu-speech.js": true,
+    "public/nabu-learner-model.js": true,
+    "public/nabu-learner-policy.js": true,
+    "public/nabu-scribe.js": true,
+    "language_services.py": true,
+    "social.py": true,
+    "content_progress.py": true,
+    "intents.py": true,
+    "data/explore.json": true
+  }
+}

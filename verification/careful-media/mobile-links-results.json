@@ -1,0 +1,24 @@
+{
+  "passed": 17,
+  "checks": [
+    "Opening Share does not silently publish a word",
+    "Lost acknowledgment leaves an actionable retry, not a false shared status",
+    "Retry recovers the same server-issued short link",
+    "Readable link carries the word and both language codes",
+    "Sharing dialog fits a 390px screen",
+    "Anonymous short-link visitor receives a preview, not an automatic account or import",
+    "Short-link API is resolved at the server root",
+    "Imported shared word starts with private fresh progress",
+    "Revoked link cannot be imported through a fresh browser preview",
+    "Revocation leaves a recipient copy untouched",
+    "Hosted navigation is a clean root-relative meaningful path",
+    "Mobile content reserves space for bottom navigation",
+    "Ziggurat is embedded and visible without a logo network request",
+    "Background render preserves the phrase breakdown the user opened",
+    "Legacy encoded links remain readable",
+    "Offline public-link opening does not reveal a stale cached snapshot",
+    "No uncaught JavaScript exceptions in new link/mobile interface flows"
+  ],
+  "pageErrors": [],
+  "scope": "Actual shipping HTML and local API/SQLite; explicit IDB, URL/history and transport fixtures. No device or hosted claims."
+}

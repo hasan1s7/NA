@@ -1,0 +1,17 @@
+usage: setup_speech.py [-h] [--model {tiny,base,small}]
+                       [--directory DIRECTORY] [--download] [--check]
+
+Explicit, optional CPU transcription setup. No paid API or implicit download.
+Run with the same Python interpreter as Nabu's .venv. A network download
+occurs ONLY when --download is supplied. Existing .env.local is never
+modified.
+
+options:
+  -h, --help            show this help message and exit
+  --model {tiny,base,small}
+  --directory DIRECTORY
+                        Existing or desired model folder outside public/
+  --download            Explicitly download free model weights from Hugging
+                        Face
+  --check               Load weights on CPU to verify local compatibility (no
+                        download)

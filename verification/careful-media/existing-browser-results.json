@@ -1,0 +1,43 @@
+{
+  "passed": 30,
+  "checks": [
+    "Automatic guest lookup saves a Reference card, not forced homework",
+    "Reference-only library does not create a review task",
+    "Registration shows a private one-use recovery code",
+    "Signing in does not automatically upload guest words",
+    "Explicit guest import reaches real server",
+    "Phrase card exposes natural meaning, literal wording and draft provenance",
+    "Reader lookup reuses a duplicate instead of creating a second card",
+    "Reading saves only the selected item with the surrounding sentence",
+    "Reader segmentation preserves the entire original text",
+    "Reader and translation fit a narrow screen",
+    "Production asks for the word, not the translation",
+    "Production review persists separately from recognition",
+    "Undo restores independent skill state",
+    "Interrupted save is locally available with visible pending status",
+    "Offline account writes never spill into guest library",
+    "Lost acknowledgment retries without duplicate server words",
+    "Remembered account reopens its cached library while disconnected",
+    "Two real accounts request and accept friendship",
+    "Direct word exchange imports a fresh independent card",
+    "Contributor proposals remain unpublished until owner approval",
+    "Owner approval creates a new collection version and change history",
+    "Shared approval does not overwrite the owner private library",
+    "Collaborative collection import preserves duplicates and fresh private progress",
+    "Friends interface has no mobile horizontal overflow",
+    "Second sign-in sees confirmed library from another device",
+    "Signout removes account cache but retains guest words",
+    "Recovery rotates code and ends other sessions",
+    "Password recovery retains the account library",
+    "Known expired account stays locked when subsequently offline",
+    "No uncaught JavaScript errors throughout integrated flows"
+  ],
+  "pageErrors": [],
+  "boundaries": [
+    "URL/history fixture",
+    "in-memory IndexedDB fixture; not native durability",
+    "fetch bridge with actual API/SQLite and TestClient cookies",
+    "no native navigation, HTTPS, service-worker or production hosting verification"
+  ],
+  "liveProviderCalls": 0
+}

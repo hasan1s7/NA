@@ -1,0 +1,8 @@
+{
+  "archiveExtraction": "passed",
+  "localLauncher": "passed",
+  "release": "1.17.0",
+  "institutionCapability": true,
+  "readerAndWorkspaceBundle": "passed",
+  "privateData": "temporary fixture only"
+}

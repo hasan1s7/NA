@@ -1,0 +1,18 @@
+PASS Rebuilt Pages shell boots without a backend
+PASS All bank entries remain available in Pages mode
+PASS Selecting a bank entry renders the 2D map with five prioritized translations
+PASS Selecting the word saves to the guest library
+PASS Graph includes explanatory relation types
+PASS No runtime-error toast on graph selection
+PASS Graph stays inside mobile page width
+PASS Graph is locally scrollable on narrow screens
+PASS Settings renders the bundled feature tree, with all nineteen nodes
+PASS Feature-tree JSON export control is available
+PASS No runtime-error toast on Settings
+PASS Settings tree stays inside mobile page width
+PASS Term-concatenation button produces the expected breakdown
+PASS Complete composed pair auto-saves without duplicate entries
+PASS Repeating a composition preserves duplicate protection
+PASS Existing approximate bank transliteration renders
+PASS No uncaught page errors
+TOTAL 17

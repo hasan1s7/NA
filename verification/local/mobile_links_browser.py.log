@@ -1,0 +1,17 @@
+PASS Opening Share does not silently publish a word
+PASS Lost acknowledgment leaves an actionable retry, not a false shared status
+PASS Retry recovers the same server-issued short link
+PASS Readable link carries the word and both language codes
+PASS Sharing dialog fits a 390px screen
+PASS Anonymous short-link visitor receives a preview, not an automatic account or import
+PASS Short-link API is resolved at the server root
+PASS Imported shared word starts with private fresh progress
+PASS Revoked link cannot be imported through a fresh browser preview
+PASS Revocation leaves a recipient copy untouched
+PASS Hosted navigation is a clean root-relative meaningful path
+PASS Mobile content reserves space for bottom navigation
+PASS Ziggurat is embedded and visible without a logo network request
+PASS Background render preserves the phrase breakdown the user opened
+PASS Legacy encoded links remain readable
+PASS Offline public-link opening does not reveal a stale cached snapshot
+PASS No uncaught JavaScript exceptions in new link/mobile interface flows

@@ -1,0 +1,37 @@
+[
+  {
+    "script": "startup_browser.py",
+    "exitCode": 0,
+    "seconds": 3.95
+  },
+  {
+    "script": "next_browser.py",
+    "exitCode": 0,
+    "seconds": 10.82
+  },
+  {
+    "script": "bank_browser.py",
+    "exitCode": 0,
+    "seconds": 11.33
+  },
+  {
+    "script": "mobile_links_browser.py",
+    "exitCode": 0,
+    "seconds": 6.52
+  },
+  {
+    "script": "spatial_browser.py",
+    "exitCode": 0,
+    "seconds": 3.93
+  },
+  {
+    "script": "local_release_browser.py",
+    "exitCode": 0,
+    "seconds": 4.75
+  },
+  {
+    "script": "pages_package_browser.py",
+    "exitCode": 0,
+    "seconds": 3.68
+  }
+]

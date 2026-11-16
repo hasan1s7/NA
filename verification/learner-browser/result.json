@@ -1,0 +1,17 @@
+{
+  "status": "blocked-by-environment",
+  "browser": "Chromium",
+  "reason": "Chromium process singleton socket creation was denied by the execution environment (Operation not permitted).",
+  "assertionsRun": 0,
+  "coverageInstead": [
+    "Executable shipping-bundle DOM tests with IndexedDB transaction fixture",
+    "Live module tests with real scoring, posterior fitting and policy",
+    "Actual task provenance through FastAPI and SQLite"
+  ],
+  "claimsExcluded": [
+    "native browser rendering",
+    "native browser IndexedDB durability",
+    "mobile visual layout",
+    "real accessibility technology"
+  ]
+}

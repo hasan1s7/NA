@@ -1,0 +1,19 @@
+{
+  "passed": 8,
+  "checks": [
+    "Connection page shows installation-specific extension ID (fixture)",
+    "Insecure remote server is rejected before credential transmission",
+    "Permission denial leaves no stored token",
+    "Server rejects invalid connection without storing credential",
+    "Successful connection saves account scope, clears visible secret and old drafts",
+    "Requested host permission matches only the configured origin",
+    "Explicit disconnect removes credentials and explains server revocation",
+    "No uncaught connection-page errors"
+  ],
+  "pageErrors": [],
+  "boundaries": [
+    "DOM with mocked Chrome permissions/storage",
+    "Mock fetch responses; API authentication tested separately",
+    "Not a native permission prompt test"
+  ]
+}

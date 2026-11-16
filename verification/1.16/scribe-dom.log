@@ -1,0 +1,29 @@
+✔ modes preserve source node, range, scroll, media identity, notes and saved state (1410.131196ms)
+✖ saved correction, note, edited reading aid, mode and text survive a new app instance (852.944328ms)
+✔ mode changes during pending save cannot duplicate or cancel it; failed save can retry (615.792983ms)
+✔ rapid selection ignores stale success and stale failure, then lookup retry recovers (875.589106ms)
+✔ council request uses current pair languages, survives mode switches, reports dependency and ignores late replies (710.223858ms)
+✔ mobile sheet, hidden avatar and keyboard-activatable modes leave the same reader usable (525.577792ms)
+✔ all twelve script/locale pairs select, explain, save and expose only their relevant council pair (6173.694708ms)
+✔ local media position and identity survive mode changes; pronunciation stops source audio and has recoverable errors (454.326947ms)
+✔ phrase selection and repeated-word source highlighting retain the actual occurrence (430.06003ms)
+✔ twelve language codes retain the agreed distinct pair without changing locale settings (3.416991ms)
+✔ brief explanations retain material uncertainty and custom correction priority (0.770516ms)
+✔ self critique is grounded in a defect and includes evidence and a repair (0.310666ms)
+✔ repeated source expressions highlight only their exact selected occurrence (0.651942ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16800.601191
+
+✖ failing tests:
+
+test at tests/scribe-bundle.dom.mjs:58:1
+✖ saved correction, note, edited reading aid, mode and text survive a new app instance (852.944328ms)
+  TypeError [Error]: el.scrollIntoView is not a function
+      at modalError (https://nabu.invalid/read:6028:233)
+      at Proxy.<anonymous> (https://nabu.invalid/read:2139:67)

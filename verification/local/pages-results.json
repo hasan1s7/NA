@@ -1,0 +1,24 @@
+{
+  "count": 17,
+  "checks": [
+    "Rebuilt Pages shell boots without a backend",
+    "All bank entries remain available in Pages mode",
+    "Selecting a bank entry renders the 2D map with five prioritized translations",
+    "Selecting the word saves to the guest library",
+    "Graph includes explanatory relation types",
+    "No runtime-error toast on graph selection",
+    "Graph stays inside mobile page width",
+    "Graph is locally scrollable on narrow screens",
+    "Settings renders the bundled feature tree, with all nineteen nodes",
+    "Feature-tree JSON export control is available",
+    "No runtime-error toast on Settings",
+    "Settings tree stays inside mobile page width",
+    "Term-concatenation button produces the expected breakdown",
+    "Complete composed pair auto-saves without duplicate entries",
+    "Repeating a composition preserves duplicate protection",
+    "Existing approximate bank transliteration renders",
+    "No uncaught page errors"
+  ],
+  "errors": [],
+  "scope": "Rebuilt bundle with URL/history and IndexedDB fixtures; Pages/API-unavailable transport; not deployed, native storage, or provider validation."
+}
