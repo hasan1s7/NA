@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "styleVersion": "nabu-openmoji-1",
+  "assets": [
+    {
+      "id": "water",
+      "label": "Water droplet",
+      "concepts": [
+        "food.water"
+      ],
+      "sense": "water as a substance",
+      "alt": "A blue water droplet.",
+      "styleVersion": "nabu-openmoji-1",
+      "depiction": "concept",
+      "author": "OpenMoji contributors",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/hfg-gmuend/openmoji/blob/master/color/svg/1F4A7.svg",
+      "sourceBlob": "5a70df569f9ce02d40d306ba33c42a9d3e59264f",
+      "sha256": "ec3895fbd78797679bad1be852d05e659977a010764a7b049822ef7c687ae18c",
+      "modified": false,
+      "generation": null
+    },
+    {
+      "id": "book",
+      "label": "Open book",
+      "concepts": [
+        "work.book"
+      ],
+      "sense": "book; printed reading material",
+      "alt": "An open book with pages, representing printed reading material.",
+      "styleVersion": "nabu-openmoji-1",
+      "depiction": "concept",
+      "author": "OpenMoji contributors",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/hfg-gmuend/openmoji/blob/master/color/svg/1F4D6.svg",
+      "sourceBlob": "c9ae8df5831d75c1801344eac9b5253c09001bf9",
+      "sha256": "12ceb88b0c0b0fd7c5ff65956f106d598e5d44536f7934e7d22937e291665753",
+      "modified": false,
+      "generation": null
+    },
+    {
+      "id": "house",
+      "label": "House",
+      "concepts": [
+        "home.house"
+      ],
+      "sense": "house; building for living in",
+      "alt": "A small house with a roof, door and window.",
+      "styleVersion": "nabu-openmoji-1",
+      "depiction": "concept",
+      "author": "OpenMoji contributors",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/hfg-gmuend/openmoji/blob/master/color/svg/1F3E0.svg",
+      "sourceBlob": "fa2faf7798857257196861ef9fa621fde7c5728d",
+      "sha256": "edfb5e77a7d324526f76295c0b3eb913006fd0424a0ee3dd0f12b0824225568f",
+      "modified": false,
+      "generation": null
+    },
+    {
+      "id": "sun",
+      "label": "Sun",
+      "concepts": [
+        "nature.sun"
+      ],
+      "sense": "the sun",
+      "alt": "The sun with rays radiating around it.",
+      "styleVersion": "nabu-openmoji-1",
+      "depiction": "concept",
+      "author": "OpenMoji contributors",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/hfg-gmuend/openmoji/blob/master/color/svg/2600.svg",
+      "sourceBlob": "d875b61b39a52721a341e815944377c852e22283",
+      "sha256": "cf039475b1c737bd355572478013138e602814dae141928f7d50d819080ac4ab",
+      "modified": false,
+      "generation": null
+    },
+    {
+      "id": "bank",
+      "label": "Financial institution",
+      "concepts": [
+        "city.bank"
+      ],
+      "sense": "financial institution, not a river edge",
+      "alt": "A bank building with columns and a currency emblem, representing a financial institution.",
+      "styleVersion": "nabu-openmoji-1",
+      "depiction": "concept",
+      "author": "OpenMoji contributors",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/hfg-gmuend/openmoji/blob/master/color/svg/1F3E6.svg",
+      "sourceBlob": "028d7f0dfe2344ff8a492be65b195ef089b952e7",
+      "sha256": "83c3f48f749099fbd3a523c25e551df55ee4e17bd4e94f971f3652d79ae969b1",
+      "modified": false,
+      "generation": null
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": "graph-integrity-v1",
+  "scope": "Additive interpretation and recommendation safeguards. Existing catalogue IDs, translations, card identities and learner evidence are unchanged.",
+  "catalogueStatus": {
+    "reviewStatus": "authored-unreviewed",
+    "humanReviewed": false,
+    "attested": false,
+    "notice": "The multilingual bank contains authored alignment groups. Structural coverage and round-trip checks do not establish lexical identity, linguistic accuracy or independent translation evidence."
+  },
+  "entryFlags": [
+    {
+      "conceptId": "relatives.uncle",
+      "code": "kinship-branch-collapsed",
+      "requiresContext": true,
+      "reviewStatus": "review-needed",
+      "sourcePath": "data/expansion/corrections.json",
+      "locator": "relatives.uncle",
+      "reason": "The existing note distinguishes paternal and maternal uncle forms, while aliases place both in one translation alignment. Ask which family branch is intended before using this alignment in a new recommendation."
+    },
+    {
+      "conceptId": "relatives.aunt",
+      "code": "kinship-branch-collapsed",
+      "requiresContext": true,
+      "reviewStatus": "review-needed",
+      "sourcePath": "data/expansion/corrections.json",
+      "locator": "relatives.aunt",
+      "reason": "The existing note distinguishes paternal and maternal aunt forms, but the alignment mixes branch-specific terms and aliases. Context is needed before using this alignment in a new recommendation."
+    }
+  ],
+  "externalImportIssues": [
+    {
+      "id": "external-pdf-p073-output-001",
+      "status": "needs_verification",
+      "quarantined": true,
+      "scope": "external-source-output-record",
+      "presentInActiveBank": false,
+      "sourceId": "pdf:nabu-language-graph-workspace-1",
+      "sourceDocument": "Nabu Language Graph Workspace (1).pdf",
+      "sourcePageCount": 515,
+      "observedAt": "2026-11-13",
+      "patternId": "P073",
+      "inputForm": "marcir",
+      "language": "es",
+      "associationStatus": "cross-page-output-association-unverified",
+      "associationNote": "Page 193 links marcir with P073, and page 25 labels P073 as past system. Page 30 does not print a pattern ID beside the suspicious output. These separate observations do not prove an upstream full-application join; the exact output record remains quarantined pending source verification.",
+      "observations": [
+        {"page": 25, "observedValue": "P073", "system": "past system", "description": "P073 appears in the external pattern row table, labeled past system."},
+        {"page": 193, "inputForm": "marcir", "patternId": "P073", "system": "past system", "description": "An association between marcir and P073 is displayed in the past-system column."},
+        {"page": 30, "tableHeader": "change: expected>actual [cells affected]", "exactText": "marciendo>attestation criteria [1 cells]", "extractedRowText": "marciendo>attestation criteria [1 cells] 1 1 stored", "expectedOutput": "marciendo", "actualOutput": "attestation criteria", "verbs": 1, "independentBaseVerbs": 1, "tier": "stored", "description": "The displayed change record contains text that may be interface metadata. This does not by itself establish which upstream source produced it."}
+      ],
+      "reason": "Possible nonlinguistic interface metadata in an exported output record. Verify the upstream row, fields and source lineage before importing this application.",
+      "notAClaim": "This does not declare marciendo invalid, invalidate all P073 applications, or claim that a live Nabu bank record was removed."
+    }
+  ],
+  "lexicalVerifications": [
+    {
+      "id": "dictionary-es-marciendo",
+      "language": "es",
+      "form": "marciendo",
+      "lemma": "marcir",
+      "lexicalStatus": "dictionary-listed-gerund",
+      "checkedAt": "2026-11-13",
+      "attestedInCorpus": false,
+      "patternApplicationVerified": false,
+      "note": "The dictionary lists this gerund. That verifies the listed form, not its frequency, contextual use or the external P073 application.",
+      "provenance": [
+        {
+          "sourceId": "rae-asale-dle:marcir",
+          "lineageId": "rae-asale-dle:marcir",
+          "kind": "lexical-reference",
+          "url": "https://dle.rae.es/marcir",
+          "locator": "Conjugation table: gerundio",
+          "verificationStatus": "verified",
+          "supportsForm": true,
+          "form": "marciendo",
+          "language": "es"
+        },
+        {
+          "sourceId": "larousse-conjugation:marcir",
+          "lineageId": "larousse-conjugation:marcir",
+          "kind": "lexical-reference",
+          "url": "https://www.larousse.com/conjugaison/espagnol/marcir/2096678",
+          "locator": "Conjugation table: gerundio",
+          "verificationStatus": "verified",
+          "supportsForm": true,
+          "form": "marciendo",
+          "language": "es"
+        }
+      ]
+    }
+  ],
+  "evidencePolicy": {
+    "legacyConceptIdsAreLexemes": false,
+    "categoryLinksArePrerequisites": false,
+    "translationLinksTransferLearnerEvidence": false,
+    "generatedFormsAreAttestations": false,
+    "siblingOutputsAreIndependentSources": false,
+    "sourceLineageCountEstablishesStatisticalIndependence": false,
+    "productionMorphologyApplicationsImported": 0
+  }
+}

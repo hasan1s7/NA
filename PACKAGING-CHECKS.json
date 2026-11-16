@@ -1,6 +1,6 @@
 {
   "release": "1.17.0",
-  "build": "nabu-workspaces-1.17-20261115-r2",
+  "build": "nabu-pages-1.17-20261116-r3",
   "rootFolder": "Nabu-1.17",
   "privateDataExcluded": true,
   "launchers": [
@@ -17,6 +17,6 @@
     "Android"
   ],
   "noExternalDeployment": true,
-  "currentVerification": "docs/VERIFICATION_OVERNIGHT.md",
+  "currentVerification": "docs/PAGES_AND_PALETTES_1.17.md",
   "preservation": "verification/overnight/preservation.json"
 }

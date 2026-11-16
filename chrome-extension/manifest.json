@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Nabu - capture from your media",
+  "description": "Capture selected words, context, recordings and private notes into your own Nabu account. No passive browsing collection.",
+  "version": "1.13.0",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "sidePanel",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open Nabu capture"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' http://127.0.0.1:* http://localhost:* https:; media-src 'self' blob:; object-src 'none'; base-uri 'none'"
+  }
+}

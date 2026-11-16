@@ -1,0 +1,84 @@
+{
+  "release": "1.15.0",
+  "build": "nabu-learner-20261114-r1",
+  "originalSourceAndPaperUnchanged": true,
+  "sourceZipCrcVerified": true,
+  "currentReleaseContentHashesVerified": 695,
+  "slideCount": 8,
+  "paperPages": 9,
+  "previewPngCount": 11,
+  "slideshowRendered": true,
+  "slideshowOverflowTest": "passed",
+  "nativeApplicationScreenshotsIncluded": false,
+  "applicationTestsRerunForThisDelivery": false,
+  "files": {
+    "nabu-local-1.15.0.zip": {
+      "bytes": 13653000,
+      "sha256": "3df074635c5f081507079c97deff6ed10623a027fb6ae15687a8746f7bba514d"
+    },
+    "Nabu-Bayesian-Learner-Paper-1.15.0.pdf": {
+      "bytes": 250023,
+      "sha256": "123ad09ebc21e756c2d07d78d7ff03367cefa003d526891096a283e123f1fd5b"
+    },
+    "Nabu-1.15.0-Walkthrough.pptx": {
+      "bytes": 1113779,
+      "sha256": "c3c2386cc549bc78488e5df5cb9a7738a4144b8b3907f0bb36dc3a1281959658"
+    },
+    "Nabu-1.15.0-Walkthrough.pdf": {
+      "bytes": 475308,
+      "sha256": "6473e52d5dd91de3e190024f09cb6cfce51f7a52c5d333ca76bc292f0bb65d67"
+    },
+    "Nabu-1.15.0-Delivery-Manifest.json": {
+      "bytes": 8610,
+      "sha256": "50218d871280d07be702d980fc6244b113a360f10d6473bc69189cdd7b639f89"
+    },
+    "README-DELIVERY.md": {
+      "bytes": 2424,
+      "sha256": "0dfe920632551798b73c5cfe5c73500e8ad88bdebd495f03d8651aa548e32203"
+    },
+    "previews/01-overview.png": {
+      "bytes": 95935,
+      "sha256": "674e2d42c7522122416f416016349ed3f07cd79f3c0b61ad726cd0ecd42ef1ea"
+    },
+    "previews/02-working-flow.png": {
+      "bytes": 140938,
+      "sha256": "8d4c4b1db6af805b6818a59623bcf14b628e7450f0e5f0b0e62369bffa628b41"
+    },
+    "previews/03-learner-model.png": {
+      "bytes": 121375,
+      "sha256": "e783fb1da39c4781f713947d0997dc12fd4071b6b671b1ddd4d35584989e4045"
+    },
+    "previews/04-cross-language-example.png": {
+      "bytes": 140235,
+      "sha256": "e03a742bcda98d81d184884f48ebff40ae921c61c41fa679f638e94afc5f3264"
+    },
+    "previews/05-decision-layer.png": {
+      "bytes": 130947,
+      "sha256": "df55f689f43d1ff0f959c132017b4a2ab8a5bf5ff66391f57d660fbc0e137fbb"
+    },
+    "previews/06-evidence-ledger.png": {
+      "bytes": 138814,
+      "sha256": "725cf2c1191e9d9fd06886d3f08c1007c772cb8469df0c1026296d518f14c242"
+    },
+    "previews/07-verification.png": {
+      "bytes": 131062,
+      "sha256": "ff0760d4b1d7399e584fd719faf9c2524004cd8f73476fa8099aab62463a4de9"
+    },
+    "previews/08-quick-start.png": {
+      "bytes": 264673,
+      "sha256": "a715e7e876de1a3ef35dcbe31bc1900ff819fc7d48ffea4a83d9b82fc0f485e2"
+    },
+    "previews/Nabu-1.15.0-Paper-Overview.png": {
+      "bytes": 439752,
+      "sha256": "5d0bc93b40a273d912e71f7634b3ddfe6af03aceca462180d3a3706d0b3c9c32"
+    },
+    "previews/Nabu-1.15.0-Paper-Results.png": {
+      "bytes": 351283,
+      "sha256": "033a3922267b566f5c3b532a813ff0698541fa812efc71eb6ff5d6f9fd7fdaed"
+    },
+    "previews/Nabu-1.15.0-Slideshow-Preview.png": {
+      "bytes": 952308,
+      "sha256": "e0190a15e102f61938fa9489e3c835218c0247310004731172187925a868fe35"
+    }
+  }
+}

@@ -2,9 +2,15 @@
 
 Read or resume content → select a word or phrase → understand it in context → listen when available → save → continue.
 
-**Release:** 1.17.0. **Build:** `nabu-workspaces-1.17-20261115-r2`.
+**Release:** 1.17.0. **Build:** `nabu-pages-1.17-20261116-r3`.
 
 **Overnight build r2:** optional learner consent and a coarse departmental support summary, plus corrected history/export behavior. See `docs/RELEASE_NOTES_1.17_OVERNIGHT.md` and `docs/VERIFICATION_OVERNIGHT.md` for current scope and evidence.
+
+## GitHub Pages and colours
+
+The hosted application runs from the `public/` folder through `.github/workflows/nabu-pages.yml`. On Pages, reading, the offline word bank, guest saving, notes, review, local media and colour palettes run in the browser. Accounts, departmental workspaces, sync and server-backed providers require the full Python application; Pages does not run that backend.
+
+The original green theme is the default. Open **Settings & data → Colour palette** to choose Original green, Lapis, Clay or Plum. The preference saves on this device. Palette templates are defined in `public/nabu-palette.js` and `public/nabu-palette.css`; they use shared semantic colour tokens and ship locally.
 
 ## Start
 

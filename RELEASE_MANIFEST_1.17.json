@@ -1,17 +1,13 @@
 {
   "release": "1.17.0",
-  "baseRelease": "1.17.0 (r1)",
-  "baseArchiveSha256": "52695f940faeb5903a1339088ad9479a0475fa9555a8708b916c8226c51861aa",
-  "build": "nabu-workspaces-1.17-20261115-r2",
+  "build": "nabu-pages-1.17-20261116-r3",
+  "baseBuild": "nabu-workspaces-1.17-20261115-r2",
   "tests": {
-    "javascript": 869,
-    "dom": 102,
-    "python": 522,
-    "departmentHttp": 19,
-    "institutionHttp": 23,
-    "launcherHttp": 14
+    "javascript": 872,
+    "dom": 106
   },
-  "limitationsDocument": "docs/VERIFICATION_OVERNIGHT.md",
+  "backend": "Unchanged; r2 had 522 passes; not rerun for this frontend update",
+  "limitationsDocument": "docs/PAGES_AND_PALETTES_1.17.md",
   "files": [
     {
       "path": ".dockerignore",
@@ -175,13 +171,13 @@
     },
     {
       "path": "PACKAGING-CHECKS.json",
-      "bytes": 550,
-      "sha256": "b52337c22c33437ec9c3dfce7f1d6e5ced02c2b97f01fba9ea8aad451eccffc9"
+      "bytes": 546,
+      "sha256": "6a9e1bab21787a9fb0126657f56b9a7a6810051938ef54ae2ab7f0fb145e63af"
     },
     {
       "path": "README.md",
-      "bytes": 6785,
-      "sha256": "6626b23ffac8c236a6be39a4dfbb60cf41dd923f8382eca8a86617e568b27e76"
+      "bytes": 7485,
+      "sha256": "c40080f2107e724e43239d3b194e350a47f7f4ba9874cca801544044048d1dfb"
     },
     {
       "path": "REDESIGN_REPORT.md",
@@ -709,6 +705,11 @@
       "sha256": "3979c3cf712ceeb92fc9d1cee6c52ef3bb555aa6377e2882458af6ea9b769341"
     },
     {
+      "path": "docs/PAGES_AND_PALETTES_1.17.md",
+      "bytes": 2381,
+      "sha256": "9c60c8cb289fbb64d75390cfb4c5c5bca6802d361016c19be5e43b96325a87ff"
+    },
+    {
       "path": "docs/RELEASE_NOTES_1.15.0.md",
       "bytes": 10806,
       "sha256": "7d52e61a3687e3556e7a052aec124d721823a310f58036877bb90e4959538965"
@@ -1150,8 +1151,8 @@
     },
     {
       "path": "mobile/www/index.html",
-      "bytes": 1952641,
-      "sha256": "7631c70b24172c59869a451184fa56bd18880e8102f21c0ab8838b1823cf4768"
+      "bytes": 1959958,
+      "sha256": "4f515cc886d5e10e3c8e908bef4c8ebf24d640ee6e6de99afec800a337c9d62b"
     },
     {
       "path": "mobile/www/nabu-icon.svg",
@@ -1495,8 +1496,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 1928554,
-      "sha256": "675644911abc2e57c2553c6927e85d48b6e5d7a466227da57e2d2bb82f5056bf"
+      "bytes": 1935871,
+      "sha256": "1e23a9741597a2085494ba6d31c88deb85a634a070751a729869c9159515815c"
     },
     {
       "path": "public/nabu-account-store.js",
@@ -1505,8 +1506,8 @@
     },
     {
       "path": "public/nabu-app.js",
-      "bytes": 205270,
-      "sha256": "e3772a588cd68e3e3204a5871033e18245ceb46910be5e7214759fb97fa5cbaa"
+      "bytes": 207629,
+      "sha256": "372936d792273e48b333b537aaa78c5b6b7639b8e160af108ec447ea939fa6e7"
     },
     {
       "path": "public/nabu-assignment-outbox.js",
@@ -1595,8 +1596,8 @@
     },
     {
       "path": "public/nabu-institutions.css",
-      "bytes": 2675,
-      "sha256": "5d56ce0daaa1f916a59ceb401e401dc008e84d425b4a426473409bd7c294ae4d"
+      "bytes": 2695,
+      "sha256": "3933643988eeaa4178f903664e74cf459d731bcb91626df3170ecb93728c31e8"
     },
     {
       "path": "public/nabu-institutions.js",
@@ -1684,6 +1685,16 @@
       "sha256": "a606ac948f1503f3749f46859d2e0636de0c84f2720866e36cc0b491a3f9797d"
     },
     {
+      "path": "public/nabu-palette.css",
+      "bytes": 3961,
+      "sha256": "f71913845dd9620d4995ce367e6c5fd075bab8b9ff8f1292bca620ea98ce480e"
+    },
+    {
+      "path": "public/nabu-palette.js",
+      "bytes": 962,
+      "sha256": "f306086a175e57c0589650eee58d2d05efdfeeb2a9307eeaee7af4851f4c8746"
+    },
+    {
       "path": "public/nabu-reading-ui.js",
       "bytes": 5500,
       "sha256": "484fc52d5aa10fdaa914f625b6f304d90ac422a44e2d4889732befb7a2f91d2f"
@@ -1695,8 +1706,8 @@
     },
     {
       "path": "public/nabu-scribe.css",
-      "bytes": 6190,
-      "sha256": "40e96dfc52adb05f7cf2615b3521864f909394dc0cb5710ddcb951c745f242ad"
+      "bytes": 6194,
+      "sha256": "b94e261b24226af13098c113bcb1131ae7256c5b83f3de9e93719d558c86a34c"
     },
     {
       "path": "public/nabu-scribe.js",
@@ -1740,8 +1751,8 @@
     },
     {
       "path": "public/nabu-sw.js",
-      "bytes": 3031,
-      "sha256": "fdfeaad116320ce2d270987e274c9dd47549edc9942e3c4d617179dbeec98888"
+      "bytes": 3026,
+      "sha256": "6bfcca572e11a38a23433e28cb8bd7b9669e5488fd673e960ab58f9085ec2707"
     },
     {
       "path": "public/nabu-sync.js",
@@ -2040,8 +2051,8 @@
     },
     {
       "path": "tests/local_http_smoke.py",
-      "bytes": 7594,
-      "sha256": "aedbd034e7269b596326cecf8e98b3eebca35ad6c5981d9114d89448ab4e2c14"
+      "bytes": 7589,
+      "sha256": "0c65a83ea4f8e45444887aedc827a9e9d23917569dde3338b2b2eb1e1eadcd2e"
     },
     {
       "path": "tests/local_release_browser.py",
@@ -2070,8 +2081,8 @@
     },
     {
       "path": "tests/next-step-bundle.dom.mjs",
-      "bytes": 13919,
-      "sha256": "97b355b7285b5cc004f56767487e441fd9b719d9288dc1c918e22ce7d0ae11ff"
+      "bytes": 13914,
+      "sha256": "f525ba25cade70e9471c0f32c72a62c69fe0b4ca92b48a7e4d4f5809b596b8fb"
     },
     {
       "path": "tests/next-step-evidence.test.mjs",
@@ -2107,6 +2118,16 @@
       "path": "tests/pages_package_browser.py",
       "bytes": 4468,
       "sha256": "a9e074528ea00d2a13fb86449abc79356e7c925cd57c9541856347c4c59ecb99"
+    },
+    {
+      "path": "tests/palette.dom.mjs",
+      "bytes": 4165,
+      "sha256": "73ae4fe7a3b29728ae924c48deba54add136b8ed9408dfd6d3e44bd27cb61a04"
+    },
+    {
+      "path": "tests/palette.test.mjs",
+      "bytes": 1864,
+      "sha256": "9597ab0cf83f6e68a26e5d188611d870e1f459bb9af289bc2a2cf6d66ca8a1b2"
     },
     {
       "path": "tests/phrases.test.mjs",
@@ -2420,8 +2441,8 @@
     },
     {
       "path": "tools/build_standalone.py",
-      "bytes": 10384,
-      "sha256": "b8df061eea350151b1221471c02fde82a99715832f3d3bbe17e16e70a815d7e8"
+      "bytes": 10477,
+      "sha256": "b56d55be5af37aa6e160c410d1fbf26465f02aaf221fcf48274f3d841ed2c693"
     },
     {
       "path": "tools/check_providers.py",
@@ -3647,6 +3668,16 @@
       "path": "verification/overnight/source-selection.json",
       "bytes": 233,
       "sha256": "dcbddb21f8a56594507881b3f16ad8a801c010113ef95e5a8e481ff2fcd08ce6"
+    },
+    {
+      "path": "verification/pages/dom.log",
+      "bytes": 11309,
+      "sha256": "77d063e7c0a44eb7146a6138517d2d75a2facba4de98c551ce7b83598e00e9c2"
+    },
+    {
+      "path": "verification/pages/node.log",
+      "bytes": 76675,
+      "sha256": "19b811623b318941e4f89440e366ff526fa965a40886561da6a98e66e085c2fc"
     },
     {
       "path": "verification/redesign/accessibility-results.json",
