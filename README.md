@@ -8,9 +8,11 @@ Read or resume content → select a word or phrase → understand it in context 
 
 ## GitHub Pages and colours
 
-The hosted application runs from the `public/` folder through `.github/workflows/nabu-pages.yml`. On Pages, reading, the offline word bank, guest saving, notes, review, local media and colour palettes run in the browser. Accounts, departmental workspaces, sync and server-backed providers require the full Python application; Pages does not run that backend.
+Open **https://hasan1s7.github.io/NA/**. GitHub Pages publishes the generated entry files from `main` / repository root. Editable application modules remain in `public/`; run `python3 tools/build_pages.py` after editing them and commit both source and generated entry files. The optional `.github/workflows/nabu-pages.yml` deployment is manual only; the active publisher is branch Pages. On Pages, reading, the offline word bank, guest saving, notes, review, local media and colour palettes run in the browser. Accounts, departmental workspaces, sync and server-backed providers require the full Python application; Pages does not run that backend.
 
 The original green theme is the default. Open **Settings & data → Colour palette** to choose Original green, Lapis, Clay or Plum. The preference saves on this device. Palette templates are defined in `public/nabu-palette.js` and `public/nabu-palette.css`; they use shared semantic colour tokens and ship locally.
+
+The deployed green build passed live Chromium checks for lookup, saving, notes, reader/mode restoration and palette persistence after refresh. Local verification passed 872 JavaScript tests, 106 DOM tests and 14 launcher/HTTP checks. See [Pages release report](docs/PAGES_AND_PALETTES_1.17.md) for exact limits.
 
 ## Start
 

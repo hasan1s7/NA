@@ -30,6 +30,11 @@
       "sha256": "3d49fa7686308ae64ac0a3e3a87af8d87c99867002e03633b5ced13d97017fe9"
     },
     {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "path": ".python-version",
       "bytes": 7,
       "sha256": "e72b03ed5b70312f2782f2b05055c55b24670e126d50e24c4f2c559bf288f810"
@@ -171,13 +176,13 @@
     },
     {
       "path": "PACKAGING-CHECKS.json",
-      "bytes": 546,
-      "sha256": "6a9e1bab21787a9fb0126657f56b9a7a6810051938ef54ae2ab7f0fb145e63af"
+      "bytes": 757,
+      "sha256": "bdb427e189a5858406b95e3df0be167406d8042f1c4c8efd698915ca0a2cae4e"
     },
     {
       "path": "README.md",
-      "bytes": 7485,
-      "sha256": "c40080f2107e724e43239d3b194e350a47f7f4ba9874cca801544044048d1dfb"
+      "bytes": 8088,
+      "sha256": "050705ad2ea6b01cfe71f1948f4131339f18e4bd27ca8e587aaefc03a9f07b3f"
     },
     {
       "path": "REDESIGN_REPORT.md",
@@ -280,6 +285,11 @@
       "sha256": "7bf2dd1095d1cdb7bae90a18bed2555ac73fc8b70008a52ca8390911b8255e83"
     },
     {
+      "path": "index.html",
+      "bytes": 1935871,
+      "sha256": "1e23a9741597a2085494ba6d31c88deb85a634a070751a729869c9159515815c"
+    },
+    {
       "path": "institutions.py",
       "bytes": 51995,
       "sha256": "8e9579c6ff1f06d55cc583ae403c8649fac21ca7943b182b7ee3be033ab4a350"
@@ -298,6 +308,31 @@
       "path": "media_services.py",
       "bytes": 17443,
       "sha256": "bafe9f65d9f165c3370b7ff82f6734585806e82e5c0a5578cd013348d17fc8c3"
+    },
+    {
+      "path": "nabu-icon.svg",
+      "bytes": 431,
+      "sha256": "bda6e3c61339ae365eea33c943f7388e5266f41722ba440103cfe4dfa9afbd17"
+    },
+    {
+      "path": "nabu-repair.html",
+      "bytes": 3855,
+      "sha256": "90d6e3a035c6fe024078e4da29ac29a47f804e66377b268e0b2c9f8c85e077cf"
+    },
+    {
+      "path": "nabu-scribe.svg",
+      "bytes": 1220,
+      "sha256": "28e244edb2cae961d355a6269f7e597f1e4761b7df6282d91df1330c12be31cb"
+    },
+    {
+      "path": "nabu-sw.js",
+      "bytes": 3026,
+      "sha256": "6bfcca572e11a38a23433e28cb8bd7b9669e5488fd673e960ab58f9085ec2707"
+    },
+    {
+      "path": "nabu.webmanifest",
+      "bytes": 1090,
+      "sha256": "44a2e8cd6b5d6ae2773c5315952663e6c8d8ab7d9c101e1db7cfc407cfbba270"
     },
     {
       "path": "next_step_inputs.py",
@@ -706,8 +741,8 @@
     },
     {
       "path": "docs/PAGES_AND_PALETTES_1.17.md",
-      "bytes": 2381,
-      "sha256": "9c60c8cb289fbb64d75390cfb4c5c5bca6802d361016c19be5e43b96325a87ff"
+      "bytes": 4550,
+      "sha256": "bc71a9a0454cee8a95c7c0cd14f03f0ee9d2177415bdbdbde6fab9e86baff2a4"
     },
     {
       "path": "docs/RELEASE_NOTES_1.15.0.md",
@@ -1023,6 +1058,31 @@
       "path": "docs/learner-evaluation/results.md",
       "bytes": 6164,
       "sha256": "49b6b49b70d1e1b787635e4120a45ee9ab4c214066e29eab5fa14e08eca8f753"
+    },
+    {
+      "path": "icons/apple-touch-icon.png",
+      "bytes": 7326,
+      "sha256": "fbbdc9fcbb67ffcbef5bfba70f6e30a83881af106cee784838cad1179c442086"
+    },
+    {
+      "path": "icons/favicon-32.png",
+      "bytes": 1290,
+      "sha256": "f536063291b1f53de9e6de0b982cce69bd70a0dd856f53912dfab86051e0c7c0"
+    },
+    {
+      "path": "icons/icon-192.png",
+      "bytes": 7780,
+      "sha256": "a0e57ad7e72916e49a843f754edb6f67dc602021e5e8d6d9dfe603d92ad3abaa"
+    },
+    {
+      "path": "icons/icon-512.png",
+      "bytes": 21990,
+      "sha256": "b8b2bc69ce62fd6bb6186cbe3e504538600660e425aefae616941d757faea4bb"
+    },
+    {
+      "path": "icons/maskable-512.png",
+      "bytes": 14462,
+      "sha256": "9ee304aea02cc054683e656abc3ab8a7970162fa73a73ebb5df6888910b66eac"
     },
     {
       "path": "mobile/PrivacyInfo.xcprivacy",
@@ -2430,6 +2490,11 @@
       "sha256": "e913ddd51cd85d2e86016edf43e975150dac2dee2c59bcfa802639392b199310"
     },
     {
+      "path": "tools/build_pages.py",
+      "bytes": 990,
+      "sha256": "ef8661bd19691dc5978e406f18268afdb51086af4fb32401daba700bfb53a7c9"
+    },
+    {
       "path": "tools/build_paper.py",
       "bytes": 3335,
       "sha256": "7ec7ee5cac430bcb365b95b64a8ebdabe1d25fdf39889f675d68170765646de1"
@@ -3673,6 +3738,16 @@
       "path": "verification/pages/dom.log",
       "bytes": 11309,
       "sha256": "77d063e7c0a44eb7146a6138517d2d75a2facba4de98c551ce7b83598e00e9c2"
+    },
+    {
+      "path": "verification/pages/launcher.log",
+      "bytes": 842,
+      "sha256": "6f52aca5496ca91980a1540f75d70f79e643f3632e80e7b80dbbffb84d036364"
+    },
+    {
+      "path": "verification/pages/live-checks.json",
+      "bytes": 1457,
+      "sha256": "17817b510e9c1ee436aa199b1caf02b2a713466e4afd547b695d1032673cb278"
     },
     {
       "path": "verification/pages/node.log",

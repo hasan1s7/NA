@@ -9,14 +9,19 @@
     "start-local.sh",
     "start_local.py"
   ],
-  "verifiedPlatform": "Linux loopback HTTP and DOM fixtures",
+  "verifiedPlatform": "Linux loopback launcher/HTTP; DOM fixtures; hosted Chromium desktop",
   "nativePlatformsUntested": [
     "Windows",
     "macOS",
     "iOS",
     "Android"
   ],
-  "noExternalDeployment": true,
+  "noExternalDeployment": false,
   "currentVerification": "docs/PAGES_AND_PALETTES_1.17.md",
-  "preservation": "verification/overnight/preservation.json"
+  "preservation": "verification/overnight/preservation.json",
+  "deployment": {
+    "url": "https://hasan1s7.github.io/NA/",
+    "scope": "Static browser application",
+    "verified": "Chromium live flow; built-in branch Pages success"
+  }
 }

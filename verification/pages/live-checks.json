@@ -1,0 +1,53 @@
+{
+  "build": "nabu-pages-1.17-20261116-r3",
+  "javascript": 872,
+  "dom": 106,
+  "launcherHttp": 14,
+  "newPaletteChecks": 7,
+  "cspHashes": "matched",
+  "unchangedBackendAndLauncherFiles": [
+    "institutions.py",
+    "server.py",
+    "social.py",
+    "language_services.py",
+    "media_services.py",
+    "intents.py",
+    "requirements.txt",
+    "requirements-dev.txt",
+    "package.json",
+    "Start-Nabu.cmd",
+    "Start-Nabu.command",
+    "start_local.py",
+    "start-local.sh"
+  ],
+  "backendFullSuite": "r2 had 522 passes; not rerun for this frontend update",
+  "livePages": {
+    "url": "https://hasan1s7.github.io/NA/",
+    "publisher": "main / root branch Pages",
+    "deploymentRun": 43925033945,
+    "result": "success",
+    "browser": "Chromium",
+    "verified": [
+      "default green",
+      "lookup and save",
+      "saved vocabulary after refresh",
+      "source sentence highlighting",
+      "mode switching",
+      "private note and selection after refresh",
+      "palette persistence",
+      "keyboard palette activation and visible focus"
+    ],
+    "notCertified": [
+      "physical mobile and desktop OS launchers",
+      "narrow native viewport",
+      "live providers",
+      "audible speech",
+      "institutional server on Pages"
+    ]
+  },
+  "customActions": {
+    "result": "blocked before steps",
+    "reason": "Account locked due to billing issue",
+    "workflow": "manual-only optional deployment; contents read-only"
+  }
+}
