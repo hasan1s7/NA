@@ -1,0 +1,67 @@
+"""Pages-only UI regression: actual bundle, guest library, explicit browser fixtures.
+URL/history and IndexedDB are test fixtures; no native storage/hosting claims.
+"""
+import json
+from pathlib import Path
+from playwright.sync_api import sync_playwright,expect
+import next_browser as H
+ROOT=H.ROOT
+OUT=ROOT/'verification/local/pages-ui';OUT.mkdir(parents=True,exist_ok=True)
+checks=[];errors=[]
+def check(name,condition=True):
+ assert condition,name
+ checks.append(name);print('PASS',name,flush=True)
+with sync_playwright() as pw:
+ browser=pw.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox','--disable-dev-shm-usage'])
+ page=browser.new_page(viewport={'width':1440,'height':1000})
+ page.on('pageerror',lambda e:errors.append(str(e)))
+ page.expose_binding('__apiCall',lambda source,req:{'status':404,'data':{'detail':'Static Pages fixture: no backend'}})
+ page.evaluate(H.fixture);page.set_content(H.html)
+ expect(page.locator('#translation-input')).to_be_visible()
+ check('Rebuilt Pages shell boots without a backend')
+ page.locator('.workspace-tabs [data-view="graph"]').click()
+ expect(page.locator('#graph-count')).to_have_text('1,026 entries')
+ check('All bank entries remain available in Pages mode')
+ page.locator('[data-action="graph-word"][data-id="essentials.hello"]').first.click();H.settle(page)
+ expect(page.locator('.spatial-svg')).to_be_visible()
+ expect(page.locator('.map-language')).to_have_count(5)
+ check('Selecting a bank entry renders the 2D map with five prioritized translations')
+ check('Selecting the word saves to the guest library',len(H.snap(page)['cards'])==1)
+ check('Graph includes explanatory relation types','not guaranteed grammatical translations' in page.locator('.graph-visual-panel').inner_text())
+ check('No runtime-error toast on graph selection',page.locator('#toast.error:visible').count()==0)
+ page.screenshot(path=str(OUT/'word-graph-desktop.png'),full_page=True)
+ page.set_viewport_size({'width':390,'height':844})
+ check('Graph stays inside mobile page width',page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+ check('Graph is locally scrollable on narrow screens',page.locator('.graph-scroll').evaluate('(e)=>e.scrollWidth>e.clientWidth'))
+ page.screenshot(path=str(OUT/'word-graph-mobile.png'),full_page=True)
+ page.set_viewport_size({'width':1440,'height':1000})
+ page.locator('#settings-nav').click()
+ expect(page.locator('.feature-tree')).to_be_visible()
+ expect(page.locator('.tree-node')).to_have_count(19)
+ check('Settings renders the bundled feature tree, with all nineteen nodes')
+ expect(page.locator('[data-action="export-feature-tree"]')).to_be_visible()
+ check('Feature-tree JSON export control is available')
+ check('No runtime-error toast on Settings',page.locator('#toast.error:visible').count()==0)
+ page.screenshot(path=str(OUT/'feature-tree-desktop.png'),full_page=True)
+ page.set_viewport_size({'width':390,'height':844})
+ check('Settings tree stays inside mobile page width',page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+ page.set_viewport_size({'width':1440,'height':1000})
+ H.nav(page,'translate')
+ page.locator('#translation-input').fill('water book')
+ page.locator('[data-action="compose-translation"]').click();H.settle(page)
+ expect(page.locator('.translation-result')).to_have_text('agua libro')
+ expect(page.locator('.composition-row')).to_have_count(2)
+ check('Term-concatenation button produces the expected breakdown')
+ check('Complete composed pair auto-saves without duplicate entries',len(H.snap(page)['cards'])==2)
+ page.locator('[data-action="compose-translation"]').click();H.settle(page)
+ check('Repeating a composition preserves duplicate protection',len(H.snap(page)['cards'])==2)
+ page.locator('#source-language').select_option('ru')
+ page.locator('#target-language').select_option('en')
+ page.locator('#translation-input').fill('\u0441\u043f\u0430\u0441\u0438\u0431\u043e')
+ page.locator('#translation-input').press('Enter');H.settle(page)
+ expect(page.locator('.transliteration-block')).to_be_visible()
+ check('Existing approximate bank transliteration renders')
+ check('No uncaught page errors',not errors)
+ browser.close()
+(OUT/'pages-ui.json').write_text(json.dumps({'count':len(checks),'checks':checks,'errors':errors,'scope':'Rebuilt bundle with URL/history and IndexedDB fixtures; Pages/API-unavailable transport; not deployed, native storage, or provider validation.'},indent=2))
+print('TOTAL',len(checks))

@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {speechKey} from '../public/nabu-speech.js';
+const base={text:'bonjour',language:'fr',scope:'alice',model:'eleven_v4'};
+test('speech cache isolates accounts',()=>assert.notEqual(speechKey(base),speechKey({...base,scope:'bob'})));
+test('speech cache isolates languages and models',()=>{assert.notEqual(speechKey(base),speechKey({...base,language:'en'}));assert.notEqual(speechKey(base),speechKey({...base,model:'eleven_v3'}));});
+test('speech cache preserves diacritics and normalizes equivalent Unicode',()=>{assert.equal(speechKey({...base,text:' cafe\u0301 '}),speechKey({...base,text:'caf\u00e9'}));assert.notEqual(speechKey({...base,text:'cafe'}),speechKey({...base,text:'caf\u00e9'}));});
+test('speed changes reuse the same generated recording',()=>assert.equal(speechKey({...base,rate:1}),speechKey({...base,rate:.85})));
+test('new media policy allows private blobs, not remote provider connections',async()=>{const html=await fs.readFile(new URL('../public/index.html',import.meta.url),'utf8');const csp=html.match(/Content-Security-Policy" content="([^"]+)/)[1];assert.match(csp,/media-src 'self' blob:/);assert.doesNotMatch(csp,/api\.elevenlabs|api-free\.deepl|api\.deepl/);});
+test('speech implementation has bounded cache and does not persist audio',async()=>{const source=await fs.readFile(new URL('../public/nabu-speech.js',import.meta.url),'utf8');assert.match(source,/maxEntries=24/);assert.match(source,/URL\.revokeObjectURL/);assert.doesNotMatch(source,/indexedDB|localStorage|caches\.open/);});
