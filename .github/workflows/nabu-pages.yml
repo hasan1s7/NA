@@ -1,14 +1,7 @@
 name: Deploy Nabu Pages
+# Optional Actions deployment; the active site uses built-in branch Pages.
+# Manual only while the account Actions runner has a billing lock.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'public/**'
-      - 'data/**'
-      - 'tools/**'
-      - 'tests/**'
-      - 'package.json'
-      - '.github/workflows/nabu-pages.yml'
   workflow_dispatch:
 permissions:
   contents: read
