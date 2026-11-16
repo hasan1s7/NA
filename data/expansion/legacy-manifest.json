@@ -1,0 +1,6163 @@
+{
+  "version": "1.4.1",
+  "ids": [
+    "essentials.hello",
+    "essentials.goodbye",
+    "essentials.please",
+    "essentials.thanks",
+    "essentials.yes",
+    "essentials.no",
+    "essentials.sorry",
+    "essentials.welcome",
+    "essentials.excuse_me",
+    "essentials.help",
+    "essentials.question",
+    "essentials.answer",
+    "essentials.name",
+    "essentials.language",
+    "essentials.word",
+    "people.person",
+    "people.man",
+    "people.woman",
+    "people.child",
+    "people.baby",
+    "people.friend",
+    "people.family",
+    "people.mother",
+    "people.father",
+    "people.sister",
+    "people.brother",
+    "people.daughter",
+    "people.son",
+    "people.teacher",
+    "people.student",
+    "reference.i",
+    "reference.you",
+    "reference.he",
+    "reference.she",
+    "reference.we",
+    "reference.they",
+    "reference.this",
+    "reference.that",
+    "reference.here",
+    "reference.there",
+    "reference.who",
+    "reference.what",
+    "reference.where",
+    "reference.when",
+    "reference.why",
+    "food.bread",
+    "food.rice",
+    "food.pasta",
+    "food.meat",
+    "food.fish",
+    "food.chicken",
+    "food.egg",
+    "food.cheese",
+    "food.milk",
+    "food.water",
+    "food.tea",
+    "food.coffee",
+    "food.sugar",
+    "food.salt",
+    "food.oil",
+    "produce.apple",
+    "produce.banana",
+    "produce.orange",
+    "produce.lemon",
+    "produce.grape",
+    "produce.tomato",
+    "produce.potato",
+    "produce.onion",
+    "produce.carrot",
+    "produce.cucumber",
+    "produce.lettuce",
+    "produce.fruit",
+    "produce.vegetable",
+    "produce.soup",
+    "produce.salad",
+    "home.house",
+    "home.room",
+    "home.door",
+    "home.window",
+    "home.table",
+    "home.chair",
+    "home.bed",
+    "home.kitchen",
+    "home.bathroom",
+    "home.key",
+    "home.light",
+    "home.floor",
+    "home.wall",
+    "home.roof",
+    "home.garden",
+    "city.city",
+    "city.street",
+    "city.road",
+    "city.shop",
+    "city.market",
+    "city.school",
+    "city.hospital",
+    "city.pharmacy",
+    "city.restaurant",
+    "city.hotel",
+    "city.bank",
+    "city.park",
+    "city.station",
+    "city.airport",
+    "city.bridge",
+    "travel.car",
+    "travel.bus",
+    "travel.train",
+    "travel.airplane",
+    "travel.bicycle",
+    "travel.boat",
+    "travel.ticket",
+    "travel.passport",
+    "travel.bag",
+    "travel.map",
+    "travel.left",
+    "travel.right",
+    "travel.straight",
+    "travel.near",
+    "travel.far",
+    "time.day",
+    "time.night",
+    "time.morning",
+    "time.afternoon",
+    "time.evening",
+    "time.week",
+    "time.month",
+    "time.year",
+    "time.today",
+    "time.tomorrow",
+    "time.yesterday",
+    "time.now",
+    "time.later",
+    "time.early",
+    "time.late",
+    "nature.sun",
+    "nature.moon",
+    "nature.star",
+    "nature.sky",
+    "nature.cloud",
+    "nature.rain",
+    "nature.snow",
+    "nature.wind",
+    "nature.fire",
+    "nature.earth",
+    "nature.sea",
+    "nature.river",
+    "nature.lake",
+    "nature.mountain",
+    "nature.tree",
+    "animals.dog",
+    "animals.cat",
+    "animals.bird",
+    "animals.fish",
+    "animals.horse",
+    "animals.cow",
+    "animals.sheep",
+    "animals.goat",
+    "animals.pig",
+    "animals.chicken",
+    "animals.duck",
+    "animals.rabbit",
+    "animals.mouse",
+    "animals.lion",
+    "animals.elephant",
+    "body.head",
+    "body.face",
+    "body.eye",
+    "body.ear",
+    "body.nose",
+    "body.mouth",
+    "body.tooth",
+    "body.hand",
+    "body.arm",
+    "body.leg",
+    "body.foot",
+    "body.heart",
+    "body.hair",
+    "body.back",
+    "body.stomach",
+    "health.doctor",
+    "health.nurse",
+    "health.medicine",
+    "health.pain",
+    "health.fever",
+    "health.cough",
+    "health.cold",
+    "health.sick",
+    "health.healthy",
+    "health.tired",
+    "health.hungry",
+    "health.thirsty",
+    "health.afraid",
+    "health.happy",
+    "health.sad",
+    "clothes.shirt",
+    "clothes.trousers",
+    "clothes.dress",
+    "clothes.skirt",
+    "clothes.coat",
+    "clothes.jacket",
+    "clothes.shoe",
+    "clothes.sock",
+    "clothes.hat",
+    "clothes.scarf",
+    "clothes.glove",
+    "clothes.belt",
+    "clothes.sweater",
+    "clothes.pocket",
+    "clothes.glasses",
+    "actions.eat",
+    "actions.drink",
+    "actions.sleep",
+    "actions.go",
+    "actions.come",
+    "actions.see",
+    "actions.hear",
+    "actions.speak",
+    "actions.read",
+    "actions.write",
+    "actions.learn",
+    "actions.work",
+    "actions.buy",
+    "actions.sell",
+    "actions.pay",
+    "daily.open",
+    "daily.close",
+    "daily.give",
+    "daily.take",
+    "daily.make",
+    "daily.want",
+    "daily.need",
+    "daily.know",
+    "daily.think",
+    "daily.understand",
+    "daily.ask",
+    "daily.answer",
+    "daily.wait",
+    "daily.find",
+    "daily.help",
+    "qualities.big",
+    "qualities.small",
+    "qualities.good",
+    "qualities.bad",
+    "qualities.new",
+    "qualities.old",
+    "qualities.hot",
+    "qualities.cold",
+    "qualities.easy",
+    "qualities.difficult",
+    "qualities.fast",
+    "qualities.slow",
+    "qualities.clean",
+    "qualities.dirty",
+    "qualities.beautiful",
+    "colors.red",
+    "colors.blue",
+    "colors.green",
+    "colors.yellow",
+    "colors.black",
+    "colors.white",
+    "colors.gray",
+    "colors.brown",
+    "colors.pink",
+    "colors.purple",
+    "colors.orange",
+    "colors.light",
+    "colors.dark",
+    "colors.heavy",
+    "colors.empty",
+    "numbers.zero",
+    "numbers.one",
+    "numbers.two",
+    "numbers.three",
+    "numbers.four",
+    "numbers.five",
+    "numbers.six",
+    "numbers.seven",
+    "numbers.eight",
+    "numbers.nine",
+    "numbers.ten",
+    "numbers.hundred",
+    "numbers.thousand",
+    "numbers.first",
+    "numbers.last",
+    "work.work",
+    "work.money",
+    "work.price",
+    "work.time",
+    "work.book",
+    "work.pen",
+    "work.paper",
+    "work.phone",
+    "work.computer",
+    "work.internet",
+    "work.email",
+    "work.message",
+    "work.meeting",
+    "work.problem",
+    "work.idea",
+    "phrases.good_morning",
+    "phrases.good_night",
+    "phrases.how_are_you",
+    "phrases.nice_to_meet_you",
+    "phrases.see_you_later",
+    "phrases.you_are_welcome",
+    "phrases.no_problem",
+    "phrases.i_do_not_understand",
+    "phrases.please_repeat",
+    "phrases.speak_slowly",
+    "phrases.what_does_it_mean",
+    "phrases.how_do_you_say_this",
+    "phrases.do_you_speak_english",
+    "phrases.where_is_the_bathroom",
+    "phrases.how_much",
+    "phrases.i_would_like_this",
+    "phrases.can_you_help_me",
+    "phrases.the_bill_please",
+    "phrases.i_need_help",
+    "phrases.i_am_lost",
+    "phrases.where_is_the_station",
+    "phrases.i_do_not_know",
+    "phrases.just_a_moment",
+    "phrases.lets_go",
+    "phrases.have_a_good_day",
+    "phrases.see_you_tomorrow",
+    "phrases.please_write_it_down",
+    "phrases.pay_by_card",
+    "phrases.please_show_me",
+    "phrases.i_have_a_question",
+    "expressions.piece_of_cake",
+    "expressions.in_the_clouds",
+    "expressions.tongue_to_cat",
+    "expressions.one_hand",
+    "expressions.one_arrow",
+    "expressions.down_and_feather",
+    "expressions.only_station",
+    "expressions.wolfs_mouth",
+    "expressions.cats_paw",
+    "expressions.cold_porridge",
+    "expressions.flea_behind_ear",
+    "expressions.ringing_skirts"
+  ],
+  "identityFields": {
+    "essentials.hello": {
+      "terms": {
+        "en": "hello",
+        "es": "hola",
+        "fr": "bonjour",
+        "ar": "مرحبا",
+        "zh-CN": "你好",
+        "ru": "привет",
+        "de": "hallo",
+        "it": "ciao",
+        "ja": "こんにちは",
+        "ko": "안녕하세요",
+        "pt": "olá",
+        "tr": "merhaba"
+      },
+      "sense": "greeting"
+    },
+    "essentials.goodbye": {
+      "terms": {
+        "en": "goodbye",
+        "es": "adiós",
+        "fr": "au revoir",
+        "ar": "وداعا",
+        "zh-CN": "再见",
+        "ru": "до свидания",
+        "de": "auf Wiedersehen",
+        "it": "arrivederci",
+        "ja": "さようなら",
+        "ko": "안녕히 가세요",
+        "pt": "adeus",
+        "tr": "hoşça kal"
+      },
+      "sense": "farewell"
+    },
+    "essentials.please": {
+      "terms": {
+        "en": "please",
+        "es": "por favor",
+        "fr": "s'il vous plaît",
+        "ar": "من فضلك",
+        "zh-CN": "请",
+        "ru": "пожалуйста",
+        "de": "bitte",
+        "it": "per favore",
+        "ja": "お願いします",
+        "ko": "부탁합니다",
+        "pt": "por favor",
+        "tr": "lütfen"
+      },
+      "sense": "polite request"
+    },
+    "essentials.thanks": {
+      "terms": {
+        "en": "thank you",
+        "es": "gracias",
+        "fr": "merci",
+        "ar": "شكرا",
+        "zh-CN": "谢谢",
+        "ru": "спасибо",
+        "de": "danke",
+        "it": "grazie",
+        "ja": "ありがとう",
+        "ko": "감사합니다",
+        "pt": "obrigado",
+        "tr": "teşekkür ederim"
+      },
+      "sense": "expression of thanks"
+    },
+    "essentials.yes": {
+      "terms": {
+        "en": "yes",
+        "es": "sí",
+        "fr": "oui",
+        "ar": "نعم",
+        "zh-CN": "是",
+        "ru": "да",
+        "de": "ja",
+        "it": "sì",
+        "ja": "はい",
+        "ko": "네",
+        "pt": "sim",
+        "tr": "evet"
+      },
+      "sense": "yes"
+    },
+    "essentials.no": {
+      "terms": {
+        "en": "no",
+        "es": "no",
+        "fr": "non",
+        "ar": "لا",
+        "zh-CN": "不",
+        "ru": "нет",
+        "de": "nein",
+        "it": "no",
+        "ja": "いいえ",
+        "ko": "아니요",
+        "pt": "não",
+        "tr": "hayır"
+      },
+      "sense": "no"
+    },
+    "essentials.sorry": {
+      "terms": {
+        "en": "sorry",
+        "es": "lo siento",
+        "fr": "désolé",
+        "ar": "آسف",
+        "zh-CN": "对不起",
+        "ru": "извините",
+        "de": "Entschuldigung",
+        "it": "mi dispiace",
+        "ja": "ごめんなさい",
+        "ko": "미안합니다",
+        "pt": "desculpe",
+        "tr": "özür dilerim"
+      },
+      "sense": "apology"
+    },
+    "essentials.welcome": {
+      "terms": {
+        "en": "welcome",
+        "es": "bienvenido",
+        "fr": "bienvenue",
+        "ar": "أهلا وسهلا",
+        "zh-CN": "欢迎",
+        "ru": "добро пожаловать",
+        "de": "willkommen",
+        "it": "benvenuto",
+        "ja": "ようこそ",
+        "ko": "환영합니다",
+        "pt": "bem-vindo",
+        "tr": "hoş geldiniz"
+      },
+      "sense": "welcome"
+    },
+    "essentials.excuse_me": {
+      "terms": {
+        "en": "excuse me",
+        "es": "disculpe",
+        "fr": "excusez-moi",
+        "ar": "عفوا",
+        "zh-CN": "劳驾",
+        "ru": "извините",
+        "de": "Entschuldigung",
+        "it": "mi scusi",
+        "ja": "すみません",
+        "ko": "실례합니다",
+        "pt": "com licença",
+        "tr": "affedersiniz"
+      },
+      "sense": "politely getting attention"
+    },
+    "essentials.help": {
+      "terms": {
+        "en": "help",
+        "es": "ayuda",
+        "fr": "aide",
+        "ar": "مساعدة",
+        "zh-CN": "帮助",
+        "ru": "помощь",
+        "de": "Hilfe",
+        "it": "aiuto",
+        "ja": "助け",
+        "ko": "도움",
+        "pt": "ajuda",
+        "tr": "yardım"
+      },
+      "sense": "assistance (noun)"
+    },
+    "essentials.question": {
+      "terms": {
+        "en": "question",
+        "es": "pregunta",
+        "fr": "question",
+        "ar": "سؤال",
+        "zh-CN": "问题",
+        "ru": "вопрос",
+        "de": "Frage",
+        "it": "domanda",
+        "ja": "質問",
+        "ko": "질문",
+        "pt": "pergunta",
+        "tr": "soru"
+      },
+      "sense": "a question, not a difficulty"
+    },
+    "essentials.answer": {
+      "terms": {
+        "en": "answer",
+        "es": "respuesta",
+        "fr": "réponse",
+        "ar": "إجابة",
+        "zh-CN": "回答",
+        "ru": "ответ",
+        "de": "Antwort",
+        "it": "risposta",
+        "ja": "答え",
+        "ko": "답",
+        "pt": "resposta",
+        "tr": "cevap"
+      },
+      "sense": "a response (noun)"
+    },
+    "essentials.name": {
+      "terms": {
+        "en": "name",
+        "es": "nombre",
+        "fr": "nom",
+        "ar": "اسم",
+        "zh-CN": "名字",
+        "ru": "имя",
+        "de": "Name",
+        "it": "nome",
+        "ja": "名前",
+        "ko": "이름",
+        "pt": "nome",
+        "tr": "isim"
+      },
+      "sense": "a person's name"
+    },
+    "essentials.language": {
+      "terms": {
+        "en": "language",
+        "es": "idioma",
+        "fr": "langue",
+        "ar": "لغة",
+        "zh-CN": "语言",
+        "ru": "язык",
+        "de": "Sprache",
+        "it": "lingua",
+        "ja": "言語",
+        "ko": "언어",
+        "pt": "idioma",
+        "tr": "dil"
+      },
+      "sense": "language"
+    },
+    "essentials.word": {
+      "terms": {
+        "en": "word",
+        "es": "palabra",
+        "fr": "mot",
+        "ar": "كلمة",
+        "zh-CN": "单词",
+        "ru": "слово",
+        "de": "Wort",
+        "it": "parola",
+        "ja": "単語",
+        "ko": "단어",
+        "pt": "palavra",
+        "tr": "kelime"
+      },
+      "sense": "word"
+    },
+    "people.person": {
+      "terms": {
+        "en": "person",
+        "es": "persona",
+        "fr": "personne",
+        "ar": "شخص",
+        "zh-CN": "人",
+        "ru": "человек",
+        "de": "Person",
+        "it": "persona",
+        "ja": "人",
+        "ko": "사람",
+        "pt": "pessoa",
+        "tr": "kişi"
+      },
+      "sense": "person"
+    },
+    "people.man": {
+      "terms": {
+        "en": "man",
+        "es": "hombre",
+        "fr": "homme",
+        "ar": "رجل",
+        "zh-CN": "男人",
+        "ru": "мужчина",
+        "de": "Mann",
+        "it": "uomo",
+        "ja": "男性",
+        "ko": "남자",
+        "pt": "homem",
+        "tr": "erkek"
+      },
+      "sense": "adult male person"
+    },
+    "people.woman": {
+      "terms": {
+        "en": "woman",
+        "es": "mujer",
+        "fr": "femme",
+        "ar": "امرأة",
+        "zh-CN": "女人",
+        "ru": "женщина",
+        "de": "Frau",
+        "it": "donna",
+        "ja": "女性",
+        "ko": "여자",
+        "pt": "mulher",
+        "tr": "kadın"
+      },
+      "sense": "adult female person"
+    },
+    "people.child": {
+      "terms": {
+        "en": "child",
+        "es": "niño",
+        "fr": "enfant",
+        "ar": "طفل",
+        "zh-CN": "孩子",
+        "ru": "ребёнок",
+        "de": "Kind",
+        "it": "bambino",
+        "ja": "子供",
+        "ko": "아이",
+        "pt": "criança",
+        "tr": "çocuk"
+      },
+      "sense": "child; generic or masculine form"
+    },
+    "people.baby": {
+      "terms": {
+        "en": "baby",
+        "es": "bebé",
+        "fr": "bébé",
+        "ar": "رضيع",
+        "zh-CN": "婴儿",
+        "ru": "младенец",
+        "de": "Baby",
+        "it": "neonato",
+        "ja": "赤ちゃん",
+        "ko": "아기",
+        "pt": "bebê",
+        "tr": "bebek"
+      },
+      "sense": "baby"
+    },
+    "people.friend": {
+      "terms": {
+        "en": "friend",
+        "es": "amigo",
+        "fr": "ami",
+        "ar": "صديق",
+        "zh-CN": "朋友",
+        "ru": "друг",
+        "de": "Freund",
+        "it": "amico",
+        "ja": "友達",
+        "ko": "친구",
+        "pt": "amigo",
+        "tr": "arkadaş"
+      },
+      "sense": "friend; generic or masculine form"
+    },
+    "people.family": {
+      "terms": {
+        "en": "family",
+        "es": "familia",
+        "fr": "famille",
+        "ar": "عائلة",
+        "zh-CN": "家庭",
+        "ru": "семья",
+        "de": "Familie",
+        "it": "famiglia",
+        "ja": "家族",
+        "ko": "가족",
+        "pt": "família",
+        "tr": "aile"
+      },
+      "sense": "family"
+    },
+    "people.mother": {
+      "terms": {
+        "en": "mother",
+        "es": "madre",
+        "fr": "mère",
+        "ar": "أم",
+        "zh-CN": "母亲",
+        "ru": "мать",
+        "de": "Mutter",
+        "it": "madre",
+        "ja": "母",
+        "ko": "어머니",
+        "pt": "mãe",
+        "tr": "anne"
+      },
+      "sense": "mother"
+    },
+    "people.father": {
+      "terms": {
+        "en": "father",
+        "es": "padre",
+        "fr": "père",
+        "ar": "أب",
+        "zh-CN": "父亲",
+        "ru": "отец",
+        "de": "Vater",
+        "it": "padre",
+        "ja": "父",
+        "ko": "아버지",
+        "pt": "pai",
+        "tr": "baba"
+      },
+      "sense": "father"
+    },
+    "people.sister": {
+      "terms": {
+        "en": "older sister",
+        "es": "hermana mayor",
+        "fr": "sœur aînée",
+        "ar": "أخت كبرى",
+        "zh-CN": "姐姐",
+        "ru": "старшая сестра",
+        "de": "ältere Schwester",
+        "it": "sorella maggiore",
+        "ja": "姉",
+        "ko": "누나",
+        "pt": "irmã mais velha",
+        "tr": "abla"
+      },
+      "sense": "older sister (male speaker)"
+    },
+    "people.brother": {
+      "terms": {
+        "en": "older brother",
+        "es": "hermano mayor",
+        "fr": "frère aîné",
+        "ar": "أخ أكبر",
+        "zh-CN": "哥哥",
+        "ru": "старший брат",
+        "de": "älterer Bruder",
+        "it": "fratello maggiore",
+        "ja": "兄",
+        "ko": "형",
+        "pt": "irmão mais velho",
+        "tr": "ağabey"
+      },
+      "sense": "older brother (male speaker)"
+    },
+    "people.daughter": {
+      "terms": {
+        "en": "daughter",
+        "es": "hija",
+        "fr": "fille",
+        "ar": "ابنة",
+        "zh-CN": "女儿",
+        "ru": "дочь",
+        "de": "Tochter",
+        "it": "figlia",
+        "ja": "娘",
+        "ko": "딸",
+        "pt": "filha",
+        "tr": "kız evlat"
+      },
+      "sense": "daughter"
+    },
+    "people.son": {
+      "terms": {
+        "en": "son",
+        "es": "hijo",
+        "fr": "fils",
+        "ar": "ابن",
+        "zh-CN": "儿子",
+        "ru": "сын",
+        "de": "Sohn",
+        "it": "figlio",
+        "ja": "息子",
+        "ko": "아들",
+        "pt": "filho",
+        "tr": "erkek evlat"
+      },
+      "sense": "son"
+    },
+    "people.teacher": {
+      "terms": {
+        "en": "teacher",
+        "es": "profesor",
+        "fr": "professeur",
+        "ar": "معلم",
+        "zh-CN": "老师",
+        "ru": "учитель",
+        "de": "Lehrer",
+        "it": "insegnante",
+        "ja": "先生",
+        "ko": "선생님",
+        "pt": "professor",
+        "tr": "öğretmen"
+      },
+      "sense": "teacher"
+    },
+    "people.student": {
+      "terms": {
+        "en": "student",
+        "es": "estudiante",
+        "fr": "étudiant",
+        "ar": "طالب",
+        "zh-CN": "学生",
+        "ru": "студент",
+        "de": "Student",
+        "it": "studente",
+        "ja": "学生",
+        "ko": "학생",
+        "pt": "estudante",
+        "tr": "öğrenci"
+      },
+      "sense": "student"
+    },
+    "reference.i": {
+      "terms": {
+        "en": "I",
+        "es": "yo",
+        "fr": "je",
+        "ar": "أنا",
+        "zh-CN": "我",
+        "ru": "я",
+        "de": "ich",
+        "it": "io",
+        "ja": "私",
+        "ko": "나",
+        "pt": "eu",
+        "tr": "ben"
+      },
+      "sense": "I"
+    },
+    "reference.you": {
+      "terms": {
+        "en": "you",
+        "es": "tú",
+        "fr": "tu",
+        "ar": "أنت",
+        "zh-CN": "你",
+        "ru": "ты",
+        "de": "du",
+        "it": "tu",
+        "ja": "あなた",
+        "ko": "너",
+        "pt": "tu",
+        "tr": "sen"
+      },
+      "sense": "you; singular, informal"
+    },
+    "reference.he": {
+      "terms": {
+        "en": "he",
+        "es": "él",
+        "fr": "il",
+        "ar": "هو",
+        "zh-CN": "他",
+        "ru": "он",
+        "de": "er",
+        "it": "lui",
+        "ja": "彼",
+        "ko": "그",
+        "pt": "ele",
+        "tr": "o"
+      },
+      "sense": "he; masculine singular"
+    },
+    "reference.she": {
+      "terms": {
+        "en": "she",
+        "es": "ella",
+        "fr": "elle",
+        "ar": "هي",
+        "zh-CN": "她",
+        "ru": "она",
+        "de": "sie",
+        "it": "lei",
+        "ja": "彼女",
+        "ko": "그녀",
+        "pt": "ela",
+        "tr": "o"
+      },
+      "sense": "she; feminine singular"
+    },
+    "reference.we": {
+      "terms": {
+        "en": "we",
+        "es": "nosotros",
+        "fr": "nous",
+        "ar": "نحن",
+        "zh-CN": "我们",
+        "ru": "мы",
+        "de": "wir",
+        "it": "noi",
+        "ja": "私たち",
+        "ko": "우리",
+        "pt": "nós",
+        "tr": "biz"
+      },
+      "sense": "we"
+    },
+    "reference.they": {
+      "terms": {
+        "en": "they",
+        "es": "ellos",
+        "fr": "ils",
+        "ar": "هم",
+        "zh-CN": "他们",
+        "ru": "они",
+        "de": "sie",
+        "it": "loro",
+        "ja": "彼ら",
+        "ko": "그들",
+        "pt": "eles",
+        "tr": "onlar"
+      },
+      "sense": "they; plural"
+    },
+    "reference.this": {
+      "terms": {
+        "en": "this",
+        "es": "esto",
+        "fr": "ceci",
+        "ar": "هذا",
+        "zh-CN": "这个",
+        "ru": "это",
+        "de": "dies",
+        "it": "questo",
+        "ja": "これ",
+        "ko": "이것",
+        "pt": "isto",
+        "tr": "bu"
+      },
+      "sense": "this; nearby thing"
+    },
+    "reference.that": {
+      "terms": {
+        "en": "that",
+        "es": "eso",
+        "fr": "cela",
+        "ar": "ذلك",
+        "zh-CN": "那个",
+        "ru": "то",
+        "de": "das",
+        "it": "quello",
+        "ja": "それ",
+        "ko": "그것",
+        "pt": "isso",
+        "tr": "şu"
+      },
+      "sense": "that; indicated thing"
+    },
+    "reference.here": {
+      "terms": {
+        "en": "here",
+        "es": "aquí",
+        "fr": "ici",
+        "ar": "هنا",
+        "zh-CN": "这里",
+        "ru": "здесь",
+        "de": "hier",
+        "it": "qui",
+        "ja": "ここ",
+        "ko": "여기",
+        "pt": "aqui",
+        "tr": "burada"
+      },
+      "sense": "here"
+    },
+    "reference.there": {
+      "terms": {
+        "en": "there",
+        "es": "allí",
+        "fr": "là-bas",
+        "ar": "هناك",
+        "zh-CN": "那里",
+        "ru": "там",
+        "de": "dort",
+        "it": "lì",
+        "ja": "そこ",
+        "ko": "거기",
+        "pt": "ali",
+        "tr": "orada"
+      },
+      "sense": "there"
+    },
+    "reference.who": {
+      "terms": {
+        "en": "who",
+        "es": "quién",
+        "fr": "qui",
+        "ar": "من",
+        "zh-CN": "谁",
+        "ru": "кто",
+        "de": "wer",
+        "it": "chi",
+        "ja": "誰",
+        "ko": "누구",
+        "pt": "quem",
+        "tr": "kim"
+      },
+      "sense": "who"
+    },
+    "reference.what": {
+      "terms": {
+        "en": "what",
+        "es": "qué",
+        "fr": "quoi",
+        "ar": "ماذا",
+        "zh-CN": "什么",
+        "ru": "что",
+        "de": "was",
+        "it": "che cosa",
+        "ja": "何",
+        "ko": "무엇",
+        "pt": "o que",
+        "tr": "ne"
+      },
+      "sense": "what"
+    },
+    "reference.where": {
+      "terms": {
+        "en": "where",
+        "es": "dónde",
+        "fr": "où",
+        "ar": "أين",
+        "zh-CN": "哪里",
+        "ru": "где",
+        "de": "wo",
+        "it": "dove",
+        "ja": "どこ",
+        "ko": "어디",
+        "pt": "onde",
+        "tr": "nerede"
+      },
+      "sense": "where"
+    },
+    "reference.when": {
+      "terms": {
+        "en": "when",
+        "es": "cuándo",
+        "fr": "quand",
+        "ar": "متى",
+        "zh-CN": "什么时候",
+        "ru": "когда",
+        "de": "wann",
+        "it": "quando",
+        "ja": "いつ",
+        "ko": "언제",
+        "pt": "quando",
+        "tr": "ne zaman"
+      },
+      "sense": "when"
+    },
+    "reference.why": {
+      "terms": {
+        "en": "why",
+        "es": "por qué",
+        "fr": "pourquoi",
+        "ar": "لماذا",
+        "zh-CN": "为什么",
+        "ru": "почему",
+        "de": "warum",
+        "it": "perché",
+        "ja": "なぜ",
+        "ko": "왜",
+        "pt": "por quê",
+        "tr": "neden"
+      },
+      "sense": "why"
+    },
+    "food.bread": {
+      "terms": {
+        "en": "bread",
+        "es": "pan",
+        "fr": "pain",
+        "ar": "خبز",
+        "zh-CN": "面包",
+        "ru": "хлеб",
+        "de": "Brot",
+        "it": "pane",
+        "ja": "パン",
+        "ko": "빵",
+        "pt": "pão",
+        "tr": "ekmek"
+      },
+      "sense": "bread"
+    },
+    "food.rice": {
+      "terms": {
+        "en": "rice",
+        "es": "arroz",
+        "fr": "riz",
+        "ar": "أرز",
+        "zh-CN": "米饭",
+        "ru": "рис",
+        "de": "Reis",
+        "it": "riso",
+        "ja": "ご飯",
+        "ko": "밥",
+        "pt": "arroz",
+        "tr": "pirinç"
+      },
+      "sense": "cooked rice / rice as food"
+    },
+    "food.pasta": {
+      "terms": {
+        "en": "pasta",
+        "es": "pasta",
+        "fr": "pâtes",
+        "ar": "معكرونة",
+        "zh-CN": "意大利面",
+        "ru": "макароны",
+        "de": "Nudeln",
+        "it": "pasta",
+        "ja": "パスタ",
+        "ko": "파스타",
+        "pt": "massa",
+        "tr": "makarna"
+      },
+      "sense": "pasta"
+    },
+    "food.meat": {
+      "terms": {
+        "en": "meat",
+        "es": "carne",
+        "fr": "viande",
+        "ar": "لحم",
+        "zh-CN": "肉",
+        "ru": "мясо",
+        "de": "Fleisch",
+        "it": "carne",
+        "ja": "肉",
+        "ko": "고기",
+        "pt": "carne",
+        "tr": "et"
+      },
+      "sense": "meat"
+    },
+    "food.fish": {
+      "terms": {
+        "en": "fish",
+        "es": "pescado",
+        "fr": "poisson",
+        "ar": "سمك",
+        "zh-CN": "鱼肉",
+        "ru": "рыба",
+        "de": "Fisch",
+        "it": "pesce",
+        "ja": "魚",
+        "ko": "생선",
+        "pt": "peixe",
+        "tr": "balık"
+      },
+      "sense": "fish as food"
+    },
+    "food.chicken": {
+      "terms": {
+        "en": "chicken",
+        "es": "pollo",
+        "fr": "poulet",
+        "ar": "لحم الدجاج",
+        "zh-CN": "鸡肉",
+        "ru": "курятина",
+        "de": "Hühnerfleisch",
+        "it": "carne di pollo",
+        "ja": "鶏肉",
+        "ko": "닭고기",
+        "pt": "frango",
+        "tr": "tavuk eti"
+      },
+      "sense": "chicken meat"
+    },
+    "food.egg": {
+      "terms": {
+        "en": "egg",
+        "es": "huevo",
+        "fr": "œuf",
+        "ar": "بيضة",
+        "zh-CN": "鸡蛋",
+        "ru": "яйцо",
+        "de": "Ei",
+        "it": "uovo",
+        "ja": "卵",
+        "ko": "달걀",
+        "pt": "ovo",
+        "tr": "yumurta"
+      },
+      "sense": "egg"
+    },
+    "food.cheese": {
+      "terms": {
+        "en": "cheese",
+        "es": "queso",
+        "fr": "fromage",
+        "ar": "جبن",
+        "zh-CN": "奶酪",
+        "ru": "сыр",
+        "de": "Käse",
+        "it": "formaggio",
+        "ja": "チーズ",
+        "ko": "치즈",
+        "pt": "queijo",
+        "tr": "peynir"
+      },
+      "sense": "cheese"
+    },
+    "food.milk": {
+      "terms": {
+        "en": "milk",
+        "es": "leche",
+        "fr": "lait",
+        "ar": "حليب",
+        "zh-CN": "牛奶",
+        "ru": "молоко",
+        "de": "Milch",
+        "it": "latte",
+        "ja": "牛乳",
+        "ko": "우유",
+        "pt": "leite",
+        "tr": "süt"
+      },
+      "sense": "milk"
+    },
+    "food.water": {
+      "terms": {
+        "en": "water",
+        "es": "agua",
+        "fr": "eau",
+        "ar": "ماء",
+        "zh-CN": "水",
+        "ru": "вода",
+        "de": "Wasser",
+        "it": "acqua",
+        "ja": "水",
+        "ko": "물",
+        "pt": "água",
+        "tr": "su"
+      },
+      "sense": "water"
+    },
+    "food.tea": {
+      "terms": {
+        "en": "tea",
+        "es": "té",
+        "fr": "thé",
+        "ar": "شاي",
+        "zh-CN": "茶",
+        "ru": "чай",
+        "de": "Tee",
+        "it": "tè",
+        "ja": "お茶",
+        "ko": "차",
+        "pt": "chá",
+        "tr": "çay"
+      },
+      "sense": "tea"
+    },
+    "food.coffee": {
+      "terms": {
+        "en": "coffee",
+        "es": "café",
+        "fr": "café",
+        "ar": "قهوة",
+        "zh-CN": "咖啡",
+        "ru": "кофе",
+        "de": "Kaffee",
+        "it": "caffè",
+        "ja": "コーヒー",
+        "ko": "커피",
+        "pt": "café",
+        "tr": "kahve"
+      },
+      "sense": "coffee"
+    },
+    "food.sugar": {
+      "terms": {
+        "en": "sugar",
+        "es": "azúcar",
+        "fr": "sucre",
+        "ar": "سكر",
+        "zh-CN": "糖",
+        "ru": "сахар",
+        "de": "Zucker",
+        "it": "zucchero",
+        "ja": "砂糖",
+        "ko": "설탕",
+        "pt": "açúcar",
+        "tr": "şeker"
+      },
+      "sense": "sugar"
+    },
+    "food.salt": {
+      "terms": {
+        "en": "salt",
+        "es": "sal",
+        "fr": "sel",
+        "ar": "ملح",
+        "zh-CN": "盐",
+        "ru": "соль",
+        "de": "Salz",
+        "it": "sale",
+        "ja": "塩",
+        "ko": "소금",
+        "pt": "sal",
+        "tr": "tuz"
+      },
+      "sense": "salt"
+    },
+    "food.oil": {
+      "terms": {
+        "en": "oil",
+        "es": "aceite",
+        "fr": "huile",
+        "ar": "زيت",
+        "zh-CN": "食用油",
+        "ru": "растительное масло",
+        "de": "Speiseöl",
+        "it": "olio",
+        "ja": "食用油",
+        "ko": "식용유",
+        "pt": "óleo",
+        "tr": "sıvı yağ"
+      },
+      "sense": "cooking oil"
+    },
+    "produce.apple": {
+      "terms": {
+        "en": "apple",
+        "es": "manzana",
+        "fr": "pomme",
+        "ar": "تفاحة",
+        "zh-CN": "苹果",
+        "ru": "яблоко",
+        "de": "Apfel",
+        "it": "mela",
+        "ja": "りんご",
+        "ko": "사과",
+        "pt": "maçã",
+        "tr": "elma"
+      },
+      "sense": "apple"
+    },
+    "produce.banana": {
+      "terms": {
+        "en": "banana",
+        "es": "plátano",
+        "fr": "banane",
+        "ar": "موزة",
+        "zh-CN": "香蕉",
+        "ru": "банан",
+        "de": "Banane",
+        "it": "banana",
+        "ja": "バナナ",
+        "ko": "바나나",
+        "pt": "banana",
+        "tr": "muz"
+      },
+      "sense": "banana"
+    },
+    "produce.orange": {
+      "terms": {
+        "en": "orange",
+        "es": "naranja",
+        "fr": "orange",
+        "ar": "برتقالة",
+        "zh-CN": "橙子",
+        "ru": "апельсин",
+        "de": "Orange",
+        "it": "arancia",
+        "ja": "オレンジ",
+        "ko": "오렌지",
+        "pt": "laranja",
+        "tr": "portakal"
+      },
+      "sense": "orange fruit"
+    },
+    "produce.lemon": {
+      "terms": {
+        "en": "lemon",
+        "es": "limón",
+        "fr": "citron",
+        "ar": "ليمونة",
+        "zh-CN": "柠檬",
+        "ru": "лимон",
+        "de": "Zitrone",
+        "it": "limone",
+        "ja": "レモン",
+        "ko": "레몬",
+        "pt": "limão",
+        "tr": "limon"
+      },
+      "sense": "lemon"
+    },
+    "produce.grape": {
+      "terms": {
+        "en": "grape",
+        "es": "uva",
+        "fr": "raisin",
+        "ar": "حبة عنب",
+        "zh-CN": "葡萄",
+        "ru": "виноградина",
+        "de": "Weintraube",
+        "it": "acino d'uva",
+        "ja": "ぶどう",
+        "ko": "포도",
+        "pt": "uva",
+        "tr": "üzüm"
+      },
+      "sense": "grape"
+    },
+    "produce.tomato": {
+      "terms": {
+        "en": "tomato",
+        "es": "tomate",
+        "fr": "tomate",
+        "ar": "طماطم",
+        "zh-CN": "番茄",
+        "ru": "помидор",
+        "de": "Tomate",
+        "it": "pomodoro",
+        "ja": "トマト",
+        "ko": "토마토",
+        "pt": "tomate",
+        "tr": "domates"
+      },
+      "sense": "tomato"
+    },
+    "produce.potato": {
+      "terms": {
+        "en": "potato",
+        "es": "patata",
+        "fr": "pomme de terre",
+        "ar": "بطاطس",
+        "zh-CN": "土豆",
+        "ru": "картофель",
+        "de": "Kartoffel",
+        "it": "patata",
+        "ja": "じゃがいも",
+        "ko": "감자",
+        "pt": "batata",
+        "tr": "patates"
+      },
+      "sense": "potato"
+    },
+    "produce.onion": {
+      "terms": {
+        "en": "onion",
+        "es": "cebolla",
+        "fr": "oignon",
+        "ar": "بصل",
+        "zh-CN": "洋葱",
+        "ru": "лук",
+        "de": "Zwiebel",
+        "it": "cipolla",
+        "ja": "玉ねぎ",
+        "ko": "양파",
+        "pt": "cebola",
+        "tr": "soğan"
+      },
+      "sense": "onion"
+    },
+    "produce.carrot": {
+      "terms": {
+        "en": "carrot",
+        "es": "zanahoria",
+        "fr": "carotte",
+        "ar": "جزرة",
+        "zh-CN": "胡萝卜",
+        "ru": "морковь",
+        "de": "Karotte",
+        "it": "carota",
+        "ja": "にんじん",
+        "ko": "당근",
+        "pt": "cenoura",
+        "tr": "havuç"
+      },
+      "sense": "carrot"
+    },
+    "produce.cucumber": {
+      "terms": {
+        "en": "cucumber",
+        "es": "pepino",
+        "fr": "concombre",
+        "ar": "خيار",
+        "zh-CN": "黄瓜",
+        "ru": "огурец",
+        "de": "Gurke",
+        "it": "cetriolo",
+        "ja": "きゅうり",
+        "ko": "오이",
+        "pt": "pepino",
+        "tr": "salatalık"
+      },
+      "sense": "cucumber"
+    },
+    "produce.lettuce": {
+      "terms": {
+        "en": "lettuce",
+        "es": "lechuga",
+        "fr": "laitue",
+        "ar": "خس",
+        "zh-CN": "生菜",
+        "ru": "салат-латук",
+        "de": "Kopfsalat",
+        "it": "lattuga",
+        "ja": "レタス",
+        "ko": "상추",
+        "pt": "alface",
+        "tr": "marul"
+      },
+      "sense": "lettuce"
+    },
+    "produce.fruit": {
+      "terms": {
+        "en": "fruit",
+        "es": "fruta",
+        "fr": "fruit",
+        "ar": "فاكهة",
+        "zh-CN": "水果",
+        "ru": "фрукт",
+        "de": "Obst",
+        "it": "frutta",
+        "ja": "果物",
+        "ko": "과일",
+        "pt": "fruta",
+        "tr": "meyve"
+      },
+      "sense": "fruit"
+    },
+    "produce.vegetable": {
+      "terms": {
+        "en": "vegetable",
+        "es": "verdura",
+        "fr": "légume",
+        "ar": "خضار",
+        "zh-CN": "蔬菜",
+        "ru": "овощ",
+        "de": "Gemüse",
+        "it": "verdura",
+        "ja": "野菜",
+        "ko": "채소",
+        "pt": "legume",
+        "tr": "sebze"
+      },
+      "sense": "vegetable"
+    },
+    "produce.soup": {
+      "terms": {
+        "en": "soup",
+        "es": "sopa",
+        "fr": "soupe",
+        "ar": "حساء",
+        "zh-CN": "汤",
+        "ru": "суп",
+        "de": "Suppe",
+        "it": "zuppa",
+        "ja": "スープ",
+        "ko": "수프",
+        "pt": "sopa",
+        "tr": "çorba"
+      },
+      "sense": "soup"
+    },
+    "produce.salad": {
+      "terms": {
+        "en": "salad",
+        "es": "ensalada",
+        "fr": "salade",
+        "ar": "سلطة",
+        "zh-CN": "沙拉",
+        "ru": "салат",
+        "de": "Salat",
+        "it": "insalata",
+        "ja": "サラダ",
+        "ko": "샐러드",
+        "pt": "salada",
+        "tr": "salata"
+      },
+      "sense": "salad"
+    },
+    "home.house": {
+      "terms": {
+        "en": "house",
+        "es": "casa",
+        "fr": "maison",
+        "ar": "منزل",
+        "zh-CN": "房子",
+        "ru": "дом",
+        "de": "Haus",
+        "it": "casa",
+        "ja": "家",
+        "ko": "집",
+        "pt": "casa",
+        "tr": "ev"
+      },
+      "sense": "house"
+    },
+    "home.room": {
+      "terms": {
+        "en": "room",
+        "es": "habitación",
+        "fr": "pièce",
+        "ar": "غرفة",
+        "zh-CN": "房间",
+        "ru": "комната",
+        "de": "Zimmer",
+        "it": "stanza",
+        "ja": "部屋",
+        "ko": "방",
+        "pt": "quarto",
+        "tr": "oda"
+      },
+      "sense": "room"
+    },
+    "home.door": {
+      "terms": {
+        "en": "door",
+        "es": "puerta",
+        "fr": "porte",
+        "ar": "باب",
+        "zh-CN": "门",
+        "ru": "дверь",
+        "de": "Tür",
+        "it": "porta",
+        "ja": "ドア",
+        "ko": "문",
+        "pt": "porta",
+        "tr": "kapı"
+      },
+      "sense": "door"
+    },
+    "home.window": {
+      "terms": {
+        "en": "window",
+        "es": "ventana",
+        "fr": "fenêtre",
+        "ar": "نافذة",
+        "zh-CN": "窗户",
+        "ru": "окно",
+        "de": "Fenster",
+        "it": "finestra",
+        "ja": "窓",
+        "ko": "창문",
+        "pt": "janela",
+        "tr": "pencere"
+      },
+      "sense": "window"
+    },
+    "home.table": {
+      "terms": {
+        "en": "table",
+        "es": "mesa",
+        "fr": "table",
+        "ar": "طاولة",
+        "zh-CN": "桌子",
+        "ru": "стол",
+        "de": "Tisch",
+        "it": "tavolo",
+        "ja": "テーブル",
+        "ko": "탁자",
+        "pt": "mesa",
+        "tr": "masa"
+      },
+      "sense": "table"
+    },
+    "home.chair": {
+      "terms": {
+        "en": "chair",
+        "es": "silla",
+        "fr": "chaise",
+        "ar": "كرسي",
+        "zh-CN": "椅子",
+        "ru": "стул",
+        "de": "Stuhl",
+        "it": "sedia",
+        "ja": "椅子",
+        "ko": "의자",
+        "pt": "cadeira",
+        "tr": "sandalye"
+      },
+      "sense": "chair"
+    },
+    "home.bed": {
+      "terms": {
+        "en": "bed",
+        "es": "cama",
+        "fr": "lit",
+        "ar": "سرير",
+        "zh-CN": "床",
+        "ru": "кровать",
+        "de": "Bett",
+        "it": "letto",
+        "ja": "ベッド",
+        "ko": "침대",
+        "pt": "cama",
+        "tr": "yatak"
+      },
+      "sense": "bed"
+    },
+    "home.kitchen": {
+      "terms": {
+        "en": "kitchen",
+        "es": "cocina",
+        "fr": "cuisine",
+        "ar": "مطبخ",
+        "zh-CN": "厨房",
+        "ru": "кухня",
+        "de": "Küche",
+        "it": "cucina",
+        "ja": "台所",
+        "ko": "부엌",
+        "pt": "cozinha",
+        "tr": "mutfak"
+      },
+      "sense": "kitchen"
+    },
+    "home.bathroom": {
+      "terms": {
+        "en": "bathroom",
+        "es": "baño",
+        "fr": "salle de bain",
+        "ar": "حمام",
+        "zh-CN": "浴室",
+        "ru": "ванная",
+        "de": "Badezimmer",
+        "it": "bagno",
+        "ja": "浴室",
+        "ko": "욕실",
+        "pt": "banheiro",
+        "tr": "banyo"
+      },
+      "sense": "bathroom"
+    },
+    "home.key": {
+      "terms": {
+        "en": "key",
+        "es": "llave",
+        "fr": "clé",
+        "ar": "مفتاح",
+        "zh-CN": "钥匙",
+        "ru": "ключ",
+        "de": "Schlüssel",
+        "it": "chiave",
+        "ja": "鍵",
+        "ko": "열쇠",
+        "pt": "chave",
+        "tr": "anahtar"
+      },
+      "sense": "key"
+    },
+    "home.light": {
+      "terms": {
+        "en": "light",
+        "es": "luz",
+        "fr": "lumière",
+        "ar": "ضوء",
+        "zh-CN": "光",
+        "ru": "свет",
+        "de": "Licht",
+        "it": "luce",
+        "ja": "光",
+        "ko": "빛",
+        "pt": "luz",
+        "tr": "ışık"
+      },
+      "sense": "light / illumination"
+    },
+    "home.floor": {
+      "terms": {
+        "en": "floor",
+        "es": "suelo",
+        "fr": "sol",
+        "ar": "أرضية",
+        "zh-CN": "地板",
+        "ru": "пол",
+        "de": "Fußboden",
+        "it": "pavimento",
+        "ja": "床",
+        "ko": "바닥",
+        "pt": "chão",
+        "tr": "zemin"
+      },
+      "sense": "floor surface, not building level"
+    },
+    "home.wall": {
+      "terms": {
+        "en": "wall",
+        "es": "pared",
+        "fr": "mur",
+        "ar": "جدار",
+        "zh-CN": "墙",
+        "ru": "стена",
+        "de": "Wand",
+        "it": "parete",
+        "ja": "壁",
+        "ko": "벽",
+        "pt": "parede",
+        "tr": "duvar"
+      },
+      "sense": "wall"
+    },
+    "home.roof": {
+      "terms": {
+        "en": "roof",
+        "es": "tejado",
+        "fr": "toit",
+        "ar": "سقف",
+        "zh-CN": "屋顶",
+        "ru": "крыша",
+        "de": "Dach",
+        "it": "tetto",
+        "ja": "屋根",
+        "ko": "지붕",
+        "pt": "telhado",
+        "tr": "çatı"
+      },
+      "sense": "roof"
+    },
+    "home.garden": {
+      "terms": {
+        "en": "garden",
+        "es": "jardín",
+        "fr": "jardin",
+        "ar": "حديقة",
+        "zh-CN": "花园",
+        "ru": "сад",
+        "de": "Garten",
+        "it": "giardino",
+        "ja": "庭",
+        "ko": "정원",
+        "pt": "jardim",
+        "tr": "bahçe"
+      },
+      "sense": "garden"
+    },
+    "city.city": {
+      "terms": {
+        "en": "city",
+        "es": "ciudad",
+        "fr": "ville",
+        "ar": "مدينة",
+        "zh-CN": "城市",
+        "ru": "город",
+        "de": "Stadt",
+        "it": "città",
+        "ja": "都市",
+        "ko": "도시",
+        "pt": "cidade",
+        "tr": "şehir"
+      },
+      "sense": "city"
+    },
+    "city.street": {
+      "terms": {
+        "en": "street",
+        "es": "calle",
+        "fr": "rue",
+        "ar": "شارع",
+        "zh-CN": "街道",
+        "ru": "улица",
+        "de": "Straße",
+        "it": "via",
+        "ja": "通り",
+        "ko": "거리",
+        "pt": "rua",
+        "tr": "sokak"
+      },
+      "sense": "street"
+    },
+    "city.road": {
+      "terms": {
+        "en": "road",
+        "es": "carretera",
+        "fr": "route",
+        "ar": "طريق",
+        "zh-CN": "公路",
+        "ru": "дорога",
+        "de": "Straße",
+        "it": "strada",
+        "ja": "道路",
+        "ko": "도로",
+        "pt": "estrada",
+        "tr": "yol"
+      },
+      "sense": "road"
+    },
+    "city.shop": {
+      "terms": {
+        "en": "shop",
+        "es": "tienda",
+        "fr": "magasin",
+        "ar": "متجر",
+        "zh-CN": "商店",
+        "ru": "магазин",
+        "de": "Geschäft",
+        "it": "negozio",
+        "ja": "店",
+        "ko": "가게",
+        "pt": "loja",
+        "tr": "dükkân"
+      },
+      "sense": "shop"
+    },
+    "city.market": {
+      "terms": {
+        "en": "market",
+        "es": "mercado",
+        "fr": "marché",
+        "ar": "سوق",
+        "zh-CN": "市场",
+        "ru": "рынок",
+        "de": "Markt",
+        "it": "mercato",
+        "ja": "市場",
+        "ko": "시장",
+        "pt": "mercado",
+        "tr": "pazar"
+      },
+      "sense": "market"
+    },
+    "city.school": {
+      "terms": {
+        "en": "school",
+        "es": "escuela",
+        "fr": "école",
+        "ar": "مدرسة",
+        "zh-CN": "学校",
+        "ru": "школа",
+        "de": "Schule",
+        "it": "scuola",
+        "ja": "学校",
+        "ko": "학교",
+        "pt": "escola",
+        "tr": "okul"
+      },
+      "sense": "school"
+    },
+    "city.hospital": {
+      "terms": {
+        "en": "hospital",
+        "es": "hospital",
+        "fr": "hôpital",
+        "ar": "مستشفى",
+        "zh-CN": "医院",
+        "ru": "больница",
+        "de": "Krankenhaus",
+        "it": "ospedale",
+        "ja": "病院",
+        "ko": "병원",
+        "pt": "hospital",
+        "tr": "hastane"
+      },
+      "sense": "hospital"
+    },
+    "city.pharmacy": {
+      "terms": {
+        "en": "pharmacy",
+        "es": "farmacia",
+        "fr": "pharmacie",
+        "ar": "صيدلية",
+        "zh-CN": "药店",
+        "ru": "аптека",
+        "de": "Apotheke",
+        "it": "farmacia",
+        "ja": "薬局",
+        "ko": "약국",
+        "pt": "farmácia",
+        "tr": "eczane"
+      },
+      "sense": "pharmacy"
+    },
+    "city.restaurant": {
+      "terms": {
+        "en": "restaurant",
+        "es": "restaurante",
+        "fr": "restaurant",
+        "ar": "مطعم",
+        "zh-CN": "餐厅",
+        "ru": "ресторан",
+        "de": "Restaurant",
+        "it": "ristorante",
+        "ja": "レストラン",
+        "ko": "식당",
+        "pt": "restaurante",
+        "tr": "restoran"
+      },
+      "sense": "restaurant"
+    },
+    "city.hotel": {
+      "terms": {
+        "en": "hotel",
+        "es": "hotel",
+        "fr": "hôtel",
+        "ar": "فندق",
+        "zh-CN": "酒店",
+        "ru": "гостиница",
+        "de": "Hotel",
+        "it": "albergo",
+        "ja": "ホテル",
+        "ko": "호텔",
+        "pt": "hotel",
+        "tr": "otel"
+      },
+      "sense": "hotel"
+    },
+    "city.bank": {
+      "terms": {
+        "en": "bank",
+        "es": "banco",
+        "fr": "banque",
+        "ar": "بنك",
+        "zh-CN": "银行",
+        "ru": "банк",
+        "de": "Bank",
+        "it": "banca",
+        "ja": "銀行",
+        "ko": "은행",
+        "pt": "banco",
+        "tr": "banka"
+      },
+      "sense": "financial institution"
+    },
+    "city.park": {
+      "terms": {
+        "en": "park",
+        "es": "parque",
+        "fr": "parc",
+        "ar": "منتزه",
+        "zh-CN": "公园",
+        "ru": "парк",
+        "de": "Park",
+        "it": "parco",
+        "ja": "公園",
+        "ko": "공원",
+        "pt": "parque",
+        "tr": "park"
+      },
+      "sense": "park"
+    },
+    "city.station": {
+      "terms": {
+        "en": "station",
+        "es": "estación",
+        "fr": "gare",
+        "ar": "محطة قطار",
+        "zh-CN": "火车站",
+        "ru": "вокзал",
+        "de": "Bahnhof",
+        "it": "stazione",
+        "ja": "駅",
+        "ko": "기차역",
+        "pt": "estação",
+        "tr": "tren istasyonu"
+      },
+      "sense": "train station"
+    },
+    "city.airport": {
+      "terms": {
+        "en": "airport",
+        "es": "aeropuerto",
+        "fr": "aéroport",
+        "ar": "مطار",
+        "zh-CN": "机场",
+        "ru": "аэропорт",
+        "de": "Flughafen",
+        "it": "aeroporto",
+        "ja": "空港",
+        "ko": "공항",
+        "pt": "aeroporto",
+        "tr": "havalimanı"
+      },
+      "sense": "airport"
+    },
+    "city.bridge": {
+      "terms": {
+        "en": "bridge",
+        "es": "puente",
+        "fr": "pont",
+        "ar": "جسر",
+        "zh-CN": "桥",
+        "ru": "мост",
+        "de": "Brücke",
+        "it": "ponte",
+        "ja": "橋",
+        "ko": "다리",
+        "pt": "ponte",
+        "tr": "köprü"
+      },
+      "sense": "bridge"
+    },
+    "travel.car": {
+      "terms": {
+        "en": "car",
+        "es": "coche",
+        "fr": "voiture",
+        "ar": "سيارة",
+        "zh-CN": "汽车",
+        "ru": "автомобиль",
+        "de": "Auto",
+        "it": "automobile",
+        "ja": "車",
+        "ko": "자동차",
+        "pt": "carro",
+        "tr": "araba"
+      },
+      "sense": "car"
+    },
+    "travel.bus": {
+      "terms": {
+        "en": "bus",
+        "es": "autobús",
+        "fr": "bus",
+        "ar": "حافلة",
+        "zh-CN": "公共汽车",
+        "ru": "автобус",
+        "de": "Bus",
+        "it": "autobus",
+        "ja": "バス",
+        "ko": "버스",
+        "pt": "ônibus",
+        "tr": "otobüs"
+      },
+      "sense": "bus"
+    },
+    "travel.train": {
+      "terms": {
+        "en": "train",
+        "es": "tren",
+        "fr": "train",
+        "ar": "قطار",
+        "zh-CN": "火车",
+        "ru": "поезд",
+        "de": "Zug",
+        "it": "treno",
+        "ja": "電車",
+        "ko": "기차",
+        "pt": "trem",
+        "tr": "tren"
+      },
+      "sense": "train"
+    },
+    "travel.airplane": {
+      "terms": {
+        "en": "airplane",
+        "es": "avión",
+        "fr": "avion",
+        "ar": "طائرة",
+        "zh-CN": "飞机",
+        "ru": "самолёт",
+        "de": "Flugzeug",
+        "it": "aereo",
+        "ja": "飛行機",
+        "ko": "비행기",
+        "pt": "avião",
+        "tr": "uçak"
+      },
+      "sense": "airplane"
+    },
+    "travel.bicycle": {
+      "terms": {
+        "en": "bicycle",
+        "es": "bicicleta",
+        "fr": "vélo",
+        "ar": "دراجة",
+        "zh-CN": "自行车",
+        "ru": "велосипед",
+        "de": "Fahrrad",
+        "it": "bicicletta",
+        "ja": "自転車",
+        "ko": "자전거",
+        "pt": "bicicleta",
+        "tr": "bisiklet"
+      },
+      "sense": "bicycle"
+    },
+    "travel.boat": {
+      "terms": {
+        "en": "boat",
+        "es": "barco",
+        "fr": "bateau",
+        "ar": "قارب",
+        "zh-CN": "船",
+        "ru": "лодка",
+        "de": "Boot",
+        "it": "barca",
+        "ja": "船",
+        "ko": "배",
+        "pt": "barco",
+        "tr": "tekne"
+      },
+      "sense": "boat"
+    },
+    "travel.ticket": {
+      "terms": {
+        "en": "ticket",
+        "es": "billete",
+        "fr": "billet",
+        "ar": "تذكرة",
+        "zh-CN": "票",
+        "ru": "билет",
+        "de": "Fahrkarte",
+        "it": "biglietto",
+        "ja": "切符",
+        "ko": "표",
+        "pt": "passagem",
+        "tr": "bilet"
+      },
+      "sense": "travel ticket"
+    },
+    "travel.passport": {
+      "terms": {
+        "en": "passport",
+        "es": "pasaporte",
+        "fr": "passeport",
+        "ar": "جواز سفر",
+        "zh-CN": "护照",
+        "ru": "паспорт",
+        "de": "Reisepass",
+        "it": "passaporto",
+        "ja": "パスポート",
+        "ko": "여권",
+        "pt": "passaporte",
+        "tr": "pasaport"
+      },
+      "sense": "passport"
+    },
+    "travel.bag": {
+      "terms": {
+        "en": "bag",
+        "es": "bolsa",
+        "fr": "sac",
+        "ar": "حقيبة",
+        "zh-CN": "包",
+        "ru": "сумка",
+        "de": "Tasche",
+        "it": "borsa",
+        "ja": "かばん",
+        "ko": "가방",
+        "pt": "bolsa",
+        "tr": "çanta"
+      },
+      "sense": "bag"
+    },
+    "travel.map": {
+      "terms": {
+        "en": "map",
+        "es": "mapa",
+        "fr": "carte",
+        "ar": "خريطة",
+        "zh-CN": "地图",
+        "ru": "карта",
+        "de": "Landkarte",
+        "it": "mappa",
+        "ja": "地図",
+        "ko": "지도",
+        "pt": "mapa",
+        "tr": "harita"
+      },
+      "sense": "map"
+    },
+    "travel.left": {
+      "terms": {
+        "en": "left",
+        "es": "izquierda",
+        "fr": "gauche",
+        "ar": "يسار",
+        "zh-CN": "左边",
+        "ru": "лево",
+        "de": "links",
+        "it": "sinistra",
+        "ja": "左",
+        "ko": "왼쪽",
+        "pt": "esquerda",
+        "tr": "sol"
+      },
+      "sense": "left direction"
+    },
+    "travel.right": {
+      "terms": {
+        "en": "right",
+        "es": "derecha",
+        "fr": "droite",
+        "ar": "يمين",
+        "zh-CN": "右边",
+        "ru": "право",
+        "de": "rechts",
+        "it": "destra",
+        "ja": "右",
+        "ko": "오른쪽",
+        "pt": "direita",
+        "tr": "sağ"
+      },
+      "sense": "right direction"
+    },
+    "travel.straight": {
+      "terms": {
+        "en": "straight ahead",
+        "es": "todo recto",
+        "fr": "tout droit",
+        "ar": "إلى الأمام مباشرة",
+        "zh-CN": "一直往前",
+        "ru": "прямо",
+        "de": "geradeaus",
+        "it": "sempre dritto",
+        "ja": "まっすぐ",
+        "ko": "똑바로",
+        "pt": "em frente",
+        "tr": "dümdüz"
+      },
+      "sense": "straight ahead"
+    },
+    "travel.near": {
+      "terms": {
+        "en": "near",
+        "es": "cerca",
+        "fr": "près",
+        "ar": "قريب",
+        "zh-CN": "近",
+        "ru": "близко",
+        "de": "nah",
+        "it": "vicino",
+        "ja": "近い",
+        "ko": "가깝다",
+        "pt": "perto",
+        "tr": "yakın"
+      },
+      "sense": "near in distance"
+    },
+    "travel.far": {
+      "terms": {
+        "en": "far",
+        "es": "lejos",
+        "fr": "loin",
+        "ar": "بعيد",
+        "zh-CN": "远",
+        "ru": "далеко",
+        "de": "weit",
+        "it": "lontano",
+        "ja": "遠い",
+        "ko": "멀다",
+        "pt": "longe",
+        "tr": "uzak"
+      },
+      "sense": "far in distance"
+    },
+    "time.day": {
+      "terms": {
+        "en": "day",
+        "es": "día",
+        "fr": "jour",
+        "ar": "يوم",
+        "zh-CN": "天",
+        "ru": "день",
+        "de": "Tag",
+        "it": "giorno",
+        "ja": "日",
+        "ko": "날",
+        "pt": "dia",
+        "tr": "gün"
+      },
+      "sense": "day; period of time"
+    },
+    "time.night": {
+      "terms": {
+        "en": "night",
+        "es": "noche",
+        "fr": "nuit",
+        "ar": "ليل",
+        "zh-CN": "夜晚",
+        "ru": "ночь",
+        "de": "Nacht",
+        "it": "notte",
+        "ja": "夜",
+        "ko": "밤",
+        "pt": "noite",
+        "tr": "gece"
+      },
+      "sense": "night"
+    },
+    "time.morning": {
+      "terms": {
+        "en": "morning",
+        "es": "mañana",
+        "fr": "matin",
+        "ar": "صباح",
+        "zh-CN": "早晨",
+        "ru": "утро",
+        "de": "Morgen",
+        "it": "mattina",
+        "ja": "朝",
+        "ko": "아침",
+        "pt": "manhã",
+        "tr": "sabah"
+      },
+      "sense": "morning; part of the day"
+    },
+    "time.afternoon": {
+      "terms": {
+        "en": "afternoon",
+        "es": "tarde",
+        "fr": "après-midi",
+        "ar": "بعد الظهر",
+        "zh-CN": "下午",
+        "ru": "день",
+        "de": "Nachmittag",
+        "it": "pomeriggio",
+        "ja": "午後",
+        "ko": "오후",
+        "pt": "tarde",
+        "tr": "öğleden sonra"
+      },
+      "sense": "afternoon; after midday"
+    },
+    "time.evening": {
+      "terms": {
+        "en": "evening",
+        "es": "tarde",
+        "fr": "soir",
+        "ar": "مساء",
+        "zh-CN": "晚上",
+        "ru": "вечер",
+        "de": "Abend",
+        "it": "sera",
+        "ja": "夕方",
+        "ko": "저녁",
+        "pt": "noite",
+        "tr": "akşam"
+      },
+      "sense": "evening; end of the day"
+    },
+    "time.week": {
+      "terms": {
+        "en": "week",
+        "es": "semana",
+        "fr": "semaine",
+        "ar": "أسبوع",
+        "zh-CN": "星期",
+        "ru": "неделя",
+        "de": "Woche",
+        "it": "settimana",
+        "ja": "週",
+        "ko": "주",
+        "pt": "semana",
+        "tr": "hafta"
+      },
+      "sense": "week"
+    },
+    "time.month": {
+      "terms": {
+        "en": "month",
+        "es": "mes",
+        "fr": "mois",
+        "ar": "شهر",
+        "zh-CN": "月",
+        "ru": "месяц",
+        "de": "Monat",
+        "it": "mese",
+        "ja": "月",
+        "ko": "월",
+        "pt": "mês",
+        "tr": "ay"
+      },
+      "sense": "calendar month"
+    },
+    "time.year": {
+      "terms": {
+        "en": "year",
+        "es": "año",
+        "fr": "année",
+        "ar": "سنة",
+        "zh-CN": "年",
+        "ru": "год",
+        "de": "Jahr",
+        "it": "anno",
+        "ja": "年",
+        "ko": "년",
+        "pt": "ano",
+        "tr": "yıl"
+      },
+      "sense": "year"
+    },
+    "time.today": {
+      "terms": {
+        "en": "today",
+        "es": "hoy",
+        "fr": "aujourd'hui",
+        "ar": "اليوم",
+        "zh-CN": "今天",
+        "ru": "сегодня",
+        "de": "heute",
+        "it": "oggi",
+        "ja": "今日",
+        "ko": "오늘",
+        "pt": "hoje",
+        "tr": "bugün"
+      },
+      "sense": "today"
+    },
+    "time.tomorrow": {
+      "terms": {
+        "en": "tomorrow",
+        "es": "mañana",
+        "fr": "demain",
+        "ar": "غدا",
+        "zh-CN": "明天",
+        "ru": "завтра",
+        "de": "morgen",
+        "it": "domani",
+        "ja": "明日",
+        "ko": "내일",
+        "pt": "amanhã",
+        "tr": "yarın"
+      },
+      "sense": "tomorrow; the next day"
+    },
+    "time.yesterday": {
+      "terms": {
+        "en": "yesterday",
+        "es": "ayer",
+        "fr": "hier",
+        "ar": "أمس",
+        "zh-CN": "昨天",
+        "ru": "вчера",
+        "de": "gestern",
+        "it": "ieri",
+        "ja": "昨日",
+        "ko": "어제",
+        "pt": "ontem",
+        "tr": "dün"
+      },
+      "sense": "yesterday"
+    },
+    "time.now": {
+      "terms": {
+        "en": "now",
+        "es": "ahora",
+        "fr": "maintenant",
+        "ar": "الآن",
+        "zh-CN": "现在",
+        "ru": "сейчас",
+        "de": "jetzt",
+        "it": "adesso",
+        "ja": "今",
+        "ko": "지금",
+        "pt": "agora",
+        "tr": "şimdi"
+      },
+      "sense": "now"
+    },
+    "time.later": {
+      "terms": {
+        "en": "later",
+        "es": "más tarde",
+        "fr": "plus tard",
+        "ar": "لاحقا",
+        "zh-CN": "稍后",
+        "ru": "позже",
+        "de": "später",
+        "it": "più tardi",
+        "ja": "後で",
+        "ko": "나중에",
+        "pt": "mais tarde",
+        "tr": "sonra"
+      },
+      "sense": "later"
+    },
+    "time.early": {
+      "terms": {
+        "en": "early",
+        "es": "temprano",
+        "fr": "tôt",
+        "ar": "مبكرا",
+        "zh-CN": "早",
+        "ru": "рано",
+        "de": "früh",
+        "it": "presto",
+        "ja": "早く",
+        "ko": "일찍",
+        "pt": "cedo",
+        "tr": "erken"
+      },
+      "sense": "early"
+    },
+    "time.late": {
+      "terms": {
+        "en": "late",
+        "es": "tarde",
+        "fr": "tard",
+        "ar": "متأخرا",
+        "zh-CN": "晚",
+        "ru": "поздно",
+        "de": "spät",
+        "it": "tardi",
+        "ja": "遅く",
+        "ko": "늦게",
+        "pt": "tarde",
+        "tr": "geç"
+      },
+      "sense": "late"
+    },
+    "nature.sun": {
+      "terms": {
+        "en": "sun",
+        "es": "sol",
+        "fr": "soleil",
+        "ar": "شمس",
+        "zh-CN": "太阳",
+        "ru": "солнце",
+        "de": "Sonne",
+        "it": "sole",
+        "ja": "太陽",
+        "ko": "태양",
+        "pt": "sol",
+        "tr": "güneş"
+      },
+      "sense": "sun"
+    },
+    "nature.moon": {
+      "terms": {
+        "en": "moon",
+        "es": "luna",
+        "fr": "lune",
+        "ar": "قمر",
+        "zh-CN": "月亮",
+        "ru": "луна",
+        "de": "Mond",
+        "it": "luna",
+        "ja": "月",
+        "ko": "달",
+        "pt": "lua",
+        "tr": "ay"
+      },
+      "sense": "the moon"
+    },
+    "nature.star": {
+      "terms": {
+        "en": "star",
+        "es": "estrella",
+        "fr": "étoile",
+        "ar": "نجمة",
+        "zh-CN": "星星",
+        "ru": "звезда",
+        "de": "Stern",
+        "it": "stella",
+        "ja": "星",
+        "ko": "별",
+        "pt": "estrela",
+        "tr": "yıldız"
+      },
+      "sense": "star"
+    },
+    "nature.sky": {
+      "terms": {
+        "en": "sky",
+        "es": "cielo",
+        "fr": "ciel",
+        "ar": "سماء",
+        "zh-CN": "天空",
+        "ru": "небо",
+        "de": "Himmel",
+        "it": "cielo",
+        "ja": "空",
+        "ko": "하늘",
+        "pt": "céu",
+        "tr": "gökyüzü"
+      },
+      "sense": "sky"
+    },
+    "nature.cloud": {
+      "terms": {
+        "en": "cloud",
+        "es": "nube",
+        "fr": "nuage",
+        "ar": "سحابة",
+        "zh-CN": "云",
+        "ru": "облако",
+        "de": "Wolke",
+        "it": "nuvola",
+        "ja": "雲",
+        "ko": "구름",
+        "pt": "nuvem",
+        "tr": "bulut"
+      },
+      "sense": "cloud"
+    },
+    "nature.rain": {
+      "terms": {
+        "en": "rain",
+        "es": "lluvia",
+        "fr": "pluie",
+        "ar": "مطر",
+        "zh-CN": "雨",
+        "ru": "дождь",
+        "de": "Regen",
+        "it": "pioggia",
+        "ja": "雨",
+        "ko": "비",
+        "pt": "chuva",
+        "tr": "yağmur"
+      },
+      "sense": "rain"
+    },
+    "nature.snow": {
+      "terms": {
+        "en": "snow",
+        "es": "nieve",
+        "fr": "neige",
+        "ar": "ثلج",
+        "zh-CN": "雪",
+        "ru": "снег",
+        "de": "Schnee",
+        "it": "neve",
+        "ja": "雪",
+        "ko": "눈",
+        "pt": "neve",
+        "tr": "kar"
+      },
+      "sense": "snow"
+    },
+    "nature.wind": {
+      "terms": {
+        "en": "wind",
+        "es": "viento",
+        "fr": "vent",
+        "ar": "رياح",
+        "zh-CN": "风",
+        "ru": "ветер",
+        "de": "Wind",
+        "it": "vento",
+        "ja": "風",
+        "ko": "바람",
+        "pt": "vento",
+        "tr": "rüzgâr"
+      },
+      "sense": "wind"
+    },
+    "nature.fire": {
+      "terms": {
+        "en": "fire",
+        "es": "fuego",
+        "fr": "feu",
+        "ar": "نار",
+        "zh-CN": "火",
+        "ru": "огонь",
+        "de": "Feuer",
+        "it": "fuoco",
+        "ja": "火",
+        "ko": "불",
+        "pt": "fogo",
+        "tr": "ateş"
+      },
+      "sense": "fire"
+    },
+    "nature.earth": {
+      "terms": {
+        "en": "soil",
+        "es": "tierra",
+        "fr": "terre",
+        "ar": "تربة",
+        "zh-CN": "土壤",
+        "ru": "почва",
+        "de": "Erde",
+        "it": "terra",
+        "ja": "土",
+        "ko": "흙",
+        "pt": "solo",
+        "tr": "toprak"
+      },
+      "sense": "soil / earth"
+    },
+    "nature.sea": {
+      "terms": {
+        "en": "sea",
+        "es": "mar",
+        "fr": "mer",
+        "ar": "بحر",
+        "zh-CN": "海",
+        "ru": "море",
+        "de": "Meer",
+        "it": "mare",
+        "ja": "海",
+        "ko": "바다",
+        "pt": "mar",
+        "tr": "deniz"
+      },
+      "sense": "sea"
+    },
+    "nature.river": {
+      "terms": {
+        "en": "river",
+        "es": "río",
+        "fr": "rivière",
+        "ar": "نهر",
+        "zh-CN": "河流",
+        "ru": "река",
+        "de": "Fluss",
+        "it": "fiume",
+        "ja": "川",
+        "ko": "강",
+        "pt": "rio",
+        "tr": "nehir"
+      },
+      "sense": "river"
+    },
+    "nature.lake": {
+      "terms": {
+        "en": "lake",
+        "es": "lago",
+        "fr": "lac",
+        "ar": "بحيرة",
+        "zh-CN": "湖",
+        "ru": "озеро",
+        "de": "See",
+        "it": "lago",
+        "ja": "湖",
+        "ko": "호수",
+        "pt": "lago",
+        "tr": "göl"
+      },
+      "sense": "lake"
+    },
+    "nature.mountain": {
+      "terms": {
+        "en": "mountain",
+        "es": "montaña",
+        "fr": "montagne",
+        "ar": "جبل",
+        "zh-CN": "山",
+        "ru": "гора",
+        "de": "Berg",
+        "it": "montagna",
+        "ja": "山",
+        "ko": "산",
+        "pt": "montanha",
+        "tr": "dağ"
+      },
+      "sense": "mountain"
+    },
+    "nature.tree": {
+      "terms": {
+        "en": "tree",
+        "es": "árbol",
+        "fr": "arbre",
+        "ar": "شجرة",
+        "zh-CN": "树",
+        "ru": "дерево",
+        "de": "Baum",
+        "it": "albero",
+        "ja": "木",
+        "ko": "나무",
+        "pt": "árvore",
+        "tr": "ağaç"
+      },
+      "sense": "tree"
+    },
+    "animals.dog": {
+      "terms": {
+        "en": "dog",
+        "es": "perro",
+        "fr": "chien",
+        "ar": "كلب",
+        "zh-CN": "狗",
+        "ru": "собака",
+        "de": "Hund",
+        "it": "cane",
+        "ja": "犬",
+        "ko": "개",
+        "pt": "cachorro",
+        "tr": "köpek"
+      },
+      "sense": "dog"
+    },
+    "animals.cat": {
+      "terms": {
+        "en": "cat",
+        "es": "gato",
+        "fr": "chat",
+        "ar": "قطة",
+        "zh-CN": "猫",
+        "ru": "кошка",
+        "de": "Katze",
+        "it": "gatto",
+        "ja": "猫",
+        "ko": "고양이",
+        "pt": "gato",
+        "tr": "kedi"
+      },
+      "sense": "cat"
+    },
+    "animals.bird": {
+      "terms": {
+        "en": "bird",
+        "es": "pájaro",
+        "fr": "oiseau",
+        "ar": "طائر",
+        "zh-CN": "鸟",
+        "ru": "птица",
+        "de": "Vogel",
+        "it": "uccello",
+        "ja": "鳥",
+        "ko": "새",
+        "pt": "pássaro",
+        "tr": "kuş"
+      },
+      "sense": "bird"
+    },
+    "animals.fish": {
+      "terms": {
+        "en": "fish",
+        "es": "pez",
+        "fr": "poisson",
+        "ar": "سمكة",
+        "zh-CN": "鱼",
+        "ru": "рыба",
+        "de": "Fisch",
+        "it": "pesce",
+        "ja": "魚",
+        "ko": "물고기",
+        "pt": "peixe",
+        "tr": "balık"
+      },
+      "sense": "fish; living animal"
+    },
+    "animals.horse": {
+      "terms": {
+        "en": "horse",
+        "es": "caballo",
+        "fr": "cheval",
+        "ar": "حصان",
+        "zh-CN": "马",
+        "ru": "лошадь",
+        "de": "Pferd",
+        "it": "cavallo",
+        "ja": "馬",
+        "ko": "말",
+        "pt": "cavalo",
+        "tr": "at"
+      },
+      "sense": "horse"
+    },
+    "animals.cow": {
+      "terms": {
+        "en": "cow",
+        "es": "vaca",
+        "fr": "vache",
+        "ar": "بقرة",
+        "zh-CN": "奶牛",
+        "ru": "корова",
+        "de": "Kuh",
+        "it": "mucca",
+        "ja": "牛",
+        "ko": "소",
+        "pt": "vaca",
+        "tr": "inek"
+      },
+      "sense": "cow"
+    },
+    "animals.sheep": {
+      "terms": {
+        "en": "sheep",
+        "es": "oveja",
+        "fr": "mouton",
+        "ar": "خروف",
+        "zh-CN": "绵羊",
+        "ru": "овца",
+        "de": "Schaf",
+        "it": "pecora",
+        "ja": "羊",
+        "ko": "양",
+        "pt": "ovelha",
+        "tr": "koyun"
+      },
+      "sense": "sheep"
+    },
+    "animals.goat": {
+      "terms": {
+        "en": "goat",
+        "es": "cabra",
+        "fr": "chèvre",
+        "ar": "ماعز",
+        "zh-CN": "山羊",
+        "ru": "коза",
+        "de": "Ziege",
+        "it": "capra",
+        "ja": "ヤギ",
+        "ko": "염소",
+        "pt": "cabra",
+        "tr": "keçi"
+      },
+      "sense": "goat"
+    },
+    "animals.pig": {
+      "terms": {
+        "en": "pig",
+        "es": "cerdo",
+        "fr": "cochon",
+        "ar": "خنزير",
+        "zh-CN": "猪",
+        "ru": "свинья",
+        "de": "Schwein",
+        "it": "maiale",
+        "ja": "豚",
+        "ko": "돼지",
+        "pt": "porco",
+        "tr": "domuz"
+      },
+      "sense": "pig"
+    },
+    "animals.chicken": {
+      "terms": {
+        "en": "chicken",
+        "es": "gallina",
+        "fr": "poule",
+        "ar": "دجاجة",
+        "zh-CN": "鸡",
+        "ru": "курица",
+        "de": "Huhn",
+        "it": "gallina",
+        "ja": "鶏",
+        "ko": "닭",
+        "pt": "galinha",
+        "tr": "tavuk"
+      },
+      "sense": "chicken; living bird"
+    },
+    "animals.duck": {
+      "terms": {
+        "en": "duck",
+        "es": "pato",
+        "fr": "canard",
+        "ar": "بطة",
+        "zh-CN": "鸭子",
+        "ru": "утка",
+        "de": "Ente",
+        "it": "anatra",
+        "ja": "アヒル",
+        "ko": "오리",
+        "pt": "pato",
+        "tr": "ördek"
+      },
+      "sense": "duck"
+    },
+    "animals.rabbit": {
+      "terms": {
+        "en": "rabbit",
+        "es": "conejo",
+        "fr": "lapin",
+        "ar": "أرنب",
+        "zh-CN": "兔子",
+        "ru": "кролик",
+        "de": "Kaninchen",
+        "it": "coniglio",
+        "ja": "ウサギ",
+        "ko": "토끼",
+        "pt": "coelho",
+        "tr": "tavşan"
+      },
+      "sense": "rabbit"
+    },
+    "animals.mouse": {
+      "terms": {
+        "en": "mouse",
+        "es": "ratón",
+        "fr": "souris",
+        "ar": "فأر",
+        "zh-CN": "老鼠",
+        "ru": "мышь",
+        "de": "Maus",
+        "it": "topo",
+        "ja": "ネズミ",
+        "ko": "쥐",
+        "pt": "camundongo",
+        "tr": "fare"
+      },
+      "sense": "mouse; animal, not computer device"
+    },
+    "animals.lion": {
+      "terms": {
+        "en": "lion",
+        "es": "león",
+        "fr": "lion",
+        "ar": "أسد",
+        "zh-CN": "狮子",
+        "ru": "лев",
+        "de": "Löwe",
+        "it": "leone",
+        "ja": "ライオン",
+        "ko": "사자",
+        "pt": "leão",
+        "tr": "aslan"
+      },
+      "sense": "lion"
+    },
+    "animals.elephant": {
+      "terms": {
+        "en": "elephant",
+        "es": "elefante",
+        "fr": "éléphant",
+        "ar": "فيل",
+        "zh-CN": "大象",
+        "ru": "слон",
+        "de": "Elefant",
+        "it": "elefante",
+        "ja": "ゾウ",
+        "ko": "코끼리",
+        "pt": "elefante",
+        "tr": "fil"
+      },
+      "sense": "elephant"
+    },
+    "body.head": {
+      "terms": {
+        "en": "head",
+        "es": "cabeza",
+        "fr": "tête",
+        "ar": "رأس",
+        "zh-CN": "头",
+        "ru": "голова",
+        "de": "Kopf",
+        "it": "testa",
+        "ja": "頭",
+        "ko": "머리",
+        "pt": "cabeça",
+        "tr": "baş"
+      },
+      "sense": "head"
+    },
+    "body.face": {
+      "terms": {
+        "en": "face",
+        "es": "cara",
+        "fr": "visage",
+        "ar": "وجه",
+        "zh-CN": "脸",
+        "ru": "лицо",
+        "de": "Gesicht",
+        "it": "viso",
+        "ja": "顔",
+        "ko": "얼굴",
+        "pt": "rosto",
+        "tr": "yüz"
+      },
+      "sense": "face"
+    },
+    "body.eye": {
+      "terms": {
+        "en": "eye",
+        "es": "ojo",
+        "fr": "œil",
+        "ar": "عين",
+        "zh-CN": "眼睛",
+        "ru": "глаз",
+        "de": "Auge",
+        "it": "occhio",
+        "ja": "目",
+        "ko": "눈",
+        "pt": "olho",
+        "tr": "göz"
+      },
+      "sense": "eye"
+    },
+    "body.ear": {
+      "terms": {
+        "en": "ear",
+        "es": "oreja",
+        "fr": "oreille",
+        "ar": "أذن",
+        "zh-CN": "耳朵",
+        "ru": "ухо",
+        "de": "Ohr",
+        "it": "orecchio",
+        "ja": "耳",
+        "ko": "귀",
+        "pt": "orelha",
+        "tr": "kulak"
+      },
+      "sense": "ear"
+    },
+    "body.nose": {
+      "terms": {
+        "en": "nose",
+        "es": "nariz",
+        "fr": "nez",
+        "ar": "أنف",
+        "zh-CN": "鼻子",
+        "ru": "нос",
+        "de": "Nase",
+        "it": "naso",
+        "ja": "鼻",
+        "ko": "코",
+        "pt": "nariz",
+        "tr": "burun"
+      },
+      "sense": "nose"
+    },
+    "body.mouth": {
+      "terms": {
+        "en": "mouth",
+        "es": "boca",
+        "fr": "bouche",
+        "ar": "فم",
+        "zh-CN": "嘴",
+        "ru": "рот",
+        "de": "Mund",
+        "it": "bocca",
+        "ja": "口",
+        "ko": "입",
+        "pt": "boca",
+        "tr": "ağız"
+      },
+      "sense": "mouth"
+    },
+    "body.tooth": {
+      "terms": {
+        "en": "tooth",
+        "es": "diente",
+        "fr": "dent",
+        "ar": "سن",
+        "zh-CN": "牙齿",
+        "ru": "зуб",
+        "de": "Zahn",
+        "it": "dente",
+        "ja": "歯",
+        "ko": "이",
+        "pt": "dente",
+        "tr": "diş"
+      },
+      "sense": "tooth"
+    },
+    "body.hand": {
+      "terms": {
+        "en": "hand",
+        "es": "mano",
+        "fr": "main",
+        "ar": "يد",
+        "zh-CN": "手",
+        "ru": "рука",
+        "de": "Hand",
+        "it": "mano",
+        "ja": "手",
+        "ko": "손",
+        "pt": "mão",
+        "tr": "el"
+      },
+      "sense": "hand; part at the end of an arm"
+    },
+    "body.arm": {
+      "terms": {
+        "en": "arm",
+        "es": "brazo",
+        "fr": "bras",
+        "ar": "ذراع",
+        "zh-CN": "手臂",
+        "ru": "рука",
+        "de": "Arm",
+        "it": "braccio",
+        "ja": "腕",
+        "ko": "팔",
+        "pt": "braço",
+        "tr": "kol"
+      },
+      "sense": "arm; upper limb"
+    },
+    "body.leg": {
+      "terms": {
+        "en": "leg",
+        "es": "pierna",
+        "fr": "jambe",
+        "ar": "ساق",
+        "zh-CN": "腿",
+        "ru": "нога",
+        "de": "Bein",
+        "it": "gamba",
+        "ja": "脚",
+        "ko": "다리",
+        "pt": "perna",
+        "tr": "bacak"
+      },
+      "sense": "leg; lower limb"
+    },
+    "body.foot": {
+      "terms": {
+        "en": "foot",
+        "es": "pie",
+        "fr": "pied",
+        "ar": "قدم",
+        "zh-CN": "脚",
+        "ru": "ступня",
+        "de": "Fuß",
+        "it": "piede",
+        "ja": "足",
+        "ko": "발",
+        "pt": "pé",
+        "tr": "ayak"
+      },
+      "sense": "foot"
+    },
+    "body.heart": {
+      "terms": {
+        "en": "heart",
+        "es": "corazón",
+        "fr": "cœur",
+        "ar": "قلب",
+        "zh-CN": "心脏",
+        "ru": "сердце",
+        "de": "Herz",
+        "it": "cuore",
+        "ja": "心臓",
+        "ko": "심장",
+        "pt": "coração",
+        "tr": "kalp"
+      },
+      "sense": "heart; organ"
+    },
+    "body.hair": {
+      "terms": {
+        "en": "hair",
+        "es": "pelo",
+        "fr": "cheveux",
+        "ar": "شعر",
+        "zh-CN": "头发",
+        "ru": "волосы",
+        "de": "Haar",
+        "it": "capelli",
+        "ja": "髪",
+        "ko": "머리카락",
+        "pt": "cabelo",
+        "tr": "saç"
+      },
+      "sense": "hair"
+    },
+    "body.back": {
+      "terms": {
+        "en": "back",
+        "es": "espalda",
+        "fr": "dos",
+        "ar": "ظهر",
+        "zh-CN": "背部",
+        "ru": "спина",
+        "de": "Rücken",
+        "it": "schiena",
+        "ja": "背中",
+        "ko": "등",
+        "pt": "costas",
+        "tr": "sırt"
+      },
+      "sense": "back; body part"
+    },
+    "body.stomach": {
+      "terms": {
+        "en": "stomach",
+        "es": "estómago",
+        "fr": "estomac",
+        "ar": "معدة",
+        "zh-CN": "胃",
+        "ru": "желудок",
+        "de": "Magen",
+        "it": "stomaco",
+        "ja": "胃",
+        "ko": "위",
+        "pt": "estômago",
+        "tr": "mide"
+      },
+      "sense": "stomach"
+    },
+    "health.doctor": {
+      "terms": {
+        "en": "doctor",
+        "es": "médico",
+        "fr": "médecin",
+        "ar": "طبيب",
+        "zh-CN": "医生",
+        "ru": "врач",
+        "de": "Arzt",
+        "it": "medico",
+        "ja": "医者",
+        "ko": "의사",
+        "pt": "médico",
+        "tr": "doktor"
+      },
+      "sense": "doctor"
+    },
+    "health.nurse": {
+      "terms": {
+        "en": "nurse",
+        "es": "enfermero",
+        "fr": "infirmier",
+        "ar": "ممرض",
+        "zh-CN": "护士",
+        "ru": "медсестра",
+        "de": "Pflegekraft",
+        "it": "infermiere",
+        "ja": "看護師",
+        "ko": "간호사",
+        "pt": "enfermeiro",
+        "tr": "hemşire"
+      },
+      "sense": "nurse"
+    },
+    "health.medicine": {
+      "terms": {
+        "en": "medicine",
+        "es": "medicamento",
+        "fr": "médicament",
+        "ar": "دواء",
+        "zh-CN": "药",
+        "ru": "лекарство",
+        "de": "Medikament",
+        "it": "medicina",
+        "ja": "薬",
+        "ko": "약",
+        "pt": "remédio",
+        "tr": "ilaç"
+      },
+      "sense": "medicine; a drug or remedy"
+    },
+    "health.pain": {
+      "terms": {
+        "en": "pain",
+        "es": "dolor",
+        "fr": "douleur",
+        "ar": "ألم",
+        "zh-CN": "疼痛",
+        "ru": "боль",
+        "de": "Schmerz",
+        "it": "dolore",
+        "ja": "痛み",
+        "ko": "통증",
+        "pt": "dor",
+        "tr": "ağrı"
+      },
+      "sense": "pain"
+    },
+    "health.fever": {
+      "terms": {
+        "en": "fever",
+        "es": "fiebre",
+        "fr": "fièvre",
+        "ar": "حمى",
+        "zh-CN": "发烧",
+        "ru": "лихорадка",
+        "de": "Fieber",
+        "it": "febbre",
+        "ja": "発熱",
+        "ko": "발열",
+        "pt": "febre",
+        "tr": "ateş"
+      },
+      "sense": "fever"
+    },
+    "health.cough": {
+      "terms": {
+        "en": "cough",
+        "es": "tos",
+        "fr": "toux",
+        "ar": "سعال",
+        "zh-CN": "咳嗽",
+        "ru": "кашель",
+        "de": "Husten",
+        "it": "tosse",
+        "ja": "咳",
+        "ko": "기침",
+        "pt": "tosse",
+        "tr": "öksürük"
+      },
+      "sense": "cough"
+    },
+    "health.cold": {
+      "terms": {
+        "en": "cold",
+        "es": "resfriado",
+        "fr": "rhume",
+        "ar": "زكام",
+        "zh-CN": "感冒",
+        "ru": "простуда",
+        "de": "Erkältung",
+        "it": "raffreddore",
+        "ja": "風邪",
+        "ko": "감기",
+        "pt": "resfriado",
+        "tr": "soğuk algınlığı"
+      },
+      "sense": "common cold; illness"
+    },
+    "health.sick": {
+      "terms": {
+        "en": "sick",
+        "es": "enfermo",
+        "fr": "malade",
+        "ar": "مريض",
+        "zh-CN": "生病",
+        "ru": "больной",
+        "de": "krank",
+        "it": "malato",
+        "ja": "病気",
+        "ko": "아프다",
+        "pt": "doente",
+        "tr": "hasta"
+      },
+      "sense": "sick"
+    },
+    "health.healthy": {
+      "terms": {
+        "en": "healthy",
+        "es": "sano",
+        "fr": "en bonne santé",
+        "ar": "بصحة جيدة",
+        "zh-CN": "健康",
+        "ru": "здоровый",
+        "de": "gesund",
+        "it": "sano",
+        "ja": "健康",
+        "ko": "건강하다",
+        "pt": "saudável",
+        "tr": "sağlıklı"
+      },
+      "sense": "healthy"
+    },
+    "health.tired": {
+      "terms": {
+        "en": "tired",
+        "es": "cansado",
+        "fr": "fatigué",
+        "ar": "متعب",
+        "zh-CN": "累",
+        "ru": "усталый",
+        "de": "müde",
+        "it": "stanco",
+        "ja": "疲れた",
+        "ko": "피곤하다",
+        "pt": "cansado",
+        "tr": "yorgun"
+      },
+      "sense": "tired"
+    },
+    "health.hungry": {
+      "terms": {
+        "en": "hungry",
+        "es": "hambriento",
+        "fr": "affamé",
+        "ar": "جائع",
+        "zh-CN": "饿",
+        "ru": "голодный",
+        "de": "hungrig",
+        "it": "affamato",
+        "ja": "お腹が空いた",
+        "ko": "배고프다",
+        "pt": "faminto",
+        "tr": "aç"
+      },
+      "sense": "hungry"
+    },
+    "health.thirsty": {
+      "terms": {
+        "en": "thirsty",
+        "es": "sediento",
+        "fr": "assoiffé",
+        "ar": "عطشان",
+        "zh-CN": "渴",
+        "ru": "испытывающий жажду",
+        "de": "durstig",
+        "it": "assetato",
+        "ja": "喉が渇いた",
+        "ko": "목마르다",
+        "pt": "sedento",
+        "tr": "susamış"
+      },
+      "sense": "thirsty"
+    },
+    "health.afraid": {
+      "terms": {
+        "en": "afraid",
+        "es": "asustado",
+        "fr": "effrayé",
+        "ar": "خائف",
+        "zh-CN": "害怕",
+        "ru": "испуганный",
+        "de": "ängstlich",
+        "it": "spaventato",
+        "ja": "怖がっている",
+        "ko": "두렵다",
+        "pt": "com medo",
+        "tr": "korkmuş"
+      },
+      "sense": "afraid / frightened"
+    },
+    "health.happy": {
+      "terms": {
+        "en": "happy",
+        "es": "feliz",
+        "fr": "heureux",
+        "ar": "سعيد",
+        "zh-CN": "开心",
+        "ru": "счастливый",
+        "de": "glücklich",
+        "it": "felice",
+        "ja": "幸せ",
+        "ko": "행복하다",
+        "pt": "feliz",
+        "tr": "mutlu"
+      },
+      "sense": "happy"
+    },
+    "health.sad": {
+      "terms": {
+        "en": "sad",
+        "es": "triste",
+        "fr": "triste",
+        "ar": "حزين",
+        "zh-CN": "难过",
+        "ru": "грустный",
+        "de": "traurig",
+        "it": "triste",
+        "ja": "悲しい",
+        "ko": "슬프다",
+        "pt": "triste",
+        "tr": "üzgün"
+      },
+      "sense": "sad"
+    },
+    "clothes.shirt": {
+      "terms": {
+        "en": "shirt",
+        "es": "camisa",
+        "fr": "chemise",
+        "ar": "قميص",
+        "zh-CN": "衬衫",
+        "ru": "рубашка",
+        "de": "Hemd",
+        "it": "camicia",
+        "ja": "シャツ",
+        "ko": "셔츠",
+        "pt": "camisa",
+        "tr": "gömlek"
+      },
+      "sense": "shirt"
+    },
+    "clothes.trousers": {
+      "terms": {
+        "en": "trousers",
+        "es": "pantalones",
+        "fr": "pantalon",
+        "ar": "بنطال",
+        "zh-CN": "裤子",
+        "ru": "брюки",
+        "de": "Hose",
+        "it": "pantaloni",
+        "ja": "ズボン",
+        "ko": "바지",
+        "pt": "calças",
+        "tr": "pantolon"
+      },
+      "sense": "trousers"
+    },
+    "clothes.dress": {
+      "terms": {
+        "en": "dress",
+        "es": "vestido",
+        "fr": "robe",
+        "ar": "فستان",
+        "zh-CN": "连衣裙",
+        "ru": "платье",
+        "de": "Kleid",
+        "it": "vestito",
+        "ja": "ワンピース",
+        "ko": "원피스",
+        "pt": "vestido",
+        "tr": "elbise"
+      },
+      "sense": "dress"
+    },
+    "clothes.skirt": {
+      "terms": {
+        "en": "skirt",
+        "es": "falda",
+        "fr": "jupe",
+        "ar": "تنورة",
+        "zh-CN": "裙子",
+        "ru": "юбка",
+        "de": "Rock",
+        "it": "gonna",
+        "ja": "スカート",
+        "ko": "치마",
+        "pt": "saia",
+        "tr": "etek"
+      },
+      "sense": "skirt"
+    },
+    "clothes.coat": {
+      "terms": {
+        "en": "coat",
+        "es": "abrigo",
+        "fr": "manteau",
+        "ar": "معطف",
+        "zh-CN": "大衣",
+        "ru": "пальто",
+        "de": "Mantel",
+        "it": "cappotto",
+        "ja": "コート",
+        "ko": "코트",
+        "pt": "casaco",
+        "tr": "palto"
+      },
+      "sense": "coat"
+    },
+    "clothes.jacket": {
+      "terms": {
+        "en": "jacket",
+        "es": "chaqueta",
+        "fr": "veste",
+        "ar": "سترة",
+        "zh-CN": "夹克",
+        "ru": "куртка",
+        "de": "Jacke",
+        "it": "giacca",
+        "ja": "ジャケット",
+        "ko": "재킷",
+        "pt": "jaqueta",
+        "tr": "ceket"
+      },
+      "sense": "jacket"
+    },
+    "clothes.shoe": {
+      "terms": {
+        "en": "shoe",
+        "es": "zapato",
+        "fr": "chaussure",
+        "ar": "حذاء",
+        "zh-CN": "鞋",
+        "ru": "ботинок",
+        "de": "Schuh",
+        "it": "scarpa",
+        "ja": "靴",
+        "ko": "신발",
+        "pt": "sapato",
+        "tr": "ayakkabı"
+      },
+      "sense": "shoe"
+    },
+    "clothes.sock": {
+      "terms": {
+        "en": "sock",
+        "es": "calcetín",
+        "fr": "chaussette",
+        "ar": "جورب",
+        "zh-CN": "袜子",
+        "ru": "носок",
+        "de": "Socke",
+        "it": "calzino",
+        "ja": "靴下",
+        "ko": "양말",
+        "pt": "meia",
+        "tr": "çorap"
+      },
+      "sense": "sock"
+    },
+    "clothes.hat": {
+      "terms": {
+        "en": "hat",
+        "es": "sombrero",
+        "fr": "chapeau",
+        "ar": "قبعة",
+        "zh-CN": "帽子",
+        "ru": "шляпа",
+        "de": "Hut",
+        "it": "cappello",
+        "ja": "帽子",
+        "ko": "모자",
+        "pt": "chapéu",
+        "tr": "şapka"
+      },
+      "sense": "hat"
+    },
+    "clothes.scarf": {
+      "terms": {
+        "en": "scarf",
+        "es": "bufanda",
+        "fr": "écharpe",
+        "ar": "وشاح",
+        "zh-CN": "围巾",
+        "ru": "шарф",
+        "de": "Schal",
+        "it": "sciarpa",
+        "ja": "マフラー",
+        "ko": "목도리",
+        "pt": "cachecol",
+        "tr": "atkı"
+      },
+      "sense": "scarf"
+    },
+    "clothes.glove": {
+      "terms": {
+        "en": "glove",
+        "es": "guante",
+        "fr": "gant",
+        "ar": "قفاز",
+        "zh-CN": "手套",
+        "ru": "перчатка",
+        "de": "Handschuh",
+        "it": "guanto",
+        "ja": "手袋",
+        "ko": "장갑",
+        "pt": "luva",
+        "tr": "eldiven"
+      },
+      "sense": "glove"
+    },
+    "clothes.belt": {
+      "terms": {
+        "en": "belt",
+        "es": "cinturón",
+        "fr": "ceinture",
+        "ar": "حزام",
+        "zh-CN": "腰带",
+        "ru": "ремень",
+        "de": "Gürtel",
+        "it": "cintura",
+        "ja": "ベルト",
+        "ko": "벨트",
+        "pt": "cinto",
+        "tr": "kemer"
+      },
+      "sense": "belt"
+    },
+    "clothes.sweater": {
+      "terms": {
+        "en": "sweater",
+        "es": "suéter",
+        "fr": "pull",
+        "ar": "كنزة",
+        "zh-CN": "毛衣",
+        "ru": "свитер",
+        "de": "Pullover",
+        "it": "maglione",
+        "ja": "セーター",
+        "ko": "스웨터",
+        "pt": "suéter",
+        "tr": "kazak"
+      },
+      "sense": "sweater"
+    },
+    "clothes.pocket": {
+      "terms": {
+        "en": "pocket",
+        "es": "bolsillo",
+        "fr": "poche",
+        "ar": "جيب",
+        "zh-CN": "口袋",
+        "ru": "карман",
+        "de": "Tasche",
+        "it": "tasca",
+        "ja": "ポケット",
+        "ko": "주머니",
+        "pt": "bolso",
+        "tr": "cep"
+      },
+      "sense": "pocket"
+    },
+    "clothes.glasses": {
+      "terms": {
+        "en": "glasses",
+        "es": "gafas",
+        "fr": "lunettes",
+        "ar": "نظارة",
+        "zh-CN": "眼镜",
+        "ru": "очки",
+        "de": "Brille",
+        "it": "occhiali",
+        "ja": "眼鏡",
+        "ko": "안경",
+        "pt": "óculos",
+        "tr": "gözlük"
+      },
+      "sense": "eyeglasses"
+    },
+    "actions.eat": {
+      "terms": {
+        "en": "eat",
+        "es": "comer",
+        "fr": "manger",
+        "ar": "يأكل",
+        "zh-CN": "吃",
+        "ru": "есть",
+        "de": "essen",
+        "it": "mangiare",
+        "ja": "食べる",
+        "ko": "먹다",
+        "pt": "comer",
+        "tr": "yemek"
+      },
+      "sense": "eat"
+    },
+    "actions.drink": {
+      "terms": {
+        "en": "drink",
+        "es": "beber",
+        "fr": "boire",
+        "ar": "يشرب",
+        "zh-CN": "喝",
+        "ru": "пить",
+        "de": "trinken",
+        "it": "bere",
+        "ja": "飲む",
+        "ko": "마시다",
+        "pt": "beber",
+        "tr": "içmek"
+      },
+      "sense": "to drink (verb)"
+    },
+    "actions.sleep": {
+      "terms": {
+        "en": "sleep",
+        "es": "dormir",
+        "fr": "dormir",
+        "ar": "ينام",
+        "zh-CN": "睡觉",
+        "ru": "спать",
+        "de": "schlafen",
+        "it": "dormire",
+        "ja": "寝る",
+        "ko": "자다",
+        "pt": "dormir",
+        "tr": "uyumak"
+      },
+      "sense": "sleep"
+    },
+    "actions.go": {
+      "terms": {
+        "en": "go",
+        "es": "ir",
+        "fr": "aller",
+        "ar": "يذهب",
+        "zh-CN": "去",
+        "ru": "идти",
+        "de": "gehen",
+        "it": "andare",
+        "ja": "行く",
+        "ko": "가다",
+        "pt": "ir",
+        "tr": "gitmek"
+      },
+      "sense": "go"
+    },
+    "actions.come": {
+      "terms": {
+        "en": "come",
+        "es": "venir",
+        "fr": "venir",
+        "ar": "يأتي",
+        "zh-CN": "来",
+        "ru": "приходить",
+        "de": "kommen",
+        "it": "venire",
+        "ja": "来る",
+        "ko": "오다",
+        "pt": "vir",
+        "tr": "gelmek"
+      },
+      "sense": "come"
+    },
+    "actions.see": {
+      "terms": {
+        "en": "see",
+        "es": "ver",
+        "fr": "voir",
+        "ar": "يرى",
+        "zh-CN": "看见",
+        "ru": "видеть",
+        "de": "sehen",
+        "it": "vedere",
+        "ja": "見る",
+        "ko": "보다",
+        "pt": "ver",
+        "tr": "görmek"
+      },
+      "sense": "see"
+    },
+    "actions.hear": {
+      "terms": {
+        "en": "hear",
+        "es": "oír",
+        "fr": "entendre",
+        "ar": "يسمع",
+        "zh-CN": "听见",
+        "ru": "слышать",
+        "de": "hören",
+        "it": "sentire",
+        "ja": "聞こえる",
+        "ko": "듣다",
+        "pt": "ouvir",
+        "tr": "duymak"
+      },
+      "sense": "hear"
+    },
+    "actions.speak": {
+      "terms": {
+        "en": "speak",
+        "es": "hablar",
+        "fr": "parler",
+        "ar": "يتكلم",
+        "zh-CN": "说话",
+        "ru": "говорить",
+        "de": "sprechen",
+        "it": "parlare",
+        "ja": "話す",
+        "ko": "말하다",
+        "pt": "falar",
+        "tr": "konuşmak"
+      },
+      "sense": "speak"
+    },
+    "actions.read": {
+      "terms": {
+        "en": "read",
+        "es": "leer",
+        "fr": "lire",
+        "ar": "يقرأ",
+        "zh-CN": "阅读",
+        "ru": "читать",
+        "de": "lesen",
+        "it": "leggere",
+        "ja": "読む",
+        "ko": "읽다",
+        "pt": "ler",
+        "tr": "okumak"
+      },
+      "sense": "to read (verb)"
+    },
+    "actions.write": {
+      "terms": {
+        "en": "write",
+        "es": "escribir",
+        "fr": "écrire",
+        "ar": "يكتب",
+        "zh-CN": "写",
+        "ru": "писать",
+        "de": "schreiben",
+        "it": "scrivere",
+        "ja": "書く",
+        "ko": "쓰다",
+        "pt": "escrever",
+        "tr": "yazmak"
+      },
+      "sense": "write"
+    },
+    "actions.learn": {
+      "terms": {
+        "en": "learn",
+        "es": "aprender",
+        "fr": "apprendre",
+        "ar": "يتعلم",
+        "zh-CN": "学习",
+        "ru": "учиться",
+        "de": "lernen",
+        "it": "imparare",
+        "ja": "学ぶ",
+        "ko": "배우다",
+        "pt": "aprender",
+        "tr": "öğrenmek"
+      },
+      "sense": "learn"
+    },
+    "actions.work": {
+      "terms": {
+        "en": "work",
+        "es": "trabajar",
+        "fr": "travailler",
+        "ar": "يعمل",
+        "zh-CN": "工作",
+        "ru": "работать",
+        "de": "arbeiten",
+        "it": "lavorare",
+        "ja": "働く",
+        "ko": "일하다",
+        "pt": "trabalhar",
+        "tr": "çalışmak"
+      },
+      "sense": "to work (verb)"
+    },
+    "actions.buy": {
+      "terms": {
+        "en": "buy",
+        "es": "comprar",
+        "fr": "acheter",
+        "ar": "يشتري",
+        "zh-CN": "买",
+        "ru": "покупать",
+        "de": "kaufen",
+        "it": "comprare",
+        "ja": "買う",
+        "ko": "사다",
+        "pt": "comprar",
+        "tr": "satın almak"
+      },
+      "sense": "buy"
+    },
+    "actions.sell": {
+      "terms": {
+        "en": "sell",
+        "es": "vender",
+        "fr": "vendre",
+        "ar": "يبيع",
+        "zh-CN": "卖",
+        "ru": "продавать",
+        "de": "verkaufen",
+        "it": "vendere",
+        "ja": "売る",
+        "ko": "팔다",
+        "pt": "vender",
+        "tr": "satmak"
+      },
+      "sense": "sell"
+    },
+    "actions.pay": {
+      "terms": {
+        "en": "pay",
+        "es": "pagar",
+        "fr": "payer",
+        "ar": "يدفع",
+        "zh-CN": "付款",
+        "ru": "платить",
+        "de": "bezahlen",
+        "it": "pagare",
+        "ja": "払う",
+        "ko": "지불하다",
+        "pt": "pagar",
+        "tr": "ödemek"
+      },
+      "sense": "pay"
+    },
+    "daily.open": {
+      "terms": {
+        "en": "open",
+        "es": "abrir",
+        "fr": "ouvrir",
+        "ar": "يفتح",
+        "zh-CN": "打开",
+        "ru": "открывать",
+        "de": "öffnen",
+        "it": "aprire",
+        "ja": "開ける",
+        "ko": "열다",
+        "pt": "abrir",
+        "tr": "açmak"
+      },
+      "sense": "to open (verb)"
+    },
+    "daily.close": {
+      "terms": {
+        "en": "close",
+        "es": "cerrar",
+        "fr": "fermer",
+        "ar": "يغلق",
+        "zh-CN": "关闭",
+        "ru": "закрывать",
+        "de": "schließen",
+        "it": "chiudere",
+        "ja": "閉める",
+        "ko": "닫다",
+        "pt": "fechar",
+        "tr": "kapatmak"
+      },
+      "sense": "to close / shut (verb)"
+    },
+    "daily.give": {
+      "terms": {
+        "en": "give",
+        "es": "dar",
+        "fr": "donner",
+        "ar": "يعطي",
+        "zh-CN": "给",
+        "ru": "давать",
+        "de": "geben",
+        "it": "dare",
+        "ja": "あげる",
+        "ko": "주다",
+        "pt": "dar",
+        "tr": "vermek"
+      },
+      "sense": "to give"
+    },
+    "daily.take": {
+      "terms": {
+        "en": "take",
+        "es": "tomar",
+        "fr": "prendre",
+        "ar": "يأخذ",
+        "zh-CN": "拿",
+        "ru": "брать",
+        "de": "nehmen",
+        "it": "prendere",
+        "ja": "取る",
+        "ko": "가져가다",
+        "pt": "pegar",
+        "tr": "almak"
+      },
+      "sense": "to take"
+    },
+    "daily.make": {
+      "terms": {
+        "en": "make",
+        "es": "hacer",
+        "fr": "faire",
+        "ar": "يصنع",
+        "zh-CN": "制作",
+        "ru": "делать",
+        "de": "machen",
+        "it": "fare",
+        "ja": "作る",
+        "ko": "만들다",
+        "pt": "fazer",
+        "tr": "yapmak"
+      },
+      "sense": "to make / create"
+    },
+    "daily.want": {
+      "terms": {
+        "en": "want",
+        "es": "querer",
+        "fr": "vouloir",
+        "ar": "يريد",
+        "zh-CN": "想要",
+        "ru": "хотеть",
+        "de": "wollen",
+        "it": "volere",
+        "ja": "欲しい",
+        "ko": "원하다",
+        "pt": "querer",
+        "tr": "istemek"
+      },
+      "sense": "want"
+    },
+    "daily.need": {
+      "terms": {
+        "en": "need",
+        "es": "necesitar",
+        "fr": "avoir besoin de",
+        "ar": "يحتاج",
+        "zh-CN": "需要",
+        "ru": "нуждаться",
+        "de": "brauchen",
+        "it": "avere bisogno di",
+        "ja": "必要とする",
+        "ko": "필요하다",
+        "pt": "precisar de",
+        "tr": "ihtiyaç duymak"
+      },
+      "sense": "need"
+    },
+    "daily.know": {
+      "terms": {
+        "en": "know",
+        "es": "saber",
+        "fr": "savoir",
+        "ar": "يعرف",
+        "zh-CN": "知道",
+        "ru": "знать",
+        "de": "wissen",
+        "it": "sapere",
+        "ja": "知っている",
+        "ko": "알다",
+        "pt": "saber",
+        "tr": "bilmek"
+      },
+      "sense": "to know a fact"
+    },
+    "daily.think": {
+      "terms": {
+        "en": "think",
+        "es": "pensar",
+        "fr": "penser",
+        "ar": "يفكر",
+        "zh-CN": "思考",
+        "ru": "думать",
+        "de": "denken",
+        "it": "pensare",
+        "ja": "考える",
+        "ko": "생각하다",
+        "pt": "pensar",
+        "tr": "düşünmek"
+      },
+      "sense": "think"
+    },
+    "daily.understand": {
+      "terms": {
+        "en": "understand",
+        "es": "entender",
+        "fr": "comprendre",
+        "ar": "يفهم",
+        "zh-CN": "理解",
+        "ru": "понимать",
+        "de": "verstehen",
+        "it": "capire",
+        "ja": "分かる",
+        "ko": "이해하다",
+        "pt": "entender",
+        "tr": "anlamak"
+      },
+      "sense": "understand"
+    },
+    "daily.ask": {
+      "terms": {
+        "en": "ask",
+        "es": "preguntar",
+        "fr": "demander",
+        "ar": "يسأل",
+        "zh-CN": "问",
+        "ru": "спрашивать",
+        "de": "fragen",
+        "it": "chiedere",
+        "ja": "尋ねる",
+        "ko": "묻다",
+        "pt": "perguntar",
+        "tr": "sormak"
+      },
+      "sense": "to ask a question"
+    },
+    "daily.answer": {
+      "terms": {
+        "en": "answer",
+        "es": "responder",
+        "fr": "répondre",
+        "ar": "يجيب",
+        "zh-CN": "回答",
+        "ru": "отвечать",
+        "de": "antworten",
+        "it": "rispondere",
+        "ja": "答える",
+        "ko": "대답하다",
+        "pt": "responder",
+        "tr": "cevap vermek"
+      },
+      "sense": "to answer (verb)"
+    },
+    "daily.wait": {
+      "terms": {
+        "en": "wait",
+        "es": "esperar",
+        "fr": "attendre",
+        "ar": "ينتظر",
+        "zh-CN": "等",
+        "ru": "ждать",
+        "de": "warten",
+        "it": "aspettare",
+        "ja": "待つ",
+        "ko": "기다리다",
+        "pt": "esperar",
+        "tr": "beklemek"
+      },
+      "sense": "wait"
+    },
+    "daily.find": {
+      "terms": {
+        "en": "find",
+        "es": "encontrar",
+        "fr": "trouver",
+        "ar": "يجد",
+        "zh-CN": "找到",
+        "ru": "находить",
+        "de": "finden",
+        "it": "trovare",
+        "ja": "見つける",
+        "ko": "찾다",
+        "pt": "encontrar",
+        "tr": "bulmak"
+      },
+      "sense": "find"
+    },
+    "daily.help": {
+      "terms": {
+        "en": "help",
+        "es": "ayudar",
+        "fr": "aider",
+        "ar": "يساعد",
+        "zh-CN": "帮助",
+        "ru": "помогать",
+        "de": "helfen",
+        "it": "aiutare",
+        "ja": "助ける",
+        "ko": "돕다",
+        "pt": "ajudar",
+        "tr": "yardım etmek"
+      },
+      "sense": "to help (verb)"
+    },
+    "qualities.big": {
+      "terms": {
+        "en": "big",
+        "es": "grande",
+        "fr": "grand",
+        "ar": "كبير",
+        "zh-CN": "大",
+        "ru": "большой",
+        "de": "groß",
+        "it": "grande",
+        "ja": "大きい",
+        "ko": "크다",
+        "pt": "grande",
+        "tr": "büyük"
+      },
+      "sense": "big"
+    },
+    "qualities.small": {
+      "terms": {
+        "en": "small",
+        "es": "pequeño",
+        "fr": "petit",
+        "ar": "صغير",
+        "zh-CN": "小",
+        "ru": "маленький",
+        "de": "klein",
+        "it": "piccolo",
+        "ja": "小さい",
+        "ko": "작다",
+        "pt": "pequeno",
+        "tr": "küçük"
+      },
+      "sense": "small"
+    },
+    "qualities.good": {
+      "terms": {
+        "en": "good",
+        "es": "bueno",
+        "fr": "bon",
+        "ar": "جيد",
+        "zh-CN": "好",
+        "ru": "хороший",
+        "de": "gut",
+        "it": "buono",
+        "ja": "良い",
+        "ko": "좋다",
+        "pt": "bom",
+        "tr": "iyi"
+      },
+      "sense": "good"
+    },
+    "qualities.bad": {
+      "terms": {
+        "en": "bad",
+        "es": "malo",
+        "fr": "mauvais",
+        "ar": "سيئ",
+        "zh-CN": "坏",
+        "ru": "плохой",
+        "de": "schlecht",
+        "it": "cattivo",
+        "ja": "悪い",
+        "ko": "나쁘다",
+        "pt": "mau",
+        "tr": "kötü"
+      },
+      "sense": "bad"
+    },
+    "qualities.new": {
+      "terms": {
+        "en": "new",
+        "es": "nuevo",
+        "fr": "nouveau",
+        "ar": "جديد",
+        "zh-CN": "新",
+        "ru": "новый",
+        "de": "neu",
+        "it": "nuovo",
+        "ja": "新しい",
+        "ko": "새롭다",
+        "pt": "novo",
+        "tr": "yeni"
+      },
+      "sense": "new"
+    },
+    "qualities.old": {
+      "terms": {
+        "en": "old",
+        "es": "viejo",
+        "fr": "vieux",
+        "ar": "قديم",
+        "zh-CN": "旧",
+        "ru": "старый",
+        "de": "alt",
+        "it": "vecchio",
+        "ja": "古い",
+        "ko": "오래되다",
+        "pt": "velho",
+        "tr": "eski"
+      },
+      "sense": "old; an object, not an elderly person"
+    },
+    "qualities.hot": {
+      "terms": {
+        "en": "hot",
+        "es": "caliente",
+        "fr": "chaud",
+        "ar": "ساخن",
+        "zh-CN": "热",
+        "ru": "горячий",
+        "de": "heiß",
+        "it": "caldo",
+        "ja": "熱い",
+        "ko": "뜨겁다",
+        "pt": "quente",
+        "tr": "sıcak"
+      },
+      "sense": "hot temperature"
+    },
+    "qualities.cold": {
+      "terms": {
+        "en": "cold",
+        "es": "frío",
+        "fr": "froid",
+        "ar": "بارد",
+        "zh-CN": "冷",
+        "ru": "холодный",
+        "de": "kalt",
+        "it": "freddo",
+        "ja": "冷たい",
+        "ko": "차갑다",
+        "pt": "frio",
+        "tr": "soğuk"
+      },
+      "sense": "cold temperature"
+    },
+    "qualities.easy": {
+      "terms": {
+        "en": "easy",
+        "es": "fácil",
+        "fr": "facile",
+        "ar": "سهل",
+        "zh-CN": "容易",
+        "ru": "лёгкий",
+        "de": "einfach",
+        "it": "facile",
+        "ja": "簡単",
+        "ko": "쉽다",
+        "pt": "fácil",
+        "tr": "kolay"
+      },
+      "sense": "easy"
+    },
+    "qualities.difficult": {
+      "terms": {
+        "en": "difficult",
+        "es": "difícil",
+        "fr": "difficile",
+        "ar": "صعب",
+        "zh-CN": "难",
+        "ru": "трудный",
+        "de": "schwierig",
+        "it": "difficile",
+        "ja": "難しい",
+        "ko": "어렵다",
+        "pt": "difícil",
+        "tr": "zor"
+      },
+      "sense": "difficult"
+    },
+    "qualities.fast": {
+      "terms": {
+        "en": "fast",
+        "es": "rápido",
+        "fr": "rapide",
+        "ar": "سريع",
+        "zh-CN": "快",
+        "ru": "быстрый",
+        "de": "schnell",
+        "it": "veloce",
+        "ja": "速い",
+        "ko": "빠르다",
+        "pt": "rápido",
+        "tr": "hızlı"
+      },
+      "sense": "fast"
+    },
+    "qualities.slow": {
+      "terms": {
+        "en": "slow",
+        "es": "lento",
+        "fr": "lent",
+        "ar": "بطيء",
+        "zh-CN": "慢",
+        "ru": "медленный",
+        "de": "langsam",
+        "it": "lento",
+        "ja": "遅い",
+        "ko": "느리다",
+        "pt": "lento",
+        "tr": "yavaş"
+      },
+      "sense": "slow"
+    },
+    "qualities.clean": {
+      "terms": {
+        "en": "clean",
+        "es": "limpio",
+        "fr": "propre",
+        "ar": "نظيف",
+        "zh-CN": "干净",
+        "ru": "чистый",
+        "de": "sauber",
+        "it": "pulito",
+        "ja": "清潔",
+        "ko": "깨끗하다",
+        "pt": "limpo",
+        "tr": "temiz"
+      },
+      "sense": "clean; not dirty"
+    },
+    "qualities.dirty": {
+      "terms": {
+        "en": "dirty",
+        "es": "sucio",
+        "fr": "sale",
+        "ar": "متسخ",
+        "zh-CN": "脏",
+        "ru": "грязный",
+        "de": "schmutzig",
+        "it": "sporco",
+        "ja": "汚い",
+        "ko": "더럽다",
+        "pt": "sujo",
+        "tr": "kirli"
+      },
+      "sense": "dirty"
+    },
+    "qualities.beautiful": {
+      "terms": {
+        "en": "beautiful",
+        "es": "hermoso",
+        "fr": "beau",
+        "ar": "جميل",
+        "zh-CN": "美丽",
+        "ru": "красивый",
+        "de": "schön",
+        "it": "bello",
+        "ja": "美しい",
+        "ko": "아름답다",
+        "pt": "bonito",
+        "tr": "güzel"
+      },
+      "sense": "beautiful"
+    },
+    "colors.red": {
+      "terms": {
+        "en": "red",
+        "es": "rojo",
+        "fr": "rouge",
+        "ar": "أحمر",
+        "zh-CN": "红色",
+        "ru": "красный",
+        "de": "rot",
+        "it": "rosso",
+        "ja": "赤",
+        "ko": "빨간색",
+        "pt": "vermelho",
+        "tr": "kırmızı"
+      },
+      "sense": "red"
+    },
+    "colors.blue": {
+      "terms": {
+        "en": "blue",
+        "es": "azul",
+        "fr": "bleu",
+        "ar": "أزرق",
+        "zh-CN": "蓝色",
+        "ru": "синий",
+        "de": "blau",
+        "it": "blu",
+        "ja": "青",
+        "ko": "파란색",
+        "pt": "azul",
+        "tr": "mavi"
+      },
+      "sense": "blue"
+    },
+    "colors.green": {
+      "terms": {
+        "en": "green",
+        "es": "verde",
+        "fr": "vert",
+        "ar": "أخضر",
+        "zh-CN": "绿色",
+        "ru": "зелёный",
+        "de": "grün",
+        "it": "verde",
+        "ja": "緑",
+        "ko": "초록색",
+        "pt": "verde",
+        "tr": "yeşil"
+      },
+      "sense": "green"
+    },
+    "colors.yellow": {
+      "terms": {
+        "en": "yellow",
+        "es": "amarillo",
+        "fr": "jaune",
+        "ar": "أصفر",
+        "zh-CN": "黄色",
+        "ru": "жёлтый",
+        "de": "gelb",
+        "it": "giallo",
+        "ja": "黄色",
+        "ko": "노란색",
+        "pt": "amarelo",
+        "tr": "sarı"
+      },
+      "sense": "yellow"
+    },
+    "colors.black": {
+      "terms": {
+        "en": "black",
+        "es": "negro",
+        "fr": "noir",
+        "ar": "أسود",
+        "zh-CN": "黑色",
+        "ru": "чёрный",
+        "de": "schwarz",
+        "it": "nero",
+        "ja": "黒",
+        "ko": "검은색",
+        "pt": "preto",
+        "tr": "siyah"
+      },
+      "sense": "black"
+    },
+    "colors.white": {
+      "terms": {
+        "en": "white",
+        "es": "blanco",
+        "fr": "blanc",
+        "ar": "أبيض",
+        "zh-CN": "白色",
+        "ru": "белый",
+        "de": "weiß",
+        "it": "bianco",
+        "ja": "白",
+        "ko": "흰색",
+        "pt": "branco",
+        "tr": "beyaz"
+      },
+      "sense": "white"
+    },
+    "colors.gray": {
+      "terms": {
+        "en": "gray",
+        "es": "gris",
+        "fr": "gris",
+        "ar": "رمادي",
+        "zh-CN": "灰色",
+        "ru": "серый",
+        "de": "grau",
+        "it": "grigio",
+        "ja": "灰色",
+        "ko": "회색",
+        "pt": "cinzento",
+        "tr": "gri"
+      },
+      "sense": "gray"
+    },
+    "colors.brown": {
+      "terms": {
+        "en": "brown",
+        "es": "marrón",
+        "fr": "marron",
+        "ar": "بني",
+        "zh-CN": "棕色",
+        "ru": "коричневый",
+        "de": "braun",
+        "it": "marrone",
+        "ja": "茶色",
+        "ko": "갈색",
+        "pt": "marrom",
+        "tr": "kahverengi"
+      },
+      "sense": "brown"
+    },
+    "colors.pink": {
+      "terms": {
+        "en": "pink",
+        "es": "rosa",
+        "fr": "rose",
+        "ar": "وردي",
+        "zh-CN": "粉红色",
+        "ru": "розовый",
+        "de": "rosa",
+        "it": "rosa",
+        "ja": "ピンク",
+        "ko": "분홍색",
+        "pt": "rosa",
+        "tr": "pembe"
+      },
+      "sense": "pink"
+    },
+    "colors.purple": {
+      "terms": {
+        "en": "purple",
+        "es": "morado",
+        "fr": "violet",
+        "ar": "بنفسجي",
+        "zh-CN": "紫色",
+        "ru": "фиолетовый",
+        "de": "lila",
+        "it": "viola",
+        "ja": "紫",
+        "ko": "보라색",
+        "pt": "roxo",
+        "tr": "mor"
+      },
+      "sense": "purple"
+    },
+    "colors.orange": {
+      "terms": {
+        "en": "orange",
+        "es": "naranja",
+        "fr": "orange",
+        "ar": "برتقالي",
+        "zh-CN": "橙色",
+        "ru": "оранжевый",
+        "de": "orange",
+        "it": "arancione",
+        "ja": "オレンジ色",
+        "ko": "주황색",
+        "pt": "laranja",
+        "tr": "turuncu"
+      },
+      "sense": "orange color"
+    },
+    "colors.light": {
+      "terms": {
+        "en": "light",
+        "es": "ligero",
+        "fr": "léger",
+        "ar": "خفيف",
+        "zh-CN": "轻",
+        "ru": "лёгкий",
+        "de": "leicht",
+        "it": "leggero",
+        "ja": "軽い",
+        "ko": "가볍다",
+        "pt": "leve",
+        "tr": "hafif"
+      },
+      "sense": "lightweight; not heavy"
+    },
+    "colors.dark": {
+      "terms": {
+        "en": "dark",
+        "es": "oscuro",
+        "fr": "sombre",
+        "ar": "مظلم",
+        "zh-CN": "黑暗",
+        "ru": "тёмный",
+        "de": "dunkel",
+        "it": "buio",
+        "ja": "暗い",
+        "ko": "어둡다",
+        "pt": "escuro",
+        "tr": "karanlık"
+      },
+      "sense": "dark; without light"
+    },
+    "colors.heavy": {
+      "terms": {
+        "en": "heavy",
+        "es": "pesado",
+        "fr": "lourd",
+        "ar": "ثقيل",
+        "zh-CN": "重",
+        "ru": "тяжёлый",
+        "de": "schwer",
+        "it": "pesante",
+        "ja": "重い",
+        "ko": "무겁다",
+        "pt": "pesado",
+        "tr": "ağır"
+      },
+      "sense": "heavy"
+    },
+    "colors.empty": {
+      "terms": {
+        "en": "empty",
+        "es": "vacío",
+        "fr": "vide",
+        "ar": "فارغ",
+        "zh-CN": "空的",
+        "ru": "пустой",
+        "de": "leer",
+        "it": "vuoto",
+        "ja": "空っぽ",
+        "ko": "비어 있다",
+        "pt": "vazio",
+        "tr": "boş"
+      },
+      "sense": "empty; not full"
+    },
+    "numbers.zero": {
+      "terms": {
+        "en": "zero",
+        "es": "cero",
+        "fr": "zéro",
+        "ar": "صفر",
+        "zh-CN": "零",
+        "ru": "ноль",
+        "de": "null",
+        "it": "zero",
+        "ja": "ゼロ",
+        "ko": "영",
+        "pt": "zero",
+        "tr": "sıfır"
+      },
+      "sense": "zero"
+    },
+    "numbers.one": {
+      "terms": {
+        "en": "one",
+        "es": "uno",
+        "fr": "un",
+        "ar": "واحد",
+        "zh-CN": "一",
+        "ru": "один",
+        "de": "eins",
+        "it": "uno",
+        "ja": "一",
+        "ko": "하나",
+        "pt": "um",
+        "tr": "bir"
+      },
+      "sense": "number one"
+    },
+    "numbers.two": {
+      "terms": {
+        "en": "two",
+        "es": "dos",
+        "fr": "deux",
+        "ar": "اثنان",
+        "zh-CN": "二",
+        "ru": "два",
+        "de": "zwei",
+        "it": "due",
+        "ja": "二",
+        "ko": "둘",
+        "pt": "dois",
+        "tr": "iki"
+      },
+      "sense": "number two"
+    },
+    "numbers.three": {
+      "terms": {
+        "en": "three",
+        "es": "tres",
+        "fr": "trois",
+        "ar": "ثلاثة",
+        "zh-CN": "三",
+        "ru": "три",
+        "de": "drei",
+        "it": "tre",
+        "ja": "三",
+        "ko": "셋",
+        "pt": "três",
+        "tr": "üç"
+      },
+      "sense": "three"
+    },
+    "numbers.four": {
+      "terms": {
+        "en": "four",
+        "es": "cuatro",
+        "fr": "quatre",
+        "ar": "أربعة",
+        "zh-CN": "四",
+        "ru": "четыре",
+        "de": "vier",
+        "it": "quattro",
+        "ja": "四",
+        "ko": "넷",
+        "pt": "quatro",
+        "tr": "dört"
+      },
+      "sense": "four"
+    },
+    "numbers.five": {
+      "terms": {
+        "en": "five",
+        "es": "cinco",
+        "fr": "cinq",
+        "ar": "خمسة",
+        "zh-CN": "五",
+        "ru": "пять",
+        "de": "fünf",
+        "it": "cinque",
+        "ja": "五",
+        "ko": "다섯",
+        "pt": "cinco",
+        "tr": "beş"
+      },
+      "sense": "five"
+    },
+    "numbers.six": {
+      "terms": {
+        "en": "six",
+        "es": "seis",
+        "fr": "six",
+        "ar": "ستة",
+        "zh-CN": "六",
+        "ru": "шесть",
+        "de": "sechs",
+        "it": "sei",
+        "ja": "六",
+        "ko": "여섯",
+        "pt": "seis",
+        "tr": "altı"
+      },
+      "sense": "six"
+    },
+    "numbers.seven": {
+      "terms": {
+        "en": "seven",
+        "es": "siete",
+        "fr": "sept",
+        "ar": "سبعة",
+        "zh-CN": "七",
+        "ru": "семь",
+        "de": "sieben",
+        "it": "sette",
+        "ja": "七",
+        "ko": "일곱",
+        "pt": "sete",
+        "tr": "yedi"
+      },
+      "sense": "seven"
+    },
+    "numbers.eight": {
+      "terms": {
+        "en": "eight",
+        "es": "ocho",
+        "fr": "huit",
+        "ar": "ثمانية",
+        "zh-CN": "八",
+        "ru": "восемь",
+        "de": "acht",
+        "it": "otto",
+        "ja": "八",
+        "ko": "여덟",
+        "pt": "oito",
+        "tr": "sekiz"
+      },
+      "sense": "eight"
+    },
+    "numbers.nine": {
+      "terms": {
+        "en": "nine",
+        "es": "nueve",
+        "fr": "neuf",
+        "ar": "تسعة",
+        "zh-CN": "九",
+        "ru": "девять",
+        "de": "neun",
+        "it": "nove",
+        "ja": "九",
+        "ko": "아홉",
+        "pt": "nove",
+        "tr": "dokuz"
+      },
+      "sense": "nine"
+    },
+    "numbers.ten": {
+      "terms": {
+        "en": "ten",
+        "es": "diez",
+        "fr": "dix",
+        "ar": "عشرة",
+        "zh-CN": "十",
+        "ru": "десять",
+        "de": "zehn",
+        "it": "dieci",
+        "ja": "十",
+        "ko": "열",
+        "pt": "dez",
+        "tr": "on"
+      },
+      "sense": "ten"
+    },
+    "numbers.hundred": {
+      "terms": {
+        "en": "hundred",
+        "es": "cien",
+        "fr": "cent",
+        "ar": "مئة",
+        "zh-CN": "百",
+        "ru": "сто",
+        "de": "hundert",
+        "it": "cento",
+        "ja": "百",
+        "ko": "백",
+        "pt": "cem",
+        "tr": "yüz"
+      },
+      "sense": "hundred"
+    },
+    "numbers.thousand": {
+      "terms": {
+        "en": "thousand",
+        "es": "mil",
+        "fr": "mille",
+        "ar": "ألف",
+        "zh-CN": "千",
+        "ru": "тысяча",
+        "de": "tausend",
+        "it": "mille",
+        "ja": "千",
+        "ko": "천",
+        "pt": "mil",
+        "tr": "bin"
+      },
+      "sense": "thousand"
+    },
+    "numbers.first": {
+      "terms": {
+        "en": "first",
+        "es": "primero",
+        "fr": "premier",
+        "ar": "أول",
+        "zh-CN": "第一",
+        "ru": "первый",
+        "de": "erste",
+        "it": "primo",
+        "ja": "最初",
+        "ko": "첫 번째",
+        "pt": "primeiro",
+        "tr": "ilk"
+      },
+      "sense": "first in order"
+    },
+    "numbers.last": {
+      "terms": {
+        "en": "last",
+        "es": "último",
+        "fr": "dernier",
+        "ar": "أخير",
+        "zh-CN": "最后",
+        "ru": "последний",
+        "de": "letzte",
+        "it": "ultimo",
+        "ja": "最後",
+        "ko": "마지막",
+        "pt": "último",
+        "tr": "son"
+      },
+      "sense": "last in order"
+    },
+    "work.work": {
+      "terms": {
+        "en": "work",
+        "es": "trabajo",
+        "fr": "travail",
+        "ar": "عمل",
+        "zh-CN": "工作",
+        "ru": "работа",
+        "de": "Arbeit",
+        "it": "lavoro",
+        "ja": "仕事",
+        "ko": "일",
+        "pt": "trabalho",
+        "tr": "iş"
+      },
+      "sense": "work / labor (noun)"
+    },
+    "work.money": {
+      "terms": {
+        "en": "money",
+        "es": "dinero",
+        "fr": "argent",
+        "ar": "مال",
+        "zh-CN": "钱",
+        "ru": "деньги",
+        "de": "Geld",
+        "it": "denaro",
+        "ja": "お金",
+        "ko": "돈",
+        "pt": "dinheiro",
+        "tr": "para"
+      },
+      "sense": "money"
+    },
+    "work.price": {
+      "terms": {
+        "en": "price",
+        "es": "precio",
+        "fr": "prix",
+        "ar": "سعر",
+        "zh-CN": "价格",
+        "ru": "цена",
+        "de": "Preis",
+        "it": "prezzo",
+        "ja": "値段",
+        "ko": "가격",
+        "pt": "preço",
+        "tr": "fiyat"
+      },
+      "sense": "price"
+    },
+    "work.time": {
+      "terms": {
+        "en": "time",
+        "es": "tiempo",
+        "fr": "temps",
+        "ar": "وقت",
+        "zh-CN": "时间",
+        "ru": "время",
+        "de": "Zeit",
+        "it": "tempo",
+        "ja": "時間",
+        "ko": "시간",
+        "pt": "tempo",
+        "tr": "zaman"
+      },
+      "sense": "time; duration"
+    },
+    "work.book": {
+      "terms": {
+        "en": "book",
+        "es": "libro",
+        "fr": "livre",
+        "ar": "كتاب",
+        "zh-CN": "书",
+        "ru": "книга",
+        "de": "Buch",
+        "it": "libro",
+        "ja": "本",
+        "ko": "책",
+        "pt": "livro",
+        "tr": "kitap"
+      },
+      "sense": "book; printed reading material"
+    },
+    "work.pen": {
+      "terms": {
+        "en": "pen",
+        "es": "bolígrafo",
+        "fr": "stylo",
+        "ar": "قلم",
+        "zh-CN": "笔",
+        "ru": "ручка",
+        "de": "Stift",
+        "it": "penna",
+        "ja": "ペン",
+        "ko": "펜",
+        "pt": "caneta",
+        "tr": "kalem"
+      },
+      "sense": "pen"
+    },
+    "work.paper": {
+      "terms": {
+        "en": "paper",
+        "es": "papel",
+        "fr": "papier",
+        "ar": "ورق",
+        "zh-CN": "纸",
+        "ru": "бумага",
+        "de": "Papier",
+        "it": "carta",
+        "ja": "紙",
+        "ko": "종이",
+        "pt": "papel",
+        "tr": "kâğıt"
+      },
+      "sense": "paper; material"
+    },
+    "work.phone": {
+      "terms": {
+        "en": "phone",
+        "es": "teléfono",
+        "fr": "téléphone",
+        "ar": "هاتف",
+        "zh-CN": "电话",
+        "ru": "телефон",
+        "de": "Telefon",
+        "it": "telefono",
+        "ja": "電話",
+        "ko": "전화",
+        "pt": "telefone",
+        "tr": "telefon"
+      },
+      "sense": "phone"
+    },
+    "work.computer": {
+      "terms": {
+        "en": "computer",
+        "es": "ordenador",
+        "fr": "ordinateur",
+        "ar": "حاسوب",
+        "zh-CN": "电脑",
+        "ru": "компьютер",
+        "de": "Computer",
+        "it": "computer",
+        "ja": "コンピューター",
+        "ko": "컴퓨터",
+        "pt": "computador",
+        "tr": "bilgisayar"
+      },
+      "sense": "computer"
+    },
+    "work.internet": {
+      "terms": {
+        "en": "internet",
+        "es": "internet",
+        "fr": "internet",
+        "ar": "إنترنت",
+        "zh-CN": "互联网",
+        "ru": "интернет",
+        "de": "Internet",
+        "it": "internet",
+        "ja": "インターネット",
+        "ko": "인터넷",
+        "pt": "internet",
+        "tr": "internet"
+      },
+      "sense": "internet"
+    },
+    "work.email": {
+      "terms": {
+        "en": "email",
+        "es": "correo electrónico",
+        "fr": "courriel",
+        "ar": "بريد إلكتروني",
+        "zh-CN": "电子邮件",
+        "ru": "электронная почта",
+        "de": "E-Mail",
+        "it": "email",
+        "ja": "メール",
+        "ko": "이메일",
+        "pt": "e-mail",
+        "tr": "e-posta"
+      },
+      "sense": "email"
+    },
+    "work.message": {
+      "terms": {
+        "en": "message",
+        "es": "mensaje",
+        "fr": "message",
+        "ar": "رسالة",
+        "zh-CN": "消息",
+        "ru": "сообщение",
+        "de": "Nachricht",
+        "it": "messaggio",
+        "ja": "メッセージ",
+        "ko": "메시지",
+        "pt": "mensagem",
+        "tr": "mesaj"
+      },
+      "sense": "message"
+    },
+    "work.meeting": {
+      "terms": {
+        "en": "meeting",
+        "es": "reunión",
+        "fr": "réunion",
+        "ar": "اجتماع",
+        "zh-CN": "会议",
+        "ru": "встреча",
+        "de": "Besprechung",
+        "it": "riunione",
+        "ja": "会議",
+        "ko": "회의",
+        "pt": "reunião",
+        "tr": "toplantı"
+      },
+      "sense": "meeting"
+    },
+    "work.problem": {
+      "terms": {
+        "en": "problem",
+        "es": "problema",
+        "fr": "problème",
+        "ar": "مشكلة",
+        "zh-CN": "问题",
+        "ru": "проблема",
+        "de": "Problem",
+        "it": "problema",
+        "ja": "問題",
+        "ko": "문제",
+        "pt": "problema",
+        "tr": "sorun"
+      },
+      "sense": "a problem / difficulty"
+    },
+    "work.idea": {
+      "terms": {
+        "en": "idea",
+        "es": "idea",
+        "fr": "idée",
+        "ar": "فكرة",
+        "zh-CN": "想法",
+        "ru": "идея",
+        "de": "Idee",
+        "it": "idea",
+        "ja": "アイデア",
+        "ko": "아이디어",
+        "pt": "ideia",
+        "tr": "fikir"
+      },
+      "sense": "idea"
+    },
+    "phrases.good_morning": {
+      "terms": {
+        "en": "Good morning!",
+        "es": "¡Buenos días!",
+        "fr": "Bonjour !",
+        "ar": "صباح الخير!",
+        "zh-CN": "早上好！",
+        "ru": "Доброе утро!",
+        "de": "Guten Morgen!",
+        "it": "Buongiorno!",
+        "ja": "おはようございます。",
+        "ko": "좋은 아침이에요!",
+        "pt": "Bom dia!",
+        "tr": "Günaydın!"
+      },
+      "sense": "Good morning!"
+    },
+    "phrases.good_night": {
+      "terms": {
+        "en": "Good night!",
+        "es": "¡Buenas noches!",
+        "fr": "Bonne nuit !",
+        "ar": "تصبح على خير!",
+        "zh-CN": "晚安！",
+        "ru": "Спокойной ночи!",
+        "de": "Gute Nacht!",
+        "it": "Buonanotte!",
+        "ja": "おやすみなさい。",
+        "ko": "안녕히 주무세요.",
+        "pt": "Boa noite!",
+        "tr": "İyi geceler!"
+      },
+      "sense": "Good night!"
+    },
+    "phrases.how_are_you": {
+      "terms": {
+        "en": "How are you?",
+        "es": "¿Cómo estás?",
+        "fr": "Comment allez-vous ?",
+        "ar": "كيف حالك؟",
+        "zh-CN": "你好吗？",
+        "ru": "Как дела?",
+        "de": "Wie geht es dir?",
+        "it": "Come stai?",
+        "ja": "お元気ですか。",
+        "ko": "잘 지내세요?",
+        "pt": "Como você está?",
+        "tr": "Nasılsın?"
+      },
+      "sense": "How are you?"
+    },
+    "phrases.nice_to_meet_you": {
+      "terms": {
+        "en": "Nice to meet you.",
+        "es": "Mucho gusto.",
+        "fr": "Enchanté de faire votre connaissance.",
+        "ar": "تشرفت بلقائك.",
+        "zh-CN": "很高兴认识你。",
+        "ru": "Приятно познакомиться.",
+        "de": "Freut mich, dich kennenzulernen.",
+        "it": "Piacere di conoscerti.",
+        "ja": "はじめまして。",
+        "ko": "만나서 반갑습니다.",
+        "pt": "Prazer em conhecer você.",
+        "tr": "Tanıştığımıza memnun oldum."
+      },
+      "sense": "Nice to meet you."
+    },
+    "phrases.see_you_later": {
+      "terms": {
+        "en": "See you later!",
+        "es": "¡Hasta luego!",
+        "fr": "À plus tard !",
+        "ar": "أراك لاحقًا!",
+        "zh-CN": "回头见！",
+        "ru": "До встречи!",
+        "de": "Bis später!",
+        "it": "A dopo!",
+        "ja": "また後で。",
+        "ko": "나중에 봐요!",
+        "pt": "Até mais!",
+        "tr": "Sonra görüşürüz!"
+      },
+      "sense": "See you later!"
+    },
+    "phrases.you_are_welcome": {
+      "terms": {
+        "en": "You're welcome.",
+        "es": "De nada.",
+        "fr": "De rien.",
+        "ar": "على الرحب والسعة.",
+        "zh-CN": "不客气。",
+        "ru": "Пожалуйста.",
+        "de": "Gern geschehen.",
+        "it": "Prego.",
+        "ja": "どういたしまして。",
+        "ko": "별말씀을요.",
+        "pt": "De nada.",
+        "tr": "Rica ederim."
+      },
+      "sense": "You're welcome."
+    },
+    "phrases.no_problem": {
+      "terms": {
+        "en": "No problem.",
+        "es": "No hay problema.",
+        "fr": "Pas de problème.",
+        "ar": "لا مشكلة.",
+        "zh-CN": "没问题。",
+        "ru": "Нет проблем.",
+        "de": "Kein Problem.",
+        "it": "Nessun problema.",
+        "ja": "問題ありません。",
+        "ko": "문제없어요.",
+        "pt": "Sem problema.",
+        "tr": "Sorun değil."
+      },
+      "sense": "No problem."
+    },
+    "phrases.i_do_not_understand": {
+      "terms": {
+        "en": "I don't understand.",
+        "es": "No entiendo.",
+        "fr": "Je ne comprends pas.",
+        "ar": "لا أفهم.",
+        "zh-CN": "我不明白。",
+        "ru": "Я не понимаю.",
+        "de": "Ich verstehe nicht.",
+        "it": "Non capisco.",
+        "ja": "わかりません。",
+        "ko": "이해가 안 돼요.",
+        "pt": "Não entendo.",
+        "tr": "Anlamıyorum."
+      },
+      "sense": "I don't understand."
+    },
+    "phrases.please_repeat": {
+      "terms": {
+        "en": "Could you repeat that, please?",
+        "es": "¿Puede repetirlo, por favor?",
+        "fr": "Pouvez-vous répéter, s'il vous plaît ?",
+        "ar": "هل يمكنك أن تعيد ذلك من فضلك؟",
+        "zh-CN": "请再说一遍，好吗？",
+        "ru": "Повторите, пожалуйста.",
+        "de": "Können Sie das bitte wiederholen?",
+        "it": "Può ripetere, per favore?",
+        "ja": "もう一度言っていただけますか。",
+        "ko": "다시 말씀해 주시겠어요?",
+        "pt": "Pode repetir, por favor?",
+        "tr": "Tekrar eder misiniz, lütfen?"
+      },
+      "sense": "Could you repeat that, please?"
+    },
+    "phrases.speak_slowly": {
+      "terms": {
+        "en": "Please speak slowly.",
+        "es": "Hable despacio, por favor.",
+        "fr": "Parlez lentement, s'il vous plaît.",
+        "ar": "تحدث ببطء من فضلك.",
+        "zh-CN": "请说慢一点。",
+        "ru": "Говорите медленно, пожалуйста.",
+        "de": "Bitte sprechen Sie langsam.",
+        "it": "Parli lentamente, per favore.",
+        "ja": "ゆっくり話してください。",
+        "ko": "천천히 말씀해 주세요.",
+        "pt": "Fale devagar, por favor.",
+        "tr": "Lütfen yavaş konuşun."
+      },
+      "sense": "Please speak slowly."
+    },
+    "phrases.what_does_it_mean": {
+      "terms": {
+        "en": "What does this mean?",
+        "es": "¿Qué significa esto?",
+        "fr": "Qu'est-ce que cela veut dire ?",
+        "ar": "ماذا يعني هذا؟",
+        "zh-CN": "这是什么意思？",
+        "ru": "Что это значит?",
+        "de": "Was bedeutet das?",
+        "it": "Che cosa significa questo?",
+        "ja": "これはどういう意味ですか。",
+        "ko": "이게 무슨 뜻이에요?",
+        "pt": "O que isso significa?",
+        "tr": "Bu ne anlama geliyor?"
+      },
+      "sense": "What does this mean?"
+    },
+    "phrases.how_do_you_say_this": {
+      "terms": {
+        "en": "How do you say this?",
+        "es": "¿Cómo se dice esto?",
+        "fr": "Comment dit-on cela ?",
+        "ar": "كيف تقول هذا؟",
+        "zh-CN": "这个怎么说？",
+        "ru": "Как это сказать?",
+        "de": "Wie sagt man das?",
+        "it": "Come si dice questo?",
+        "ja": "これはどう言いますか。",
+        "ko": "이건 어떻게 말해요?",
+        "pt": "Como se diz isso?",
+        "tr": "Bu nasıl söylenir?"
+      },
+      "sense": "How do you say this?"
+    },
+    "phrases.do_you_speak_english": {
+      "terms": {
+        "en": "Do you speak English?",
+        "es": "¿Habla inglés?",
+        "fr": "Parlez-vous anglais ?",
+        "ar": "هل تتحدث الإنجليزية؟",
+        "zh-CN": "你会说英语吗？",
+        "ru": "Вы говорите по-английски?",
+        "de": "Sprechen Sie Englisch?",
+        "it": "Parla inglese?",
+        "ja": "英語を話せますか。",
+        "ko": "영어 하세요?",
+        "pt": "Você fala inglês?",
+        "tr": "İngilizce konuşuyor musunuz?"
+      },
+      "sense": "Do you speak English?"
+    },
+    "phrases.where_is_the_bathroom": {
+      "terms": {
+        "en": "Where is the bathroom?",
+        "es": "¿Dónde está el baño?",
+        "fr": "Où sont les toilettes ?",
+        "ar": "أين الحمام؟",
+        "zh-CN": "洗手间在哪里？",
+        "ru": "Где туалет?",
+        "de": "Wo ist die Toilette?",
+        "it": "Dov'è il bagno?",
+        "ja": "トイレはどこですか。",
+        "ko": "화장실이 어디예요?",
+        "pt": "Onde fica o banheiro?",
+        "tr": "Tuvalet nerede?"
+      },
+      "sense": "Where is the bathroom?"
+    },
+    "phrases.how_much": {
+      "terms": {
+        "en": "How much does this cost?",
+        "es": "¿Cuánto cuesta esto?",
+        "fr": "Combien ça coûte ?",
+        "ar": "كم ثمن هذا؟",
+        "zh-CN": "这个多少钱？",
+        "ru": "Сколько это стоит?",
+        "de": "Wie viel kostet das?",
+        "it": "Quanto costa questo?",
+        "ja": "これはいくらですか。",
+        "ko": "이거 얼마예요?",
+        "pt": "Quanto custa isso?",
+        "tr": "Bu ne kadar?"
+      },
+      "sense": "How much does this cost?"
+    },
+    "phrases.i_would_like_this": {
+      "terms": {
+        "en": "I'd like this, please.",
+        "es": "Quisiera esto, por favor.",
+        "fr": "Je voudrais ceci, s'il vous plaît.",
+        "ar": "أريد هذا من فضلك.",
+        "zh-CN": "请给我这个。",
+        "ru": "Мне это, пожалуйста.",
+        "de": "Ich hätte gern das hier, bitte.",
+        "it": "Vorrei questo, per favore.",
+        "ja": "これをお願いします。",
+        "ko": "이거 주세요.",
+        "pt": "Eu gostaria disto, por favor.",
+        "tr": "Bunu istiyorum, lütfen."
+      },
+      "sense": "I'd like this, please."
+    },
+    "phrases.can_you_help_me": {
+      "terms": {
+        "en": "Can you help me?",
+        "es": "¿Puede ayudarme?",
+        "fr": "Pouvez-vous m'aider ?",
+        "ar": "هل يمكنك مساعدتي؟",
+        "zh-CN": "你能帮我吗？",
+        "ru": "Вы можете мне помочь?",
+        "de": "Können Sie mir helfen?",
+        "it": "Può aiutarmi?",
+        "ja": "手伝っていただけますか。",
+        "ko": "도와주실 수 있나요?",
+        "pt": "Pode me ajudar?",
+        "tr": "Bana yardım edebilir misiniz?"
+      },
+      "sense": "Can you help me?"
+    },
+    "phrases.the_bill_please": {
+      "terms": {
+        "en": "The bill, please.",
+        "es": "La cuenta, por favor.",
+        "fr": "L'addition, s'il vous plaît.",
+        "ar": "الحساب من فضلك.",
+        "zh-CN": "请结账。",
+        "ru": "Счёт, пожалуйста.",
+        "de": "Die Rechnung, bitte.",
+        "it": "Il conto, per favore.",
+        "ja": "お会計をお願いします。",
+        "ko": "계산서 주세요.",
+        "pt": "A conta, por favor.",
+        "tr": "Hesap, lütfen."
+      },
+      "sense": "The bill, please."
+    },
+    "phrases.i_need_help": {
+      "terms": {
+        "en": "I need help.",
+        "es": "Necesito ayuda.",
+        "fr": "J'ai besoin d'aide.",
+        "ar": "أحتاج إلى مساعدة.",
+        "zh-CN": "我需要帮助。",
+        "ru": "Мне нужна помощь.",
+        "de": "Ich brauche Hilfe.",
+        "it": "Ho bisogno di aiuto.",
+        "ja": "助けが必要です。",
+        "ko": "도움이 필요해요.",
+        "pt": "Preciso de ajuda.",
+        "tr": "Yardıma ihtiyacım var."
+      },
+      "sense": "I need help."
+    },
+    "phrases.i_am_lost": {
+      "terms": {
+        "en": "I'm lost.",
+        "es": "Me he perdido.",
+        "fr": "Je ne trouve pas mon chemin.",
+        "ar": "لقد ضللت الطريق.",
+        "zh-CN": "我迷路了。",
+        "ru": "Я не могу найти дорогу.",
+        "de": "Ich habe mich verlaufen.",
+        "it": "Ho perso la strada.",
+        "ja": "道に迷いました。",
+        "ko": "길을 잃었어요.",
+        "pt": "Não consigo encontrar o caminho.",
+        "tr": "Yolumu kaybettim."
+      },
+      "sense": "I'm lost."
+    },
+    "phrases.where_is_the_station": {
+      "terms": {
+        "en": "Where is the train station?",
+        "es": "¿Dónde está la estación de tren?",
+        "fr": "Où est la gare ?",
+        "ar": "أين محطة القطار؟",
+        "zh-CN": "火车站在哪里？",
+        "ru": "Где железнодорожный вокзал?",
+        "de": "Wo ist der Bahnhof?",
+        "it": "Dov'è la stazione ferroviaria?",
+        "ja": "駅はどこですか。",
+        "ko": "기차역이 어디예요?",
+        "pt": "Onde fica a estação de trem?",
+        "tr": "Tren istasyonu nerede?"
+      },
+      "sense": "Where is the train station?"
+    },
+    "phrases.i_do_not_know": {
+      "terms": {
+        "en": "I don't know.",
+        "es": "No lo sé.",
+        "fr": "Je ne sais pas.",
+        "ar": "لا أعرف.",
+        "zh-CN": "我不知道。",
+        "ru": "Я не знаю.",
+        "de": "Ich weiß es nicht.",
+        "it": "Non lo so.",
+        "ja": "知りません。",
+        "ko": "몰라요.",
+        "pt": "Não sei.",
+        "tr": "Bilmiyorum."
+      },
+      "sense": "I don't know."
+    },
+    "phrases.just_a_moment": {
+      "terms": {
+        "en": "Just a moment, please.",
+        "es": "Un momento, por favor.",
+        "fr": "Un instant, s'il vous plaît.",
+        "ar": "لحظة من فضلك.",
+        "zh-CN": "请稍等。",
+        "ru": "Одну минуту, пожалуйста.",
+        "de": "Einen Moment, bitte.",
+        "it": "Un momento, per favore.",
+        "ja": "少々お待ちください。",
+        "ko": "잠시만 기다려 주세요.",
+        "pt": "Um momento, por favor.",
+        "tr": "Bir dakika, lütfen."
+      },
+      "sense": "Just a moment, please."
+    },
+    "phrases.lets_go": {
+      "terms": {
+        "en": "Let's go!",
+        "es": "¡Vamos!",
+        "fr": "Allons-y !",
+        "ar": "هيا بنا!",
+        "zh-CN": "我们走吧！",
+        "ru": "Пойдём!",
+        "de": "Los geht's!",
+        "it": "Andiamo!",
+        "ja": "行きましょう。",
+        "ko": "갑시다!",
+        "pt": "Vamos!",
+        "tr": "Hadi gidelim!"
+      },
+      "sense": "Let's go!"
+    },
+    "phrases.have_a_good_day": {
+      "terms": {
+        "en": "Have a good day!",
+        "es": "¡Que tenga un buen día!",
+        "fr": "Bonne journée !",
+        "ar": "أتمنى لك يومًا سعيدًا!",
+        "zh-CN": "祝你今天愉快！",
+        "ru": "Хорошего дня!",
+        "de": "Einen schönen Tag noch!",
+        "it": "Buona giornata!",
+        "ja": "よい一日を。",
+        "ko": "좋은 하루 보내세요!",
+        "pt": "Tenha um bom dia!",
+        "tr": "İyi günler!"
+      },
+      "sense": "Have a good day!"
+    },
+    "phrases.see_you_tomorrow": {
+      "terms": {
+        "en": "See you tomorrow!",
+        "es": "¡Hasta mañana!",
+        "fr": "À demain !",
+        "ar": "أراك غدًا!",
+        "zh-CN": "明天见！",
+        "ru": "До завтра!",
+        "de": "Bis morgen!",
+        "it": "A domani!",
+        "ja": "また明日。",
+        "ko": "내일 봐요!",
+        "pt": "Até amanhã!",
+        "tr": "Yarın görüşürüz!"
+      },
+      "sense": "See you tomorrow!"
+    },
+    "phrases.please_write_it_down": {
+      "terms": {
+        "en": "Could you write it down, please?",
+        "es": "¿Puede escribirlo, por favor?",
+        "fr": "Pouvez-vous l'écrire, s'il vous plaît ?",
+        "ar": "هل يمكنك كتابة ذلك من فضلك؟",
+        "zh-CN": "请写下来，好吗？",
+        "ru": "Напишите это, пожалуйста.",
+        "de": "Können Sie das bitte aufschreiben?",
+        "it": "Può scriverlo, per favore?",
+        "ja": "書いていただけますか。",
+        "ko": "적어 주시겠어요?",
+        "pt": "Pode escrever, por favor?",
+        "tr": "Yazar mısınız, lütfen?"
+      },
+      "sense": "Could you write it down, please?"
+    },
+    "phrases.pay_by_card": {
+      "terms": {
+        "en": "Can I pay by card?",
+        "es": "¿Puedo pagar con tarjeta?",
+        "fr": "Puis-je payer par carte ?",
+        "ar": "هل يمكنني الدفع بالبطاقة؟",
+        "zh-CN": "可以刷卡吗？",
+        "ru": "Можно заплатить картой?",
+        "de": "Kann ich mit Karte bezahlen?",
+        "it": "Posso pagare con la carta?",
+        "ja": "カードで払えますか。",
+        "ko": "카드로 결제할 수 있나요?",
+        "pt": "Posso pagar com cartão?",
+        "tr": "Kartla ödeyebilir miyim?"
+      },
+      "sense": "Can I pay by card?"
+    },
+    "phrases.please_show_me": {
+      "terms": {
+        "en": "Could you show me, please?",
+        "es": "¿Puede mostrarme, por favor?",
+        "fr": "Pouvez-vous me montrer, s'il vous plaît ?",
+        "ar": "هل يمكنك أن تريني من فضلك؟",
+        "zh-CN": "请给我看一下，好吗？",
+        "ru": "Покажите мне, пожалуйста.",
+        "de": "Können Sie es mir bitte zeigen?",
+        "it": "Può mostrarmelo, per favore?",
+        "ja": "見せていただけますか。",
+        "ko": "보여 주시겠어요?",
+        "pt": "Pode me mostrar, por favor?",
+        "tr": "Bana gösterir misiniz, lütfen?"
+      },
+      "sense": "Could you show me, please?"
+    },
+    "phrases.i_have_a_question": {
+      "terms": {
+        "en": "I have a question.",
+        "es": "Tengo una pregunta.",
+        "fr": "J'ai une question.",
+        "ar": "لدي سؤال.",
+        "zh-CN": "我有一个问题。",
+        "ru": "У меня есть вопрос.",
+        "de": "Ich habe eine Frage.",
+        "it": "Ho una domanda.",
+        "ja": "質問があります。",
+        "ko": "질문이 있어요.",
+        "pt": "Tenho uma pergunta.",
+        "tr": "Bir sorum var."
+      },
+      "sense": "I have a question."
+    },
+    "expressions.piece_of_cake": {
+      "terms": {
+        "en": "It's a piece of cake.",
+        "es": "Es muy fácil.",
+        "fr": "C'est très facile.",
+        "ar": "إنه سهل جدًا.",
+        "zh-CN": "这很容易。",
+        "ru": "Это очень легко.",
+        "de": "Das ist sehr einfach.",
+        "it": "È molto facile.",
+        "ja": "とても簡単です。",
+        "ko": "아주 쉬워요.",
+        "pt": "É muito fácil.",
+        "tr": "Çok kolay."
+      },
+      "sense": "It's very easy. · en expression"
+    },
+    "expressions.in_the_clouds": {
+      "terms": {
+        "en": "I'm distracted.",
+        "es": "Estoy en las nubes.",
+        "fr": "Je suis distrait.",
+        "ar": "أنا شارد الذهن.",
+        "zh-CN": "我走神了。",
+        "ru": "Я рассеян.",
+        "de": "Ich bin abgelenkt.",
+        "it": "Sono distratto.",
+        "ja": "ぼんやりしています。",
+        "ko": "딴생각을 하고 있어요.",
+        "pt": "Estou distraído.",
+        "tr": "Dalgınım."
+      },
+      "sense": "I'm distracted. · es expression"
+    },
+    "expressions.tongue_to_cat": {
+      "terms": {
+        "en": "I give up guessing.",
+        "es": "Me rindo; no sé la respuesta.",
+        "fr": "Je donne ma langue au chat.",
+        "ar": "أستسلم؛ لا أعرف الإجابة.",
+        "zh-CN": "我猜不出来，放弃了。",
+        "ru": "Сдаюсь, не могу угадать.",
+        "de": "Ich gebe das Raten auf.",
+        "it": "Mi arrendo, non indovino.",
+        "ja": "わからないので、降参です。",
+        "ko": "모르겠어요. 포기할게요.",
+        "pt": "Desisto de adivinhar.",
+        "tr": "Tahmin etmekten vazgeçiyorum."
+      },
+      "sense": "I give up guessing. · fr expression"
+    },
+    "expressions.one_hand": {
+      "terms": {
+        "en": "We need to work together.",
+        "es": "Tenemos que trabajar juntos.",
+        "fr": "Nous devons travailler ensemble.",
+        "ar": "يد واحدة لا تصفق.",
+        "zh-CN": "我们需要合作。",
+        "ru": "Нам нужно работать вместе.",
+        "de": "Wir müssen zusammenarbeiten.",
+        "it": "Dobbiamo lavorare insieme.",
+        "ja": "協力する必要があります。",
+        "ko": "함께 협력해야 해요.",
+        "pt": "Precisamos trabalhar juntos.",
+        "tr": "Birlikte çalışmalıyız."
+      },
+      "sense": "We need to work together. · ar expression"
+    },
+    "expressions.one_arrow": {
+      "terms": {
+        "en": "Achieve two goals at once.",
+        "es": "Lograr dos objetivos a la vez.",
+        "fr": "Atteindre deux objectifs à la fois.",
+        "ar": "تحقيق هدفين في وقت واحد.",
+        "zh-CN": "一箭双雕",
+        "ru": "Достичь двух целей одновременно.",
+        "de": "Zwei Ziele auf einmal erreichen.",
+        "it": "Raggiungere due obiettivi in una volta.",
+        "ja": "一度に二つの目的を達成する。",
+        "ko": "한 번에 두 가지 목표를 이루다.",
+        "pt": "Alcançar dois objetivos de uma vez.",
+        "tr": "Bir seferde iki hedefe ulaşmak."
+      },
+      "sense": "Achieve two goals at once. · zh-CN expression"
+    },
+    "expressions.down_and_feather": {
+      "terms": {
+        "en": "Good luck!",
+        "es": "¡Buena suerte!",
+        "fr": "Bonne chance !",
+        "ar": "بالتوفيق!",
+        "zh-CN": "祝你好运！",
+        "ru": "Ни пуха ни пера!",
+        "de": "Viel Glück!",
+        "it": "Buona fortuna!",
+        "ja": "幸運を祈ります。",
+        "ko": "행운을 빌어요!",
+        "pt": "Boa sorte!",
+        "tr": "Bol şans!"
+      },
+      "sense": "Good luck! · ru expression"
+    },
+    "expressions.only_station": {
+      "terms": {
+        "en": "I don't understand any of this.",
+        "es": "No entiendo nada de esto.",
+        "fr": "Je ne comprends rien à tout cela.",
+        "ar": "لا أفهم شيئًا من هذا.",
+        "zh-CN": "这些我一点也不懂。",
+        "ru": "Я ничего из этого не понимаю.",
+        "de": "Ich verstehe nur Bahnhof.",
+        "it": "Non capisco niente di tutto questo.",
+        "ja": "何のことかさっぱりわかりません。",
+        "ko": "이건 하나도 이해가 안 돼요.",
+        "pt": "Não entendo nada disso.",
+        "tr": "Bundan hiçbir şey anlamıyorum."
+      },
+      "sense": "I don't understand any of this. · de expression"
+    },
+    "expressions.wolfs_mouth": {
+      "terms": {
+        "en": "Good luck!",
+        "es": "¡Buena suerte!",
+        "fr": "Bonne chance !",
+        "ar": "بالتوفيق!",
+        "zh-CN": "祝你好运！",
+        "ru": "Удачи!",
+        "de": "Viel Glück!",
+        "it": "In bocca al lupo!",
+        "ja": "幸運を祈ります。",
+        "ko": "행운을 빌어요!",
+        "pt": "Boa sorte!",
+        "tr": "Bol şans!"
+      },
+      "sense": "Good luck! · it expression"
+    },
+    "expressions.cats_paw": {
+      "terms": {
+        "en": "I'm so busy I could use any help.",
+        "es": "Tengo tanto trabajo que me vendría bien cualquier ayuda.",
+        "fr": "J'ai tellement de travail que toute aide serait bienvenue.",
+        "ar": "أنا مشغول جدًا وأحتاج إلى أي مساعدة.",
+        "zh-CN": "我忙得需要任何能得到的帮助。",
+        "ru": "Я так занят, что любая помощь пригодится.",
+        "de": "Ich bin so beschäftigt, dass mir jede Hilfe recht ist.",
+        "it": "Ho tanto da fare che qualsiasi aiuto sarebbe utile.",
+        "ja": "猫の手も借りたい。",
+        "ko": "너무 바빠서 어떤 도움이라도 필요해요.",
+        "pt": "Estou tão ocupado que qualquer ajuda seria bem-vinda.",
+        "tr": "O kadar meşgulüm ki her türlü yardıma ihtiyacım var."
+      },
+      "sense": "I'm so busy I could use any help. · ja expression"
+    },
+    "expressions.cold_porridge": {
+      "terms": {
+        "en": "It's very easy.",
+        "es": "Es muy fácil.",
+        "fr": "C'est très facile.",
+        "ar": "إنه سهل جدًا.",
+        "zh-CN": "这很容易。",
+        "ru": "Это очень легко.",
+        "de": "Das ist sehr einfach.",
+        "it": "È molto facile.",
+        "ja": "とても簡単です。",
+        "ko": "식은 죽 먹기예요.",
+        "pt": "É muito fácil.",
+        "tr": "Çok kolay."
+      },
+      "sense": "It's very easy. · ko expression"
+    },
+    "expressions.flea_behind_ear": {
+      "terms": {
+        "en": "I suspect something is wrong.",
+        "es": "Sospecho que algo va mal.",
+        "fr": "Je soupçonne que quelque chose ne va pas.",
+        "ar": "أشك في أن هناك خطبًا ما.",
+        "zh-CN": "我怀疑有些不对劲。",
+        "ru": "Я подозреваю, что что-то не так.",
+        "de": "Ich vermute, dass etwas nicht stimmt.",
+        "it": "Sospetto che qualcosa non vada.",
+        "ja": "何かがおかしいのではと疑っています。",
+        "ko": "뭔가 잘못된 것 같아 의심스러워요.",
+        "pt": "Estou com a pulga atrás da orelha.",
+        "tr": "Bir şeylerin ters gittiğinden şüpheleniyorum."
+      },
+      "sense": "I suspect something is wrong. · pt expression"
+    },
+    "expressions.ringing_skirts": {
+      "terms": {
+        "en": "They're overjoyed.",
+        "es": "Está rebosante de alegría.",
+        "fr": "Cette personne déborde de joie.",
+        "ar": "هذا الشخص في غاية الفرح.",
+        "zh-CN": "这个人欣喜若狂。",
+        "ru": "Этот человек вне себя от радости.",
+        "de": "Diese Person ist überglücklich.",
+        "it": "Questa persona è molto felice.",
+        "ja": "その人は大喜びしています。",
+        "ko": "그 사람은 아주 기뻐하고 있어요.",
+        "pt": "Essa pessoa está radiante de alegria.",
+        "tr": "Etekleri zil çalıyor."
+      },
+      "sense": "They're overjoyed. · tr expression"
+    }
+  }
+}

@@ -1,0 +1,1330 @@
+{
+  "schemaVersion": 1,
+  "fixture": true,
+  "description": "Entirely authored software fixture. These events are not records of human learners, measured learning, or a validated linguistic experiment.",
+  "clock": {
+    "start": 1794312000000,
+    "now": 1794488400000,
+    "timezone": "UTC"
+  },
+  "actor": {
+    "userId": "demo-learner-a",
+    "tenantId": null
+  },
+  "rawCount": 12,
+  "uniqueEventCount": 11,
+  "events": [
+    {
+      "id": "demo-event-0000000000000001",
+      "at": 1794312000000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000001",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000001",
+        "attemptId": null,
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": null,
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": null,
+          "annotationId": null,
+          "readingId": null,
+          "context": {
+            "lexicalId": null,
+            "senseId": null,
+            "speakerId": null,
+            "syntaxId": null,
+            "contextId": "a-little-later"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "none",
+        "observation": "displayed",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": null,
+        "response": null,
+        "skipReason": null,
+        "assessment": null,
+        "rubricRef": null,
+        "scorerRef": null,
+        "analysisRef": null
+      }
+    },
+    {
+      "id": "demo-event-0000000000000002",
+      "at": 1794312010000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000001",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000001",
+        "attemptId": "demo-attempt-0000000000000002",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:take-meaning",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:take-meaning",
+          "context": {
+            "lexicalId": "authored:ar:take",
+            "senseId": "authored:ar:take-command",
+            "speakerId": null,
+            "syntaxId": "authored:ar:isolated-masculine-command",
+            "contextId": "authored:contrast:take-meaning"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "choice",
+        "observation": "response",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312009000,
+        "response": {
+          "choice": 0
+        },
+        "skipReason": null,
+        "assessment": {
+          "outcome": "correct",
+          "basis": "authored-rule"
+        },
+        "rubricRef": {
+          "id": "rubric:contrast:take-meaning",
+          "version": "878e933e",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:authored-choice",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:take-meaning",
+          "version": "7173d008",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000002",
+      "at": 1794312010000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000001",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000001",
+        "attemptId": "demo-attempt-0000000000000002",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:take-meaning",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:take-meaning",
+          "context": {
+            "lexicalId": "authored:ar:take",
+            "senseId": "authored:ar:take-command",
+            "speakerId": null,
+            "syntaxId": "authored:ar:isolated-masculine-command",
+            "contextId": "authored:contrast:take-meaning"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "choice",
+        "observation": "response",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312009000,
+        "response": {
+          "choice": 0
+        },
+        "skipReason": null,
+        "assessment": {
+          "outcome": "correct",
+          "basis": "authored-rule"
+        },
+        "rubricRef": {
+          "id": "rubric:contrast:take-meaning",
+          "version": "878e933e",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:authored-choice",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:take-meaning",
+          "version": "7173d008",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000003",
+      "at": 1794312011000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000001",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000001",
+        "attemptId": "demo-attempt-0000000000000002",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:take-meaning",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:take-meaning",
+          "context": {
+            "lexicalId": "authored:ar:take",
+            "senseId": "authored:ar:take-command",
+            "speakerId": null,
+            "syntaxId": "authored:ar:isolated-masculine-command",
+            "contextId": "authored:contrast:take-meaning"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "none",
+        "observation": "answer-revealed",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": true,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": true,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312009000,
+        "response": null,
+        "skipReason": null,
+        "assessment": null,
+        "rubricRef": {
+          "id": "rubric:contrast:take-meaning",
+          "version": "878e933e",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:authored-choice",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:take-meaning",
+          "version": "7173d008",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000004",
+      "at": 1794312020000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000001",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000001",
+        "attemptId": "demo-attempt-0000000000000004",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:take-female",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:take-female",
+          "context": {
+            "lexicalId": "authored:ar:take",
+            "senseId": "authored:ar:take-command",
+            "speakerId": null,
+            "syntaxId": "authored:ar:isolated-feminine-command",
+            "contextId": "authored:contrast:take-female"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "text",
+        "observation": "response",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312019000,
+        "response": {
+          "answer": "خذي"
+        },
+        "skipReason": null,
+        "assessment": {
+          "outcome": "correct",
+          "basis": "authored-rule"
+        },
+        "rubricRef": {
+          "id": "rubric:contrast:take-female",
+          "version": "66c17bfd",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-female",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:arabic-optional-vowels",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-female",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:take-female",
+          "version": "309131c0",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-female",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000005",
+      "at": 1794312030000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000001",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000001",
+        "attemptId": "demo-attempt-0000000000000005",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:phrase-now",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:phrase-now",
+          "context": {
+            "lexicalId": "authored:ar:take-your-time",
+            "senseId": "authored:ar:reassurance",
+            "speakerId": null,
+            "syntaxId": "authored:ar:vocative-waiting-message",
+            "contextId": "authored:contrast:phrase-now"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "text",
+        "observation": "response",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312029000,
+        "response": {
+          "answer": "غير ذلك"
+        },
+        "skipReason": null,
+        "assessment": {
+          "outcome": "incorrect",
+          "basis": "authored-rule"
+        },
+        "rubricRef": {
+          "id": "rubric:contrast:phrase-now",
+          "version": "84901d54",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-now",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:arabic-optional-vowels",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-now",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:phrase-now",
+          "version": "78a0823f",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-now",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000006",
+      "at": 1794312031000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000001",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000001",
+        "attemptId": "demo-attempt-0000000000000005",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:phrase-now",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:phrase-now",
+          "context": {
+            "lexicalId": "authored:ar:take-your-time",
+            "senseId": "authored:ar:reassurance",
+            "speakerId": null,
+            "syntaxId": "authored:ar:vocative-waiting-message",
+            "contextId": "authored:contrast:phrase-now"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "none",
+        "observation": "answer-revealed",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": true,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": true,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312029000,
+        "response": null,
+        "skipReason": null,
+        "assessment": null,
+        "rubricRef": {
+          "id": "rubric:contrast:phrase-now",
+          "version": "84901d54",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-now",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:arabic-optional-vowels",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-now",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:phrase-now",
+          "version": "78a0823f",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-now",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000007",
+      "at": 1794312050000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000002",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000002",
+        "attemptId": "demo-attempt-0000000000000007",
+        "retryOfEpisodeId": "demo-episode-0000000000000001",
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:phrase-now",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:phrase-now",
+          "context": {
+            "lexicalId": "authored:ar:take-your-time",
+            "senseId": "authored:ar:reassurance",
+            "speakerId": null,
+            "syntaxId": "authored:ar:vocative-waiting-message",
+            "contextId": "authored:contrast:phrase-now"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "text",
+        "observation": "response",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": true,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": true,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312049000,
+        "response": {
+          "answer": "خذي وقتك"
+        },
+        "skipReason": null,
+        "assessment": {
+          "outcome": "correct",
+          "basis": "authored-rule"
+        },
+        "rubricRef": {
+          "id": "rubric:contrast:phrase-now",
+          "version": "84901d54",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-now",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:arabic-optional-vowels",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-now",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:phrase-now",
+          "version": "78a0823f",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-now",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000008",
+      "at": 1794312060000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000001",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000001",
+        "attemptId": "demo-attempt-0000000000000008",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:open-meaning",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:open-meaning",
+          "context": {
+            "lexicalId": "authored:ar:open",
+            "senseId": "authored:ar:open-command",
+            "speakerId": null,
+            "syntaxId": "authored:ar:isolated-masculine-command",
+            "contextId": "authored:contrast:open-meaning"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "none",
+        "observation": "skipped",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312059000,
+        "response": null,
+        "skipReason": "too-hard",
+        "assessment": null,
+        "rubricRef": {
+          "id": "rubric:contrast:open-meaning",
+          "version": "6e24fba3",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "open-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:authored-choice",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "open-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:open-meaning",
+          "version": "4f19a0f6",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "open-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000009",
+      "at": 1794484810000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000003",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000003",
+        "attemptId": "demo-attempt-0000000000000009",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-personal-01",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:phrase-later",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:phrase-later",
+          "context": {
+            "lexicalId": "authored:ar:take-your-time",
+            "senseId": "authored:ar:reassurance",
+            "speakerId": null,
+            "syntaxId": "authored:ar:negative-imperative-book-choice",
+            "contextId": "authored:contrast:phrase-later"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "text",
+        "observation": "response",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794484809000,
+        "response": {
+          "answer": "خذي وقتك"
+        },
+        "skipReason": null,
+        "assessment": {
+          "outcome": "correct",
+          "basis": "authored-rule"
+        },
+        "rubricRef": {
+          "id": "rubric:contrast:phrase-later",
+          "version": "83de41ff",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:arabic-optional-vowels",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:phrase-later",
+          "version": "33480a1a",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000010",
+      "at": 1794312015000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000004",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000004",
+        "attemptId": "demo-attempt-0000000000000010",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-b",
+          "tenantId": null
+        },
+        "intentRef": {
+          "id": "demo-intent-other-0001",
+          "revision": 1
+        },
+        "organizationObjectiveRef": null,
+        "taskRef": {
+          "id": "contrast:take-meaning",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:take-meaning",
+          "context": {
+            "lexicalId": "authored:ar:take",
+            "senseId": "authored:ar:take-command",
+            "speakerId": null,
+            "syntaxId": "authored:ar:isolated-masculine-command",
+            "contextId": "authored:contrast:take-meaning"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "choice",
+        "observation": "response",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312014000,
+        "response": {
+          "choice": 0
+        },
+        "skipReason": null,
+        "assessment": {
+          "outcome": "correct",
+          "basis": "authored-rule"
+        },
+        "rubricRef": {
+          "id": "rubric:contrast:take-meaning",
+          "version": "878e933e",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:authored-choice",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:take-meaning",
+          "version": "7173d008",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "take-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "demo-event-0000000000000011",
+      "at": 1794312016000,
+      "kind": "evidence",
+      "contentId": "a-little-later",
+      "version": 1,
+      "sessionId": "demo-episode-0000000000000005",
+      "evidence": {
+        "schemaVersion": 1,
+        "episodeId": "demo-episode-0000000000000005",
+        "attemptId": "demo-attempt-0000000000000011",
+        "retryOfEpisodeId": null,
+        "actor": {
+          "userId": "demo-learner-a",
+          "tenantId": "demo-support-team"
+        },
+        "intentRef": {
+          "id": "demo-intent-team-00001",
+          "revision": 1
+        },
+        "organizationObjectiveRef": {
+          "id": "demo-organization-goal",
+          "revision": 1
+        },
+        "taskRef": {
+          "id": "contrast:open-meaning",
+          "version": 1
+        },
+        "occurrence": {
+          "contentId": "a-little-later",
+          "version": 1,
+          "segmentId": "s6",
+          "annotationId": "a3",
+          "readingId": "authored:contrast:open-meaning",
+          "context": {
+            "lexicalId": "authored:ar:open",
+            "senseId": "authored:ar:open-command",
+            "speakerId": null,
+            "syntaxId": "authored:ar:isolated-masculine-command",
+            "contextId": "authored:contrast:open-meaning"
+          }
+        },
+        "inputModality": "text",
+        "outputModality": "choice",
+        "observation": "response",
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "presentedAt": 1794312015000,
+        "response": {
+          "choice": 1
+        },
+        "skipReason": null,
+        "assessment": {
+          "outcome": "correct",
+          "basis": "authored-rule"
+        },
+        "rubricRef": {
+          "id": "rubric:contrast:open-meaning",
+          "version": "6e24fba3",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "open-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:authored-choice",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "open-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:open-meaning",
+          "version": "4f19a0f6",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "open-meaning",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

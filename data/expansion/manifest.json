@@ -1,0 +1,32 @@
+{
+  "edition": "bank-1.5.0",
+  "previous": {
+    "words": 300,
+    "phrases": 30,
+    "expressions": 12
+  },
+  "current": {
+    "words": 900,
+    "phrases": 90,
+    "expressions": 36
+  },
+  "languages": [
+    "en",
+    "es",
+    "fr",
+    "ar",
+    "zh-CN",
+    "ru",
+    "de",
+    "it",
+    "ja",
+    "ko",
+    "pt",
+    "tr"
+  ],
+  "concepts": 1026,
+  "forms": 12312,
+  "directedSenseTranslations": 135432,
+  "nativeReviewed": false,
+  "legacyIDsPreserved": 342
+}

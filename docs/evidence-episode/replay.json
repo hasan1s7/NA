@@ -1,0 +1,1496 @@
+{
+  "schemaVersion": 1,
+  "fixture": true,
+  "checks": {
+    "rawRecordsUnchanged": true,
+    "reorderedReplayIdentical": true,
+    "duplicateDeliveryAddsNoResponse": true,
+    "scopeSeparation": true,
+    "requiredSupportOverridesEmptyFlags": true,
+    "assistedRetryAddsNoUnaidedAssessment": true,
+    "skipReasonAddsNoCompetence": true,
+    "laterSyntaxChangeIsExplicit": true,
+    "contextIdentifierExcludedFromSubstantiveChange": true,
+    "changedAnalysisMarksSameEventStale": true,
+    "explicitRescoreReusesEventIds": true,
+    "agingChangesPolicyFreshnessOnly": true,
+    "overallCompetenceRemainsNull": true
+  },
+  "runs": {
+    "baseline": {
+      "actor": {
+        "userId": "demo-learner-a",
+        "tenantId": null
+      },
+      "sourceEventIds": [
+        "demo-event-0000000000000001",
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000003",
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000005",
+        "demo-event-0000000000000006",
+        "demo-event-0000000000000007",
+        "demo-event-0000000000000008",
+        "demo-event-0000000000000009"
+      ],
+      "eventCount": 9,
+      "countedEventIds": [
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000005",
+        "demo-event-0000000000000009"
+      ],
+      "assistedResponseIds": [
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000007"
+      ],
+      "staleResponseIds": [],
+      "competence": null,
+      "targets": [
+        {
+          "target": {
+            "id": "authored:ar:phrase:take-your-time",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "cloze",
+          "directCounts": {
+            "firstResponses": 2,
+            "unassistedAssessments": 2,
+            "correct": 1,
+            "incorrect": 1,
+            "assistedResponses": 1,
+            "unscoredResponses": 0,
+            "retryResponses": 1,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794484810000,
+          "timeSinceAssessmentMs": 3590000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:feminine-command",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "production",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 1,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:open:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 0,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 1,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 1,
+            "correct": 1,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794312010000,
+          "timeSinceAssessmentMs": 176390000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        }
+      ]
+    },
+    "reordered": {
+      "actor": {
+        "userId": "demo-learner-a",
+        "tenantId": null
+      },
+      "sourceEventIds": [
+        "demo-event-0000000000000001",
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000003",
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000005",
+        "demo-event-0000000000000006",
+        "demo-event-0000000000000007",
+        "demo-event-0000000000000008",
+        "demo-event-0000000000000009"
+      ],
+      "eventCount": 9,
+      "countedEventIds": [
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000005",
+        "demo-event-0000000000000009"
+      ],
+      "assistedResponseIds": [
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000007"
+      ],
+      "staleResponseIds": [],
+      "competence": null,
+      "targets": [
+        {
+          "target": {
+            "id": "authored:ar:phrase:take-your-time",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "cloze",
+          "directCounts": {
+            "firstResponses": 2,
+            "unassistedAssessments": 2,
+            "correct": 1,
+            "incorrect": 1,
+            "assistedResponses": 1,
+            "unscoredResponses": 0,
+            "retryResponses": 1,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794484810000,
+          "timeSinceAssessmentMs": 3590000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:feminine-command",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "production",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 1,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:open:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 0,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 1,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 1,
+            "correct": 1,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794312010000,
+          "timeSinceAssessmentMs": 176390000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        }
+      ]
+    },
+    "changedAnalysisStale": {
+      "actor": {
+        "userId": "demo-learner-a",
+        "tenantId": null
+      },
+      "sourceEventIds": [
+        "demo-event-0000000000000001",
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000003",
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000005",
+        "demo-event-0000000000000006",
+        "demo-event-0000000000000007",
+        "demo-event-0000000000000008",
+        "demo-event-0000000000000009"
+      ],
+      "eventCount": 9,
+      "countedEventIds": [
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000005"
+      ],
+      "assistedResponseIds": [
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000007"
+      ],
+      "staleResponseIds": [
+        "demo-event-0000000000000009"
+      ],
+      "competence": null,
+      "targets": [
+        {
+          "target": {
+            "id": "authored:ar:phrase:take-your-time",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "cloze",
+          "directCounts": {
+            "firstResponses": 2,
+            "unassistedAssessments": 1,
+            "correct": 0,
+            "incorrect": 1,
+            "assistedResponses": 1,
+            "unscoredResponses": 1,
+            "retryResponses": 1,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794312030000,
+          "timeSinceAssessmentMs": 176370000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:feminine-command",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "production",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 1,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:open:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 0,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 1,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 1,
+            "correct": 1,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794312010000,
+          "timeSinceAssessmentMs": 176390000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        }
+      ]
+    },
+    "changedAnalysisExplicitRescore": {
+      "actor": {
+        "userId": "demo-learner-a",
+        "tenantId": null
+      },
+      "sourceEventIds": [
+        "demo-event-0000000000000001",
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000003",
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000005",
+        "demo-event-0000000000000006",
+        "demo-event-0000000000000007",
+        "demo-event-0000000000000008",
+        "demo-event-0000000000000009"
+      ],
+      "eventCount": 9,
+      "countedEventIds": [
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000005",
+        "demo-event-0000000000000009"
+      ],
+      "assistedResponseIds": [
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000007"
+      ],
+      "staleResponseIds": [],
+      "competence": null,
+      "targets": [
+        {
+          "target": {
+            "id": "authored:ar:phrase:take-your-time",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "cloze",
+          "directCounts": {
+            "firstResponses": 2,
+            "unassistedAssessments": 2,
+            "correct": 1,
+            "incorrect": 1,
+            "assistedResponses": 1,
+            "unscoredResponses": 0,
+            "retryResponses": 1,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794484810000,
+          "timeSinceAssessmentMs": 3590000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:feminine-command",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "production",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 1,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:open:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 0,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 1,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 1,
+            "correct": 1,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794312010000,
+          "timeSinceAssessmentMs": 176390000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        }
+      ]
+    },
+    "otherLearner": {
+      "actor": {
+        "userId": "demo-learner-b",
+        "tenantId": null
+      },
+      "sourceEventIds": [
+        "demo-event-0000000000000010"
+      ],
+      "eventCount": 1,
+      "countedEventIds": [
+        "demo-event-0000000000000010"
+      ],
+      "assistedResponseIds": [],
+      "staleResponseIds": [],
+      "competence": null,
+      "targets": [
+        {
+          "target": {
+            "id": "authored:ar:take:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 1,
+            "correct": 1,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": 1794312015000,
+          "timeSinceAssessmentMs": 176385000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        }
+      ]
+    },
+    "sameLearnerOtherTeam": {
+      "actor": {
+        "userId": "demo-learner-a",
+        "tenantId": "demo-support-team"
+      },
+      "sourceEventIds": [
+        "demo-event-0000000000000011"
+      ],
+      "eventCount": 1,
+      "countedEventIds": [
+        "demo-event-0000000000000011"
+      ],
+      "assistedResponseIds": [],
+      "staleResponseIds": [],
+      "competence": null,
+      "targets": [
+        {
+          "target": {
+            "id": "authored:ar:open:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 1,
+            "correct": 1,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": 1794312016000,
+          "timeSinceAssessmentMs": 176384000,
+          "assessmentFreshness": "within-policy-window",
+          "competence": null
+        }
+      ]
+    },
+    "tenDayPolicyCheck": {
+      "actor": {
+        "userId": "demo-learner-a",
+        "tenantId": null
+      },
+      "sourceEventIds": [
+        "demo-event-0000000000000001",
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000003",
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000005",
+        "demo-event-0000000000000006",
+        "demo-event-0000000000000007",
+        "demo-event-0000000000000008",
+        "demo-event-0000000000000009"
+      ],
+      "eventCount": 9,
+      "countedEventIds": [
+        "demo-event-0000000000000002",
+        "demo-event-0000000000000005",
+        "demo-event-0000000000000009"
+      ],
+      "assistedResponseIds": [
+        "demo-event-0000000000000004",
+        "demo-event-0000000000000007"
+      ],
+      "staleResponseIds": [],
+      "competence": null,
+      "targets": [
+        {
+          "target": {
+            "id": "authored:ar:phrase:take-your-time",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "cloze",
+          "directCounts": {
+            "firstResponses": 2,
+            "unassistedAssessments": 2,
+            "correct": 1,
+            "incorrect": 1,
+            "assistedResponses": 1,
+            "unscoredResponses": 0,
+            "retryResponses": 1,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794484810000,
+          "timeSinceAssessmentMs": 691190000,
+          "assessmentFreshness": "stale",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:feminine-command",
+            "language": "ar"
+          },
+          "dimension": "retrieval",
+          "practiceMode": "production",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 1,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:open:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 0,
+            "unassistedAssessments": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 1,
+            "opportunities": 0,
+            "helpRequests": 0
+          },
+          "lastAssessmentAt": null,
+          "timeSinceAssessmentMs": null,
+          "assessmentFreshness": "unknown",
+          "competence": null
+        },
+        {
+          "target": {
+            "id": "authored:ar:take:meaning",
+            "language": "ar"
+          },
+          "dimension": "visual-recognition",
+          "practiceMode": "recognition",
+          "directCounts": {
+            "firstResponses": 1,
+            "unassistedAssessments": 1,
+            "correct": 1,
+            "incorrect": 0,
+            "assistedResponses": 0,
+            "unscoredResponses": 0,
+            "retryResponses": 0,
+            "ambiguousResponses": 0,
+            "skips": 0,
+            "opportunities": 0,
+            "helpRequests": 1
+          },
+          "lastAssessmentAt": 1794312010000,
+          "timeSinceAssessmentMs": 863990000,
+          "assessmentFreshness": "stale",
+          "competence": null
+        }
+      ]
+    }
+  },
+  "versionChangeAudit": {
+    "eventId": "demo-event-0000000000000009",
+    "baseline": {
+      "eventId": "demo-event-0000000000000009",
+      "at": 1794484810000,
+      "actor": {
+        "userId": "demo-learner-a",
+        "tenantId": null
+      },
+      "episodeId": "demo-episode-0000000000000003",
+      "retryOfEpisodeId": null,
+      "attemptId": "demo-attempt-0000000000000009",
+      "observation": "response",
+      "taskRef": {
+        "id": "contrast:phrase-later",
+        "version": 1
+      },
+      "intentRef": {
+        "id": "demo-intent-personal-01",
+        "revision": 1
+      },
+      "organizationObjectiveRef": null,
+      "occurrence": {
+        "contentId": "a-little-later",
+        "version": 1,
+        "segmentId": "s6",
+        "annotationId": "a3",
+        "readingId": "authored:contrast:phrase-later",
+        "context": {
+          "lexicalId": "authored:ar:take-your-time",
+          "senseId": "authored:ar:reassurance",
+          "speakerId": null,
+          "syntaxId": "authored:ar:negative-imperative-book-choice",
+          "contextId": "authored:contrast:phrase-later"
+        }
+      },
+      "dimension": "retrieval",
+      "practiceMode": "cloze",
+      "target": {
+        "id": "authored:ar:phrase:take-your-time",
+        "language": "ar"
+      },
+      "inputModality": "text",
+      "outputModality": "text",
+      "assistance": {
+        "lookup": false,
+        "hint": false,
+        "answerShown": false,
+        "translationShown": false,
+        "replayed": false,
+        "feedbackShown": false,
+        "baseMeaningSupplied": false,
+        "sourceVisible": false,
+        "other": false
+      },
+      "assisted": false,
+      "assistanceDerivedFromTask": [],
+      "assistanceSourceIds": [],
+      "sourceEventIds": [
+        "demo-event-0000000000000009"
+      ],
+      "sourceIds": [
+        "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+        "nabu:authored-evidence-contrasts-v1"
+      ],
+      "responseRecorded": true,
+      "latencyMs": 1000,
+      "skipReason": null,
+      "recordedAssessment": {
+        "outcome": "correct",
+        "basis": "authored-rule"
+      },
+      "recordedReferences": {
+        "rubricRef": {
+          "id": "rubric:contrast:phrase-later",
+          "version": "83de41ff",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:arabic-optional-vowels",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:phrase-later",
+          "version": "33480a1a",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      },
+      "assessment": {
+        "status": "scored",
+        "outcome": "correct",
+        "correct": true,
+        "label": "Matched the authored answer.",
+        "scope": "Only this authored prompt, intended reading, response mode and recorded assistance; no claim about general competence.",
+        "changedReferences": [],
+        "appliedRefs": {
+          "rubricRef": {
+            "id": "rubric:contrast:phrase-later",
+            "version": "83de41ff",
+            "status": "authored",
+            "provenance": [
+              {
+                "sourceId": "nabu:authored-evidence-contrasts-v1",
+                "locator": "phrase-later",
+                "kind": "authored-draft"
+              },
+              {
+                "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+                "locator": "Imperatives: regular singular masculine and feminine examples",
+                "kind": "grammar-reference-not-item-attestation"
+              }
+            ]
+          },
+          "scorerRef": {
+            "id": "nabu:arabic-optional-vowels",
+            "version": "v1",
+            "status": "authored",
+            "provenance": [
+              {
+                "sourceId": "nabu:authored-evidence-contrasts-v1",
+                "locator": "phrase-later",
+                "kind": "authored-draft"
+              },
+              {
+                "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+                "locator": "Imperatives: regular singular masculine and feminine examples",
+                "kind": "grammar-reference-not-item-attestation"
+              }
+            ]
+          },
+          "analysisRef": {
+            "id": "analysis:contrast:phrase-later",
+            "version": "33480a1a",
+            "status": "authored",
+            "provenance": [
+              {
+                "sourceId": "nabu:authored-evidence-contrasts-v1",
+                "locator": "phrase-later",
+                "kind": "authored-draft"
+              },
+              {
+                "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+                "locator": "Imperatives: regular singular masculine and feminine examples",
+                "kind": "grammar-reference-not-item-attestation"
+              }
+            ]
+          }
+        }
+      },
+      "condition": {
+        "inputModality": "text",
+        "outputModality": "text",
+        "context": {
+          "lexicalId": "authored:ar:take-your-time",
+          "senseId": "authored:ar:reassurance",
+          "speakerId": null,
+          "syntaxId": "authored:ar:negative-imperative-book-choice",
+          "contextId": "authored:contrast:phrase-later"
+        },
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "cues": [
+          "An English meaning and a different sentence with a gap are visible."
+        ]
+      },
+      "supports": [
+        "One response was recorded for this specific task, occurrence and set of conditions.",
+        "The response matched the declared rubric: Retrieval of this target under the recorded prompt and response mode."
+      ],
+      "doesNotSupport": [
+        "No overall competence, mastery, forgetting rate, or transfer to graph neighbors is estimated.",
+        "Success with these cues does not establish uncued recall, production, or performance in another modality."
+      ],
+      "firstResponse": true,
+      "counted": true,
+      "exclusionReasons": [],
+      "competence": null,
+      "independenceEstablished": false,
+      "rootEpisodeId": "demo-episode-0000000000000003",
+      "delayedCondition": {
+        "previousEventId": "demo-event-0000000000000005",
+        "delayMs": 172780000,
+        "delayThresholdMs": 86400000,
+        "delayCriterionMet": true,
+        "changedConditions": [
+          {
+            "field": "syntaxId",
+            "previous": "authored:ar:vocative-waiting-message",
+            "current": "authored:ar:negative-imperative-book-choice"
+          }
+        ],
+        "unknownConditions": [
+          "speakerId"
+        ],
+        "contextReferenceChanged": true,
+        "delayedChangedCondition": true,
+        "transferClaimed": false,
+        "scope": "An observed delay and explicitly different tested conditions; a different content/context ID alone is not such evidence. This is not an estimate of retention or transfer."
+      }
+    },
+    "stale": {
+      "eventId": "demo-event-0000000000000009",
+      "at": 1794484810000,
+      "actor": {
+        "userId": "demo-learner-a",
+        "tenantId": null
+      },
+      "episodeId": "demo-episode-0000000000000003",
+      "retryOfEpisodeId": null,
+      "attemptId": "demo-attempt-0000000000000009",
+      "observation": "response",
+      "taskRef": {
+        "id": "contrast:phrase-later",
+        "version": 1
+      },
+      "intentRef": {
+        "id": "demo-intent-personal-01",
+        "revision": 1
+      },
+      "organizationObjectiveRef": null,
+      "occurrence": {
+        "contentId": "a-little-later",
+        "version": 1,
+        "segmentId": "s6",
+        "annotationId": "a3",
+        "readingId": "authored:contrast:phrase-later",
+        "context": {
+          "lexicalId": "authored:ar:take-your-time",
+          "senseId": "authored:ar:reassurance",
+          "speakerId": null,
+          "syntaxId": "authored:ar:negative-imperative-book-choice",
+          "contextId": "authored:contrast:phrase-later"
+        }
+      },
+      "dimension": "retrieval",
+      "practiceMode": "cloze",
+      "target": {
+        "id": "authored:ar:phrase:take-your-time",
+        "language": "ar"
+      },
+      "inputModality": "text",
+      "outputModality": "text",
+      "assistance": {
+        "lookup": false,
+        "hint": false,
+        "answerShown": false,
+        "translationShown": false,
+        "replayed": false,
+        "feedbackShown": false,
+        "baseMeaningSupplied": false,
+        "sourceVisible": false,
+        "other": false
+      },
+      "assisted": false,
+      "assistanceDerivedFromTask": [],
+      "assistanceSourceIds": [],
+      "sourceEventIds": [
+        "demo-event-0000000000000009"
+      ],
+      "sourceIds": [
+        "demo:analysis-revision",
+        "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+        "nabu:authored-evidence-contrasts-v1"
+      ],
+      "responseRecorded": true,
+      "latencyMs": 1000,
+      "skipReason": null,
+      "recordedAssessment": {
+        "outcome": "correct",
+        "basis": "authored-rule"
+      },
+      "recordedReferences": {
+        "rubricRef": {
+          "id": "rubric:contrast:phrase-later",
+          "version": "83de41ff",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:arabic-optional-vowels",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:phrase-later",
+          "version": "33480a1a",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      },
+      "assessment": {
+        "status": "stale",
+        "outcome": "unscored",
+        "correct": null,
+        "label": "A scoring, rubric or analysis reference changed; this observation needs an explicit rescore.",
+        "scope": "Only this authored prompt, intended reading, response mode and recorded assistance; no claim about general competence.",
+        "changedReferences": [
+          "analysisRef"
+        ],
+        "appliedRefs": {
+          "rubricRef": {
+            "id": "rubric:contrast:phrase-later",
+            "version": "83de41ff",
+            "status": "authored",
+            "provenance": [
+              {
+                "sourceId": "nabu:authored-evidence-contrasts-v1",
+                "locator": "phrase-later",
+                "kind": "authored-draft"
+              },
+              {
+                "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+                "locator": "Imperatives: regular singular masculine and feminine examples",
+                "kind": "grammar-reference-not-item-attestation"
+              }
+            ]
+          },
+          "scorerRef": {
+            "id": "nabu:arabic-optional-vowels",
+            "version": "v1",
+            "status": "authored",
+            "provenance": [
+              {
+                "sourceId": "nabu:authored-evidence-contrasts-v1",
+                "locator": "phrase-later",
+                "kind": "authored-draft"
+              },
+              {
+                "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+                "locator": "Imperatives: regular singular masculine and feminine examples",
+                "kind": "grammar-reference-not-item-attestation"
+              }
+            ]
+          },
+          "analysisRef": {
+            "id": "analysis:contrast:phrase-later",
+            "version": "33480a1a-demo-revision-2",
+            "status": "authored",
+            "provenance": [
+              {
+                "sourceId": "nabu:authored-evidence-contrasts-v1",
+                "locator": "phrase-later",
+                "kind": "authored-draft"
+              },
+              {
+                "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+                "locator": "Imperatives: regular singular masculine and feminine examples",
+                "kind": "grammar-reference-not-item-attestation"
+              },
+              {
+                "sourceId": "demo:analysis-revision",
+                "locator": "tools/evidence_episode_demo.mjs:analysisRevisionResolver",
+                "kind": "authored-software-fixture"
+              }
+            ]
+          }
+        }
+      },
+      "condition": {
+        "inputModality": "text",
+        "outputModality": "text",
+        "context": {
+          "lexicalId": "authored:ar:take-your-time",
+          "senseId": "authored:ar:reassurance",
+          "speakerId": null,
+          "syntaxId": "authored:ar:negative-imperative-book-choice",
+          "contextId": "authored:contrast:phrase-later"
+        },
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "cues": [
+          "An English meaning and a different sentence with a gap are visible."
+        ]
+      },
+      "supports": [
+        "One response was recorded for this specific task, occurrence and set of conditions."
+      ],
+      "doesNotSupport": [
+        "No overall competence, mastery, forgetting rate, or transfer to graph neighbors is estimated.",
+        "An unscored or stale response does not become a successful or failed assessment."
+      ],
+      "firstResponse": true,
+      "counted": false,
+      "exclusionReasons": [
+        "stale-assessment"
+      ],
+      "competence": null,
+      "independenceEstablished": false,
+      "rootEpisodeId": "demo-episode-0000000000000003",
+      "delayedCondition": null
+    },
+    "rescored": {
+      "eventId": "demo-event-0000000000000009",
+      "at": 1794484810000,
+      "actor": {
+        "userId": "demo-learner-a",
+        "tenantId": null
+      },
+      "episodeId": "demo-episode-0000000000000003",
+      "retryOfEpisodeId": null,
+      "attemptId": "demo-attempt-0000000000000009",
+      "observation": "response",
+      "taskRef": {
+        "id": "contrast:phrase-later",
+        "version": 1
+      },
+      "intentRef": {
+        "id": "demo-intent-personal-01",
+        "revision": 1
+      },
+      "organizationObjectiveRef": null,
+      "occurrence": {
+        "contentId": "a-little-later",
+        "version": 1,
+        "segmentId": "s6",
+        "annotationId": "a3",
+        "readingId": "authored:contrast:phrase-later",
+        "context": {
+          "lexicalId": "authored:ar:take-your-time",
+          "senseId": "authored:ar:reassurance",
+          "speakerId": null,
+          "syntaxId": "authored:ar:negative-imperative-book-choice",
+          "contextId": "authored:contrast:phrase-later"
+        }
+      },
+      "dimension": "retrieval",
+      "practiceMode": "cloze",
+      "target": {
+        "id": "authored:ar:phrase:take-your-time",
+        "language": "ar"
+      },
+      "inputModality": "text",
+      "outputModality": "text",
+      "assistance": {
+        "lookup": false,
+        "hint": false,
+        "answerShown": false,
+        "translationShown": false,
+        "replayed": false,
+        "feedbackShown": false,
+        "baseMeaningSupplied": false,
+        "sourceVisible": false,
+        "other": false
+      },
+      "assisted": false,
+      "assistanceDerivedFromTask": [],
+      "assistanceSourceIds": [],
+      "sourceEventIds": [
+        "demo-event-0000000000000009"
+      ],
+      "sourceIds": [
+        "demo:analysis-revision",
+        "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+        "nabu:authored-evidence-contrasts-v1"
+      ],
+      "responseRecorded": true,
+      "latencyMs": 1000,
+      "skipReason": null,
+      "recordedAssessment": {
+        "outcome": "correct",
+        "basis": "authored-rule"
+      },
+      "recordedReferences": {
+        "rubricRef": {
+          "id": "rubric:contrast:phrase-later",
+          "version": "83de41ff",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "scorerRef": {
+          "id": "nabu:arabic-optional-vowels",
+          "version": "v1",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        },
+        "analysisRef": {
+          "id": "analysis:contrast:phrase-later",
+          "version": "33480a1a",
+          "status": "authored",
+          "provenance": [
+            {
+              "sourceId": "nabu:authored-evidence-contrasts-v1",
+              "locator": "phrase-later",
+              "kind": "authored-draft"
+            },
+            {
+              "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+              "locator": "Imperatives: regular singular masculine and feminine examples",
+              "kind": "grammar-reference-not-item-attestation"
+            }
+          ]
+        }
+      },
+      "assessment": {
+        "status": "rescored",
+        "outcome": "correct",
+        "correct": true,
+        "label": "Matched the authored answer.",
+        "scope": "Only this authored prompt, intended reading, response mode and recorded assistance; no claim about general competence.",
+        "changedReferences": [
+          "analysisRef"
+        ],
+        "appliedRefs": {
+          "rubricRef": {
+            "id": "rubric:contrast:phrase-later",
+            "version": "83de41ff",
+            "status": "authored",
+            "provenance": [
+              {
+                "sourceId": "nabu:authored-evidence-contrasts-v1",
+                "locator": "phrase-later",
+                "kind": "authored-draft"
+              },
+              {
+                "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+                "locator": "Imperatives: regular singular masculine and feminine examples",
+                "kind": "grammar-reference-not-item-attestation"
+              }
+            ]
+          },
+          "scorerRef": {
+            "id": "nabu:arabic-optional-vowels",
+            "version": "v1",
+            "status": "authored",
+            "provenance": [
+              {
+                "sourceId": "nabu:authored-evidence-contrasts-v1",
+                "locator": "phrase-later",
+                "kind": "authored-draft"
+              },
+              {
+                "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+                "locator": "Imperatives: regular singular masculine and feminine examples",
+                "kind": "grammar-reference-not-item-attestation"
+              }
+            ]
+          },
+          "analysisRef": {
+            "id": "analysis:contrast:phrase-later",
+            "version": "33480a1a-demo-revision-2",
+            "status": "authored",
+            "provenance": [
+              {
+                "sourceId": "nabu:authored-evidence-contrasts-v1",
+                "locator": "phrase-later",
+                "kind": "authored-draft"
+              },
+              {
+                "sourceId": "https://openbooks.lib.msu.edu/arb201/chapter/4-2-grammar-in-context/",
+                "locator": "Imperatives: regular singular masculine and feminine examples",
+                "kind": "grammar-reference-not-item-attestation"
+              },
+              {
+                "sourceId": "demo:analysis-revision",
+                "locator": "tools/evidence_episode_demo.mjs:analysisRevisionResolver",
+                "kind": "authored-software-fixture"
+              }
+            ]
+          }
+        }
+      },
+      "condition": {
+        "inputModality": "text",
+        "outputModality": "text",
+        "context": {
+          "lexicalId": "authored:ar:take-your-time",
+          "senseId": "authored:ar:reassurance",
+          "speakerId": null,
+          "syntaxId": "authored:ar:negative-imperative-book-choice",
+          "contextId": "authored:contrast:phrase-later"
+        },
+        "assistance": {
+          "lookup": false,
+          "hint": false,
+          "answerShown": false,
+          "translationShown": false,
+          "replayed": false,
+          "feedbackShown": false,
+          "baseMeaningSupplied": false,
+          "sourceVisible": false,
+          "other": false
+        },
+        "cues": [
+          "An English meaning and a different sentence with a gap are visible."
+        ]
+      },
+      "supports": [
+        "One response was recorded for this specific task, occurrence and set of conditions.",
+        "The response matched the declared rubric: Retrieval of this target under the recorded prompt and response mode."
+      ],
+      "doesNotSupport": [
+        "No overall competence, mastery, forgetting rate, or transfer to graph neighbors is estimated.",
+        "Success with these cues does not establish uncued recall, production, or performance in another modality."
+      ],
+      "firstResponse": true,
+      "counted": true,
+      "exclusionReasons": [],
+      "competence": null,
+      "independenceEstablished": false,
+      "rootEpisodeId": "demo-episode-0000000000000003",
+      "delayedCondition": {
+        "previousEventId": "demo-event-0000000000000005",
+        "delayMs": 172780000,
+        "delayThresholdMs": 86400000,
+        "delayCriterionMet": true,
+        "changedConditions": [
+          {
+            "field": "syntaxId",
+            "previous": "authored:ar:vocative-waiting-message",
+            "current": "authored:ar:negative-imperative-book-choice"
+          }
+        ],
+        "unknownConditions": [
+          "speakerId"
+        ],
+        "contextReferenceChanged": true,
+        "delayedChangedCondition": true,
+        "transferClaimed": false,
+        "scope": "An observed delay and explicitly different tested conditions; a different content/context ID alone is not such evidence. This is not an estimate of retention or transfer."
+      }
+    }
+  }
+}

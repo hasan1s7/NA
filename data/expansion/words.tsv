@@ -1,0 +1,624 @@
+# relatives|Family & relationships
+relatives|parent|progenitor|parent|والد|家长|родитель|Elternteil|genitore|親|부모|progenitor|ebeveyn
+relatives|grandmother|abuela|grand-mère|جدة|祖母|бабушка|Großmutter|nonna|祖母|할머니|avó|büyükanne
+relatives|grandfather|abuelo|grand-père|جد|祖父|дедушка|Großvater|nonno|祖父|할아버지|avô|büyükbaba
+relatives|granddaughter|nieta|petite-fille|حفيدة|孙女|внучка|Enkelin|nipote|孫娘|손녀|neta|kız torun
+relatives|grandson|nieto|petit-fils|حفيد|孙子|внук|Enkel|nipote|男の孫|손자|neto|erkek torun
+relatives|husband|marido|mari|زوج|丈夫|муж|Ehemann|marito|夫|남편|marido|koca
+relatives|wife|esposa|épouse|زوجة|妻子|жена|Ehefrau|moglie|妻|아내|esposa|eş
+relatives|uncle|tío|oncle|عم|叔叔|дядя|Onkel|zio|叔父|삼촌|tio|amca
+relatives|aunt|tía|tante|عمة|姑姑|тётя|Tante|zia|叔母|이모|tia|hala
+relatives|cousin|primo|cousin|ابن العم|堂兄弟|двоюродный брат|Cousin|cugino|いとこ|사촌|primo|kuzen
+relatives|nephew|sobrino|neveu|ابن الأخ|侄子|племянник|Neffe|nipote|甥|조카|sobrinho|erkek yeğen
+relatives|niece|sobrina|nièce|بنت الأخ|侄女|племянница|Nichte|nipote|姪|조카딸|sobrinha|kız yeğen
+relatives|neighbor|vecino|voisin|جار|邻居|сосед|Nachbar|vicino|隣人|이웃|vizinho|komşu
+relatives|colleague|colega|collègue|زميل|同事|коллега|Kollege|collega|同僚|동료|colega|iş arkadaşı
+relatives|guest|invitado|invité|ضيف|客人|гость|Gast|ospite|客|손님|convidado|misafir
+relatives|host|anfitrión|hôte|مضيف|主人|хозяин|Gastgeber|padrone di casa|ホスト|주인|anfitrião|ev sahibi
+relatives|stranger|desconocido|inconnu|غريب|陌生人|незнакомец|Fremder|sconosciuto|見知らぬ人|낯선 사람|desconhecido|yabancı
+relatives|couple|pareja|couple|زوجان|情侣|пара|Paar|coppia|カップル|커플|casal|çift
+relatives|adult|adulto|adulte|بالغ|成年人|взрослый|Erwachsener|adulto|大人|어른|adulto|yetişkin
+relatives|teenager|adolescente|adolescent|مراهق|青少年|подросток|Teenager|adolescente|十代の若者|청소년|adolescente|ergen
+relatives|relative|pariente|membre de la famille|قريب|亲戚|родственник|Verwandter|parente|親戚|친척|parente|akraba
+relatives|friendship|amistad|amitié|صداقة|友谊|дружба|Freundschaft|amicizia|友情|우정|amizade|dostluk
+relatives|wedding|boda|mariage|حفل زفاف|婚礼|свадьба|Hochzeit|matrimonio|結婚式|결혼식|casamento|düğün
+relatives|birthday|cumpleaños|anniversaire|عيد ميلاد|生日|день рождения|Geburtstag|compleanno|誕生日|생일|aniversário|doğum günü
+relatives|team|equipo|équipe|فريق|团队|команда|Team|squadra|チーム|팀|equipe|takım
+# occupations|Jobs & roles
+occupations|engineer|ingeniero|ingénieur|مهندس|工程师|инженер|Ingenieur|ingegnere|技術者|엔지니어|engenheiro|mühendis
+occupations|lawyer|abogado|avocat|محام|律师|юрист|Anwalt|avvocato|弁護士|변호사|advogado|avukat
+occupations|driver|conductor|chauffeur|سائق|司机|водитель|Fahrer|autista|運転手|운전기사|motorista|sürücü
+occupations|farmer|agricultor|agriculteur|مزارع|农民|фермер|Landwirt|agricoltore|農家|농부|agricultor|çiftçi
+occupations|cook|cocinero|cuisinier|طباخ|厨师|повар|Koch|cuoco|料理人|요리사|cozinheiro|aşçı
+occupations|waiter|camarero|serveur|نادل|服务员|официант|Kellner|cameriere|ウェイター|종업원|garçom|garson
+occupations|baker|panadero|boulanger|خباز|面包师|пекарь|Bäcker|panettiere|パン職人|제빵사|padeiro|fırıncı
+occupations|dentist|dentista|dentiste|طبيب أسنان|牙医|стоматолог|Zahnarzt|dentista|歯科医|치과 의사|dentista|diş hekimi
+occupations|pharmacist|farmacéutico|pharmacien|صيدلي|药剂师|фармацевт|Apotheker|farmacista|薬剤師|약사|farmacêutico|eczacı
+occupations|police officer|policía|policier|شرطي|警察|полицейский|Polizist|poliziotto|警察官|경찰관|policial|polis memuru
+occupations|firefighter|bombero|pompier|رجل إطفاء|消防员|пожарный|Feuerwehrmann|vigile del fuoco|消防士|소방관|bombeiro|itfaiyeci
+occupations|pilot|piloto|pilote|طيار|飞行员|пилот|Pilot|pilota|パイロット|조종사|piloto|pilot
+occupations|flight attendant|auxiliar de vuelo|personnel de cabine|مضيف طيران|空乘人员|бортпроводник|Flugbegleiter|assistente di volo|客室乗務員|승무원|comissário de bordo|uçuş görevlisi
+occupations|receptionist|recepcionista|réceptionniste|موظف استقبال|接待员|администратор|Rezeptionist|receptionist|受付係|접수원|recepcionista|resepsiyon görevlisi
+occupations|manager|gerente|responsable|مدير|经理|менеджер|Manager|dirigente|管理者|관리자|gerente|yönetici
+occupations|employee|empleado|employé|موظف|雇员|сотрудник|Angestellter|dipendente|従業員|직원|funcionário|çalışan
+occupations|customer|cliente|client|زبون|顾客|клиент|Kunde|cliente|顧客|고객|cliente|müşteri
+occupations|cashier|cajero|caissier|أمين صندوق|收银员|кассир|Kassierer|cassiere|レジ係|계산원|operador de caixa|kasiyer
+occupations|journalist|periodista|journaliste|صحفي|记者|журналист|Journalist|giornalista|記者|기자|jornalista|gazeteci
+occupations|scientist|científico|scientifique|عالم|科学家|учёный|Wissenschaftler|scienziato|科学者|과학자|cientista|bilim insanı
+occupations|artist|artista|artiste|فنان|艺术家|художник|Künstler|artista|芸術家|예술가|artista|sanatçı
+occupations|musician|músico|musicien|موسيقي|音乐家|музыкант|Musiker|musicista|音楽家|음악가|músico|müzisyen
+occupations|actor|actor|acteur|ممثل|演员|актёр|Schauspieler|attore|俳優|배우|ator|oyuncu
+occupations|translator|traductor|traducteur|مترجم|翻译员|переводчик|Übersetzer|traduttore|翻訳者|번역가|tradutor|çevirmen
+occupations|tourist|turista|touriste|سائح|游客|турист|Tourist|turista|観光客|관광객|turista|turist
+# furnishings|Furniture & household
+furnishings|sofa|sofá|canapé|أريكة|沙发|диван|Sofa|divano|ソファ|소파|sofá|kanepe
+furnishings|armchair|sillón|fauteuil|كرسي بذراعين|扶手椅|кресло|Sessel|poltrona|肘掛け椅子|안락의자|poltrona|koltuk
+furnishings|desk|escritorio|bureau|مكتب|书桌|письменный стол|Schreibtisch|scrivania|机|책상|escrivaninha|çalışma masası
+furnishings|shelf|estante|étagère|رف|架子|полка|Regalbrett|mensola|棚|선반|prateleira|raf
+furnishings|cupboard|armario|placard|خزانة|橱柜|шкаф|Schrank|armadio|戸棚|찬장|armário|dolap
+furnishings|drawer|cajón|tiroir|درج|抽屉|ящик|Schublade|cassetto|引き出し|서랍|gaveta|çekmece
+furnishings|mirror|espejo|miroir|مرآة|镜子|зеркало|Spiegel|specchio|鏡|거울|espelho|ayna
+furnishings|carpet|alfombra|tapis|سجادة|地毯|ковёр|Teppich|tappeto|カーペット|카펫|tapete|halı
+furnishings|curtain|cortina|rideau|ستارة|窗帘|занавеска|Vorhang|tenda|カーテン|커튼|cortina|perde
+furnishings|pillow|almohada|oreiller|وسادة|枕头|подушка|Kopfkissen|cuscino|枕|베개|travesseiro|yastık
+furnishings|blanket|manta|couverture|بطانية|毯子|одеяло|Decke|coperta|毛布|담요|cobertor|battaniye
+furnishings|mattress|colchón|matelas|مرتبة|床垫|матрас|Matratze|materasso|マットレス|매트리스|colchão|yatak şiltesi
+furnishings|towel|toalla|serviette|منشفة|毛巾|полотенце|Handtuch|asciugamano|タオル|수건|toalha|havlu
+furnishings|soap|jabón|savon|صابون|肥皂|мыло|Seife|sapone|石けん|비누|sabão|sabun
+furnishings|shampoo|champú|shampoing|شامبو|洗发水|шампунь|Shampoo|shampoo|シャンプー|샴푸|xampu|şampuan
+furnishings|toothbrush|cepillo de dientes|brosse à dents|فرشاة أسنان|牙刷|зубная щётка|Zahnbürste|spazzolino da denti|歯ブラシ|칫솔|escova de dentes|diş fırçası
+furnishings|toothpaste|pasta de dientes|dentifrice|معجون أسنان|牙膏|зубная паста|Zahnpasta|dentifricio|歯磨き粉|치약|pasta de dentes|diş macunu
+furnishings|shower|ducha|douche|دش|淋浴|душ|Dusche|doccia|シャワー|샤워|chuveiro|duş
+furnishings|bathtub|bañera|baignoire|حوض استحمام|浴缸|ванна|Badewanne|vasca da bagno|浴槽|욕조|banheira|küvet
+furnishings|toilet|inodoro|toilettes|مرحاض|马桶|унитаз|Toilette|water|便器|변기|vaso sanitário|klozet
+furnishings|washing machine|lavadora|machine à laver|غسالة|洗衣机|стиральная машина|Waschmaschine|lavatrice|洗濯機|세탁기|máquina de lavar|çamaşır makinesi
+furnishings|vacuum cleaner|aspiradora|aspirateur|مكنسة كهربائية|吸尘器|пылесос|Staubsauger|aspirapolvere|掃除機|진공청소기|aspirador de pó|elektrikli süpürge
+furnishings|broom|escoba|balai|مكنسة|扫帚|веник|Besen|scopa|ほうき|빗자루|vassoura|süpürge
+furnishings|bucket|cubo|seau|دلو|水桶|ведро|Eimer|secchio|バケツ|양동이|balde|kova
+furnishings|trash|basura|ordures|قمامة|垃圾|мусор|Müll|spazzatura|ごみ|쓰레기|lixo|çöp
+# kitchenware|Kitchen & table
+kitchenware|plate|plato|assiette|طبق|盘子|тарелка|Teller|piatto|皿|접시|prato|tabak
+kitchenware|bowl|cuenco|bol|وعاء|碗|миска|Schüssel|ciotola|ボウル|그릇|tigela|kase
+kitchenware|cup|taza|tasse|فنجان|杯子|чашка|Tasse|tazza|カップ|컵|xícara|fincan
+kitchenware|drinking glass|vaso|verre|كوب زجاجي|玻璃杯|стакан|Trinkglas|bicchiere|グラス|유리잔|copo|bardak
+kitchenware|bottle|botella|bouteille|زجاجة|瓶子|бутылка|Flasche|bottiglia|瓶|병|garrafa|şişe
+kitchenware|spoon|cuchara|cuillère|ملعقة|勺子|ложка|Löffel|cucchiaio|スプーン|숟가락|colher|kaşık
+kitchenware|fork|tenedor|fourchette|شوكة|叉子|вилка|Gabel|forchetta|フォーク|포크|garfo|çatal
+kitchenware|knife|cuchillo|couteau|سكين|刀|нож|Messer|coltello|ナイフ|칼|faca|bıçak
+kitchenware|chopsticks|palillos|baguettes|عيدان الطعام|筷子|палочки для еды|Essstäbchen|bacchette|箸|젓가락|hashis|yemek çubukları
+kitchenware|napkin|servilleta|serviette de table|منديل مائدة|餐巾|салфетка|Serviette|tovagliolo|ナプキン|냅킨|guardanapo|peçete
+kitchenware|tray|bandeja|plateau|صينية|托盘|поднос|Tablett|vassoio|お盆|쟁반|bandeja|tepsi
+kitchenware|frying pan|sartén|poêle|مقلاة|平底锅|сковорода|Bratpfanne|padella|フライパン|프라이팬|frigideira|tava
+kitchenware|cooking pot|olla|casserole|قدر|锅|кастрюля|Kochtopf|pentola|鍋|냄비|panela|tencere
+kitchenware|lid|tapa|couvercle|غطاء|盖子|крышка|Deckel|coperchio|蓋|뚜껑|tampa|kapak
+kitchenware|kettle|hervidor|bouilloire|غلاية|水壶|чайник|Wasserkocher|bollitore|やかん|주전자|chaleira|su ısıtıcısı
+kitchenware|teapot|tetera|théière|إبريق شاي|茶壶|заварочный чайник|Teekanne|teiera|急須|찻주전자|bule|demlik
+kitchenware|oven|horno|four|فرن|烤箱|духовка|Backofen|forno|オーブン|오븐|forno|fırın
+kitchenware|stove|cocina|cuisinière|موقد|炉灶|плита|Herd|fornello|コンロ|레인지|fogão|ocak
+kitchenware|refrigerator|refrigerador|réfrigérateur|ثلاجة|冰箱|холодильник|Kühlschrank|frigorifero|冷蔵庫|냉장고|geladeira|buzdolabı
+kitchenware|freezer|congelador|congélateur|مجمد|冰柜|морозильник|Gefrierschrank|congelatore|冷凍庫|냉동고|congelador|dondurucu
+kitchenware|microwave|microondas|micro-ondes|ميكروويف|微波炉|микроволновка|Mikrowelle|microonde|電子レンジ|전자레인지|micro-ondas|mikrodalga fırın
+kitchenware|dishwasher|lavavajillas|lave-vaisselle|غسالة صحون|洗碗机|посудомоечная машина|Geschirrspüler|lavastoviglie|食器洗い機|식기세척기|lava-louças|bulaşık makinesi
+kitchenware|sink|fregadero|évier|حوض مطبخ|水槽|кухонная раковина|Spülbecken|lavello|流し台|싱크대|pia|evye
+kitchenware|tap|grifo|robinet|صنبور|水龙头|кран|Wasserhahn|rubinetto|蛇口|수도꼭지|torneira|musluk
+kitchenware|cutting board|tabla de cortar|planche à découper|لوح تقطيع|砧板|разделочная доска|Schneidebrett|tagliere|まな板|도마|tábua de cortar|kesme tahtası
+# meals|Meals & drinks
+meals|breakfast|desayuno|petit déjeuner|فطور|早餐|завтрак|Frühstück|colazione|朝食|아침 식사|café da manhã|kahvaltı
+meals|lunch|almuerzo|déjeuner|غداء|午餐|обед|Mittagessen|pranzo|昼食|점심 식사|almoço|öğle yemeği
+meals|dinner|cena|dîner|عشاء|晚餐|ужин|Abendessen|cena|夕食|저녁 식사|jantar|akşam yemeği
+meals|snack|tentempié|en-cas|وجبة خفيفة|零食|перекус|Imbiss|spuntino|軽食|간식|lanche|atıştırmalık
+meals|dessert|postre|dessert|حلوى|甜点|десерт|Nachtisch|dolce|デザート|후식|sobremesa|tatlı
+meals|sandwich|sándwich|sandwich|شطيرة|三明治|бутерброд|Sandwich|panino|サンドイッチ|샌드위치|sanduíche|sandviç
+meals|pizza|pizza|pizza|بيتزا|披萨|пицца|Pizza|pizza|ピザ|피자|pizza|pizza
+meals|hamburger|hamburguesa|hamburger|همبرغر|汉堡包|гамбургер|Hamburger|hamburger|ハンバーガー|햄버거|hambúrguer|hamburger
+meals|sausage|salchicha|saucisse|نقانق|香肠|колбаса|Wurst|salsiccia|ソーセージ|소시지|salsicha|sosis
+meals|steak|filete|steak|شريحة لحم|牛排|стейк|Steak|bistecca|ステーキ|스테이크|bife|biftek
+meals|omelet|tortilla|omelette|عجة|煎蛋饼|омлет|Omelett|frittata|オムレツ|오믈렛|omelete|omlet
+meals|pancake|panqueque|crêpe épaisse|فطيرة بانكيك|松饼|блин|Pfannkuchen|pancake|パンケーキ|팬케이크|panqueca|pankek
+meals|cake|pastel|gâteau|كعكة|蛋糕|торт|Kuchen|torta|ケーキ|케이크|bolo|pasta
+meals|cookie|galleta|biscuit|بسكويت|饼干|печенье|Keks|biscotto|クッキー|쿠키|biscoito|kurabiye
+meals|ice cream|helado|glace|مثلجات|冰淇淋|мороженое|Eiscreme|gelato|アイスクリーム|아이스크림|sorvete|dondurma
+meals|chocolate|chocolate|chocolat|شوكولاتة|巧克力|шоколад|Schokolade|cioccolato|チョコレート|초콜릿|chocolate|çikolata
+meals|yogurt|yogur|yaourt|لبن زبادي|酸奶|йогурт|Joghurt|yogurt|ヨーグルト|요구르트|iogurte|yoğurt
+meals|cereal|cereales de desayuno|céréales de petit déjeuner|حبوب إفطار|早餐麦片|сухой завтрак|Frühstücksflocken|cereali da colazione|シリアル|시리얼|cereal matinal|kahvaltılık gevrek
+meals|juice|zumo|jus|عصير|果汁|сок|Saft|succo|ジュース|주스|suco|meyve suyu
+meals|lemonade|limonada|citronnade|عصير ليمون|柠檬水|лимонад|Zitronenlimonade|limonata|レモネード|레모네이드|limonada|limonata
+meals|sparkling water|agua con gas|eau gazeuse|ماء غازي|气泡水|газированная вода|Sprudelwasser|acqua frizzante|炭酸水|탄산수|água com gás|maden suyu
+meals|soft drink|refresco|soda|مشروب غازي|汽水|газировка|Erfrischungsgetränk|bibita gassata|清涼飲料水|탄산음료|refrigerante|gazlı içecek
+meals|menu|menú|menu|قائمة طعام|菜单|меню|Speisekarte|menù|メニュー|메뉴|cardápio|menü
+meals|portion|porción|portion|حصة|一份|порция|Portion|porzione|一人前|일인분|porção|porsiyon
+meals|leftovers|sobras|restes|بقايا الطعام|剩饭|остатки еды|Essensreste|avanzi|残り物|남은 음식|sobras|artan yemek
+# ingredients|Ingredients & flavor
+ingredients|flour|harina|farine|دقيق|面粉|мука|Mehl|farina|小麦粉|밀가루|farinha|un
+ingredients|butter|mantequilla|beurre|زبدة|黄油|сливочное масло|Butter|burro|バター|버터|manteiga|tereyağı
+ingredients|cream|nata|crème|قشدة|奶油|сливки|Sahne|panna|生クリーム|크림|creme de leite|krema
+ingredients|honey|miel|miel|عسل|蜂蜜|мёд|Honig|miele|蜂蜜|꿀|mel|bal
+ingredients|jam|mermelada|confiture|مربى|果酱|варенье|Marmelade|marmellata|ジャム|잼|geleia|reçel
+ingredients|vinegar|vinagre|vinaigre|خل|醋|уксус|Essig|aceto|酢|식초|vinagre|sirke
+ingredients|black pepper|pimienta negra|poivre noir|فلفل أسود|黑胡椒|чёрный перец|schwarzer Pfeffer|pepe nero|黒こしょう|후추|pimenta-do-reino|karabiber
+ingredients|garlic|ajo|ail|ثوم|大蒜|чеснок|Knoblauch|aglio|ニンニク|마늘|alho|sarımsak
+ingredients|ginger|jengibre|gingembre|زنجبيل|生姜|имбирь|Ingwer|zenzero|生姜|생강|gengibre|zencefil
+ingredients|cinnamon|canela|cannelle|قرفة|肉桂|корица|Zimt|cannella|シナモン|계피|canela|tarçın
+ingredients|cumin|comino|cumin|كمون|孜然|кумин|Kreuzkümmel|cumino|クミン|쿠민|cominho|kimyon
+ingredients|turmeric|cúrcuma|curcuma|كركم|姜黄|куркума|Kurkuma|curcuma|ウコン|강황|cúrcuma|zerdeçal
+ingredients|mint|menta|menthe|نعناع|薄荷|мята|Minze|menta|ミント|민트|hortelã|nane
+ingredients|parsley|perejil|persil|بقدونس|欧芹|петрушка|Petersilie|prezzemolo|パセリ|파슬리|salsa|maydanoz
+ingredients|basil|albahaca|basilic|ريحان|罗勒|базилик|Basilikum|basilico|バジル|바질|manjericão|fesleğen
+ingredients|sesame|sésamo|sésame|سمسم|芝麻|кунжут|Sesam|sesamo|ごま|참깨|gergelim|susam
+ingredients|almond|almendra|amande|لوز|扁桃仁|миндаль|Mandel|mandorla|アーモンド|아몬드|amêndoa|badem
+ingredients|walnut|nuez|noix|جوز|核桃|грецкий орех|Walnuss|noce|くるみ|호두|noz|ceviz
+ingredients|peanut|cacahuete|cacahuète|فول سوداني|花生|арахис|Erdnuss|arachide|ピーナッツ|땅콩|amendoim|yer fıstığı
+ingredients|lentil|lenteja|lentille|عدس|小扁豆|чечевица|Linse|lenticchia|レンズ豆|렌틸콩|lentilha|mercimek
+ingredients|chickpea|garbanzo|pois chiche|حمص|鹰嘴豆|нут|Kichererbse|cece|ひよこ豆|병아리콩|grão-de-bico|nohut
+ingredients|oats|avena|avoine|شوفان|燕麦|овёс|Hafer|avena|オーツ麦|귀리|aveia|yulaf
+ingredients|wheat|trigo|blé|قمح|小麦|пшеница|Weizen|grano|小麦|밀|trigo|buğday
+ingredients|yeast|levadura|levure|خميرة|酵母|дрожжи|Hefe|lievito|酵母|효모|fermento biológico|maya
+ingredients|sauce|salsa|sauce|صلصة|酱汁|соус|Soße|salsa|ソース|소스|molho|sos
+# harvest|Fruit & vegetables
+harvest|pear|pera|poire|كمثرى|梨|груша|Birne|pera|梨|배|pera|armut
+harvest|peach|melocotón|pêche|خوخ|桃子|персик|Pfirsich|pesca|桃|복숭아|pêssego|şeftali
+harvest|plum|ciruela|prune|برقوق|李子|слива|Pflaume|prugna|すもも|자두|ameixa|erik
+harvest|apricot|albaricoque|abricot|مشمش|杏|абрикос|Aprikose|albicocca|あんず|살구|damasco|kayısı
+harvest|cherry|cereza|cerise|كرز|樱桃|вишня|Kirsche|ciliegia|さくらんぼ|체리|cereja|kiraz
+harvest|strawberry|fresa|fraise|فراولة|草莓|клубника|Erdbeere|fragola|いちご|딸기|morango|çilek
+harvest|raspberry|frambuesa|framboise|توت العليق|覆盆子|малина|Himbeere|lampone|ラズベリー|라즈베리|framboesa|ahududu
+harvest|blueberry|arándano|myrtille|توت أزرق|蓝莓|голубика|Heidelbeere|mirtillo|ブルーベリー|블루베리|mirtilo|yaban mersini
+harvest|watermelon|sandía|pastèque|بطيخ|西瓜|арбуз|Wassermelone|anguria|すいか|수박|melancia|karpuz
+harvest|melon|melón|melon|شمام|甜瓜|дыня|Melone|melone|メロン|멜론|melão|kavun
+harvest|pineapple|piña|ananas|أناناس|菠萝|ананас|Ananas|ananas|パイナップル|파인애플|abacaxi|ananas
+harvest|mango|mango|mangue|مانجو|芒果|манго|Mango|mango|マンゴー|망고|manga|mango
+harvest|coconut|coco|noix de coco|جوز الهند|椰子|кокос|Kokosnuss|noce di cocco|ココナッツ|코코넛|coco|Hindistan cevizi
+harvest|avocado|aguacate|avocat|أفوكادو|牛油果|авокадо|Avocado|avocado|アボカド|아보카도|abacate|avokado
+harvest|pomegranate|granada|grenade|رمان|石榴|гранат|Granatapfel|melagrana|ざくろ|석류|romã|nar
+harvest|fig|higo|figue|تين|无花果|инжир|Feige|fico|いちじく|무화과|figo|incir
+harvest|date fruit|dátil|datte|تمر|椰枣|финик|Dattel|dattero|デーツ|대추야자 열매|tâmara|hurma
+harvest|cabbage|repollo|chou|ملفوف|卷心菜|капуста|Kohl|cavolo|キャベツ|양배추|repolho|lahana
+harvest|spinach|espinacas|épinards|سبانخ|菠菜|шпинат|Spinat|spinaci|ほうれん草|시금치|espinafre|ıspanak
+harvest|broccoli|brócoli|brocoli|بروكلي|西兰花|брокколи|Brokkoli|broccoli|ブロッコリー|브로콜리|brócolis|brokoli
+harvest|cauliflower|coliflor|chou-fleur|قرنبيط|花椰菜|цветная капуста|Blumenkohl|cavolfiore|カリフラワー|콜리플라워|couve-flor|karnabahar
+harvest|eggplant|berenjena|aubergine|باذنجان|茄子|баклажан|Aubergine|melanzana|なす|가지|berinjela|patlıcan
+harvest|pumpkin|calabaza|citrouille|يقطين|南瓜|тыква|Kürbis|zucca|かぼちゃ|호박|abóbora|balkabağı
+harvest|mushroom|seta|champignon|فطر|蘑菇|гриб|Pilz|fungo|きのこ|버섯|cogumelo|mantar
+harvest|pea|guisante|petit pois|بازلاء|豌豆|горох|Erbse|pisello|えんどう豆|완두콩|ervilha|bezelye
+# outdoors|Land & plants
+outdoors|forest|bosque|forêt|غابة|森林|лес|Wald|foresta|森|숲|floresta|orman
+outdoors|beach|playa|plage|شاطئ|海滩|пляж|Strand|spiaggia|浜辺|해변|praia|plaj
+outdoors|island|isla|île|جزيرة|岛|остров|Insel|isola|島|섬|ilha|ada
+outdoors|desert|desierto|désert|صحراء|沙漠|пустыня|Wüste|deserto|砂漠|사막|deserto|çöl
+outdoors|valley|valle|vallée|واد|山谷|долина|Tal|valle|谷|계곡|vale|vadi
+outdoors|hill|colina|colline|تل|小山|холм|Hügel|collina|丘|언덕|colina|tepe
+outdoors|cliff|acantilado|falaise|جرف|悬崖|скала|Klippe|scogliera|崖|절벽|penhasco|uçurum
+outdoors|cave|cueva|grotte|كهف|洞穴|пещера|Höhle|grotta|洞窟|동굴|caverna|mağara
+outdoors|waterfall|cascada|cascade|شلال|瀑布|водопад|Wasserfall|cascata|滝|폭포|cachoeira|şelale
+outdoors|ocean|océano|océan|محيط|海洋|океан|Ozean|oceano|大洋|대양|oceano|okyanus
+outdoors|pond|estanque|étang|بركة|池塘|пруд|Teich|stagno|池|연못|lagoa|gölet
+outdoors|stream|arroyo|ruisseau|جدول|小溪|ручей|Bach|ruscello|小川|개울|riacho|dere
+outdoors|field|campo|champ|حقل|田野|поле|Feld|campo|畑|밭|campo|tarla
+outdoors|farm|granja|ferme|مزرعة|农场|ферма|Bauernhof|fattoria|農場|농장|fazenda|çiftlik
+outdoors|grass|hierba|herbe|عشب|草|трава|Gras|erba|草|풀|grama|çimen
+outdoors|flower|flor|fleur|زهرة|花|цветок|Blume|fiore|花|꽃|flor|çiçek
+outdoors|leaf|hoja|feuille|ورقة شجر|树叶|лист|Blatt|foglia|葉|잎|folha|yaprak
+outdoors|branch|rama|branche|غصن|树枝|ветка|Ast|ramo|枝|가지|galho|dal
+outdoors|root|raíz|racine|جذر|根|корень|Wurzel|radice|根|뿌리|raiz|kök
+outdoors|seed|semilla|graine|بذرة|种子|семя|Samen|seme|種|씨앗|semente|tohum
+outdoors|sand|arena|sable|رمل|沙子|песок|Sand|sabbia|砂|모래|areia|kum
+outdoors|stone|piedra|pierre|حجر|石头|камень|Stein|pietra|石|돌|pedra|taş
+outdoors|mud|barro|boue|طين|泥|грязь|Schlamm|fango|泥|진흙|lama|çamur
+outdoors|path|sendero|sentier|درب|小路|тропа|Pfad|sentiero|小道|오솔길|trilha|patika
+outdoors|coast|costa|côte|ساحل|海岸|побережье|Küste|costa|海岸|해안|costa|kıyı
+# environment|Weather & environment
+environment|weather|tiempo atmosférico|météo|طقس|天气|погода|Wetter|tempo atmosferico|天気|날씨|tempo atmosférico|hava durumu
+environment|climate|clima|climat|مناخ|气候|климат|Klima|clima|気候|기후|clima|iklim
+environment|temperature|temperatura|température|درجة حرارة|温度|температура|Temperatur|temperatura|温度|온도|temperatura|sıcaklık
+environment|sunshine|luz del sol|lumière du soleil|ضوء الشمس|阳光|солнечный свет|Sonnenschein|luce del sole|日光|햇빛|luz do sol|güneş ışığı
+environment|fog|niebla|brouillard|ضباب|雾|туман|Nebel|nebbia|霧|안개|neblina|sis
+environment|smoke|humo|fumée|دخان|烟|дым|Rauch|fumo|煙|연기|fumaça|duman
+environment|storm|tormenta|tempête|عاصفة|暴风雨|буря|Sturm|tempesta|嵐|폭풍|tempestade|fırtına
+environment|thunder|trueno|tonnerre|رعد|雷声|гром|Donner|tuono|雷鳴|천둥|trovão|gök gürültüsü
+environment|lightning|relámpago|éclair|برق|闪电|молния|Blitz|fulmine|稲妻|번개|relâmpago|şimşek
+environment|rainbow|arcoíris|arc-en-ciel|قوس قزح|彩虹|радуга|Regenbogen|arcobaleno|虹|무지개|arco-íris|gökkuşağı
+environment|ice|hielo|glace|جليد|冰|лёд|Eis|ghiaccio|氷|얼음|gelo|buz
+environment|frost|escarcha|givre|صقيع|霜|иней|Reif|brina|霜|서리|geada|kırağı
+environment|hail|granizo|grêle|برد|冰雹|град|Hagel|grandine|ひょう|우박|granizo|dolu
+environment|breeze|brisa|brise|نسيم|微风|лёгкий ветер|Brise|brezza|そよ風|산들바람|brisa|esinti
+environment|hurricane|huracán|ouragan|إعصار|飓风|ураган|Hurrikan|uragano|ハリケーン|허리케인|furacão|kasırga
+environment|flood|inundación|inondation|فيضان|洪水|наводнение|Überschwemmung|alluvione|洪水|홍수|inundação|sel
+environment|drought|sequía|sécheresse|جفاف|干旱|засуха|Dürre|siccità|干ばつ|가뭄|seca|kuraklık
+environment|earthquake|terremoto|tremblement de terre|زلزال|地震|землетрясение|Erdbeben|terremoto|地震|지진|terremoto|deprem
+environment|volcano|volcán|volcan|بركان|火山|вулкан|Vulkan|vulcano|火山|화산|vulcão|yanardağ
+environment|heat|calor|chaleur|حرارة|热量|жара|Hitze|calore|熱|열|calor|ısı
+environment|shade|sombra|ombre|ظل|阴凉处|тень|Schatten|ombra|日陰|그늘|sombra|gölge
+environment|humidity|humedad|humidité|رطوبة|湿度|влажность|Luftfeuchtigkeit|umidità|湿度|습도|umidade|nem
+environment|forecast|pronóstico|prévisions|توقعات|预报|прогноз|Vorhersage|previsione|予報|예보|previsão|tahmin
+environment|sunrise|amanecer|lever du soleil|شروق الشمس|日出|восход солнца|Sonnenaufgang|alba|日の出|일출|nascer do sol|gün doğumu
+environment|sunset|puesta de sol|coucher du soleil|غروب الشمس|日落|закат|Sonnenuntergang|tramonto|日の入り|일몰|pôr do sol|gün batımı
+# wildlife|More animals
+wildlife|bear|oso|ours|دب|熊|медведь|Bär|orso|熊|곰|urso|ayı
+wildlife|wolf|lobo|loup|ذئب|狼|волк|Wolf|lupo|狼|늑대|lobo|kurt
+wildlife|fox|zorro|renard|ثعلب|狐狸|лиса|Fuchs|volpe|狐|여우|raposa|tilki
+wildlife|deer|ciervo|cerf|أيل|鹿|олень|Hirsch|cervo|鹿|사슴|veado|geyik
+wildlife|monkey|mono|singe|قرد|猴子|обезьяна|Affe|scimmia|猿|원숭이|macaco|maymun
+wildlife|tiger|tigre|tigre|ببر|老虎|тигр|Tiger|tigre|虎|호랑이|tigre|kaplan
+wildlife|zebra|cebra|zèbre|حمار وحشي|斑马|зебра|Zebra|zebra|シマウマ|얼룩말|zebra|zebra
+wildlife|giraffe|jirafa|girafe|زرافة|长颈鹿|жираф|Giraffe|giraffa|キリン|기린|girafa|zürafa
+wildlife|camel|camello|chameau|جمل|骆驼|верблюд|Kamel|cammello|ラクダ|낙타|camelo|deve
+wildlife|donkey|burro|âne|حمار|驴|осёл|Esel|asino|ロバ|당나귀|burro|eşek
+wildlife|turtle|tortuga|tortue|سلحفاة|龟|черепаха|Schildkröte|tartaruga|亀|거북이|tartaruga|kaplumbağa
+wildlife|snake|serpiente|serpent|ثعبان|蛇|змея|Schlange|serpente|蛇|뱀|cobra|yılan
+wildlife|frog|rana|grenouille|ضفدع|青蛙|лягушка|Frosch|rana|カエル|개구리|sapo|kurbağa
+wildlife|crocodile|cocodrilo|crocodile|تمساح|鳄鱼|крокодил|Krokodil|coccodrillo|ワニ|악어|crocodilo|timsah
+wildlife|shark|tiburón|requin|قرش|鲨鱼|акула|Hai|squalo|サメ|상어|tubarão|köpekbalığı
+wildlife|whale|ballena|baleine|حوت|鲸|кит|Wal|balena|クジラ|고래|baleia|balina
+wildlife|dolphin|delfín|dauphin|دلفين|海豚|дельфин|Delfin|delfino|イルカ|돌고래|golfinho|yunus
+wildlife|bee|abeja|abeille|نحلة|蜜蜂|пчела|Biene|ape|ミツバチ|꿀벌|abelha|arı
+wildlife|butterfly|mariposa|papillon|فراشة|蝴蝶|бабочка|Schmetterling|farfalla|蝶|나비|borboleta|kelebek
+wildlife|ant|hormiga|fourmi|نملة|蚂蚁|муравей|Ameise|formica|アリ|개미|formiga|karınca
+wildlife|fly|mosca|mouche|ذبابة|苍蝇|муха|Fliege|mosca|ハエ|파리|mosca|sinek
+wildlife|mosquito|mosquito|moustique|بعوضة|蚊子|комар|Mücke|zanzara|蚊|모기|mosquito|sivrisinek
+wildlife|spider|araña|araignée|عنكبوت|蜘蛛|паук|Spinne|ragno|クモ|거미|aranha|örümcek
+wildlife|penguin|pingüino|pingouin|بطريق|企鹅|пингвин|Pinguin|pinguino|ペンギン|펭귄|pinguim|penguen
+wildlife|eagle|águila|aigle|عقاب|鹰|орёл|Adler|aquila|ワシ|독수리|águia|kartal
+# anatomy|More body words
+anatomy|scalp|cuero cabelludo|cuir chevelu|فروة الرأس|头皮|кожа головы|Kopfhaut|cuoio capelluto|頭皮|두피|couro cabeludo|saç derisi
+anatomy|forehead|frente|front|جبهة|额头|лоб|Stirn|fronte|額|이마|testa|alın
+anatomy|eyebrow|ceja|sourcil|حاجب|眉毛|бровь|Augenbraue|sopracciglio|眉毛|눈썹|sobrancelha|kaş
+anatomy|eyelash|pestaña|cil|رمش|睫毛|ресница|Wimper|ciglio|まつげ|속눈썹|cílio|kirpik
+anatomy|cheek|mejilla|joue|خد|脸颊|щека|Wange|guancia|頬|볼|bochecha|yanak
+anatomy|chin|barbilla|menton|ذقن|下巴|подбородок|Kinn|mento|顎|턱|queixo|çene
+anatomy|lip|labio|lèvre|شفة|嘴唇|губа|Lippe|labbro|唇|입술|lábio|dudak
+anatomy|tongue|lengua|langue|لسان|舌头|язык|Zunge|lingua|舌|혀|língua|dil
+anatomy|throat|garganta|gorge|حلق|喉咙|горло|Hals|gola|喉|목구멍|garganta|boğaz
+anatomy|neck|cuello|cou|رقبة|脖子|шея|Hals|collo|首|목|pescoço|boyun
+anatomy|shoulder|hombro|épaule|كتف|肩膀|плечо|Schulter|spalla|肩|어깨|ombro|omuz
+anatomy|elbow|codo|coude|مرفق|肘|локоть|Ellbogen|gomito|肘|팔꿈치|cotovelo|dirsek
+anatomy|wrist|muñeca|poignet|رسغ|手腕|запястье|Handgelenk|polso|手首|손목|pulso|bilek
+anatomy|finger|dedo de la mano|doigt|إصبع اليد|手指|палец руки|Finger|dito della mano|手の指|손가락|dedo da mão|el parmağı
+anatomy|thumb|pulgar|pouce|إبهام|拇指|большой палец|Daumen|pollice|親指|엄지손가락|polegar|başparmak
+anatomy|palm|palma de la mano|paume|راحة اليد|手掌|ладонь|Handfläche|palmo|手のひら|손바닥|palma da mão|avuç
+anatomy|chest|pecho|poitrine|صدر|胸部|грудь|Brust|petto|胸|가슴|peito|göğüs
+anatomy|waist|cintura|taille|خصر|腰|талия|Taille|vita|ウエスト|허리|cintura|bel
+anatomy|hip|cadera|hanche|ورك|髋部|бедро|Hüfte|anca|腰骨|엉덩이|quadril|kalça
+anatomy|knee|rodilla|genou|ركبة|膝盖|колено|Knie|ginocchio|膝|무릎|joelho|diz
+anatomy|ankle|tobillo|cheville|كاحل|脚踝|лодыжка|Knöchel|caviglia|足首|발목|tornozelo|ayak bileği
+anatomy|heel|talón|talon|عقب|脚后跟|пятка|Ferse|tallone|かかと|발뒤꿈치|calcanhar|topuk
+anatomy|toe|dedo del pie|orteil|إصبع القدم|脚趾|палец ноги|Zeh|dito del piede|足の指|발가락|dedo do pé|ayak parmağı
+anatomy|skin|piel|peau|جلد|皮肤|кожа|Haut|pelle|皮膚|피부|pele|deri
+anatomy|bone|hueso|os|عظم|骨头|кость|Knochen|osso|骨|뼈|osso|kemik
+# wellbeing|Health & emotions
+wellbeing|blood|sangre|sang|دم|血液|кровь|Blut|sangue|血液|피|sangue|kan
+wellbeing|breath|aliento|souffle|نفس|气息|дыхание|Atem|respiro|息|숨|hálito|nefes
+wellbeing|muscle|músculo|muscle|عضلة|肌肉|мышца|Muskel|muscolo|筋肉|근육|músculo|kas
+wellbeing|brain|cerebro|cerveau|دماغ|大脑|мозг|Gehirn|cervello|脳|뇌|cérebro|beyin
+wellbeing|lung|pulmón|poumon|رئة|肺|лёгкое|Lunge|polmone|肺|폐|pulmão|akciğer
+wellbeing|headache|dolor de cabeza|mal de tête|صداع|头痛|головная боль|Kopfschmerzen|mal di testa|頭痛|두통|dor de cabeça|baş ağrısı
+wellbeing|toothache|dolor de muelas|mal de dents|ألم الأسنان|牙痛|зубная боль|Zahnschmerzen|mal di denti|歯痛|치통|dor de dente|diş ağrısı
+wellbeing|stomachache|dolor de estómago|mal de ventre|ألم البطن|肚子痛|боль в животе|Bauchschmerzen|mal di pancia|腹痛|복통|dor de barriga|karın ağrısı
+wellbeing|injury|lesión|blessure|إصابة|受伤|травма|Verletzung|lesione|けが|부상|lesão|yaralanma
+wellbeing|wound|herida|plaie|جرح|伤口|рана|Wunde|ferita|傷|상처|ferida|yara
+wellbeing|bandage|venda|bandage|ضمادة|绷带|бинт|Verband|benda|包帯|붕대|atadura|bandaj
+wellbeing|appointment|cita|rendez-vous|موعد|预约|запись на приём|Termin|appuntamento|予約|예약|consulta marcada|randevu
+wellbeing|prescription|receta médica|ordonnance|وصفة طبية|处方|рецепт|Rezept|ricetta medica|処方箋|처방전|receita médica|reçete
+wellbeing|allergy|alergia|allergie|حساسية|过敏|аллергия|Allergie|allergia|アレルギー|알레르기|alergia|alerji
+wellbeing|ambulance|ambulancia|ambulance|سيارة إسعاف|救护车|скорая помощь|Krankenwagen|ambulanza|救急車|구급차|ambulância|ambulans
+wellbeing|emergency|emergencia|urgence|حالة طوارئ|紧急情况|чрезвычайная ситуация|Notfall|emergenza|緊急事態|응급 상황|emergência|acil durum
+wellbeing|rest|descanso|repos|راحة|休息|отдых|Ruhe|riposo|休息|휴식|descanso|dinlenme
+wellbeing|sleep|sueño|sommeil|نوم|睡眠|сон|Schlaf|sonno|睡眠|수면|sono|uyku
+wellbeing|stress|estrés|stress|توتر|压力|стресс|Stress|stress|ストレス|스트레스|estresse|stres
+wellbeing|worry|preocupación|inquiétude|قلق|担忧|беспокойство|Sorge|preoccupazione|心配|걱정|preocupação|endişe
+wellbeing|hope|esperanza|espoir|أمل|希望|надежда|Hoffnung|speranza|希望|희망|esperança|umut
+wellbeing|surprise|sorpresa|surprise|مفاجأة|惊讶|удивление|Überraschung|sorpresa|驚き|놀라움|surpresa|şaşkınlık
+wellbeing|anger|ira|colère|غضب|愤怒|гнев|Wut|rabbia|怒り|분노|raiva|öfke
+wellbeing|joy|alegría|joie|فرح|喜悦|радость|Freude|gioia|喜び|기쁨|alegria|sevinç
+wellbeing|loneliness|soledad|solitude|وحدة|孤独|одиночество|Einsamkeit|solitudine|孤独|외로움|solidão|yalnızlık
+# accessories|Clothing & accessories
+accessories|umbrella|paraguas|parapluie|مظلة|雨伞|зонт|Regenschirm|ombrello|傘|우산|guarda-chuva|şemsiye
+accessories|boots|botas|bottes|أحذية طويلة|靴子|сапоги|Stiefel|stivali|ブーツ|부츠|botas|çizme
+accessories|sandals|sandalias|sandales|صنادل|凉鞋|сандалии|Sandalen|sandali|サンダル|샌들|sandálias|sandalet
+accessories|sneakers|zapatillas deportivas|baskets|أحذية رياضية|运动鞋|кроссовки|Turnschuhe|scarpe da ginnastica|スニーカー|운동화|tênis|spor ayakkabı
+accessories|slippers|zapatillas de casa|chaussons|نعال منزلية|拖鞋|тапочки|Hausschuhe|pantofole|スリッパ|슬리퍼|pantufas|terlik
+accessories|shorts|pantalones cortos|short|سروال قصير|短裤|шорты|Shorts|pantaloncini|短パン|반바지|bermuda|şort
+accessories|jeans|vaqueros|jean|بنطال جينز|牛仔裤|джинсы|Jeans|jeans|ジーンズ|청바지|calça jeans|kot pantolon
+accessories|suit|traje|costume|بدلة|西装|костюм|Anzug|completo|スーツ|정장|terno|takım elbise
+accessories|tie|corbata|cravate|ربطة عنق|领带|галстук|Krawatte|cravatta|ネクタイ|넥타이|gravata|kravat
+accessories|blouse|blusa|chemisier|بلوزة|女式衬衫|блузка|Bluse|camicetta|ブラウス|블라우스|blusa|bluz
+accessories|vest|chaleco|gilet|سترة بلا أكمام|马甲|жилет|Weste|gilet|ベスト|조끼|colete|yelek
+accessories|uniform|uniforme|uniforme|زي رسمي|制服|форма|Uniform|uniforme|制服|제복|uniforme|üniforma
+accessories|pajamas|pijama|pyjama|ملابس نوم|睡衣|пижама|Schlafanzug|pigiama|パジャマ|잠옷|pijama|pijama
+accessories|swimsuit|traje de baño|maillot de bain|ملابس سباحة|泳衣|купальник|Badeanzug|costume da bagno|水着|수영복|traje de banho|mayo
+accessories|raincoat|impermeable|imperméable|معطف مطر|雨衣|дождевик|Regenmantel|impermeabile|レインコート|우비|capa de chuva|yağmurluk
+accessories|helmet|casco|casque|خوذة|头盔|шлем|Helm|casco|ヘルメット|헬멧|capacete|kask
+accessories|backpack|mochila|sac à dos|حقيبة ظهر|背包|рюкзак|Rucksack|zaino|リュックサック|배낭|mochila|sırt çantası
+accessories|suitcase|maleta|valise|حقيبة سفر|行李箱|чемодан|Koffer|valigia|スーツケース|여행 가방|mala|bavul
+accessories|wallet|cartera|portefeuille|محفظة|钱包|кошелёк|Geldbörse|portafoglio|財布|지갑|carteira|cüzdan
+accessories|handbag|bolso|sac à main|حقيبة يد|手提包|сумочка|Handtasche|borsetta|ハンドバッグ|핸드백|bolsa|el çantası
+accessories|ring|anillo|bague|خاتم|戒指|кольцо|Ring|anello|指輪|반지|anel|yüzük
+accessories|necklace|collar|collier|قلادة|项链|ожерелье|Halskette|collana|ネックレス|목걸이|colar|kolye
+accessories|bracelet|pulsera|bracelet|سوار|手链|браслет|Armband|braccialetto|ブレスレット|팔찌|pulseira|bilezik
+accessories|watch|reloj de pulsera|montre|ساعة يد|手表|наручные часы|Armbanduhr|orologio da polso|腕時計|손목시계|relógio de pulso|kol saati
+accessories|button|botón|bouton|زر|纽扣|пуговица|Knopf|bottone|ボタン|단추|botão|düğme
+# mobility|Transport & directions
+mobility|taxi|taxi|taxi|سيارة أجرة|出租车|такси|Taxi|taxi|タクシー|택시|táxi|taksi
+mobility|subway|metro|métro|مترو|地铁|метро|U-Bahn|metropolitana|地下鉄|지하철|metrô|metro
+mobility|tram|tranvía|tramway|ترام|有轨电车|трамвай|Straßenbahn|tram|路面電車|노면전차|bonde|tramvay
+mobility|ferry|ferri|ferry|عبارة|渡轮|паром|Fähre|traghetto|フェリー|여객선|balsa|feribot
+mobility|motorcycle|motocicleta|moto|دراجة نارية|摩托车|мотоцикл|Motorrad|motocicletta|オートバイ|오토바이|motocicleta|motosiklet
+mobility|scooter|escúter|scooter|سكوتر|小型摩托车|скутер|Motorroller|scooter|スクーター|스쿠터|motoneta|skuter
+mobility|truck|camión|camion|شاحنة|卡车|грузовик|Lastwagen|camion|トラック|트럭|caminhão|kamyon
+mobility|van|furgoneta|camionnette|شاحنة صغيرة|厢式货车|фургон|Lieferwagen|furgone|バン|승합차|furgão|kamyonet
+mobility|engine|motor|moteur|محرك|发动机|двигатель|Motor|motore|エンジン|엔진|motor|motor
+mobility|wheel|rueda|roue|عجلة|车轮|колесо|Rad|ruota|車輪|바퀴|roda|tekerlek
+mobility|brake|freno|frein|مكبح|刹车|тормоз|Bremse|freno|ブレーキ|브레이크|freio|fren
+mobility|seat belt|cinturón de seguridad|ceinture de sécurité|حزام أمان|安全带|ремень безопасности|Sicherheitsgurt|cintura di sicurezza|シートベルト|안전벨트|cinto de segurança|emniyet kemeri
+mobility|steering wheel|volante|volant|عجلة قيادة|方向盘|руль|Lenkrad|volante|ハンドル|운전대|volante|direksiyon
+mobility|fuel|combustible|carburant|وقود|燃料|топливо|Kraftstoff|carburante|燃料|연료|combustível|yakıt
+mobility|gasoline|gasolina|essence|بنزين|汽油|бензин|Benzin|benzina|ガソリン|휘발유|gasolina|benzin
+mobility|diesel|diésel|gazole|ديزل|柴油|дизельное топливо|Diesel|gasolio|軽油|경유|diesel|mazot
+mobility|traffic|tráfico|circulation|حركة المرور|交通|дорожное движение|Verkehr|traffico|交通|교통|trânsito|trafik
+mobility|traffic light|semáforo|feu de circulation|إشارة مرور|红绿灯|светофор|Ampel|semaforo|信号機|신호등|semáforo|trafik ışığı
+mobility|intersection|cruce|carrefour|تقاطع|十字路口|перекрёсток|Kreuzung|incrocio|交差点|교차로|cruzamento|kavşak
+mobility|sidewalk|acera|trottoir|رصيف|人行道|тротуар|Gehweg|marciapiede|歩道|인도|calçada|kaldırım
+mobility|platform|andén|quai|رصيف محطة|站台|платформа|Bahnsteig|marciapiede ferroviario|ホーム|승강장|plataforma|peron
+mobility|departure|salida|départ|مغادرة|出发|отправление|Abfahrt|partenza|出発|출발|partida|kalkış
+mobility|arrival|llegada|arrivée|وصول|到达|прибытие|Ankunft|arrivo|到着|도착|chegada|varış
+mobility|delay|retraso|retard|تأخير|延误|задержка|Verspätung|ritardo|遅延|지연|atraso|gecikme
+mobility|parking|aparcamiento|stationnement|وقوف السيارات|停车|парковка|Parken|parcheggio|駐車|주차|estacionamento|park etme
+# destinations|Places & community
+destinations|library|biblioteca|bibliothèque|مكتبة|图书馆|библиотека|Bibliothek|biblioteca|図書館|도서관|biblioteca|kütüphane
+destinations|museum|museo|musée|متحف|博物馆|музей|Museum|museo|博物館|박물관|museu|müze
+destinations|cinema|cine|cinéma|سينما|电影院|кинотеатр|Kino|cinema|映画館|영화관|cinema|sinema
+destinations|theater|teatro|théâtre|مسرح|剧院|театр|Theater|teatro|劇場|극장|teatro|tiyatro
+destinations|supermarket|supermercado|supermarché|سوبر ماركت|超市|супермаркет|Supermarkt|supermercato|スーパー|슈퍼마켓|supermercado|süpermarket
+destinations|bakery|panadería|boulangerie|مخبز|面包店|пекарня|Bäckerei|panetteria|パン屋|빵집|padaria|fırın
+destinations|bookstore|librería|librairie|متجر كتب|书店|книжный магазин|Buchhandlung|libreria|本屋|서점|livraria|kitapçı
+destinations|post office|oficina de correos|bureau de poste|مكتب بريد|邮局|почта|Postamt|ufficio postale|郵便局|우체국|correios|postane
+destinations|police station|comisaría|commissariat|مركز شرطة|警察局|полицейский участок|Polizeiwache|commissariato|警察署|경찰서|delegacia|polis karakolu
+destinations|fire station|estación de bomberos|caserne de pompiers|مركز إطفاء|消防站|пожарная часть|Feuerwache|caserma dei vigili del fuoco|消防署|소방서|quartel dos bombeiros|itfaiye istasyonu
+destinations|university|universidad|université|جامعة|大学|университет|Universität|università|大学|대학교|universidade|üniversite
+destinations|office|oficina|bureau|مكتب عمل|办公室|офис|Büro|ufficio|事務所|사무실|escritório|ofis
+destinations|factory|fábrica|usine|مصنع|工厂|завод|Fabrik|fabbrica|工場|공장|fábrica|fabrika
+destinations|gym|gimnasio|salle de sport|صالة رياضية|健身房|тренажёрный зал|Fitnessstudio|palestra|ジム|헬스장|academia|spor salonu
+destinations|swimming pool|piscina|piscine|مسبح|游泳池|бассейн|Schwimmbad|piscina|プール|수영장|piscina|yüzme havuzu
+destinations|stadium|estadio|stade|ملعب|体育场|стадион|Stadion|stadio|スタジアム|경기장|estádio|stadyum
+destinations|church|iglesia|église|كنيسة|教堂|церковь|Kirche|chiesa|教会|교회|igreja|kilise
+destinations|mosque|mezquita|mosquée|مسجد|清真寺|мечеть|Moschee|moschea|モスク|모스크|mesquita|cami
+destinations|temple|templo|temple|معبد|寺庙|храм|Tempel|tempio|寺院|사원|templo|tapınak
+destinations|embassy|embajada|ambassade|سفارة|大使馆|посольство|Botschaft|ambasciata|大使館|대사관|embaixada|büyükelçilik
+destinations|port|puerto|port|ميناء|港口|порт|Hafen|porto|港|항구|porto|liman
+destinations|square|plaza|place|ساحة|广场|площадь|Platz|piazza|広場|광장|praça|meydan
+destinations|village|pueblo|village|قرية|村庄|деревня|Dorf|villaggio|村|마을|aldeia|köy
+destinations|neighborhood|barrio|quartier|حي|街区|район|Stadtviertel|quartiere|近所|동네|bairro|mahalle
+destinations|capital|capital|capitale|عاصمة|首都|столица|Hauptstadt|capitale|首都|수도|capital|başkent
+# calendar|Calendar & seasons
+calendar|Monday|lunes|lundi|الاثنين|星期一|понедельник|Montag|lunedì|月曜日|월요일|segunda-feira|pazartesi
+calendar|Tuesday|martes|mardi|الثلاثاء|星期二|вторник|Dienstag|martedì|火曜日|화요일|terça-feira|salı
+calendar|Wednesday|miércoles|mercredi|الأربعاء|星期三|среда|Mittwoch|mercoledì|水曜日|수요일|quarta-feira|çarşamba
+calendar|Thursday|jueves|jeudi|الخميس|星期四|четверг|Donnerstag|giovedì|木曜日|목요일|quinta-feira|perşembe
+calendar|Friday|viernes|vendredi|الجمعة|星期五|пятница|Freitag|venerdì|金曜日|금요일|sexta-feira|cuma
+calendar|Saturday|sábado|samedi|السبت|星期六|суббота|Samstag|sabato|土曜日|토요일|sábado|cumartesi
+calendar|Sunday|domingo|dimanche|الأحد|星期日|воскресенье|Sonntag|domenica|日曜日|일요일|domingo|pazar
+calendar|January|enero|janvier|يناير|一月|январь|Januar|gennaio|一月|일월|janeiro|ocak
+calendar|February|febrero|février|فبراير|二月|февраль|Februar|febbraio|二月|이월|fevereiro|şubat
+calendar|March|marzo|mars|مارس|三月|март|März|marzo|三月|삼월|março|mart
+calendar|April|abril|avril|أبريل|四月|апрель|April|aprile|四月|사월|abril|nisan
+calendar|May|mayo|mai|مايو|五月|май|Mai|maggio|五月|오월|maio|mayıs
+calendar|June|junio|juin|يونيو|六月|июнь|Juni|giugno|六月|유월|junho|haziran
+calendar|July|julio|juillet|يوليو|七月|июль|Juli|luglio|七月|칠월|julho|temmuz
+calendar|August|agosto|août|أغسطس|八月|август|August|agosto|八月|팔월|agosto|ağustos
+calendar|September|septiembre|septembre|سبتمبر|九月|сентябрь|September|settembre|九月|구월|setembro|eylül
+calendar|October|octubre|octobre|أكتوبر|十月|октябрь|Oktober|ottobre|十月|시월|outubro|ekim
+calendar|November|noviembre|novembre|نوفمبر|十一月|ноябрь|November|novembre|十一月|십일월|novembro|kasım
+calendar|December|diciembre|décembre|ديسمبر|十二月|декабрь|Dezember|dicembre|十二月|십이월|dezembro|aralık
+calendar|spring|primavera|printemps|ربيع|春天|весна|Frühling|primavera|春|봄|primavera|ilkbahar
+calendar|summer|verano|été|صيف|夏天|лето|Sommer|estate|夏|여름|verão|yaz
+calendar|autumn|otoño|automne|خريف|秋天|осень|Herbst|autunno|秋|가을|outono|sonbahar
+calendar|winter|invierno|hiver|شتاء|冬天|зима|Winter|inverno|冬|겨울|inverno|kış
+calendar|weekend|fin de semana|week-end|عطلة نهاية الأسبوع|周末|выходные|Wochenende|fine settimana|週末|주말|fim de semana|hafta sonu
+calendar|holiday|día festivo|jour férié|يوم عطلة|假日|праздничный день|Feiertag|giorno festivo|祝日|공휴일|feriado|resmî tatil
+# business|Work, money & paperwork
+business|document|documento|document|وثيقة|文件|документ|Dokument|documento|書類|문서|documento|belge
+business|form|formulario|formulaire|استمارة|表格|бланк|Formular|modulo|用紙|양식|formulário|form
+business|signature|firma|signature|توقيع|签名|подпись|Unterschrift|firma|署名|서명|assinatura|imza
+business|contract|contrato|contrat|عقد|合同|договор|Vertrag|contratto|契約|계약|contrato|sözleşme
+business|invoice|factura|facture|فاتورة|发票|счёт-фактура|Rechnung|fattura|請求書|청구서|fatura|fatura
+business|receipt|recibo|reçu|إيصال|收据|чек|Quittung|ricevuta|領収書|영수증|recibo|makbuz
+business|discount|descuento|réduction|خصم|折扣|скидка|Rabatt|sconto|割引|할인|desconto|indirim
+business|change|cambio|monnaie|باقي النقود|找零|сдача|Wechselgeld|resto|お釣り|거스름돈|troco|para üstü
+business|cash|efectivo|espèces|نقد|现金|наличные|Bargeld|contanti|現金|현금|dinheiro em espécie|nakit
+business|credit card|tarjeta de crédito|carte de crédit|بطاقة ائتمان|信用卡|кредитная карта|Kreditkarte|carta di credito|クレジットカード|신용카드|cartão de crédito|kredi kartı
+business|account|cuenta|compte|حساب|账户|счёт|Konto|conto|口座|계좌|conta|hesap
+business|password|contraseña|mot de passe|كلمة مرور|密码|пароль|Passwort|password|パスワード|비밀번호|senha|şifre
+business|address|dirección|adresse|عنوان|地址|адрес|Adresse|indirizzo|住所|주소|endereço|adres
+business|contact|contacto|contact|جهة اتصال|联系人|контакт|Kontakt|contatto|連絡先|연락처|contato|iletişim kişisi
+business|project|proyecto|projet|مشروع|项目|проект|Projekt|progetto|プロジェクト|프로젝트|projeto|proje
+business|task|tarea|tâche|مهمة|任务|задача|Aufgabe|compito|課題|과제|tarefa|görev
+business|deadline|fecha límite|date limite|موعد نهائي|截止日期|крайний срок|Frist|scadenza|締め切り|마감일|prazo|son tarih
+business|report|informe|rapport|تقرير|报告|отчёт|Bericht|rapporto|報告書|보고서|relatório|rapor
+business|presentation|presentación|présentation|عرض تقديمي|演示|презентация|Präsentation|presentazione|プレゼンテーション|발표|apresentação|sunum
+business|interview|entrevista|entretien|مقابلة|面试|собеседование|Vorstellungsgespräch|colloquio|面接|면접|entrevista|mülakat
+business|salary|salario|salaire|راتب|工资|зарплата|Gehalt|stipendio|給料|급여|salário|maaş
+business|rent|alquiler|loyer|إيجار|房租|арендная плата|Miete|affitto|家賃|임대료|aluguel|kira
+business|bill|cuenta|addition|حساب المطعم|账单|счёт|Rechnung|conto|お勘定|계산서|conta|hesap
+business|budget|presupuesto|budget|ميزانية|预算|бюджет|Budget|bilancio preventivo|予算|예산|orçamento|bütçe
+business|profit|beneficio|bénéfice|ربح|利润|прибыль|Gewinn|profitto|利益|이익|lucro|kâr
+# technology|Devices & digital life
+technology|screen|pantalla|écran|شاشة|屏幕|экран|Bildschirm|schermo|画面|화면|tela|ekran
+technology|keyboard|teclado|clavier|لوحة مفاتيح|键盘|клавиатура|Tastatur|tastiera|キーボード|키보드|teclado|klavye
+technology|mouse|ratón de ordenador|souris d'ordinateur|فأرة حاسوب|鼠标|компьютерная мышь|Computermaus|mouse|マウス|마우스|mouse|bilgisayar faresi
+technology|charger|cargador|chargeur|شاحن|充电器|зарядное устройство|Ladegerät|caricatore|充電器|충전기|carregador|şarj cihazı
+technology|battery|batería|batterie|بطارية|电池|батарея|Batterie|batteria|電池|배터리|bateria|pil
+technology|cable|cable|câble|كابل|电缆|кабель|Kabel|cavo|ケーブル|케이블|cabo|kablo
+technology|plug|enchufe|fiche électrique|قابس|插头|штепсель|Stecker|spina|プラグ|플러그|plugue|fiş
+technology|socket|toma de corriente|prise électrique|مقبس|插座|розетка|Steckdose|presa di corrente|コンセント|콘센트|tomada|priz
+technology|headphones|auriculares|casque audio|سماعات رأس|耳机|наушники|Kopfhörer|cuffie|ヘッドホン|헤드폰|fones de ouvido|kulaklık
+technology|microphone|micrófono|microphone|ميكروفون|麦克风|микрофон|Mikrofon|microfono|マイク|마이크|microfone|mikrofon
+technology|camera|cámara|appareil photo|كاميرا|相机|фотоаппарат|Kamera|macchina fotografica|カメラ|카메라|câmera|fotoğraf makinesi
+technology|photo|foto|photo|صورة|照片|фотография|Foto|foto|写真|사진|foto|fotoğraf
+technology|video|vídeo|vidéo|فيديو|视频|видео|Video|video|動画|동영상|vídeo|video
+technology|file|archivo|fichier|ملف|文件|файл|Datei|file|ファイル|파일|arquivo|dosya
+technology|folder|carpeta|dossier|مجلد|文件夹|папка|Ordner|cartella|フォルダー|폴더|pasta|klasör
+technology|link|enlace|lien|رابط|链接|ссылка|Link|collegamento|リンク|링크|link|bağlantı
+technology|website|sitio web|site web|موقع إلكتروني|网站|сайт|Website|sito web|ウェブサイト|웹사이트|site|web sitesi
+technology|app|aplicación|application|تطبيق|应用程序|приложение|App|applicazione|アプリ|앱|aplicativo|uygulama
+technology|software|software|logiciel|برمجيات|软件|программное обеспечение|Software|software|ソフトウェア|소프트웨어|software|yazılım
+technology|update|actualización|mise à jour|تحديث|更新|обновление|Aktualisierung|aggiornamento|更新|업데이트|atualização|güncelleme
+technology|download|descarga|téléchargement|تنزيل|下载|скачивание|Download|scaricamento|ダウンロード|다운로드|download|indirme
+technology|upload|subida de archivos|téléversement|رفع ملف|上传|загрузка на сервер|Upload|caricamento|アップロード|업로드|envio de arquivo|yükleme
+technology|backup|copia de seguridad|copie de sauvegarde|نسخة احتياطية|备份|резервная копия|Sicherungskopie|copia di sicurezza|バックアップ|백업|cópia de segurança|yedek
+technology|notification|notificación|notification|إشعار|通知|уведомление|Benachrichtigung|notifica|通知|알림|notificação|bildirim
+technology|connection|conexión|connexion|اتصال|连接|соединение|Verbindung|connessione|接続|연결|conexão|bağlantı
+# leisure|Culture & free time
+leisure|music|música|musique|موسيقى|音乐|музыка|Musik|musica|音楽|음악|música|müzik
+leisure|song|canción|chanson|أغنية|歌曲|песня|Lied|canzone|歌|노래|canção|şarkı
+leisure|dance|baile|danse|رقص|舞蹈|танец|Tanz|danza|踊り|춤|dança|dans
+leisure|movie|película|film|فيلم|电影|фильм|Film|film|映画|영화|filme|film
+leisure|story|historia|histoire|قصة|故事|рассказ|Geschichte|storia|物語|이야기|história|hikâye
+leisure|novel|novela|roman|رواية|小说|роман|Roman|romanzo|小説|소설|romance|roman
+leisure|poem|poema|poème|قصيدة|诗|стихотворение|Gedicht|poesia|詩|시|poema|şiir
+leisure|game|juego|jeu|لعبة|游戏|игра|Spiel|gioco|ゲーム|게임|jogo|oyun
+leisure|sport|deporte|sport|رياضة|运动|спорт|Sport|sport|スポーツ|스포츠|esporte|spor
+leisure|soccer|fútbol|football|كرة القدم|足球|футбол|Fußball|calcio|サッカー|축구|futebol|futbol
+leisure|basketball|baloncesto|basket-ball|كرة السلة|篮球|баскетбол|Basketball|pallacanestro|バスケットボール|농구|basquete|basketbol
+leisure|tennis|tenis|tennis|تنس|网球|теннис|Tennis|tennis|テニス|테니스|tênis|tenis
+leisure|swimming|natación|natation|سباحة|游泳|плавание|Schwimmen|nuoto|水泳|수영|natação|yüzme
+leisure|running|carrera a pie|course à pied|جري|跑步|бег|Laufen|corsa|ランニング|달리기|corrida|koşu
+leisure|walking|caminata|marche|مشي|步行|ходьба|Gehen|camminata|歩行|걷기|caminhada|yürüyüş
+leisure|hiking|senderismo|randonnée|مشي لمسافات طويلة|徒步旅行|пеший туризм|Wandern|escursionismo|ハイキング|하이킹|caminhada em trilha|doğa yürüyüşü
+leisure|camping|acampada|camping|تخييم|露营|кемпинг|Camping|campeggio|キャンプ|캠핑|acampamento|kamp
+leisure|fishing|pesca|pêche|صيد السمك|钓鱼|рыбалка|Angeln|pesca|釣り|낚시|pesca|balık tutma
+leisure|painting|pintura|peinture|رسم بالألوان|绘画|живопись|Malerei|pittura|絵画|회화|pintura|resim yapma
+leisure|drawing|dibujo|dessin|رسم|素描|рисование|Zeichnen|disegno|デッサン|소묘|desenho|çizim
+leisure|photography|fotografía|photographie|تصوير فوتوغرافي|摄影|фотография|Fotografie|fotografia|写真撮影|사진 촬영|fotografia|fotoğrafçılık
+leisure|guitar|guitarra|guitare|غيتار|吉他|гитара|Gitarre|chitarra|ギター|기타|violão|gitar
+leisure|piano|piano|piano|بيانو|钢琴|пианино|Klavier|pianoforte|ピアノ|피아노|piano|piyano
+leisure|concert|concierto|concert|حفلة موسيقية|音乐会|концерт|Konzert|concerto|コンサート|콘서트|concerto|konser
+leisure|festival|festival|festival|مهرجان|节庆|фестиваль|Festival|festival|祭り|축제|festival|festival
+# movement|Movement verbs
+movement|walk|caminar|marcher|يمشي|走路|ходить|gehen|camminare|歩く|걷다|caminhar|yürümek
+movement|run|correr|courir|يجري|跑|бегать|laufen|correre|走る|달리다|correr|koşmak
+movement|jump|saltar|sauter|يقفز|跳|прыгать|springen|saltare|跳ぶ|뛰어오르다|pular|zıplamak
+movement|swim|nadar|nager|يسبح|游泳|плавать|schwimmen|nuotare|泳ぐ|수영하다|nadar|yüzmek
+movement|drive|conducir|conduire|يقود|驾驶|водить машину|fahren|guidare|運転する|운전하다|dirigir|araba sürmek
+movement|ride|montar|monter|يركب|骑|ездить верхом|reiten|cavalcare|乗る|타다|montar|binmek
+movement|fly|volar|voler|يطير|飞|летать|fliegen|volare|飛ぶ|날다|voar|uçmak
+movement|travel|viajar|voyager|يسافر|旅行|путешествовать|reisen|viaggiare|旅行する|여행하다|viajar|seyahat etmek
+movement|leave|salir|partir|يغادر|离开|уходить|weggehen|partire|去る|떠나다|partir|ayrılmak
+movement|arrive|llegar|arriver|يصل|到达|прибывать|ankommen|arrivare|到着する|도착하다|chegar|varmak
+movement|return|volver|revenir|يعود|回来|возвращаться|zurückkommen|tornare|戻る|돌아오다|voltar|geri dönmek
+movement|enter|entrar|entrer|يدخل|进入|входить|eintreten|entrare|入る|들어가다|entrar|girmek
+movement|sit|sentarse|s'asseoir|يجلس|坐|сидеть|sitzen|sedersi|座る|앉다|sentar-se|oturmak
+movement|stand|estar de pie|être debout|يقف|站|стоять|stehen|stare in piedi|立つ|서다|ficar de pé|ayakta durmak
+movement|lie down|tumbarse|s'allonger|يستلقي|躺下|ложиться|sich hinlegen|sdraiarsi|横になる|눕다|deitar-se|uzanmak
+movement|wake up|despertarse|se réveiller|يستيقظ|醒来|просыпаться|aufwachen|svegliarsi|目を覚ます|잠에서 깨다|acordar|uyanmak
+movement|fall|caer|tomber|يسقط|掉落|падать|fallen|cadere|落ちる|떨어지다|cair|düşmek
+movement|climb|trepar|grimper|يتسلق|攀爬|карабкаться|klettern|arrampicarsi|登る|오르다|escalar|tırmanmak
+movement|turn|girar|tourner|ينعطف|转弯|поворачивать|abbiegen|girare|曲がる|돌다|virar|dönmek
+movement|cross|cruzar|traverser|يعبر|穿过|переходить|überqueren|attraversare|渡る|건너다|atravessar|karşıya geçmek
+movement|follow|seguir|suivre|يتبع|跟随|следовать|folgen|seguire|ついていく|따라가다|seguir|takip etmek
+movement|carry|llevar|porter|يحمل|携带|нести|tragen|portare|運ぶ|나르다|carregar|taşımak
+movement|lift|levantar|soulever|يرفع|举起|поднимать|heben|sollevare|持ち上げる|들어 올리다|levantar|kaldırmak
+movement|push|empujar|pousser|يدفع|推|толкать|schieben|spingere|押す|밀다|empurrar|itmek
+movement|pull|tirar de|tirer|يسحب|拉|тянуть|ziehen|tirare|引く|당기다|puxar|çekmek
+# communication|Communication verbs
+communication|say|decir|dire|يقول|说|сказать|sagen|dire|言う|말하다|dizer|söylemek
+communication|tell|contar|raconter|يروي|讲述|рассказывать|erzählen|raccontare|語る|이야기하다|contar|anlatmak
+communication|talk|conversar|discuter|يتحدث|交谈|разговаривать|sich unterhalten|conversare|会話する|대화하다|conversar|sohbet etmek
+communication|call|llamar por teléfono|téléphoner|يتصل هاتفيا|打电话|звонить|anrufen|telefonare|電話する|전화하다|telefonar|telefon etmek
+communication|listen|escuchar|écouter|يستمع|听|слушать|zuhören|ascoltare|聞く|듣다|escutar|dinlemek
+communication|explain|explicar|expliquer|يشرح|解释|объяснять|erklären|spiegare|説明する|설명하다|explicar|açıklamak
+communication|describe|describir|décrire|يصف|描述|описывать|beschreiben|descrivere|描写する|묘사하다|descrever|betimlemek
+communication|repeat|repetir|répéter|يكرر|重复|повторять|wiederholen|ripetere|繰り返す|반복하다|repetir|tekrarlamak
+communication|spell|deletrear|épeler|يتهجى|拼写|произносить по буквам|buchstabieren|fare lo spelling|つづりを言う|철자를 말하다|soletrar|harf harf söylemek
+communication|pronounce|pronunciar|prononcer|ينطق|发音|произносить|aussprechen|pronunciare|発音する|발음하다|pronunciar|telaffuz etmek
+communication|translate|traducir|traduire|يترجم|翻译|переводить|übersetzen|tradurre|翻訳する|번역하다|traduzir|çevirmek
+communication|reply|responder|répondre|يرد|回复|отвечать|antworten|rispondere|返事する|답장하다|responder|yanıtlamak
+communication|invite|invitar|inviter|يدعو|邀请|приглашать|einladen|invitare|招待する|초대하다|convidar|davet etmek
+communication|thank|agradecer|remercier|يشكر|感谢|благодарить|danken|ringraziare|感謝する|감사하다|agradecer|teşekkür etmek
+communication|apologize|disculparse|s'excuser|يعتذر|道歉|извиняться|sich entschuldigen|scusarsi|謝る|사과하다|pedir desculpas|özür dilemek
+communication|promise|prometer|promettre|يعد|承诺|обещать|versprechen|promettere|約束する|약속하다|prometer|söz vermek
+communication|agree|estar de acuerdo|être d'accord|يوافق|同意|соглашаться|zustimmen|essere d'accordo|同意する|동의하다|concordar|aynı fikirde olmak
+communication|refuse|negarse|refuser|يرفض|拒绝|отказываться|ablehnen|rifiutare|断る|거절하다|recusar|reddetmek
+communication|suggest|sugerir|suggérer|يقترح|建议|предлагать|vorschlagen|suggerire|提案する|제안하다|sugerir|önermek
+communication|discuss|debatir|discuter de|يناقش|讨论|обсуждать|besprechen|discutere|話し合う|논의하다|discutir|görüşmek
+communication|introduce|presentar|présenter|يقدم|介绍|представлять|vorstellen|presentare|紹介する|소개하다|apresentar|tanıtmak
+communication|greet|saludar|saluer|يحيي|问候|приветствовать|begrüßen|salutare|挨拶する|인사하다|cumprimentar|selamlamak
+communication|warn|advertir|avertir|يحذر|警告|предупреждать|warnen|avvertire|警告する|경고하다|avisar|uyarmak
+communication|complain|quejarse|se plaindre|يشتكي|抱怨|жаловаться|sich beschweren|lamentarsi|苦情を言う|불평하다|reclamar|şikâyet etmek
+communication|request|solicitar|solliciter|يطلب|请求|запрашивать|anfordern|richiedere|依頼する|요청하다|solicitar|talep etmek
+# skills|Thinking & doing
+skills|remember|recordar|se souvenir|يتذكر|记得|помнить|sich erinnern|ricordare|覚えている|기억하다|lembrar|hatırlamak
+skills|forget|olvidar|oublier|ينسى|忘记|забывать|vergessen|dimenticare|忘れる|잊다|esquecer|unutmak
+skills|believe|creer|croire|يصدق|相信|верить|glauben|credere|信じる|믿다|acreditar|inanmak
+skills|decide|decidir|décider|يقرر|决定|решать|entscheiden|decidere|決める|결정하다|decidir|karar vermek
+skills|choose|elegir|choisir|يختار|选择|выбирать|wählen|scegliere|選ぶ|고르다|escolher|seçmek
+skills|prefer|preferir|préférer|يفضل|更喜欢|предпочитать|bevorzugen|preferire|好む|선호하다|preferir|tercih etmek
+skills|compare|comparar|comparer|يقارن|比较|сравнивать|vergleichen|confrontare|比較する|비교하다|comparar|karşılaştırmak
+skills|recognize|reconocer|reconnaître|يتعرف على|认出|узнавать|erkennen|riconoscere|見分ける|알아보다|reconhecer|tanımak
+skills|notice|notar|remarquer|يلاحظ|注意到|замечать|bemerken|notare|気づく|알아차리다|notar|fark etmek
+skills|imagine|imaginar|imaginer|يتخيل|想象|представлять себе|sich vorstellen|immaginare|想像する|상상하다|imaginar|hayal etmek
+skills|dream|soñar|rêver|يحلم|做梦|видеть сны|träumen|sognare|夢を見る|꿈꾸다|sonhar|rüya görmek
+skills|plan|planear|planifier|يخطط|计划|планировать|planen|pianificare|計画する|계획하다|planejar|planlamak
+skills|try|intentar|essayer|يحاول|尝试|пытаться|versuchen|provare|試す|시도하다|tentar|denemek
+skills|practice|practicar|s'exercer|يتدرب|练习|практиковаться|üben|esercitarsi|練習する|연습하다|praticar|alıştırma yapmak
+skills|study|estudiar|étudier|يدرس|学习|учиться|lernen|studiare|勉強する|공부하다|estudar|ders çalışmak
+skills|teach|enseñar|enseigner|يعلم|教|преподавать|unterrichten|insegnare|教える|가르치다|ensinar|öğretmek
+skills|count|contar|compter|يعد الأعداد|数数|считать|zählen|contare|数える|세다|contar|saymak
+skills|measure|medir|mesurer|يقيس|测量|измерять|messen|misurare|測る|측정하다|medir|ölçmek
+skills|calculate|calcular|calculer|يحسب|计算|вычислять|rechnen|calcolare|計算する|계산하다|calcular|hesaplamak
+skills|solve|resolver|résoudre|يحل|解决|решать задачу|lösen|risolvere|解決する|해결하다|resolver|çözmek
+skills|create|crear|créer|يبتكر|创造|создавать|erschaffen|creare|創造する|창조하다|criar|yaratmak
+skills|draw|dibujar|dessiner|يرسم|画|рисовать|zeichnen|disegnare|描く|그리다|desenhar|çizmek
+skills|paint|pintar|peindre|يرسم بالألوان|用颜料画|писать красками|malen|dipingere|絵の具で描く|물감으로 그리다|pintar|boyamak
+skills|build|construir|construire|يبني|建造|строить|bauen|costruire|建てる|짓다|construir|inşa etmek
+skills|repair|reparar|réparer|يصلح|修理|ремонтировать|reparieren|riparare|修理する|수리하다|consertar|onarmak
+# descriptions|Useful descriptions
+descriptions|long|largo|long|طويل|长|длинный|lang|lungo|長い|길다|comprido|uzun
+descriptions|short|corto|court|قصير|短|короткий|kurz|corto|短い|짧다|curto|kısa
+descriptions|tall|alto|grand|طويل القامة|个子高|высокий|groß|alto|背が高い|키가 크다|alto|uzun boylu
+descriptions|low|bajo|bas|منخفض|低|низкий|niedrig|basso|低い|낮다|baixo|alçak
+descriptions|wide|ancho|large|عريض|宽|широкий|breit|largo|広い|넓다|largo|geniş
+descriptions|narrow|estrecho|étroit|ضيق|窄|узкий|schmal|stretto|狭い|좁다|estreito|dar
+descriptions|thick|grueso|épais|سميك|厚|толстый|dick|spesso|厚い|두껍다|grosso|kalın
+descriptions|thin|delgado|mince|رقيق|薄|тонкий|dünn|sottile|薄い|얇다|fino|ince
+descriptions|full|lleno|plein|ممتلئ|满|полный|voll|pieno|いっぱい|가득하다|cheio|dolu
+descriptions|expensive|caro|cher|غالي الثمن|贵|дорогой|teuer|caro|高い|비싸다|caro|pahalı
+descriptions|cheap|barato|bon marché|رخيص|便宜|дешёвый|billig|economico|安い|싸다|barato|ucuz
+descriptions|free|gratis|gratuit|مجاني|免费|бесплатный|kostenlos|gratuito|無料|무료|gratuito|ücretsiz
+descriptions|busy|ocupado|occupé|مشغول|忙|занятой|beschäftigt|occupato|忙しい|바쁘다|ocupado|meşgul
+descriptions|ready|listo|prêt|جاهز|准备好的|готовый|bereit|pronto|準備ができた|준비된|pronto|hazır
+descriptions|possible|posible|possible|ممكن|可能的|возможный|möglich|possibile|可能な|가능한|possível|mümkün
+descriptions|impossible|imposible|impossible|مستحيل|不可能的|невозможный|unmöglich|impossibile|不可能な|불가능한|impossível|imkânsız
+descriptions|important|importante|important|مهم|重要的|важный|wichtig|importante|重要な|중요한|importante|önemli
+descriptions|necessary|necesario|nécessaire|ضروري|必要的|необходимый|notwendig|necessario|必要な|필요한|necessário|gerekli
+descriptions|safe|seguro|sûr|آمن|安全的|безопасный|sicher|sicuro|安全な|안전한|seguro|güvenli
+descriptions|dangerous|peligroso|dangereux|خطير|危险的|опасный|gefährlich|pericoloso|危険な|위험한|perigoso|tehlikeli
+descriptions|loud|ruidoso|bruyant|صاخب|吵闹的|громкий|laut|rumoroso|うるさい|시끄럽다|barulhento|gürültülü
+descriptions|quiet|silencioso|silencieux|هادئ|安静的|тихий|leise|silenzioso|静かな|조용하다|silencioso|sessiz
+descriptions|strong|fuerte|fort|قوي|强壮的|сильный|stark|forte|強い|강하다|forte|güçlü
+descriptions|weak|débil|faible|ضعيف|虚弱的|слабый|schwach|debole|弱い|약하다|fraco|zayıf
+descriptions|fresh|fresco|frais|طازج|新鲜的|свежий|frisch|fresco|新鮮な|신선하다|fresco|taze
+# connectors|Frequency & connections
+connectors|always|siempre|toujours|دائما|总是|всегда|immer|sempre|いつも|항상|sempre|her zaman
+connectors|usually|normalmente|habituellement|عادة|通常|обычно|gewöhnlich|di solito|たいてい|보통|geralmente|genellikle
+connectors|often|a menudo|souvent|غالبا|经常|часто|oft|spesso|よく|자주|frequentemente|sık sık
+connectors|sometimes|a veces|parfois|أحيانا|有时|иногда|manchmal|a volte|時々|가끔|às vezes|bazen
+connectors|never|nunca|jamais|أبدا|从不|никогда|nie|mai|決してない|절대 안|nunca|asla
+connectors|already|ya|déjà|بالفعل|已经|уже|schon|già|もう|이미|já|zaten
+connectors|still|todavía|encore|ما زال|仍然|всё ещё|noch|ancora|まだ|아직|ainda|hâlâ
+connectors|again|otra vez|encore une fois|مرة أخرى|再一次|снова|wieder|di nuovo|もう一度|다시|de novo|tekrar
+connectors|together|juntos|ensemble|معا|一起|вместе|zusammen|insieme|一緒に|함께|juntos|birlikte
+connectors|alone|solo|seul|وحيدا|独自|один|allein|da solo|一人で|혼자|sozinho|yalnız
+connectors|almost|casi|presque|تقريبا|几乎|почти|fast|quasi|ほとんど|거의|quase|neredeyse
+connectors|only|solamente|seulement|فقط|只|только|nur|soltanto|だけ|오직|somente|sadece
+connectors|also|también|aussi|أيضا|也|тоже|auch|anche|も|또한|também|ayrıca
+connectors|very|muy|très|جدا|很|очень|sehr|molto|とても|매우|muito|çok
+connectors|enough|suficiente|assez|بما يكفي|足够|достаточно|genug|abbastanza|十分に|충분히|suficiente|yeterince
+connectors|perhaps|quizás|peut-être|ربما|也许|возможно|vielleicht|forse|たぶん|아마|talvez|belki
+connectors|because|porque|parce que|لأن|因为|потому что|weil|perché|なぜなら|왜냐하면|porque|çünkü
+connectors|although|aunque|bien que|رغم أن|虽然|хотя|obwohl|sebbene|けれども|비록|embora|her ne kadar
+connectors|before|antes de|avant|قبل|之前|до|vor|prima di|前に|전에|antes de|önce
+connectors|after|después de|après|بعد|之后|после|nach|dopo|後に|후에|depois de|sonra
+connectors|inside|dentro|à l'intérieur|في الداخل|里面|внутри|drinnen|dentro|中に|안에|dentro|içeride
+connectors|outside|fuera|à l'extérieur|في الخارج|外面|снаружи|draußen|fuori|外に|밖에|fora|dışarıda
+connectors|above|encima de|au-dessus|فوق|上方|над|über|sopra|上に|위에|acima de|üstünde
+connectors|below|debajo de|au-dessous|تحت|下方|под|unter|sotto|下に|아래에|abaixo de|altında
+connectors|between|entre|entre|بين|之间|между|zwischen|tra|間に|사이에|entre|arasında

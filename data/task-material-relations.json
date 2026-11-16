@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "version": "introduction-materials-v1",
+  "status": "authored-unreviewed",
+  "notice": "An explicit authored task-to-material association. These are the existing introduction options, not measured utility, prerequisites, or graph-derived learner benefit.",
+  "profiles": [
+    {
+      "id": "introduction",
+      "purposeFamily": "introduction",
+      "label": "A first introduction",
+      "materials": [
+        {
+          "conceptId": "phrases.nice_to_meet_you",
+          "role": "greeting",
+          "title": "Try a first-meeting greeting",
+          "taskUtility": 6
+        },
+        {
+          "conceptId": "essentials.thanks",
+          "role": "appreciation",
+          "title": "Express appreciation in a few words",
+          "taskUtility": 4.8
+        },
+        {
+          "conceptId": "phrases.please_repeat",
+          "role": "repair",
+          "title": "Have a comfortable way to ask for repetition",
+          "taskUtility": 4.4
+        }
+      ]
+    }
+  ]
+}

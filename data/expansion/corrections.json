@@ -1,0 +1,11 @@
+{
+"relatives.parent":{"terms":{"ar":"أحد الوالدين"}},
+"wildlife.penguin":{"terms":{"fr":"manchot"}},
+"wildlife.frog":{"terms":{"pt":"rã"}},
+"relatives.uncle":{"note":"Uncle. Arabic عم, Turkish amca and Chinese 叔叔 here specify a paternal uncle; maternal forms include Arabic خال, Turkish dayı and Chinese 舅舅. Japanese age-specific variants and Korean family branches also vary. Ask which family branch is meant.","aliases":{"ar":["خال"],"zh-CN":["舅舅"],"tr":["dayı"]}},
+"relatives.aunt":{"note":"Aunt. Arabic عمة, Turkish hala and Chinese 姑姑 here are paternal, while Korean 이모 is maternal. Maternal forms include Arabic خالة, Turkish teyze and Chinese 姨妈. Use the matching family branch, not blind word substitution.","aliases":{"ar":["خالة"],"zh-CN":["姨妈"],"tr":["teyze"]}},
+"relatives.cousin":{"note":"Cousin. This set contains masculine and, in some languages, paternal-branch forms. Gender, family branch and relative age may require another form; Japanese and Korean are less specific here."},
+"relatives.granddaughter":{"note":"Granddaughter. Chinese 孙女 here is a son's daughter; a daughter's daughter is 外孙女. Italian nipote also means grandson, niece or nephew; context is necessary."},
+"relatives.grandson":{"note":"Grandson. Chinese 孙子 here is a son's son; a daughter's son is 外孙. Italian nipote also means granddaughter, niece or nephew; context is necessary."},
+"phrases.how_are_you":{"details":{"usage":"Ask about someone's wellbeing. German dir is familiar, not the formal Ihnen. Register and the expected answer differ by relationship and language."}}
+}
