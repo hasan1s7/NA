@@ -1,0 +1,9 @@
+Defaulting to user installation because normal site-packages is not writeable
+Collecting Unidecode==1.4.0
+  Downloading Unidecode-1.4.0-py3-none-any.whl.metadata (13 kB)
+Downloading Unidecode-1.4.0-py3-none-any.whl (235 kB)
+Installing collected packages: Unidecode
+Successfully installed Unidecode-1.4.0
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip

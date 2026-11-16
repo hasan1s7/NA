@@ -1,0 +1,12 @@
+✔ shipping Explore: mamá intent with explicit Spanish opens the existing greeting and returns without learning writes (5244.115087ms)
+✔ shipping manual reader: traced graph support opens both real meanings without autosave or source changes (1453.86955ms)
+✔ shipping Arabic reader: authored annotation and optional practice use the real controls without automatic evidence (1593.345648ms)
+✔ shipping reader: an unsupported selected line offers a working continue action without invented support (1598.493457ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12233.231462

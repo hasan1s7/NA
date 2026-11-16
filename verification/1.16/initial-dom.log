@@ -1,0 +1,15 @@
+✔ shipping legacy practice stores one response with an envelope and separate feedback, preserving intent and media (3259.621842ms)
+✔ shipping lookup, translation, hint and reveal remain assistance on the single legacy recall attempt (1268.926117ms)
+✔ shipping authored contrast episode uses real controls and exports separate bounded targets without automatic enrollment (804.91944ms)
+✔ shipping legacy first response stays frozen after a failed write and an identical retry (438.346918ms)
+✔ shipping feedback delivery failure retries the committed attempt without adding another response (460.393045ms)
+✔ shipping app fits, decides, records a real task, refits and exports the exact scoped calculation (2875.436771ms)
+✔ shipping reveal, response and retry stay out of unassisted inference (1477.057423ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9626.106761

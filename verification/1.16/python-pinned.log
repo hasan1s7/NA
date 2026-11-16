@@ -1,0 +1,39 @@
+........................................................................ [ 14%]
+........................................................................ [ 29%]
+........................................................................ [ 44%]
+..............................F......................................... [ 59%]
+........................................................................ [ 74%]
+........................................................................ [ 89%]
+.....................................................                    [100%]
+=================================== FAILURES ===================================
+________ test_actual_learner_task_round_trips_and_replays_idempotently _________
+
+env = (<fastapi.applications.FastAPI object at 0x7fe3139dede0>, <function env.<locals>.user at 0x7fe313b58b80>, <starlette.testclient.TestClient object at 0x7fe31150dcd0>)
+
+    def test_actual_learner_task_round_trips_and_replays_idempotently(env):
+        _, new, _ = env
+        owner = new("learner_owner")
+        event = learner_event(owner)
+        response = send(owner, [event])
+        assert response.status_code == 200, response.text
+        assert send(owner, [event]).status_code == 200
+        assert persisted(owner) == [event]
+        assert next_inputs(owner).json()["contentEvents"] == [event]
+>       assert owner.get("/api/config").json()["releaseVersion"] == "1.15.0"
+E       AssertionError: assert '1.16.0' == '1.15.0'
+E         
+E         - 1.15.0
+E         ?    ^
+E         + 1.16.0
+E         ?    ^
+
+tests/test_learner_events.py:44: AssertionError
+=============================== warnings summary ===============================
+../../nabu-test-venv/lib/python3.12/site-packages/starlette/testclient.py:45
+  /workspace/scratch/1c91899ad34c/nabu-test-venv/lib/python3.12/site-packages/starlette/testclient.py:45: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_learner_events.py::test_actual_learner_task_round_trips_and_replays_idempotently
+1 failed, 484 passed, 1 warning in 202.09s (0:03:22)

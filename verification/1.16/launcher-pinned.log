@@ -1,0 +1,14 @@
+PASS Local launcher starts the full API and reports release 1.16.0
+PASS Actual HTTP serves the rebuilt standalone app and CSP
+PASS Private source/config/database paths are not served
+PASS Two isolated accounts can register with real HTTP cookies
+PASS Account libraries do not leak across real HTTP sessions
+PASS Friend request and acceptance persist
+PASS Word exchange reaches the recipient without private notes
+PASS Permissioned library preview excludes private learner notes
+PASS Review logs retain practice mode
+PASS Server restart keeps accounts, cards and review history
+PASS Local backup restores into a different database and revokes sessions
+PASS Recovery rotates the code and invalidates old HTTP sessions
+PASS Recovered account keeps the original library
+PASS Missing cloud key fails visibly instead of spending or faking a result

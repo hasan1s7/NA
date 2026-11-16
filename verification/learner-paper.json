@@ -1,0 +1,68 @@
+{
+  "filename": "paper/nabu-learner.pdf",
+  "sha256": "123ad09ebc21e756c2d07d78d7ff03367cefa003d526891096a283e123f1fd5b",
+  "pages": 9,
+  "pageSize": "US Letter",
+  "compiled": "pdflatex, bibtex, pdflatex, pdflatex",
+  "layout": {
+    "overfullBoxes": 0,
+    "unresolvedReferences": 0,
+    "outOfPageTextBlocks": 0,
+    "allFontsEmbedded": true,
+    "renderedAllPages": true,
+    "renderDpi": 105,
+    "visualReview": "All nine page layouts inspected; equations, figures, references and table checked."
+  },
+  "pageTextChecks": [
+    {
+      "page": 1,
+      "textCharacters": 4046,
+      "outOfPageTextBlocks": 0
+    },
+    {
+      "page": 2,
+      "textCharacters": 5179,
+      "outOfPageTextBlocks": 0
+    },
+    {
+      "page": 3,
+      "textCharacters": 4829,
+      "outOfPageTextBlocks": 0
+    },
+    {
+      "page": 4,
+      "textCharacters": 4933,
+      "outOfPageTextBlocks": 0
+    },
+    {
+      "page": 5,
+      "textCharacters": 5358,
+      "outOfPageTextBlocks": 0
+    },
+    {
+      "page": 6,
+      "textCharacters": 3047,
+      "outOfPageTextBlocks": 0
+    },
+    {
+      "page": 7,
+      "textCharacters": 4529,
+      "outOfPageTextBlocks": 0
+    },
+    {
+      "page": 8,
+      "textCharacters": 4457,
+      "outOfPageTextBlocks": 0
+    },
+    {
+      "page": 9,
+      "textCharacters": 2161,
+      "outOfPageTextBlocks": 0
+    }
+  ],
+  "limitations": [
+    "Research and implementation draft; not submitted or peer reviewed.",
+    "All learner numerical outcomes are synthetic.",
+    "PDF is not tagged; screen-reader PDF accessibility not verified."
+  ]
+}

@@ -1,0 +1,8 @@
+
+Nabu 1.16 - local application
+Open: http://127.0.0.1:8000/explore
+Database: /workspace/scratch/1c91899ad34c/launcher-check.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Configuration OK. No database was created or modified.

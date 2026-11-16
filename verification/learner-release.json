@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "release": "1.15.0",
+  "releaseDate": "2026-11-14",
+  "build": "nabu-learner-20261114-r1",
+  "verifiedAt": "2026-11-14T13:06:10.967316+00:00",
+  "baseline": {
+    "filename": "nabu-local-1.14.0.zip",
+    "sha256": "dfa8a4a05bc84d9d2b58f4de1492e69cef79c255b143ad6fe85846615c0c28de"
+  },
+  "versions": {
+    "model": "nabu-hierarchical-learner-v1",
+    "policy": "bayes-immediate-decision-v1",
+    "task": 1
+  },
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64",
+    "python": "3.12.14",
+    "jsdom": "31.0.1",
+    "domDependency": "Preinstalled pinned jsdom via NABU_TEST_JSDOM; fresh npm install not performed."
+  },
+  "testSuites": {
+    "javascript": {
+      "command": "node --test tests/*.test.mjs",
+      "tests": 855,
+      "pass": 855,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "log": "verification/learner-node-tests.log",
+      "logSha256": "c78e55989854747be17a6a95e1ce181b9bfbd78d8045a3334ed13f2d70643c85"
+    },
+    "dom": {
+      "command": "node --test tests/*ui.dom.mjs tests/*bundle.dom.mjs",
+      "tests": 72,
+      "pass": 72,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "log": "verification/learner-dom-tests.log",
+      "logSha256": "44bfdc270a0c96c072b43c10d0660bd906415fc844b8cdde0ea85bd24bcbf522"
+    },
+    "python": {
+      "command": "python -m pytest -q",
+      "passed": 483,
+      "warnings": 2,
+      "seconds": 112.03,
+      "log": "verification/learner-api-tests.log",
+      "logSha256": "f29cc3af4948ae309cfe2633d1ce5989a6fb0ade0605a9e460188a5192402f9a"
+    }
+  },
+  "learnerSpecificTests": {
+    "engine": 23,
+    "policy": 19,
+    "evaluation": 7,
+    "observationBridge": 27,
+    "ui": 14,
+    "shippingBundle": 2,
+    "api": 3,
+    "total": 95
+  },
+  "numericalEvaluation": {
+    "path": "docs/learner-evaluation/results.json",
+    "sha256": "8302ff5e28045f003ddddf8405272ef06c316c693c77410a50fd5e9f064c4581",
+    "seed": 140015,
+    "checks": {
+      "exactDecisions": 8,
+      "exactDecisionTotal": 8,
+      "structural": 5,
+      "structuralTotal": 5,
+      "numericalReference": true,
+      "passed": true
+    },
+    "milliseconds": 805.848829
+  },
+  "catalogue": {
+    "count": 93,
+    "languages": [
+      "ar",
+      "de",
+      "en",
+      "es",
+      "fr",
+      "it",
+      "ja",
+      "ko",
+      "pt",
+      "ru",
+      "tr",
+      "zh-CN"
+    ],
+    "evaluatedTaskIds": [
+      "learner:ar:write:reading",
+      "learner:es:write:reading",
+      "learner:en:write:reading",
+      "learner:es:write:pattern",
+      "learner:ar:write:retrieval",
+      "learner:ar:write:base-recall",
+      "learner:ar:open:pattern"
+    ],
+    "quality": "Authored mappings and references are not independent linguistic or psychometric validation.",
+    "existingContrastMappings": 8
+  },
+  "nativeBrowser": {
+    "status": "blocked-by-environment",
+    "browser": "Chromium",
+    "reason": "Chromium process singleton socket creation was denied by the execution environment (Operation not permitted).",
+    "assertionsRun": 0,
+    "coverageInstead": [
+      "Executable shipping-bundle DOM tests with IndexedDB transaction fixture",
+      "Live module tests with real scoring, posterior fitting and policy",
+      "Actual task provenance through FastAPI and SQLite"
+    ],
+    "claimsExcluded": [
+      "native browser rendering",
+      "native browser IndexedDB durability",
+      "mobile visual layout",
+      "real accessibility technology"
+    ]
+  },
+  "sourceSha256": {
+    "public/nabu-learner-model.js": "63a00836044a7ddbae1f84a52996ece6004bb7dcc5680e5fa4e3b5ecbdb4e19a",
+    "public/nabu-learner-observations.js": "0a8f112e92564dacaaee07ccedd0237525a418d3034daff7f9bd3cd8da4eb693",
+    "public/nabu-learner-policy.js": "51af58113785bf16114b2abb087dc8aee89cdcc599af65bbe46402f61879f112",
+    "public/nabu-learner-tasks.js": "a2646fbf94806abcafd16c4eda3fb03ddb969018668622b7144a94df62ef2e4a",
+    "public/nabu-learner-ui.js": "1889150008b7973d18a6673bc1c0051bc28b555ed7e0ce9d166da2c6555eaf30",
+    "public/nabu-learner.css": "f22721d436e5d28c02678366b8ce30b0408466f181e80d769fa3a6b51d56378f",
+    "public/index.html": "e68c1755bbc093f4a0ddf98bcb5152ffacc5d66c5c67eccd0496c4427b2c268f",
+    "public/nabu-sw.js": "788cf08fd368a60358cd0f8b1dfedcbdac2ed6704169e4a98bb0998d4071b7fd",
+    "public/nabu-app.js": "aed0e6c1715b2e5662ff49c44a296459a3a0deb9ff90351d6aa6bab80f254973",
+    "tools/build_standalone.py": "bf5d2b0eb707fe96df56551e6cd6d66f4053dd755fc56d3462d66ba665a8534c",
+    "tools/evaluate_learner.mjs": "7df895a2e4fee9f10a3fdde543635ba7cdb0cd2a3c68218f54050954799f39a4",
+    "package.json": "7aa8c47a21076807ee3053b29af8262485b1133f2429700538a2841d4ea16593",
+    "server.py": "371ba1e8936036e0b3705915a0af88a75703d30a6bc130400230a306db6ee82d"
+  },
+  "releaseBoundary": {
+    "localApplicationImplemented": true,
+    "deployed": false,
+    "humanCalibrationEstablished": false,
+    "humanLearningEfficacyEstablished": false,
+    "privateUserDatabaseMigrated": false,
+    "productionCohortImport": false
+  },
+  "limitations": [
+    "One-step information-only decision look-ahead; no identified causal teaching effect.",
+    "Authored task map, priors, guessing/lapse settings and utility costs require empirical validation.",
+    "Predictive convergence checks cover at most twelve observed tasks, not all latent parameters.",
+    "Conservative hint save/replay can exclude a response after support was requested but not displayed.",
+    "Native Chromium verification was blocked before any browser assertion."
+  ]
+}

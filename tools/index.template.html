@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!--NABU_BASE-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#324f7b">
+  <meta name="description" content="Read what you love. Understand what you need. Nabu keeps language support close to your content.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://api.mymemory.translated.net; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self'; manifest-src 'self'">
+  <title>Nabu - Stay with the story.</title>
+  <link rel="icon" href="./nabu-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="manifest" href="./nabu.webmanifest">
+  <link rel="stylesheet" href="./nabu.css">
+  <link rel="stylesheet" href="./nabu-workspace.css">
+  <script type="module" src="./nabu-app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <aside class="sidebar" aria-label="Main navigation">
+    <a class="brand" href="./" aria-label="Nabu home"><img class="brand-mark" src="./nabu-icon.svg" alt="" aria-hidden="true"><span>nabu<span class="brand-period">.</span></span></a>
+    <div class="workspace-label">YOUR SPACE</div>
+    <nav id="navigation"></nav>
+    <div class="sidebar-bottom"><div class="local-status"><span class="status-dot"></span><span id="storage-label">Guest library on this device</span></div><button class="nav-item" data-action="go" data-view="settings" id="settings-nav"></button></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><span class="breadcrumb">NABU</span><div class="topbar-right"><button id="connection" class="connection" data-action="account">On this device</button><button class="avatar" data-action="go" data-view="settings" aria-label="Open settings" id="avatar">N</button></div></header>
+    <main id="main" tabindex="-1"><div class="loading-screen"><img class="brand-mark" src="./nabu-icon.svg" alt="" aria-hidden="true"><h1>Opening Nabu</h1><p>Opening your private library...</p></div></main>
+    <footer class="app-footer"><span>Nabu 1.17 · Language, in your own context.</span><span>Private notes are never included in shares.</span></footer>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-header"><h2 id="modal-title"></h2><button class="icon-button" data-action="close-modal" aria-label="Close dialog">&#215;</button></div><div id="modal-body"></div></dialog>
+  <dialog id="word-sheet" aria-label="Word support"><div id="word-sheet-body"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><div class="fatal">Nabu needs JavaScript to translate and store your cards. Enable JavaScript, then reload this page.</div></noscript>
+</body>
+</html>

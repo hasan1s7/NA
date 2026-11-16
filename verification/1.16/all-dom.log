@@ -1,0 +1,177 @@
+✔ shipping legacy practice stores one response with an envelope and separate feedback, preserving intent and media (2308.390341ms)
+✔ shipping lookup, translation, hint and reveal remain assistance on the single legacy recall attempt (1318.991674ms)
+✔ shipping authored contrast episode uses real controls and exports separate bounded targets without automatic enrollment (1103.87747ms)
+✔ shipping legacy first response stays frozen after a failed write and an identical retry (593.809957ms)
+✔ shipping feedback delivery failure retries the committed attempt without adding another response (559.512621ms)
+✔ optional controls and context help preserve the reader, media, cards and schedules (520.495256ms)
+✔ a recognition response records exactly one bounded assessment and no production success (243.002385ms)
+✔ skip is a saved choice with no response, assessment, revealed answer or correctness count (105.601117ms)
+✔ revealing an answer and retrying the same target never become unaided evidence (211.164347ms)
+✔ a failed save freezes the first response and retries the same payload and ID (123.582063ms)
+✔ lost acknowledgement retries idempotently and never adds another assessment (118.575842ms)
+✔ retrying a failed skip save never fabricates feedback or a revealed answer (95.562999ms)
+✔ ledger replay and export preserve existing learning state and use semantic actor scope (99.091371ms)
+✔ changing intent invalidates an open check and restores the source without saving a response (96.821078ms)
+✔ account and team switches cannot reuse another actor or team’s ledger (115.252339ms)
+✔ a locked account omits evidence controls even when the server supports them (33.732272ms)
+✔ an imported future record cannot advance local response timestamps or supply current evidence (149.333724ms)
+✔ a pending context-help save cannot reopen the old intention’s modal after a scope change (78.894298ms)
+✔ the complete optional contrast episode retains separate meanings, conditions and assisted status (543.88767ms)
+✔ no-practice still hides authored comparisons on an early help-only branch and blocks a stale check action (77.07569ms)
+✔ an inferred no-practice preference remains unconfirmed and does not block optional checks (48.293268ms)
+✔ a recent reopen resumes the episode and its feedback without creating fresh unaided evidence (257.366839ms)
+✔ optional entry creates mamá intent and preserves source node, media, cards and evidence (489.216724ms)
+✔ adding and clearing optional fields uses explicit user-edit provenance (323.247845ms)
+✔ skip persists exploration without creating a fabricated record and reload retains it (87.058016ms)
+✔ creation, lifecycle controls, selecting saved intents and confirmed deletion work (268.453429ms)
+✔ empty input gives actionable error; ambiguous and Arabic input remain editable and escaped (274.407671ms)
+✔ write failure preserves draft and source; skip still works temporarily without corrupting saved data (84.018122ms)
+✔ in-flight save disables draft actions and does not lose the submitted intent (58.578647ms)
+✔ account change immediately removes guest draft and never presents it as account data (105.326449ms)
+✔ all exposed intent actions have handlers and all form controls have accessible labels (50.011683ms)
+✔ team creation supports no destination, then shared objective and private activity remain separate (160.158901ms)
+✔ retrying a UI save after lost acknowledgement reuses its stable ID (88.311225ms)
+✔ shipping self-contained bundle boots and its actual Explore/reader integration creates an intent (1523.430363ms)
+✔ shipping app fits, decides, records a real task, refits and exports the exact scoped calculation (3473.768769ms)
+✔ shipping reveal, response and retry stay out of unassisted inference (1417.780822ms)
+✔ real prior and policy run in the live panel without creating learner evidence (535.806527ms)
+✔ an unassisted real response updates a scoped posterior; source and schedules stay in place (819.449032ms)
+✔ reveals and same-session repeats never become independent evidence (570.170767ms)
+✔ a meaning-supplied pattern check updates only the explicitly remaining component (400.319431ms)
+✔ failed response writes retry the same first payload and ID, even if the input changes (341.664216ms)
+✔ a lost response acknowledgement is idempotent and a skip remains unscored (711.676166ms)
+✔ no-practice preference excludes recommended and manual checks (156.986923ms)
+✔ team/account changes close a check and discard old predictions without moving evidence (130.221963ms)
+✔ locked accounts expose no learner controls and a scoped export contains its model calculation (108.740956ms)
+✔ a shown exceptional form follows its memory route across different task IDs (195.362999ms)
+✔ a recognition prompt exposes a form and a conditioned prompt exposes its base (267.988494ms)
+✔ an accepted support save cannot replace a newly selected goal dialog (74.114548ms)
+✔ continuing while a cue saves prevents the old cue from reopening (65.171626ms)
+✔ a queued native close event cannot relinquish a newly opened goal dialog (60.672125ms)
+✖ shipping Explore: mamá intent with explicit Spanish opens the existing greeting and returns without learning writes (2755.629509ms)
+✖ shipping manual reader: traced graph support opens both real meanings without autosave or source changes (1131.552079ms)
+✖ shipping Arabic reader: authored annotation and optional practice use the real controls without automatic evidence (543.042444ms)
+✖ shipping reader: an unsupported selected line offers a working continue action without invented support (453.399619ms)
+✔ explicit Spanish mamá intent opens a real local phrase and returns without changing media or evidence (4501.717232ms)
+✔ an unconfirmed introduction language offers the working correction action without inventing Spanish (127.728186ms)
+✔ light opens both actual bank meanings and never records a selected meaning as knowledge (310.560915ms)
+✔ an unknown song line exposes no invented explanation and Continue preserves the whole source (137.949261ms)
+✔ open-ended poetry opens an existing catalogue item without requiring a destination or practice (111.70253ms)
+✔ exploration without a selected source does not emit an unavailable-support event (20.214156ms)
+✔ the selected Arabic annotation invokes its actual reader token and preserves RTL content (85.92377ms)
+✔ optional practice routes only to a real activity in the active content version (67.038797ms)
+✔ a changed source or intent revision invalidates old suggestions and closes their owned modal (73.805328ms)
+✔ resetting suggestions does not close an unrelated dialog that replaced their earlier modal (26.641471ms)
+✔ a pending guest snapshot cannot attach a result to a different source (35.51119ms)
+✔ matched account and team inputs use only the authenticated evidence response (32.551349ms)
+✔ wrong-account and wrong-team responses fail without guest-data fallback or foreign suggestions (57.214225ms)
+✔ an account switch discards the pending old response before any choice or event is shown (21.089864ms)
+✔ a remotely changed intent refreshes the intent context and requires a fresh request (32.261958ms)
+✔ unavailable account evidence never reads guest history, and a locked account can keep reading (41.06529ms)
+✔ guest content events are ignored when the content store belongs to an account (25.017244ms)
+✔ source markup stays escaped, multilingual selection uses bdi, and all visible controls are wired (38.605568ms)
+✔ modes preserve source node, range, scroll, media identity, notes and saved state (2793.308069ms)
+✔ saved correction, note, edited reading aid, mode and text survive a new app instance (1614.270627ms)
+✔ mode changes during pending save cannot duplicate or cancel it; failed save can retry (628.662258ms)
+✔ rapid selection ignores stale success and stale failure, then lookup retry recovers (870.940965ms)
+✔ council request uses current pair languages, survives mode switches, reports dependency and ignores late replies (624.458465ms)
+✔ mobile sheet, hidden avatar and keyboard-activatable modes leave the same reader usable (643.678154ms)
+✔ all twelve script/locale pairs select, explain, save and expose only their relevant council pair (6122.753847ms)
+✔ local media position and identity survive mode changes; pronunciation stops source audio and has recoverable errors (471.235919ms)
+✔ phrase selection and repeated-word source highlighting retain the actual occurrence (432.428976ms)
+ℹ tests 81
+ℹ suites 0
+ℹ pass 77
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16762.023967
+
+✖ failing tests:
+
+test at tests/next-step-bundle.dom.mjs:91:1
+✖ shipping Explore: mamá intent with explicit Spanish opens the existing greeting and returns without learning writes (2755.629509ms)
+  AssertionError [ERR_ASSERTION]: Use the current self-contained graph and learner integration build
+  + actual - expected
+  
+  + 'nabu-scribe-1.16-20261115-r1'
+  - 'nabu-learner-20261114-r1'
+          ^
+  
+      at boot (file:///workspace/scratch/1c91899ad34c/work/Nabu-1.16/tests/next-step-bundle.dom.mjs:70:10)
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processTimers (node:internal/timers:615:9)
+      at async TestContext.<anonymous> (file:///workspace/scratch/1c91899ad34c/work/Nabu-1.16/tests/next-step-bundle.dom.mjs:92:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'nabu-scribe-1.16-20261115-r1',
+    expected: 'nabu-learner-20261114-r1',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/next-step-bundle.dom.mjs:121:1
+✖ shipping manual reader: traced graph support opens both real meanings without autosave or source changes (1131.552079ms)
+  AssertionError [ERR_ASSERTION]: Use the current self-contained graph and learner integration build
+  + actual - expected
+  
+  + 'nabu-scribe-1.16-20261115-r1'
+  - 'nabu-learner-20261114-r1'
+          ^
+  
+      at boot (file:///workspace/scratch/1c91899ad34c/work/Nabu-1.16/tests/next-step-bundle.dom.mjs:70:10)
+      at async TestContext.<anonymous> (file:///workspace/scratch/1c91899ad34c/work/Nabu-1.16/tests/next-step-bundle.dom.mjs:122:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'nabu-scribe-1.16-20261115-r1',
+    expected: 'nabu-learner-20261114-r1',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/next-step-bundle.dom.mjs:143:1
+✖ shipping Arabic reader: authored annotation and optional practice use the real controls without automatic evidence (543.042444ms)
+  AssertionError [ERR_ASSERTION]: Use the current self-contained graph and learner integration build
+  + actual - expected
+  
+  + 'nabu-scribe-1.16-20261115-r1'
+  - 'nabu-learner-20261114-r1'
+          ^
+  
+      at boot (file:///workspace/scratch/1c91899ad34c/work/Nabu-1.16/tests/next-step-bundle.dom.mjs:70:10)
+      at async TestContext.<anonymous> (file:///workspace/scratch/1c91899ad34c/work/Nabu-1.16/tests/next-step-bundle.dom.mjs:144:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'nabu-scribe-1.16-20261115-r1',
+    expected: 'nabu-learner-20261114-r1',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/next-step-bundle.dom.mjs:171:1
+✖ shipping reader: an unsupported selected line offers a working continue action without invented support (453.399619ms)
+  AssertionError [ERR_ASSERTION]: Use the current self-contained graph and learner integration build
+  + actual - expected
+  
+  + 'nabu-scribe-1.16-20261115-r1'
+  - 'nabu-learner-20261114-r1'
+          ^
+  
+      at boot (file:///workspace/scratch/1c91899ad34c/work/Nabu-1.16/tests/next-step-bundle.dom.mjs:70:10)
+      at async TestContext.<anonymous> (file:///workspace/scratch/1c91899ad34c/work/Nabu-1.16/tests/next-step-bundle.dom.mjs:172:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'nabu-scribe-1.16-20261115-r1',
+    expected: 'nabu-learner-20261114-r1',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

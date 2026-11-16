@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 1,
+  "note": "Fictional test data; never installed as real learner or team records.",
+  "cases": [
+    {
+      "caseId": "individual-with-destination",
+      "description": "Alexandra’s mamá: no language is assumed from Mexican identity.",
+      "tenantId": null,
+      "kind": "learner",
+      "rawText": "I want to meet my girlfriend Alexandra’s Mexican mother and make a good impression.",
+      "content": {
+        "rawText": "I want to meet my girlfriend Alexandra’s Mexican mother and make a good impression.",
+        "immediateActivity": "I want to meet my girlfriend Alexandra’s Mexican mother",
+        "destination": "make a good impression",
+        "timeHorizon": null,
+        "context": null,
+        "languages": [],
+        "modalities": [],
+        "constraints": [],
+        "preferences": [],
+        "sourceContent": null,
+        "objectiveStatus": "explicit",
+        "status": "active",
+        "provenance": {
+          "parser": "local-intent-v1",
+          "fields": {
+            "immediateActivity": {
+              "status": "explicit",
+              "source": "user_text"
+            },
+            "destination": {
+              "status": "explicit",
+              "source": "local_parser",
+              "evidence": "make a good impression"
+            },
+            "timeHorizon": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "languages": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "modalities": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "sourceContent": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "context": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "constraints": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "preferences": {
+              "status": "unknown",
+              "source": "none"
+            }
+          }
+        }
+      }
+    },
+    {
+      "caseId": "individual-without-destination",
+      "description": "Exploration is a legitimate intent; no destination or deadline is needed.",
+      "tenantId": null,
+      "kind": "learner",
+      "rawText": "I want to explore Arabic poetry with no particular end goal.",
+      "content": {
+        "rawText": "I want to explore Arabic poetry with no particular end goal.",
+        "immediateActivity": "I want to explore Arabic poetry with no particular end goal.",
+        "destination": null,
+        "timeHorizon": null,
+        "context": null,
+        "languages": [
+          "ar"
+        ],
+        "modalities": [],
+        "constraints": [],
+        "preferences": [],
+        "sourceContent": null,
+        "objectiveStatus": "exploratory",
+        "status": "active",
+        "provenance": {
+          "parser": "local-intent-v1",
+          "fields": {
+            "immediateActivity": {
+              "status": "exploratory",
+              "source": "user_text"
+            },
+            "destination": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "timeHorizon": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "languages": {
+              "status": "explicit",
+              "source": "local_parser",
+              "evidence": "explore Arabic"
+            },
+            "modalities": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "sourceContent": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "context": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "constraints": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "preferences": {
+              "status": "unknown",
+              "source": "none"
+            }
+          }
+        }
+      }
+    },
+    {
+      "caseId": "team-with-destination",
+      "description": "The shared team objective and a member’s immediate reading intent remain distinct.",
+      "tenantId": "fixture-support",
+      "kind": "organization",
+      "rawText": "Our team needs to practice customer-support calls in Spanish so that we can handle refund and delivery questions clearly.",
+      "learnerText": "I want to read this Spanish support transcript.",
+      "content": {
+        "rawText": "Our team needs to practice customer-support calls in Spanish so that we can handle refund and delivery questions clearly.",
+        "immediateActivity": "Our team needs to practice customer-support calls in Spanish",
+        "destination": "we can handle refund and delivery questions clearly",
+        "timeHorizon": null,
+        "context": null,
+        "languages": [
+          "es"
+        ],
+        "modalities": [],
+        "constraints": [],
+        "preferences": [],
+        "sourceContent": null,
+        "objectiveStatus": "explicit",
+        "status": "active",
+        "provenance": {
+          "parser": "local-intent-v1",
+          "fields": {
+            "immediateActivity": {
+              "status": "explicit",
+              "source": "user_text"
+            },
+            "destination": {
+              "status": "explicit",
+              "source": "local_parser",
+              "evidence": "we can handle refund and delivery questions clearly"
+            },
+            "timeHorizon": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "languages": {
+              "status": "explicit",
+              "source": "local_parser",
+              "evidence": "in Spanish"
+            },
+            "modalities": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "sourceContent": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "context": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "constraints": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "preferences": {
+              "status": "unknown",
+              "source": "none"
+            }
+          }
+        }
+      },
+      "learnerContent": {
+        "rawText": "I want to read this Spanish support transcript.",
+        "immediateActivity": "I want to read this Spanish support transcript.",
+        "destination": null,
+        "timeHorizon": null,
+        "context": null,
+        "languages": [
+          "es"
+        ],
+        "modalities": [
+          "reading"
+        ],
+        "constraints": [],
+        "preferences": [],
+        "sourceContent": null,
+        "objectiveStatus": "explicit",
+        "status": "active",
+        "provenance": {
+          "parser": "local-intent-v1",
+          "fields": {
+            "immediateActivity": {
+              "status": "explicit",
+              "source": "user_text"
+            },
+            "destination": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "timeHorizon": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "languages": {
+              "status": "explicit",
+              "source": "local_parser",
+              "evidence": "Spanish support"
+            },
+            "modalities": {
+              "status": "explicit",
+              "source": "local_parser",
+              "evidence": "read"
+            },
+            "sourceContent": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "context": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "constraints": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "preferences": {
+              "status": "unknown",
+              "source": "none"
+            }
+          }
+        }
+      }
+    },
+    {
+      "caseId": "team-without-destination",
+      "description": "A team can explore; members keep their own immediate intentions.",
+      "tenantId": "fixture-poetry",
+      "kind": "organization",
+      "rawText": "Our team wants to explore Arabic poetry with no particular end goal.",
+      "learnerText": "I want to listen to this poem.",
+      "content": {
+        "rawText": "Our team wants to explore Arabic poetry with no particular end goal.",
+        "immediateActivity": "Our team wants to explore Arabic poetry with no particular end goal.",
+        "destination": null,
+        "timeHorizon": null,
+        "context": null,
+        "languages": [
+          "ar"
+        ],
+        "modalities": [],
+        "constraints": [],
+        "preferences": [],
+        "sourceContent": null,
+        "objectiveStatus": "exploratory",
+        "status": "active",
+        "provenance": {
+          "parser": "local-intent-v1",
+          "fields": {
+            "immediateActivity": {
+              "status": "exploratory",
+              "source": "user_text"
+            },
+            "destination": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "timeHorizon": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "languages": {
+              "status": "explicit",
+              "source": "local_parser",
+              "evidence": "explore Arabic"
+            },
+            "modalities": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "sourceContent": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "context": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "constraints": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "preferences": {
+              "status": "unknown",
+              "source": "none"
+            }
+          }
+        }
+      },
+      "learnerContent": {
+        "rawText": "I want to listen to this poem.",
+        "immediateActivity": "I want to listen to this poem.",
+        "destination": null,
+        "timeHorizon": null,
+        "context": null,
+        "languages": [],
+        "modalities": [
+          "listening"
+        ],
+        "constraints": [],
+        "preferences": [],
+        "sourceContent": null,
+        "objectiveStatus": "explicit",
+        "status": "active",
+        "provenance": {
+          "parser": "local-intent-v1",
+          "fields": {
+            "immediateActivity": {
+              "status": "explicit",
+              "source": "user_text"
+            },
+            "destination": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "timeHorizon": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "languages": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "modalities": {
+              "status": "explicit",
+              "source": "local_parser",
+              "evidence": "listen"
+            },
+            "sourceContent": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "context": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "constraints": {
+              "status": "unknown",
+              "source": "none"
+            },
+            "preferences": {
+              "status": "unknown",
+              "source": "none"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

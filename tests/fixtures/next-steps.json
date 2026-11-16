@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "notice": "Fictional test scenarios only. No observations or intentions are installed as real learner data. A flagged generated form is a provenance test, not a claim that the word is linguistically invalid.",
+  "cases": [
+    {
+      "id": "mama-introduction",
+      "intent": "I want to meet my girlfriend Alexandra’s Mexican mother and make a good impression.",
+      "edits": {"languages": ["es"], "modalities": ["speaking"]},
+      "source": {"sourceLang": "es", "targetLang": "en", "text": "", "hasMedia": false},
+      "expectedPrimaryKind": "bank-entry"
+    },
+    {
+      "id": "multiple-dictionary-meanings",
+      "intent": "I want to understand this word in English.",
+      "source": {"sourceLang": "en", "targetLang": "es", "text": "The suitcase is light.", "selectedText": "light", "hasMedia": true},
+      "expectedPrimaryKind": "compare-senses"
+    },
+    {
+      "id": "one-song-line",
+      "intent": "I want to understand this song.",
+      "source": {"sourceLang": "en", "targetLang": "es", "text": "It's a piece of cake.", "selectedText": "It's a piece of cake.", "format": "song", "hasMedia": true},
+      "expectedPrimaryKind": "bank-entry"
+    },
+    {
+      "id": "open-ended-poetry",
+      "intent": "I want to explore Arabic poetry with no particular end goal.",
+      "source": {"sourceLang": "ar", "targetLang": "en", "text": "", "hasMedia": false},
+      "expectedPrimaryKind": "open-content"
+    },
+    {
+      "id": "suspect-generated-record",
+      "intent": "I want to understand this form in Spanish.",
+      "source": {"sourceLang": "es", "targetLang": "en", "text": "marciendo", "selectedText": "marciendo", "structuralStatus": "generated", "analysisProvenance": [], "hasMedia": true},
+      "expectedPrimaryKind": "continue-media"
+    },
+    {
+      "id": "no-safe-local-material",
+      "intent": "I want to understand this line.",
+      "source": {"sourceLang": "en", "targetLang": "es", "text": "glorpified moonstairs", "selectedText": "glorpified moonstairs", "hasMedia": true},
+      "expectedPrimaryKind": "continue-media"
+    }
+  ]
+}

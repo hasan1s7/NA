@@ -1,0 +1,17 @@
+✔ modes preserve source node, range, scroll, media identity, notes and saved state (1513.550209ms)
+✔ saved correction, note, edited reading aid, mode and text survive a new app instance (1299.810455ms)
+✔ mode changes during pending save cannot duplicate or cancel it; failed save can retry (545.424949ms)
+✔ rapid selection ignores stale success and stale failure, then lookup retry recovers (773.304022ms)
+✔ council request uses current pair languages, survives mode switches, reports dependency and ignores late replies (632.913322ms)
+✔ mobile sheet, hidden avatar and keyboard-activatable modes leave the same reader usable (568.710263ms)
+✔ all twelve script/locale pairs select, explain, save and expose only their relevant council pair (6598.290764ms)
+✔ local media position and identity survive mode changes; pronunciation stops source audio and has recoverable errors (469.750998ms)
+✔ phrase selection and repeated-word source highlighting retain the actual occurrence (460.637141ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14325.446802

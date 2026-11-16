@@ -1,0 +1,41 @@
+{
+  "scope": "Declared 1.16 palette pairs, not a browser computed-style or WCAG audit",
+  "pairs": [
+    {
+      "element": "body",
+      "foreground": "#292e38",
+      "background": "#f6f3ed",
+      "contrast": 12.3
+    },
+    {
+      "element": "muted text",
+      "foreground": "#5d626c",
+      "background": "#fffcf7",
+      "contrast": 5.98
+    },
+    {
+      "element": "primary button",
+      "foreground": "#ffffff",
+      "background": "#324f7b",
+      "contrast": 8.27
+    },
+    {
+      "element": "uncertainty",
+      "foreground": "#65503f",
+      "background": "#fffcf7",
+      "contrast": 7.4
+    },
+    {
+      "element": "council error",
+      "foreground": "#813e33",
+      "background": "#fffcf7",
+      "contrast": 7.68
+    },
+    {
+      "element": "source highlight",
+      "foreground": "#302a26",
+      "background": "#edddc7",
+      "contrast": 10.62
+    }
+  ]
+}

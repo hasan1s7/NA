@@ -1,0 +1,90 @@
+[
+  {
+    "path": "HANDOFF.md",
+    "status": "updated"
+  },
+  {
+    "path": "README.md",
+    "status": "updated"
+  },
+  {
+    "path": "START_HERE.md",
+    "status": "updated"
+  },
+  {
+    "path": "package.json",
+    "status": "updated"
+  },
+  {
+    "path": "public/index.html",
+    "status": "updated"
+  },
+  {
+    "path": "public/nabu-account-store.js",
+    "status": "updated"
+  },
+  {
+    "path": "public/nabu-app.js",
+    "status": "updated"
+  },
+  {
+    "path": "public/nabu-explore-ui.js",
+    "status": "updated"
+  },
+  {
+    "path": "public/nabu-reading-ui.js",
+    "status": "updated"
+  },
+  {
+    "path": "public/nabu-store.js",
+    "status": "updated"
+  },
+  {
+    "path": "public/nabu-sw.js",
+    "status": "updated"
+  },
+  {
+    "path": "server.py",
+    "status": "updated"
+  },
+  {
+    "path": "start_local.py",
+    "status": "updated"
+  },
+  {
+    "path": "tests/idb-fixture.js",
+    "status": "updated"
+  },
+  {
+    "path": "tests/local_http_smoke.py",
+    "status": "updated"
+  },
+  {
+    "path": "tests/next-step-bundle.dom.mjs",
+    "status": "updated"
+  },
+  {
+    "path": "tests/test_content_progress.py",
+    "status": "updated"
+  },
+  {
+    "path": "tests/test_learner_events.py",
+    "status": "updated"
+  },
+  {
+    "path": "tools/build_standalone.py",
+    "status": "updated"
+  },
+  {
+    "path": "tools/index.template.html",
+    "status": "updated"
+  },
+  {
+    "path": "verification/local/http-server.log",
+    "status": "updated"
+  },
+  {
+    "path": "verification/local/http-smoke.json",
+    "status": "updated"
+  }
+]

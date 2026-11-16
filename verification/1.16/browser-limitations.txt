@@ -1,0 +1,12 @@
+Native Chromium launch was attempted against the running baseline application.
+The environment blocked Chromium's local Unix-domain socket:
+  FATAL: chrome/browser/process_singleton_posix.cc:297
+  socket() failed: Operation not permitted (1)
+A separate cloud browser could not reach the execution environment's loopback
+server (ERR_CONNECTION_REFUSED). No deployment or tunnel was created.
+
+The shipped JavaScript was subsequently executed in jsdom with the project's
+explicit IndexedDB transaction, network and speech-event fixtures. Actual
+FastAPI/SQLite/HTTP/launcher tests ran separately. These are different evidence
+boundaries. No 1.16 native-browser screenshot, visual reflow/zoom claim, physical
+keyboard or screen-reader claim, or audible provider claim is made.
