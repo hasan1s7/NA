@@ -1,0 +1,486 @@
+{
+  "checks": 80,
+  "failures": [],
+  "results": [
+    {
+      "path": "public/nabu-account-store.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-app.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-clipart.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-core.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-feature-tree.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-graph.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-illustrations.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-links.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-media.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-reading-ui.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-spatial-graph.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-speech.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-store.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-sw.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-sync.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-transliteration.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "public/nabu-word-tools.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/background.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/common.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/nabu-media.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/nabu-transliteration.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/options.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "chrome-extension/sidepanel.js",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/configure_native.mjs",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/mobile_doctor.mjs",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/native_projects.mjs",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/prepare_mobile.mjs",
+      "kind": "node --check",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "backup_service.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "language_services.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "media_services.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "server.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "social.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "start_local.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "translation_memory.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "upgrades.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "word_links.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/backup_database.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/backup_status.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/build_graph.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/build_icons.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/build_media_catalogue.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/build_standalone.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/check_providers.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/configure_native.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/evaluate_fsrs.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/expand_bank.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/restore_database.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/setup_speech.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tools/verify_offsite_backup.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/bank_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/browser_smoke.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/extension_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/extension_options_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/hosted_accounts.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/local_http_smoke.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/local_release_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/meaning_tools_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/media_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/mobile_links_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/next_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/pages_package_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/redesign_accessibility.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/redesign_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/redesign_http.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/social_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/spatial_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/startup_browser.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_backups.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_language_services.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_local_launcher.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_meaning_tools.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_media_services.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_native_config.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_operations.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_release_audit.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_server.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_social.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_translation_memory.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_upgrades.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "path": "tests/test_word_links.py",
+      "kind": "Python AST",
+      "exit": 0,
+      "error": ""
+    }
+  ]
+}

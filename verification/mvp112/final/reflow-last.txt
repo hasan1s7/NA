@@ -1,0 +1,35 @@
+PASS Computed visible text contrast: quick-lookup
+PASS Visible action handlers exist: quick-lookup
+PASS Computed visible text contrast: empty-reader
+PASS Visible action handlers exist: empty-reader
+PASS Selecting a word preserves a manually scrolled reading position
+PASS Passive updates retain document node and manual scroll
+PASS Returning restores the actual clicked late word
+PASS Highlighted phrase uses the original selection and sentence
+PASS Computed visible text contrast: long-definition-desktop
+PASS Visible action handlers exist: long-definition-desktop
+PASS Reading and panel fit 1024px width
+PASS Computed visible text contrast: long-definition-1024
+PASS Visible action handlers exist: long-definition-1024
+PASS Reading and panel fit 768px width
+PASS Computed visible text contrast: long-definition-768
+PASS Visible action handlers exist: long-definition-768
+PASS Reading and panel fit 390px width
+PASS Computed visible text contrast: long-definition-390
+PASS Visible action handlers exist: long-definition-390
+PASS Reading and panel fit 320px width
+PASS Computed visible text contrast: long-definition-320
+PASS Visible action handlers exist: long-definition-320
+PASS Nested note editor returns to original word sheet with saved note
+PASS Phone reading fits at 200% CSS zoom
+PASS Computed visible text contrast: word-bank
+PASS Visible action handlers exist: word-bank
+PASS Empty word-bank filter has a working reset
+PASS Computed visible text contrast: library
+PASS Visible action handlers exist: library
+PASS Computed visible text contrast: settings
+PASS Visible action handlers exist: settings
+PASS Settings fit 390px width
+PASS Settings fit 320px width
+PASS Visible buttons and links have accessible text or names
+PASS No uncaught browser errors in edge-case checks

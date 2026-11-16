@@ -1,0 +1,30 @@
+{
+  "passed": 23,
+  "checks": [
+    "Documented launcher starts packaged version 1.13.0",
+    "Shipping route /explore",
+    "Shipping route /read?content=a-little-later&version=1",
+    "Shipping route /words",
+    "Shipping route /library",
+    "Shipping route /review",
+    "Shipping route /settings",
+    "Text and progress path needs no provider setup",
+    "Private progress rejects anonymous reads",
+    "Existing signup preserved",
+    "Existing card API saves source, note, reading, image and schedule",
+    "All seven progress event kinds persist in account database",
+    "Lost-acknowledgment retry keeps exactly one event per ID",
+    "Changed payload with reused ID is refused",
+    "A stale different-account tab cannot write",
+    "Existing CSRF protection applies to progress",
+    "Practice created no hidden cards or schedule changes",
+    "Existing login survives process restart",
+    "Exact source version, position, preference and practice survive restart",
+    "Original saved word metadata and schedule survive restart",
+    "Signing out removes access to private progress",
+    "Second account cannot see first account progress",
+    "Existing SQLite backup includes private content progress"
+  ],
+  "failure": null,
+  "boundary": "Real release process / loopback HTTP / SQLite persistence, without browser or API fixtures.\nA disposable account/database is created; optional providers are not called. --ready\nuses preinstalled Python dependencies. This does not prove native Chrome durability.\n"
+}

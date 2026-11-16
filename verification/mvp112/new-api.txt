@@ -1,0 +1,18 @@
+...........F..                                                           [100%]
+=================================== FAILURES ===================================
+______ test_cross_tab_account_header_blocks_and_account_deletion_cascades ______
+
+env = (<fastapi.applications.FastAPI object at 0x7fec07c0e350>, <function env.<locals>.user at 0x7fec07d254e0>, <starlette.testclient.TestClient object at 0x7fec056daad0>)
+
+    def test_cross_tab_account_header_blocks_and_account_deletion_cascades(env):
+        app,new,_=env;a=new('progress_owner');b=new('other_owner');uid=a.headers['X-Nabu-Account']
+        assert send(a,[event()]).status_code==200
+        a.headers['X-Nabu-Account']=b.headers['X-Nabu-Account'];assert send(a,[event()]).status_code==409
+>       a.headers['X-Nabu-Account']=uid;assert a.delete('/api/account',json={'password':PASSWORD}).status_code==200
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: TestClient.delete() got an unexpected keyword argument 'json'
+
+tests/test_content_progress.py:60: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_content_progress.py::test_cross_tab_account_header_blocks_and_account_deletion_cascades - TypeError: TestClient.delete() got an unexpected keyword argument 'json'
+1 failed, 13 passed in 6.74s

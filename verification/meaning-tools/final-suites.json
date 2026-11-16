@@ -1,0 +1,121 @@
+{
+  "completed": 12,
+  "expected": 12,
+  "results": [
+    {
+      "name": "js",
+      "command": "npm test",
+      "exit": 0,
+      "seconds": 3.3
+    },
+    {
+      "name": "python",
+      "command": "/opt/pyvenv/bin/python -m pytest -q",
+      "exit": 0,
+      "seconds": 89.05
+    },
+    {
+      "name": "meaning-ui",
+      "command": "/opt/pyvenv/bin/python tests/meaning_tools_browser.py",
+      "exit": 0,
+      "seconds": 15.86
+    },
+    {
+      "name": "redesign-ui",
+      "command": "/opt/pyvenv/bin/python tests/redesign_browser.py",
+      "exit": 0,
+      "seconds": 10.92
+    },
+    {
+      "name": "accessibility",
+      "command": "/opt/pyvenv/bin/python tests/redesign_accessibility.py",
+      "exit": 0,
+      "seconds": 5.7
+    },
+    {
+      "name": "media-ui",
+      "command": "/opt/pyvenv/bin/python tests/media_browser.py",
+      "exit": 0,
+      "seconds": 10.88
+    },
+    {
+      "name": "existing-ui",
+      "command": "npm run test:ui",
+      "exit": 0,
+      "seconds": 41.64
+    },
+    {
+      "name": "local-release-ui",
+      "command": "/opt/pyvenv/bin/python tests/local_release_browser.py",
+      "exit": 0,
+      "seconds": 6.36
+    },
+    {
+      "name": "spatial-ui",
+      "command": "/opt/pyvenv/bin/python tests/spatial_browser.py",
+      "exit": 0,
+      "seconds": 4.69
+    },
+    {
+      "name": "extension-ui",
+      "command": "/opt/pyvenv/bin/python tests/extension_browser.py",
+      "exit": 0,
+      "seconds": 4.3
+    },
+    {
+      "name": "extension-options",
+      "command": "/opt/pyvenv/bin/python tests/extension_options_browser.py",
+      "exit": 0,
+      "seconds": 2.58
+    },
+    {
+      "name": "http",
+      "command": "/opt/pyvenv/bin/python tests/redesign_http.py",
+      "exit": 0,
+      "seconds": 5.66
+    }
+  ],
+  "final_reruns": [
+    {
+      "name": "js",
+      "command": "npm test",
+      "exit": 0,
+      "passed": 351,
+      "log": "final-js.txt"
+    },
+    {
+      "name": "meaning-ui",
+      "command": "python tests/meaning_tools_browser.py",
+      "exit": 0,
+      "passed": 42,
+      "log": "final-meaning-ui.txt"
+    },
+    {
+      "name": "extension-ui",
+      "command": "python tests/extension_browser.py",
+      "exit": 0,
+      "passed": 22,
+      "log": "final-extension-ui.txt"
+    },
+    {
+      "name": "media-after-polish",
+      "command": "python tests/media_browser.py",
+      "exit": 0,
+      "passed": 21,
+      "log": "post-polish-media-ui.txt"
+    },
+    {
+      "name": "startup-after-polish",
+      "command": "python tests/startup_browser.py",
+      "exit": 0,
+      "passed": 14,
+      "log": "post-polish-startup-ui.txt"
+    },
+    {
+      "name": "syntax-after-polish",
+      "exit": 0,
+      "passed": 52,
+      "log": "final-syntax.json"
+    }
+  ]
+}

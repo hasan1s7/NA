@@ -1,0 +1,18 @@
+{
+  "release": "1.11.0",
+  "sourceArchiveSHA256": "ead479912ae6a7b7260346088014a83ddc84391d0aab170f9876579e8583c309",
+  "counts": {
+    "JS domain, storage, startup, media, extension, reading and illustration checks": 351,
+    "Python/API/operations tests": 297,
+    "New illustration/reading UI checks": 42,
+    "Redesign UI checks": 34,
+    "Focused keyboard/reflow/contrast checks": 35,
+    "Existing media/context UI": 21,
+    "Extension panel checks (Chrome API fixtures)": 22,
+    "Extension connection/options checks": 8,
+    "Actual HTTP and process-restart checks": 15
+  },
+  "nativeNavigation": "blocked",
+  "windowsExecution": "not tested",
+  "deployed": false
+}

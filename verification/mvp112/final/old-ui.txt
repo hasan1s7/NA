@@ -1,0 +1,86 @@
+
+> nabu-translate-remember@1.12.0 test:ui
+> python tests/startup_browser.py && python tests/next_browser.py && python tests/bank_browser.py && python tests/mobile_links_browser.py
+
+PASS Real denied storage produces an actionable error, not an endless loader
+PASS Repair control exists on storage failure
+PASS Actual standalone scripts execute under the exact CSP hashes
+PASS No uncaught parse or top-level error in the standalone bundle
+PASS Standalone HTML boots with no external JS or CSS dependencies
+PASS Independent guard records readiness
+PASS Startup helper disappears after successful render
+PASS No remote script elements
+PASS Mobile layout has no horizontal overflow
+PASS Existing stored card is retained and counted for review
+PASS Blocked BroadcastChannel does not prevent startup
+PASS Nonresponding database becomes a clear error within the open timeout
+PASS Guard reports a top-level application syntax failure
+PASS Guard handles an absent or blocked application bundle
+TOTAL 14
+PASS Automatic guest lookup saves a Reference card, not forced homework
+PASS Reference-only library does not create a review task
+PASS Registration shows a private one-use recovery code
+PASS Signing in does not automatically upload guest words
+PASS Explicit guest import reaches real server
+PASS Phrase card exposes natural meaning, literal wording and draft provenance
+PASS Reader lookup reuses a duplicate instead of creating a second card
+PASS Reading saves only the selected item with the surrounding sentence
+PASS Reader segmentation preserves the entire original text
+PASS Reader and translation fit a narrow screen
+PASS Production asks for the word, not the translation
+PASS Production review persists separately from recognition
+PASS Undo restores independent skill state
+PASS Interrupted save is locally available with visible pending status
+PASS Offline account writes never spill into guest library
+PASS Lost acknowledgment retries without duplicate server words
+PASS Remembered account reopens its cached library while disconnected
+PASS Two real accounts request and accept friendship
+PASS Direct word exchange imports a fresh independent card
+PASS Contributor proposals remain unpublished until owner approval
+PASS Owner approval creates a new collection version and change history
+PASS Shared approval does not overwrite the owner private library
+PASS Collaborative collection import preserves duplicates and fresh private progress
+PASS Friends interface has no mobile horizontal overflow
+PASS Second sign-in sees confirmed library from another device
+PASS Signout removes account cache but retains guest words
+PASS Recovery rotates code and ends other sessions
+PASS Password recovery retains the account library
+PASS Known expired account stays locked when subsequently offline
+PASS No uncaught JavaScript errors throughout integrated flows
+PASS All 1026 entries counted while initial DOM is bounded to 60 rows
+PASS Show-more exposes the next batch without dropping data
+PASS Phrases filter includes all ninety entries and pagination terminates
+PASS Expressions filter includes all thirty-six source expressions
+PASS The last bank entry is searchable beyond the former thousand-entry cap
+PASS Explicit word-bank save creates a Reference card and exposes twelve forms
+PASS New expression renders distinct natural meaning, literal wording, usage and provenance
+PASS New idiom detail fits a narrow viewport
+PASS Ordinary phrase English gloss is labeled, never presented as Japanese literal translation
+PASS New word bank powers reading lookup with a saved surrounding sentence
+PASS Reader fits mobile without horizontal scrolling
+PASS New reader entry becomes a five-minute sentence-completion review
+PASS Sentence-completion progress persists independently
+PASS Offline new-bank save is visibly pending, not falsely synced
+PASS Reconnect confirms the new-bank word in the actual server database
+PASS New phrase proposals remain pending until the collection owner approves
+PASS Approved expanded-bank phrase publishes without editing private schedules
+PASS Friends and collection controls fit mobile
+PASS Expanded-feature flows have no uncaught application errors
+TOTAL 19
+PASS Opening Share does not silently publish a word
+PASS Lost acknowledgment leaves an actionable retry, not a false shared status
+PASS Retry recovers the same server-issued short link
+PASS Readable link carries the word and both language codes
+PASS Sharing dialog fits a 390px screen
+PASS Anonymous short-link visitor receives a preview, not an automatic account or import
+PASS Short-link API is resolved at the server root
+PASS Imported shared word starts with private fresh progress
+PASS Revoked link cannot be imported through a fresh browser preview
+PASS Revocation leaves a recipient copy untouched
+PASS Hosted navigation is a clean root-relative meaningful path
+PASS Mobile content reserves space for bottom navigation
+PASS Ziggurat is embedded and visible without a logo network request
+PASS Background render preserves the phrase breakdown the user opened
+PASS Legacy encoded links remain readable
+PASS Offline public-link opening does not reveal a stale cached snapshot
+PASS No uncaught JavaScript exceptions in new link/mobile interface flows

@@ -1,0 +1,214 @@
+TAP version 13
+# Subtest: guest reading place survives a newly constructed store
+ok 1 - guest reading place survives a newly constructed store
+  ---
+  duration_ms: 2.500084
+  type: 'test'
+  ...
+# Subtest: sign-in never migrates guest or another account progress
+ok 2 - sign-in never migrates guest or another account progress
+  ---
+  duration_ms: 0.795128
+  type: 'test'
+  ...
+# Subtest: failed local writes do not claim success and retry persists exactly once
+ok 3 - failed local writes do not claim success and retry persists exactly once
+  ---
+  duration_ms: 0.938411
+  type: 'test'
+  ...
+# Subtest: offline account queue survives reopen and a lost server acknowledgement
+ok 4 - offline account queue survives reopen and a lost server acknowledgement
+  ---
+  duration_ms: 1.320196
+  type: 'test'
+  ...
+# Subtest: concurrent append operations preserve both observations
+ok 5 - concurrent append operations preserve both observations
+  ---
+  duration_ms: 11.116791
+  type: 'test'
+  ...
+# Subtest: late old-account remote response cannot enter a new account
+ok 6 - late old-account remote response cannot enter a new account
+  ---
+  duration_ms: 0.459261
+  type: 'test'
+  ...
+# Subtest: locked identity rejects writes instead of assigning them to guest
+ok 7 - locked identity rejects writes instead of assigning them to guest
+  ---
+  duration_ms: 0.351551
+  type: 'test'
+  ...
+# Subtest: exactly six usable items, required genres, rights and editorial status
+ok 8 - exactly six usable items, required genres, rights and editorial status
+  ---
+  duration_ms: 3.780751
+  type: 'test'
+  ...
+# Subtest: a-little-later: all anchors reproduce the original text and multiword expressions
+ok 9 - a-little-later: all anchors reproduce the original text and multiword expressions
+  ---
+  duration_ms: 15.173282
+  type: 'test'
+  ...
+# Subtest: a-little-later: every activity accepts its authored answer
+ok 10 - a-little-later: every activity accepts its authored answer
+  ---
+  duration_ms: 0.657324
+  type: 'test'
+  ...
+# Subtest: a-book-for-rain: all anchors reproduce the original text and multiword expressions
+ok 11 - a-book-for-rain: all anchors reproduce the original text and multiword expressions
+  ---
+  duration_ms: 2.330072
+  type: 'test'
+  ...
+# Subtest: a-book-for-rain: every activity accepts its authored answer
+ok 12 - a-book-for-rain: every activity accepts its authored answer
+  ---
+  duration_ms: 0.2566
+  type: 'test'
+  ...
+# Subtest: the-key: all anchors reproduce the original text and multiword expressions
+ok 13 - the-key: all anchors reproduce the original text and multiword expressions
+  ---
+  duration_ms: 0.570405
+  type: 'test'
+  ...
+# Subtest: the-key: every activity accepts its authored answer
+ok 14 - the-key: every activity accepts its authored answer
+  ---
+  duration_ms: 0.2365
+  type: 'test'
+  ...
+# Subtest: a-place-for-light: all anchors reproduce the original text and multiword expressions
+ok 15 - a-place-for-light: all anchors reproduce the original text and multiword expressions
+  ---
+  duration_ms: 0.385221
+  type: 'test'
+  ...
+# Subtest: a-place-for-light: every activity accepts its authored answer
+ok 16 - a-place-for-light: every activity accepts its authored answer
+  ---
+  duration_ms: 0.308788
+  type: 'test'
+  ...
+# Subtest: an-unsent-letter: all anchors reproduce the original text and multiword expressions
+ok 17 - an-unsent-letter: all anchors reproduce the original text and multiword expressions
+  ---
+  duration_ms: 0.647529
+  type: 'test'
+  ...
+# Subtest: an-unsent-letter: every activity accepts its authored answer
+ok 18 - an-unsent-letter: every activity accepts its authored answer
+  ---
+  duration_ms: 0.138446
+  type: 'test'
+  ...
+# Subtest: a-drop-of-water: all anchors reproduce the original text and multiword expressions
+ok 19 - a-drop-of-water: all anchors reproduce the original text and multiword expressions
+  ---
+  duration_ms: 1.210614
+  type: 'test'
+  ...
+# Subtest: a-drop-of-water: every activity accepts its authored answer
+ok 20 - a-drop-of-water: every activity accepts its authored answer
+  ---
+  duration_ms: 0.109763
+  type: 'test'
+  ...
+# Subtest: Unicode scalar to UTF16 conversion includes astral symbols and marks
+ok 21 - Unicode scalar to UTF16 conversion includes astral symbols and marks
+  ---
+  duration_ms: 0.623554
+  type: 'test'
+  ...
+# Subtest: repeated words highlight the explicitly selected occurrence
+ok 22 - repeated words highlight the explicitly selected occurrence
+  ---
+  duration_ms: 0.291492
+  type: 'test'
+  ...
+# Subtest: altered quote fails validation rather than becoming a dead annotation
+ok 23 - altered quote fails validation rather than becoming a dead annotation
+  ---
+  duration_ms: 0.831972
+  type: 'test'
+  ...
+# Subtest: bad links and answer rules fail publication validation
+ok 24 - bad links and answer rules fail publication validation
+  ---
+  duration_ms: 0.501483
+  type: 'test'
+  ...
+# Subtest: assisted, incorrect, unaided and skipped responses are distinct
+ok 25 - assisted, incorrect, unaided and skipped responses are distinct
+  ---
+  duration_ms: 0.224683
+  type: 'test'
+  ...
+# Subtest: Arabic optional vowels ignored; hamza and different letters are retained
+ok 26 - Arabic optional vowels ignored; hamza and different letters are retained
+  ---
+  duration_ms: 0.172926
+  type: 'test'
+  ...
+# Subtest: two response histories yield different inspectable next support
+ok 27 - two response histories yield different inspectable next support
+  ---
+  duration_ms: 0.276609
+  type: 'test'
+  ...
+# Subtest: assistance cannot masquerade as unaided recall; skip leaves policy unchanged
+ok 28 - assistance cannot masquerade as unaided recall; skip leaves policy unchanged
+  ---
+  duration_ms: 0.105917
+  type: 'test'
+  ...
+# Subtest: opening or finishing content does not fabricate practice outcomes
+ok 29 - opening or finishing content does not fabricate practice outcomes
+  ---
+  duration_ms: 0.184964
+  type: 'test'
+  ...
+# Subtest: same event retried is counted once, mismatched payload rejected
+ok 30 - same event retried is counted once, mismatched payload rejected
+  ---
+  duration_ms: 1.135492
+  type: 'test'
+  ...
+# Subtest: server key ordering is not a different event
+ok 31 - server key ordering is not a different event
+  ---
+  duration_ms: 0.183932
+  type: 'test'
+  ...
+# Subtest: unknown versions do not borrow annotations or mastery
+ok 32 - unknown versions do not borrow annotations or mastery
+  ---
+  duration_ms: 0.123753
+  type: 'test'
+  ...
+# Subtest: positions and practice are validated before persistence
+ok 33 - positions and practice are validated before persistence
+  ---
+  duration_ms: 0.14893
+  type: 'test'
+  ...
+# Subtest: explicit preferences change next-content ranking, not recall state
+ok 34 - explicit preferences change next-content ranking, not recall state
+  ---
+  duration_ms: 0.224373
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 122.086385

@@ -1,0 +1,41 @@
+PASS Context editor contains the exact selected source sentence
+PASS Known water sense offers only its matching asset
+PASS Image choice reaches the same account library
+PASS Saved illustration decodes with descriptive alt
+PASS Visible text contrast: water-context
+PASS Controls have accessible labels: water-context
+PASS Broken-image state preserves content and retry reloads the actual asset
+PASS Incorrect-image feedback persists without redisplaying the rejected image
+PASS Flag is persisted, not merely a success message
+PASS Explicit restore clears the relevant rejection
+PASS Remove deletes the saved association
+PASS Slow save reports newer unsaved edits accurately
+PASS Failed save retains edits and its explicit retry persists them
+PASS Financial bank has a distinct concept and bundled asset
+PASS Learner can correct a bank sense without changing the original source
+PASS Financial image is not reused for the manual river meaning
+PASS Manual meaning shows explicitly labelled choices, not an automatic match
+PASS Explicit replacement and removal leave no image for the ambiguous manual sense
+PASS Automatic suggestion cannot overwrite a correction without confirmation
+PASS Explicit replacement uses and persists the selected draft
+PASS Explicitly hidden reading remains hidden after reopening
+PASS Unavailable kanji reading is explicit; no fabricated Chinese-character reading is shown
+PASS Fresh UI instance reloads corrected reading and matching image from real SQLite
+PASS Visible text contrast: saved-Japanese-reading
+PASS Controls have accessible labels: saved-Japanese-reading
+PASS Missing asset leaves the word usable with a working removal path
+PASS Equivalent Arabic and English concepts use the same licensed asset
+PASS Visible text contrast: Arabic-context
+PASS Controls have accessible labels: Arabic-context
+PASS Context panel fits 768px
+PASS Visible text contrast: Arabic-768
+PASS Controls have accessible labels: Arabic-768
+PASS Context panel fits 390px
+PASS Visible text contrast: Arabic-390
+PASS Controls have accessible labels: Arabic-390
+PASS Context panel fits 320px
+PASS Visible text contrast: Arabic-320
+PASS Controls have accessible labels: Arabic-320
+PASS Context panel reflows at 200% CSS zoom
+PASS Rapid selections leave the latest selected word in the panel
+PASS No uncaught UI exceptions

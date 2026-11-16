@@ -1,0 +1,28 @@
+✔ department reporting is optional, separate from membership, and off by default (212.619047ms)
+✔ explicit opt-in and withdrawal use saved revisions and accurately reflect acknowledged state (53.694792ms)
+✔ a revision conflict removes stale choice controls until the learner reloads (53.759143ms)
+✔ lost consent acknowledgement stays unknown until a successful reload (44.187376ms)
+✔ a failed consent load provides retry without inventing a saved state (24.890868ms)
+✔ owner support view contains only released bands and explains suppression and inference limits (26.800508ms)
+✔ insufficient participants never become zero performance or display a participant number (29.663235ms)
+✔ support failure removes formerly shown values and retains a working retry (21.846233ms)
+✔ malformed aggregate payloads are unavailable rather than misleading partial reports (53.685647ms)
+✔ late support results cannot replace a newer reporting view (23.196112ms)
+✔ account switching rejects an in-flight consent acknowledgement (32.816854ms)
+✔ reporting and summary preserve the reader node, selection, script direction and scroll position (50.515151ms)
+✔ unrecognized reporting terms do not present an actionable consent form (30.237986ms)
+✔ workspace is optional, escapes titles and exposes reporting terms before response (179.77164ms)
+✔ accepted Arabic source, submission, feedback and replay remain usable (79.272669ms)
+✔ failed online submission freezes its exact response and ID until successful retry (48.850644ms)
+✔ a new response invalidates an older replay export snapshot (30.883497ms)
+✔ opted-in offline answer survives failure and can be retried through pending controls (24.480879ms)
+✔ account change clears workspace and ignores in-flight response (28.566531ms)
+✔ late workspace load cannot replace pending answers view (17.04309ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1758.140563

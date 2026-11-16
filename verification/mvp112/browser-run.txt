@@ -1,0 +1,73 @@
+PASS First-time guest sees all six real pieces without signup or keys
+PASS All four interest filters and reset operate on actual content
+PASS Visible text contrast: explore-desktop
+PASS Visible actions have real handlers: explore-desktop
+PASS Published item opens with its exact untouched source: a-little-later
+PASS Authored annotation, not a fabricated generic translation: a-little-later/هل ما زال
+PASS Authored annotation, not a fabricated generic translation: a-little-later/قريب من المحطة
+PASS Authored annotation, not a fabricated generic translation: a-little-later/خذي وقتك
+PASS Authored annotation, not a fabricated generic translation: a-little-later/من فضلك
+PASS Published item opens with its exact untouched source: a-book-for-rain
+PASS Authored annotation, not a fabricated generic translation: a-book-for-rain/أبحث عن
+PASS Authored annotation, not a fabricated generic translation: a-book-for-rain/من فضلك
+PASS Authored annotation, not a fabricated generic translation: a-book-for-rain/ليس عليك
+PASS Authored annotation, not a fabricated generic translation: a-book-for-rain/كم سعره
+PASS Published item opens with its exact untouched source: the-key
+PASS Authored annotation, not a fabricated generic translation: the-key/منذ زمن
+PASS Authored annotation, not a fabricated generic translation: the-key/من هناك
+PASS Authored annotation, not a fabricated generic translation: the-key/ما زالت
+PASS Authored annotation, not a fabricated generic translation: the-key/احتفظ به
+PASS Published item opens with its exact untouched source: a-place-for-light
+PASS Authored annotation, not a fabricated generic translation: a-place-for-light/مكانًا للضوء
+PASS Authored annotation, not a fabricated generic translation: a-place-for-light/حيث كانت رسالتك
+PASS Authored annotation, not a fabricated generic translation: a-place-for-light/يكفي لهذا اليوم
+PASS Authored annotation, not a fabricated generic translation: a-place-for-light/لم تعد كما كانت
+PASS Published item opens with its exact untouched source: an-unsent-letter
+PASS Authored annotation, not a fabricated generic translation: an-unsent-letter/توقفتُ عند
+PASS Authored annotation, not a fabricated generic translation: an-unsent-letter/في موعدها
+PASS Authored annotation, not a fabricated generic translation: an-unsent-letter/فصار للسطر اتجاه
+PASS Authored annotation, not a fabricated generic translation: an-unsent-letter/لم أطلب منك
+PASS Published item opens with its exact untouched source: a-drop-of-water
+PASS Authored annotation, not a fabricated generic translation: a-drop-of-water/بعد قليل
+PASS Authored annotation, not a fabricated generic translation: a-drop-of-water/بخار ماء
+PASS Authored annotation, not a fabricated generic translation: a-drop-of-water/أما
+PASS Authored annotation, not a fabricated generic translation: a-drop-of-water/على شكل
+PASS Opening context keeps document and manual reading position
+PASS Failed vocabulary save preserves source and shows a genuine retry
+PASS Saved card preserves source/provenance, no hidden homework
+PASS Save does not rebuild the reading DOM
+PASS Missing device voice is a visible, reachable unavailable state
+PASS Closing help restores focus to original expression
+PASS Reading position is durably written in existing meta store
+PASS Fresh application restores same content and a later reading position
+PASS Previously saved vocabulary survives fresh application fixture
+PASS Blank response has an actionable validation state
+PASS Incorrect recall leads to a justified recall reattempt
+PASS Revealed answer is recorded as assisted, not unaided recall
+PASS Successful unaided recall recommends a related context with an inspectable reason
+PASS Visible text contrast: practice
+PASS Visible actions have real handlers: practice
+PASS Skip is persisted as missing evidence
+PASS Content practice has not created cards or changed review schedules
+PASS Read/unread is explicit and separate from practice
+PASS More like this persists an explicit reversible preference
+PASS Failed progress write retains response; retry commits it
+PASS Arabic phone panel has keyboard focus inside its modal
+PASS Visible text contrast: phone-word-sheet
+PASS Visible actions have real handlers: phone-word-sheet
+PASS Escape returns keyboard focus to selected Arabic expression
+PASS No horizontal overflow at 1024
+PASS No horizontal overflow at 768
+PASS No horizontal overflow at 390
+PASS No horizontal overflow at 320
+PASS 200% CSS zoom reflows
+PASS Visible text contrast: reader-desktop
+PASS Visible actions have real handlers: reader-desktop
+PASS Signup does not silently transfer guest reading history
+PASS Content source/progress reaches actual account SQLite
+PASS Fresh account UI loads server-confirmed progress without guest history
+PASS Offline progress reports device-only pending data rather than false sync
+PASS Working retry sends the pending event to actual server
+PASS Visible text contrast: explore-phone
+PASS Visible actions have real handlers: explore-phone
+PASS No unexpected uncaught browser exceptions

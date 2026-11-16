@@ -1,0 +1,386 @@
+
+Nabu 1.12.0 - local testing
+Open: http://127.0.0.1:36073/explore
+Database: /tmp/tmp0woab66u/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [8966]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:36073 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49244 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /explore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /read?content=a-little-later&version=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /words HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /review HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /api/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:49252 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49252 - "POST /api/library/translations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:49252 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:49252 - "POST /api/content-progress HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:49252 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8966]
+
+Nabu 1.12.0 - local testing
+Open: http://127.0.0.1:36073/explore
+Database: /tmp/tmp0woab66u/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [8983]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:36073 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60842 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60846 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60846 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60846 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60846 - "POST /api/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60846 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:60846 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60846 - "GET /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8983]
+
+Nabu 1.12.0 - local testing
+Open: http://127.0.0.1:46765/explore
+Database: /tmp/tmp7glq_4xm/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [9034]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:46765 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51158 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /explore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /read?content=a-little-later&version=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /words HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /review HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /api/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:51160 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51160 - "POST /api/library/translations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:51160 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:51160 - "POST /api/content-progress HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:51160 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9034]
+
+Nabu 1.12.0 - local testing
+Open: http://127.0.0.1:46765/explore
+Database: /tmp/tmp7glq_4xm/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [9051]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:46765 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51290 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51302 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51302 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51302 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51302 - "POST /api/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51302 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:51302 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51302 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9051]
+
+Nabu 1.12.1 - local testing
+Open: http://127.0.0.1:38781/explore
+Database: /tmp/tmpz09iqfxh/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [3155]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:38781 (Press CTRL+C to quit)
+INFO:     127.0.0.1:55240 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /explore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /read?content=a-little-later&version=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /words HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /review HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /api/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55248 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:55248 - "POST /api/library/translations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55248 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:55248 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:55248 - "POST /api/content-progress HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:55248 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3155]
+
+Nabu 1.12.1 - local testing
+Open: http://127.0.0.1:38781/explore
+Database: /tmp/tmpz09iqfxh/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [3172]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:38781 (Press CTRL+C to quit)
+INFO:     127.0.0.1:34056 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34066 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34066 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34066 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34066 - "POST /api/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34066 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:34066 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:34066 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3172]
+
+Nabu 1.12.1 - local testing
+Open: http://127.0.0.1:49905/explore
+Database: /tmp/tmpgy4awnb1/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [3266]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:49905 (Press CTRL+C to quit)
+INFO:     127.0.0.1:39734 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /explore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /read?content=a-little-later&version=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /words HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /review HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /api/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:39744 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:39744 - "POST /api/library/translations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39744 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:39744 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:39744 - "POST /api/content-progress HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:39744 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3266]
+
+Nabu 1.12.1 - local testing
+Open: http://127.0.0.1:49905/explore
+Database: /tmp/tmpgy4awnb1/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [3283]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:49905 (Press CTRL+C to quit)
+INFO:     127.0.0.1:39890 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39904 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39904 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39904 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39904 - "POST /api/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39904 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:39904 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:39904 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3283]
+
+Nabu 1.13.0 - local testing
+Open: http://127.0.0.1:47699/explore
+Database: /tmp/tmpi1hh9ir8/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [5541]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:47699 (Press CTRL+C to quit)
+INFO:     127.0.0.1:36118 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36132 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36132 - "GET /explore HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [5541]
+
+Nabu 1.13.0 - local testing
+Open: http://127.0.0.1:45941/explore
+Database: /tmp/tmpeclfnhyk/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [5593]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:45941 (Press CTRL+C to quit)
+INFO:     127.0.0.1:42010 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /explore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /read?content=a-little-later&version=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /words HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /review HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /api/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:42012 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:42012 - "POST /api/library/translations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42012 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:42012 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:42012 - "POST /api/content-progress HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:42012 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [5593]
+
+Nabu 1.13.0 - local testing
+Open: http://127.0.0.1:45941/explore
+Database: /tmp/tmpeclfnhyk/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [5610]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:45941 (Press CTRL+C to quit)
+INFO:     127.0.0.1:42132 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42140 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42140 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42140 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42140 - "POST /api/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42140 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:42140 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:42140 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [5610]
+
+Nabu 1.13.0 - local testing
+Open: http://127.0.0.1:42451/explore
+Database: /tmp/tmpggwt7bd5/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [6343]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:42451 (Press CTRL+C to quit)
+INFO:     127.0.0.1:38828 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /explore HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /read?content=a-little-later&version=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /words HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /review HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /api/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:38830 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:38830 - "POST /api/library/translations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "POST /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38830 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:38830 - "POST /api/content-progress HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:38830 - "POST /api/content-progress HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:38830 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6343]
+
+Nabu 1.13.0 - local testing
+Open: http://127.0.0.1:42451/explore
+Database: /tmp/tmpggwt7bd5/acceptance.sqlite3
+Private configuration: .env.local
+DeepL: off; built-in bank works without a key
+Cloud speech: off; device voices can be selected in Settings
+Keep this terminal open. Press Ctrl+C to stop.
+
+INFO:     Started server process [6360]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:42451 (Press CTRL+C to quit)
+INFO:     127.0.0.1:38952 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38960 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38960 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38960 - "GET /api/library HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38960 - "POST /api/logout HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38960 - "GET /api/content-progress HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:38960 - "POST /api/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:38960 - "GET /api/content-progress HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6360]

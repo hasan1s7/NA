@@ -1,0 +1,496 @@
+
+> nabu-translate-remember@1.12.0 test:meaning
+> node --test tests/illustrations.test.mjs tests/transliteration.test.mjs && python -m pytest -q tests/test_meaning_tools.py && python tests/meaning_tools_browser.py
+
+TAP version 13
+# Subtest: catalogue records sense, style, license, alt and original hashes without invented generation
+ok 1 - catalogue records sense, style, license, alt and original hashes without invented generation
+  ---
+  duration_ms: 1.421671
+  type: 'test'
+  ...
+# Subtest: same spelling does not imply the same image: bank finance vs river edge
+ok 2 - same spelling does not imply the same image: bank finance vs river edge
+  ---
+  duration_ms: 1.124409
+  type: 'test'
+  ...
+# Subtest: the same concept in Arabic and English reuses exactly one local asset
+ok 3 - the same concept in Arabic and English reuses exactly one local asset
+  ---
+  duration_ms: 0.411601
+  type: 'test'
+  ...
+# Subtest: selection request keeps exact source, language, selected meaning and expression kind
+ok 4 - selection request keeps exact source, language, selected meaning and expression kind
+  ---
+  duration_ms: 0.182361
+  type: 'test'
+  ...
+# Subtest: literal depiction is not recommended for the intended idiomatic meaning
+ok 5 - literal depiction is not recommended for the intended idiomatic meaning
+  ---
+  duration_ms: 0.251183
+  type: 'test'
+  ...
+# Subtest: missing concept, assets and provider give explicit unavailable without a network call
+ok 6 - missing concept, assets and provider give explicit unavailable without a network call
+  ---
+  duration_ms: 0.198775
+  type: 'test'
+  ...
+# Subtest: stored wrong-sense or missing illustration is not rendered
+ok 7 - stored wrong-sense or missing illustration is not rendered
+  ---
+  duration_ms: 0.279495
+  type: 'test'
+  ...
+# Subtest: choice validation prevents wrong-sense substitution and missing asset
+ok 8 - choice validation prevents wrong-sense substitution and missing asset
+  ---
+  duration_ms: 0.509967
+  type: 'test'
+  ...
+# Subtest: a manual meaning can explicitly choose, replace and remove a labelled illustration
+ok 9 - a manual meaning can explicitly choose, replace and remove a labelled illustration
+  ---
+  duration_ms: 1.843757
+  type: 'test'
+  ...
+# Subtest: private incorrect-image feedback survives serialization and explicit restore clears only its own flag
+ok 10 - private incorrect-image feedback survives serialization and explicit restore clears only its own flag
+  ---
+  duration_ms: 2.860877
+  type: 'test'
+  ...
+# Subtest: unsafe rejected identifiers are discarded and all old card inputs still work
+ok 11 - unsafe rejected identifiers are discarded and all old card inputs still work
+  ---
+  duration_ms: 0.765587
+  type: 'test'
+  ...
+# Subtest: no content reaches an adapter without provider-specific authorization
+ok 12 - no content reaches an adapter without provider-specific authorization
+  ---
+  duration_ms: 0.597898
+  type: 'test'
+  ...
+# Subtest: simultaneous identical-sense requests coalesce and cached image is reused across languages
+ok 13 - simultaneous identical-sense requests coalesce and cached image is reused across languages
+  ---
+  duration_ms: 24.854091
+  type: 'test'
+  ...
+# Subtest: provider failures are not cached and an explicit retry succeeds
+ok 14 - provider failures are not cached and an explicit retry succeeds
+  ---
+  duration_ms: 0.489366
+  type: 'test'
+  ...
+# Subtest: unsafe or unlicensed provider output never becomes a ready result
+ok 15 - unsafe or unlicensed provider output never becomes a ready result
+  ---
+  duration_ms: 0.641052
+  type: 'test'
+  ...
+# Subtest: account scope clearing prevents late generation from restoring private cache
+ok 16 - account scope clearing prevents late generation from restoring private cache
+  ---
+  duration_ms: 4.39151
+  type: 'test'
+  ...
+# Subtest: rapid selection ignores obsolete image responses
+ok 17 - rapid selection ignores obsolete image responses
+  ---
+  duration_ms: 0.380575
+  type: 'test'
+  ...
+# Subtest: reading fixture ru: Привет, Nabu!
+ok 18 - reading fixture ru: Привет, Nabu!
+  ---
+  duration_ms: 8.618124
+  type: 'test'
+  ...
+# Subtest: reading fixture ru: ЩУКА
+ok 19 - reading fixture ru: ЩУКА
+  ---
+  duration_ms: 1.416463
+  type: 'test'
+  ...
+# Subtest: reading fixture ru: Щука
+ok 20 - reading fixture ru: Щука
+  ---
+  duration_ms: 0.356559
+  type: 'test'
+  ...
+# Subtest: reading fixture ru: ёлка
+ok 21 - reading fixture ru: ёлка
+  ---
+  duration_ms: 0.396629
+  type: 'test'
+  ...
+# Subtest: reading fixture ru: ма́ма
+ok 22 - reading fixture ru: ма́ма
+  ---
+  duration_ms: 1.127073
+  type: 'test'
+  ...
+# Subtest: reading fixture ru: объект, семь
+ok 23 - reading fixture ru: объект, семь
+  ---
+  duration_ms: 0.305804
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: كتب
+ok 24 - reading fixture ar: كتب
+  ---
+  duration_ms: 2.375357
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: كَتَبَ
+ok 25 - reading fixture ar: كَتَبَ
+  ---
+  duration_ms: 0.369549
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: كِتَابٌ
+ok 26 - reading fixture ar: كِتَابٌ
+  ---
+  duration_ms: 0.885034
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: مُدَرِّس
+ok 27 - reading fixture ar: مُدَرِّس
+  ---
+  duration_ms: 0.997952
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: مُدَرِّس
+ok 28 - reading fixture ar: مُدَرِّس
+  ---
+  duration_ms: 0.234098
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: أحمد
+ok 29 - reading fixture ar: أحمد
+  ---
+  duration_ms: 0.124145
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: أَحْمَد
+ok 30 - reading fixture ar: أَحْمَد
+  ---
+  duration_ms: 0.097946
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: نُور
+ok 31 - reading fixture ar: نُور
+  ---
+  duration_ms: 0.330281
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: فِي
+ok 32 - reading fixture ar: فِي
+  ---
+  duration_ms: 0.359824
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: مـاء، Nabu 2026.
+ok 33 - reading fixture ar: مـاء، Nabu 2026.
+  ---
+  duration_ms: 0.330551
+  type: 'test'
+  ...
+# Subtest: reading fixture ko: 한글
+ok 34 - reading fixture ko: 한글
+  ---
+  duration_ms: 0.225154
+  type: 'test'
+  ...
+# Subtest: reading fixture ko: 가
+ok 35 - reading fixture ko: 가
+  ---
+  duration_ms: 0.37776
+  type: 'test'
+  ...
+# Subtest: reading fixture ko: 한글, Nabu 42!
+ok 36 - reading fixture ko: 한글, Nabu 42!
+  ---
+  duration_ms: 0.354727
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: みず
+ok 37 - reading fixture ja: みず
+  ---
+  duration_ms: 1.072352
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: きゃく
+ok 38 - reading fixture ja: きゃく
+  ---
+  duration_ms: 0.394396
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: がっこう
+ok 39 - reading fixture ja: がっこう
+  ---
+  duration_ms: 1.513367
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: コーヒー
+ok 40 - reading fixture ja: コーヒー
+  ---
+  duration_ms: 0.140929
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: しんよう
+ok 41 - reading fixture ja: しんよう
+  ---
+  duration_ms: 0.157414
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: でんあつ
+ok 42 - reading fixture ja: でんあつ
+  ---
+  duration_ms: 0.279776
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: ｶﾀｶﾅ
+ok 43 - reading fixture ja: ｶﾀｶﾅ
+  ---
+  duration_ms: 0.137715
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: Nabu: ティー!
+ok 44 - reading fixture ja: Nabu: ティー!
+  ---
+  duration_ms: 0.345923
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: は、へ、を。
+ok 45 - reading fixture ja: は、へ、を。
+  ---
+  duration_ms: 0.119918
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: ちゃっと
+ok 46 - reading fixture ja: ちゃっと
+  ---
+  duration_ms: 0.262459
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: きんいろ
+ok 47 - reading fixture ja: きんいろ
+  ---
+  duration_ms: 0.105136
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: شُكْرًا
+ok 48 - reading fixture ar: شُكْرًا
+  ---
+  duration_ms: 0.241198
+  type: 'test'
+  ...
+# Subtest: reading fixture ar: شُكْراً
+ok 49 - reading fixture ar: شُكْراً
+  ---
+  duration_ms: 0.104345
+  type: 'test'
+  ...
+# Subtest: reading fixture ja: おっちゃん
+ok 50 - reading fixture ja: おっちゃん
+  ---
+  duration_ms: 0.156913
+  type: 'test'
+  ...
+# Subtest: original en preserves diacritics without pronunciation claim
+ok 51 - original en preserves diacritics without pronunciation claim
+  ---
+  duration_ms: 0.350911
+  type: 'test'
+  ...
+# Subtest: original es preserves diacritics without pronunciation claim
+ok 52 - original es preserves diacritics without pronunciation claim
+  ---
+  duration_ms: 0.166587
+  type: 'test'
+  ...
+# Subtest: original fr preserves diacritics without pronunciation claim
+ok 53 - original fr preserves diacritics without pronunciation claim
+  ---
+  duration_ms: 0.071977
+  type: 'test'
+  ...
+# Subtest: original de preserves diacritics without pronunciation claim
+ok 54 - original de preserves diacritics without pronunciation claim
+  ---
+  duration_ms: 0.061852
+  type: 'test'
+  ...
+# Subtest: original it preserves diacritics without pronunciation claim
+ok 55 - original it preserves diacritics without pronunciation claim
+  ---
+  duration_ms: 0.061702
+  type: 'test'
+  ...
+# Subtest: original pt preserves diacritics without pronunciation claim
+ok 56 - original pt preserves diacritics without pronunciation claim
+  ---
+  duration_ms: 0.078477
+  type: 'test'
+  ...
+# Subtest: original tr preserves diacritics without pronunciation claim
+ok 57 - original tr preserves diacritics without pronunciation claim
+  ---
+  duration_ms: 0.14113
+  type: 'test'
+  ...
+# Subtest: all and only the twelve app languages have declared behavior
+ok 58 - all and only the twelve app languages have declared behavior
+  ---
+  duration_ms: 1.251918
+  type: 'test'
+  ...
+# Subtest: empty, unsupported languages, wrong scripts and schemes return honest unavailable
+ok 59 - empty, unsupported languages, wrong scripts and schemes return honest unavailable
+  ---
+  duration_ms: 0.26905
+  type: 'test'
+  ...
+# Subtest: Arabic does not invent missing vowels and orders shadda independently of input ordering
+ok 60 - Arabic does not invent missing vowels and orders shadda independently of input ordering
+  ---
+  duration_ms: 0.20242
+  type: 'test'
+  ...
+# Subtest: unmapped Arabic letters and marks stay visible with a partial warning
+ok 61 - unmapped Arabic letters and marks stay visible with a partial warning
+  ---
+  duration_ms: 0.252264
+  type: 'test'
+  ...
+# Subtest: mixed Russian and unrelated scripts are not silently relabelled
+ok 62 - mixed Russian and unrelated scripts are not silently relabelled
+  ---
+  duration_ms: 0.402738
+  type: 'test'
+  ...
+# Subtest: Korean declared scheme does not claim sound-change Romanization
+ok 63 - Korean declared scheme does not claim sound-change Romanization
+  ---
+  duration_ms: 0.226246
+  type: 'test'
+  ...
+# Subtest: Japanese kanji require a genuine whole-word reading even if a generic bank hint exists
+ok 64 - Japanese kanji require a genuine whole-word reading even if a generic bank hint exists
+  ---
+  duration_ms: 0.218465
+  type: 'test'
+  ...
+# Subtest: Chinese generic character conversion is not relabelled dictionary-derived
+ok 65 - Chinese generic character conversion is not relabelled dictionary-derived
+  ---
+  duration_ms: 0.119448
+  type: 'test'
+  ...
+# Subtest: dictionary adapter binds the entire word, language, scheme and provenance
+ok 66 - dictionary adapter binds the entire word, language, scheme and provenance
+  ---
+  duration_ms: 0.195741
+  type: 'test'
+  ...
+# Subtest: Japanese unhandled small kana and dangling gemination are visible, not invented
+ok 67 - Japanese unhandled small kana and dangling gemination are visible, not invented
+  ---
+  duration_ms: 0.401156
+  type: 'test'
+  ...
+# Subtest: saved correction wins even for unavailable kanji; original word/context unchanged
+ok 68 - saved correction wins even for unavailable kanji; original word/context unchanged
+  ---
+  duration_ms: 0.421116
+  type: 'test'
+  ...
+# Subtest: cleared reading is not replaced by automatic output
+ok 69 - cleared reading is not replaced by automatic output
+  ---
+  duration_ms: 0.338172
+  type: 'test'
+  ...
+# Subtest: oversized reading input is rejected without truncating the original
+ok 70 - oversized reading input is rejected without truncating the original
+  ---
+  duration_ms: 0.22942
+  type: 'test'
+  ...
+# Subtest: an explicit dictionary request never silently uses a different kana scheme
+ok 71 - an explicit dictionary request never silently uses a different kana scheme
+  ---
+  duration_ms: 0.206697
+  type: 'test'
+  ...
+# Subtest: scheme hamza, ayn and soft/hard sign symbols are not mistaken for unmapped script
+ok 72 - scheme hamza, ayn and soft/hard sign symbols are not mistaken for unmapped script
+  ---
+  duration_ms: 0.388948
+  type: 'test'
+  ...
+# Subtest: web app and packaged extension use identical reading and media implementations
+ok 73 - web app and packaged extension use identical reading and media implementations
+  ---
+  duration_ms: 0.782262
+  type: 'test'
+  ...
+1..73
+# tests 73
+# suites 0
+# pass 73
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 277.17723
+............                                                             [100%]
+12 passed in 5.42s
+PASS Context editor contains the exact selected source sentence
+PASS Known water sense offers only its matching asset
+PASS Image choice reaches the same account library
+PASS Saved illustration decodes with descriptive alt
+PASS Visible text contrast: water-context
+PASS Controls have accessible labels: water-context
+PASS Broken-image state preserves content and retry reloads the actual asset
+PASS Incorrect-image feedback persists without redisplaying the rejected image
+PASS Flag is persisted, not merely a success message
+PASS Explicit restore clears the relevant rejection
+PASS Remove deletes the saved association
+PASS Slow save reports newer unsaved edits accurately
+PASS Failed save retains edits and its explicit retry persists them
+PASS Financial bank has a distinct concept and bundled asset
+PASS Learner can correct a bank sense without changing the original source
+PASS Financial image is not reused for the manual river meaning
+PASS Manual meaning shows explicitly labelled choices, not an automatic match
+PASS Explicit replacement and removal leave no image for the ambiguous manual sense
+PASS Edited reading preview updates immediately and becomes confirmed only after save
+PASS Automatic suggestion cannot overwrite a correction without confirmation
+PASS Explicit replacement uses and persists the selected draft
+PASS Explicitly hidden reading remains hidden after reopening
+PASS Unavailable kanji reading is explicit; no fabricated Chinese-character reading is shown
+PASS Fresh UI instance reloads corrected reading and matching image from real SQLite
+PASS Visible text contrast: saved-Japanese-reading
+PASS Controls have accessible labels: saved-Japanese-reading
+PASS Missing asset leaves the word usable with a working removal path
+PASS Equivalent Arabic and English concepts use the same licensed asset
+PASS Visible text contrast: Arabic-context
+PASS Controls have accessible labels: Arabic-context
+PASS Context panel fits 768px
+PASS Visible text contrast: Arabic-768
+PASS Controls have accessible labels: Arabic-768
+PASS Context panel fits 390px
+PASS Visible text contrast: Arabic-390
+PASS Controls have accessible labels: Arabic-390
+PASS Context panel fits 320px
+PASS Visible text contrast: Arabic-320
+PASS Controls have accessible labels: Arabic-320
+PASS Context panel reflows at 200% CSS zoom
+PASS Rapid selections leave the latest selected word in the panel
+PASS No uncaught UI exceptions

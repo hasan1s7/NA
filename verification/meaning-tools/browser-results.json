@@ -1,0 +1,99 @@
+{
+  "passed": 42,
+  "checks": [
+    "Context editor contains the exact selected source sentence",
+    "Known water sense offers only its matching asset",
+    "Image choice reaches the same account library",
+    "Saved illustration decodes with descriptive alt",
+    "Visible text contrast: water-context",
+    "Controls have accessible labels: water-context",
+    "Broken-image state preserves content and retry reloads the actual asset",
+    "Incorrect-image feedback persists without redisplaying the rejected image",
+    "Flag is persisted, not merely a success message",
+    "Explicit restore clears the relevant rejection",
+    "Remove deletes the saved association",
+    "Slow save reports newer unsaved edits accurately",
+    "Failed save retains edits and its explicit retry persists them",
+    "Financial bank has a distinct concept and bundled asset",
+    "Learner can correct a bank sense without changing the original source",
+    "Financial image is not reused for the manual river meaning",
+    "Manual meaning shows explicitly labelled choices, not an automatic match",
+    "Explicit replacement and removal leave no image for the ambiguous manual sense",
+    "Edited reading preview updates immediately and becomes confirmed only after save",
+    "Automatic suggestion cannot overwrite a correction without confirmation",
+    "Explicit replacement uses and persists the selected draft",
+    "Explicitly hidden reading remains hidden after reopening",
+    "Unavailable kanji reading is explicit; no fabricated Chinese-character reading is shown",
+    "Fresh UI instance reloads corrected reading and matching image from real SQLite",
+    "Visible text contrast: saved-Japanese-reading",
+    "Controls have accessible labels: saved-Japanese-reading",
+    "Missing asset leaves the word usable with a working removal path",
+    "Equivalent Arabic and English concepts use the same licensed asset",
+    "Visible text contrast: Arabic-context",
+    "Controls have accessible labels: Arabic-context",
+    "Context panel fits 768px",
+    "Visible text contrast: Arabic-768",
+    "Controls have accessible labels: Arabic-768",
+    "Context panel fits 390px",
+    "Visible text contrast: Arabic-390",
+    "Controls have accessible labels: Arabic-390",
+    "Context panel fits 320px",
+    "Visible text contrast: Arabic-320",
+    "Controls have accessible labels: Arabic-320",
+    "Context panel reflows at 200% CSS zoom",
+    "Rapid selections leave the latest selected word in the panel",
+    "No uncaught UI exceptions"
+  ],
+  "failure": null,
+  "pageErrors": [],
+  "screenshots": [
+    "water-context-desktop.png",
+    "reader-water-desktop.png",
+    "bank-financial-desktop.png",
+    "bank-river-no-image.png",
+    "japanese-user-reading-desktop.png",
+    "arabic-context-desktop.png",
+    "arabic-context-phone.png",
+    "arabic-context-phone-200.png",
+    "arabic-reader-phone.png"
+  ],
+  "contrast": [
+    {
+      "screen": "water-context",
+      "checked": 25,
+      "failures": [],
+      "minimum": 4.81
+    },
+    {
+      "screen": "saved-Japanese-reading",
+      "checked": 25,
+      "failures": [],
+      "minimum": 4.81
+    },
+    {
+      "screen": "Arabic-context",
+      "checked": 24,
+      "failures": [],
+      "minimum": 4.81
+    },
+    {
+      "screen": "Arabic-768",
+      "checked": 26,
+      "failures": [],
+      "minimum": 4.95
+    },
+    {
+      "screen": "Arabic-390",
+      "checked": 24,
+      "failures": [],
+      "minimum": 4.95
+    },
+    {
+      "screen": "Arabic-320",
+      "checked": 21,
+      "failures": [],
+      "minimum": 4.95
+    }
+  ],
+  "boundary": "Shipping UI with explicit navigation/IndexedDB/transport fixtures and real\nFastAPI/SQLite. Passages are authored QA inputs, never actual learner records.\nNo native browser persistence, OS voice, audio, model or live image-provider claim.\n"
+}

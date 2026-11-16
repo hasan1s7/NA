@@ -1,0 +1,3494 @@
+{
+  "release": "1.17.0",
+  "build": "nabu-workspaces-1.17-20261115-r2",
+  "fixture": "Fictional coordinator, instructor and five learners; real loopback HTTP; no human outcomes.",
+  "passed": 19,
+  "checks": [
+    "Acceptance does not opt learners into departmental reporting",
+    "Reporting choice defaults off",
+    "Owner still cannot open an ungranted individual record",
+    "Named reviewer alone cannot open owner summary",
+    "Four opted-in learners release no cohort count",
+    "Five opt-ins release a coarse cohort band",
+    "Rubric-review support is explained without mastery",
+    "Summary omits learner identifiers and raw answers",
+    "Unsupported filtering cannot create a drilldown",
+    "A successful retry does not replace first-response evidence",
+    "Publishing a rubric does not silently revise support evidence",
+    "Explicit reassessments change the group support explanation",
+    "Original and corrected assessments both replay",
+    "Withdrawing alone removes eligibility from future summaries",
+    "Withdrawal does not revoke accepted individual review",
+    "Rejoining leaves reporting off and advances the choice revision",
+    "A stale opt-in cannot revive reporting after rejoin",
+    "The ordinary reader stays available",
+    "Institutional summary stays independent of unavailable council"
+  ],
+  "snapshots": {
+    "default_off": {
+      "schemaVersion": 1,
+      "policyVersion": "department-support-v1",
+      "status": "insufficient",
+      "minimumParticipants": 5,
+      "participantBand": null,
+      "denominator": "Current members who opted in and have at least one accepted assignment.",
+      "categories": [
+        {
+          "key": "correction_pending",
+          "label": "Correction requests need review",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "review_rubric",
+          "label": "First responses need rubric review",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "awaiting_response",
+          "label": "Some accepted tasks await evidence",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "assisted_evidence",
+          "label": "Matches include available or reported help",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "task_matches",
+          "label": "First responses match these task rubrics",
+          "status": "suppressed",
+          "band": null
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "insufficient_information",
+          "reason": "There is not enough releasable group evidence to select targeted support. Offer optional general help without inferring individual ability or participation."
+        }
+      ],
+      "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+      "learnerModelUpdated": false,
+      "conditionsVerified": false
+    },
+    "four_opted_in": {
+      "schemaVersion": 1,
+      "policyVersion": "department-support-v1",
+      "status": "insufficient",
+      "minimumParticipants": 5,
+      "participantBand": null,
+      "denominator": "Current members who opted in and have at least one accepted assignment.",
+      "categories": [
+        {
+          "key": "correction_pending",
+          "label": "Correction requests need review",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "review_rubric",
+          "label": "First responses need rubric review",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "awaiting_response",
+          "label": "Some accepted tasks await evidence",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "assisted_evidence",
+          "label": "Matches include available or reported help",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "task_matches",
+          "label": "First responses match these task rubrics",
+          "status": "suppressed",
+          "band": null
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "insufficient_information",
+          "reason": "There is not enough releasable group evidence to select targeted support. Offer optional general help without inferring individual ability or participation."
+        }
+      ],
+      "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+      "learnerModelUpdated": false,
+      "conditionsVerified": false
+    },
+    "five_nonmatches": {
+      "schemaVersion": 1,
+      "policyVersion": "department-support-v1",
+      "status": "available",
+      "minimumParticipants": 5,
+      "participantBand": {
+        "lower": 5,
+        "upper": 9,
+        "label": "5–9"
+      },
+      "denominator": "Current members who opted in and have at least one accepted assignment.",
+      "categories": [
+        {
+          "key": "correction_pending",
+          "label": "Correction requests need review",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "review_rubric",
+          "label": "First responses need rubric review",
+          "status": "released",
+          "band": {
+            "lower": 5,
+            "upper": 9,
+            "label": "5–9"
+          }
+        },
+        {
+          "key": "awaiting_response",
+          "label": "Some accepted tasks await evidence",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "assisted_evidence",
+          "label": "Matches include available or reported help",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "task_matches",
+          "label": "First responses match these task rubrics",
+          "status": "suppressed",
+          "band": null
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "review_rubrics",
+          "reason": "Review the authored rubric and acceptable alternatives before offering targeted practice; a non-match is not proof of inability."
+        }
+      ],
+      "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+      "learnerModelUpdated": false,
+      "conditionsVerified": false
+    },
+    "corrected_assisted_matches": {
+      "schemaVersion": 1,
+      "policyVersion": "department-support-v1",
+      "status": "available",
+      "minimumParticipants": 5,
+      "participantBand": {
+        "lower": 5,
+        "upper": 9,
+        "label": "5–9"
+      },
+      "denominator": "Current members who opted in and have at least one accepted assignment.",
+      "categories": [
+        {
+          "key": "correction_pending",
+          "label": "Correction requests need review",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "review_rubric",
+          "label": "First responses need rubric review",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "awaiting_response",
+          "label": "Some accepted tasks await evidence",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "assisted_evidence",
+          "label": "Matches include available or reported help",
+          "status": "released",
+          "band": {
+            "lower": 5,
+            "upper": 9,
+            "label": "5–9"
+          }
+        },
+        {
+          "key": "task_matches",
+          "label": "First responses match these task rubrics",
+          "status": "suppressed",
+          "band": null
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "offer_optional_unassisted_check",
+          "reason": "If useful and agreed, offer a later unassisted task. Source availability and self-reported help limit the interpretation of a match."
+        }
+      ],
+      "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+      "learnerModelUpdated": false,
+      "conditionsVerified": false
+    },
+    "one_withdraws": {
+      "schemaVersion": 1,
+      "policyVersion": "department-support-v1",
+      "status": "insufficient",
+      "minimumParticipants": 5,
+      "participantBand": null,
+      "denominator": "Current members who opted in and have at least one accepted assignment.",
+      "categories": [
+        {
+          "key": "correction_pending",
+          "label": "Correction requests need review",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "review_rubric",
+          "label": "First responses need rubric review",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "awaiting_response",
+          "label": "Some accepted tasks await evidence",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "assisted_evidence",
+          "label": "Matches include available or reported help",
+          "status": "suppressed",
+          "band": null
+        },
+        {
+          "key": "task_matches",
+          "label": "First responses match these task rubrics",
+          "status": "suppressed",
+          "band": null
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "insufficient_information",
+          "reason": "There is not enough releasable group evidence to select targeted support. Offer optional general help without inferring individual ability or participation."
+        }
+      ],
+      "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+      "learnerModelUpdated": false,
+      "conditionsVerified": false
+    }
+  },
+  "trace": [
+    {
+      "method": "POST",
+      "path": "/api/decision-tenants",
+      "status": 200,
+      "response": {
+        "id": "arabic_pilot",
+        "label": "Fictional Arabic pilot",
+        "role": "owner"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/members",
+      "status": 200,
+      "response": {
+        "userId": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+        "added": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/members",
+      "status": 200,
+      "response": {
+        "userId": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+        "added": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/members",
+      "status": 200,
+      "response": {
+        "userId": "a66791b0-3a8b-4d30-a19b-27e0cb3976d8",
+        "added": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/members",
+      "status": 200,
+      "response": {
+        "userId": "d6bc4293-5202-4520-885a-86e8e5db81f9",
+        "added": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/members",
+      "status": 200,
+      "response": {
+        "userId": "f55aa5b4-141e-41e9-80d4-cae4ec844f6a",
+        "added": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/members",
+      "status": 200,
+      "response": {
+        "userId": "915dae34-f091-40cb-a8b5-29508dfa6031",
+        "added": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/sources",
+      "status": 200,
+      "response": {
+        "source": {
+          "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "version": 1,
+          "title": "A fictional request",
+          "text": "خذي وقتك.",
+          "language": "ar",
+          "attribution": "Original fictional demo fixture",
+          "rights": "Original short fixture"
+        },
+        "sha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/tasks",
+      "status": 200,
+      "response": {
+        "task": {
+          "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "title": "Interpret the request",
+          "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "sourceVersion": 1,
+          "prompt": "Give a short English meaning.",
+          "mode": "recall",
+          "options": [],
+          "sourceVisible": true
+        },
+        "rubricVersion": 1
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/assignments",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+          "tenantId": "arabic_pilot",
+          "learnerId": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "offered",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963422,
+          "acceptedAt": null,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/assignments/351d2b5a-66d2-4a05-835e-ab5f93c9e22d/acceptance",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+          "tenantId": "arabic_pilot",
+          "learnerId": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963422,
+          "acceptedAt": 1794794963428,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts",
+      "status": 200,
+      "response": {
+        "acknowledgedId": "63d82b8f-0c47-4b91-8789-1c978f497b43",
+        "duplicate": false,
+        "record": {
+          "schemaVersion": 1,
+          "assignment": {
+            "id": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+            "tenantId": "arabic_pilot",
+            "learnerId": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+            "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "rubricVersion": 1,
+            "status": "accepted",
+            "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "createdAt": 1794794963422,
+            "acceptedAt": 1794794963428,
+            "objective": "Understand this particular request.",
+            "sharing": "responses",
+            "reviewers": [
+              {
+                "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "handle": "demo_instructor"
+              }
+            ],
+            "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+          },
+          "task": {
+            "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "mode": "recall",
+            "options": [],
+            "prompt": "Give a short English meaning.",
+            "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "sourceVersion": 1,
+            "sourceVisible": true,
+            "title": "Interpret the request"
+          },
+          "source": {
+            "attribution": "Original fictional demo fixture",
+            "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "language": "ar",
+            "rights": "Original short fixture",
+            "text": "خذي وقتك.",
+            "title": "A fictional request",
+            "version": 1
+          },
+          "attempts": [
+            {
+              "id": "63d82b8f-0c47-4b91-8789-1c978f497b43",
+              "observation": {
+                "assignmentId": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "choice": null,
+                "id": "63d82b8f-0c47-4b91-8789-1c978f497b43",
+                "occurredAt": 1794794963429,
+                "offline": false,
+                "response": "No rush",
+                "retryOf": null
+              },
+              "receivedAt": 1794794963434,
+              "assessments": [
+                {
+                  "assistance": {
+                    "hint": false,
+                    "other": false,
+                    "previousFeedback": false,
+                    "sourceAvailable": true,
+                    "sourceConsulted": false,
+                    "translation": false
+                  },
+                  "assisted": true,
+                  "conditionsVerified": false,
+                  "firstResponse": true,
+                  "interpretation": "Does not match this rubric; another valid answer may need review.",
+                  "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                  "mastery": null,
+                  "matched": false,
+                  "modality": "reading",
+                  "mode": "recall",
+                  "reason": "Initial assessment",
+                  "scorerVersion": "nabu-assignment-exact-v1",
+                  "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                  "sourceVersion": 1,
+                  "id": "14689bbe-721e-4163-8388-bf95b6b53e8b",
+                  "rubricVersion": 1,
+                  "createdAt": 1794794963434,
+                  "createdBy": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+                  "supersedes": null
+                }
+              ]
+            }
+          ],
+          "appeals": [],
+          "policy": {
+            "revision": 1,
+            "offlineResponses": false,
+            "externalAI": false,
+            "scorer": "nabu-assignment-exact-v1"
+          },
+          "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+          "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+          "canReview": false,
+          "rawResponsesVisible": true,
+          "directObservations": 1,
+          "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+          "rubrics": [
+            {
+              "tenant_id": "arabic_pilot",
+              "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+              "version": 1,
+              "payload": {
+                "acceptedAnswers": [
+                  "Take your time"
+                ],
+                "answerIndex": null,
+                "normalization": "nfc-casefold-space"
+              },
+              "reason": "Initial authored rubric",
+              "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+              "created_at": 1794794963416
+            }
+          ],
+          "decision": {
+            "policyVersion": "assignment-next-action-v1",
+            "action": "offer_review",
+            "assessmentId": "14689bbe-721e-4163-8388-bf95b6b53e8b",
+            "reason": "A non-match may reflect the answer or the rubric; offer review before inferring inability.",
+            "learnerModelUpdated": false
+          }
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/assignments",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "eae0a2ec-9470-4a54-a73f-f624acf3d246",
+          "tenantId": "arabic_pilot",
+          "learnerId": "a66791b0-3a8b-4d30-a19b-27e0cb3976d8",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "offered",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963440,
+          "acceptedAt": null,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/assignments/eae0a2ec-9470-4a54-a73f-f624acf3d246/acceptance",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "eae0a2ec-9470-4a54-a73f-f624acf3d246",
+          "tenantId": "arabic_pilot",
+          "learnerId": "a66791b0-3a8b-4d30-a19b-27e0cb3976d8",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963440,
+          "acceptedAt": 1794794963445,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts",
+      "status": 200,
+      "response": {
+        "acknowledgedId": "de36b812-c0ea-4a1d-b345-494a75bee163",
+        "duplicate": false,
+        "record": {
+          "schemaVersion": 1,
+          "assignment": {
+            "id": "eae0a2ec-9470-4a54-a73f-f624acf3d246",
+            "tenantId": "arabic_pilot",
+            "learnerId": "a66791b0-3a8b-4d30-a19b-27e0cb3976d8",
+            "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "rubricVersion": 1,
+            "status": "accepted",
+            "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "createdAt": 1794794963440,
+            "acceptedAt": 1794794963445,
+            "objective": "Understand this particular request.",
+            "sharing": "responses",
+            "reviewers": [
+              {
+                "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "handle": "demo_instructor"
+              }
+            ],
+            "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+          },
+          "task": {
+            "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "mode": "recall",
+            "options": [],
+            "prompt": "Give a short English meaning.",
+            "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "sourceVersion": 1,
+            "sourceVisible": true,
+            "title": "Interpret the request"
+          },
+          "source": {
+            "attribution": "Original fictional demo fixture",
+            "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "language": "ar",
+            "rights": "Original short fixture",
+            "text": "خذي وقتك.",
+            "title": "A fictional request",
+            "version": 1
+          },
+          "attempts": [
+            {
+              "id": "de36b812-c0ea-4a1d-b345-494a75bee163",
+              "observation": {
+                "assignmentId": "eae0a2ec-9470-4a54-a73f-f624acf3d246",
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "choice": null,
+                "id": "de36b812-c0ea-4a1d-b345-494a75bee163",
+                "occurredAt": 1794794963446,
+                "offline": false,
+                "response": "No rush",
+                "retryOf": null
+              },
+              "receivedAt": 1794794963450,
+              "assessments": [
+                {
+                  "assistance": {
+                    "hint": false,
+                    "other": false,
+                    "previousFeedback": false,
+                    "sourceAvailable": true,
+                    "sourceConsulted": false,
+                    "translation": false
+                  },
+                  "assisted": true,
+                  "conditionsVerified": false,
+                  "firstResponse": true,
+                  "interpretation": "Does not match this rubric; another valid answer may need review.",
+                  "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                  "mastery": null,
+                  "matched": false,
+                  "modality": "reading",
+                  "mode": "recall",
+                  "reason": "Initial assessment",
+                  "scorerVersion": "nabu-assignment-exact-v1",
+                  "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                  "sourceVersion": 1,
+                  "id": "94045c84-af72-4631-9fdb-a5ceeeef07d4",
+                  "rubricVersion": 1,
+                  "createdAt": 1794794963450,
+                  "createdBy": "a66791b0-3a8b-4d30-a19b-27e0cb3976d8",
+                  "supersedes": null
+                }
+              ]
+            }
+          ],
+          "appeals": [],
+          "policy": {
+            "revision": 1,
+            "offlineResponses": false,
+            "externalAI": false,
+            "scorer": "nabu-assignment-exact-v1"
+          },
+          "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+          "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+          "canReview": false,
+          "rawResponsesVisible": true,
+          "directObservations": 1,
+          "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+          "rubrics": [
+            {
+              "tenant_id": "arabic_pilot",
+              "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+              "version": 1,
+              "payload": {
+                "acceptedAnswers": [
+                  "Take your time"
+                ],
+                "answerIndex": null,
+                "normalization": "nfc-casefold-space"
+              },
+              "reason": "Initial authored rubric",
+              "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+              "created_at": 1794794963416
+            }
+          ],
+          "decision": {
+            "policyVersion": "assignment-next-action-v1",
+            "action": "offer_review",
+            "assessmentId": "94045c84-af72-4631-9fdb-a5ceeeef07d4",
+            "reason": "A non-match may reflect the answer or the rubric; offer review before inferring inability.",
+            "learnerModelUpdated": false
+          }
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/assignments",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "2115a73a-2e92-422f-9af1-ea3e39ed2a34",
+          "tenantId": "arabic_pilot",
+          "learnerId": "d6bc4293-5202-4520-885a-86e8e5db81f9",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "offered",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963456,
+          "acceptedAt": null,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/assignments/2115a73a-2e92-422f-9af1-ea3e39ed2a34/acceptance",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "2115a73a-2e92-422f-9af1-ea3e39ed2a34",
+          "tenantId": "arabic_pilot",
+          "learnerId": "d6bc4293-5202-4520-885a-86e8e5db81f9",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963456,
+          "acceptedAt": 1794794963462,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts",
+      "status": 200,
+      "response": {
+        "acknowledgedId": "ff5b7917-4d96-49d7-9e0b-464fe075277c",
+        "duplicate": false,
+        "record": {
+          "schemaVersion": 1,
+          "assignment": {
+            "id": "2115a73a-2e92-422f-9af1-ea3e39ed2a34",
+            "tenantId": "arabic_pilot",
+            "learnerId": "d6bc4293-5202-4520-885a-86e8e5db81f9",
+            "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "rubricVersion": 1,
+            "status": "accepted",
+            "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "createdAt": 1794794963456,
+            "acceptedAt": 1794794963462,
+            "objective": "Understand this particular request.",
+            "sharing": "responses",
+            "reviewers": [
+              {
+                "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "handle": "demo_instructor"
+              }
+            ],
+            "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+          },
+          "task": {
+            "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "mode": "recall",
+            "options": [],
+            "prompt": "Give a short English meaning.",
+            "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "sourceVersion": 1,
+            "sourceVisible": true,
+            "title": "Interpret the request"
+          },
+          "source": {
+            "attribution": "Original fictional demo fixture",
+            "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "language": "ar",
+            "rights": "Original short fixture",
+            "text": "خذي وقتك.",
+            "title": "A fictional request",
+            "version": 1
+          },
+          "attempts": [
+            {
+              "id": "ff5b7917-4d96-49d7-9e0b-464fe075277c",
+              "observation": {
+                "assignmentId": "2115a73a-2e92-422f-9af1-ea3e39ed2a34",
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "choice": null,
+                "id": "ff5b7917-4d96-49d7-9e0b-464fe075277c",
+                "occurredAt": 1794794963463,
+                "offline": false,
+                "response": "No rush",
+                "retryOf": null
+              },
+              "receivedAt": 1794794963467,
+              "assessments": [
+                {
+                  "assistance": {
+                    "hint": false,
+                    "other": false,
+                    "previousFeedback": false,
+                    "sourceAvailable": true,
+                    "sourceConsulted": false,
+                    "translation": false
+                  },
+                  "assisted": true,
+                  "conditionsVerified": false,
+                  "firstResponse": true,
+                  "interpretation": "Does not match this rubric; another valid answer may need review.",
+                  "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                  "mastery": null,
+                  "matched": false,
+                  "modality": "reading",
+                  "mode": "recall",
+                  "reason": "Initial assessment",
+                  "scorerVersion": "nabu-assignment-exact-v1",
+                  "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                  "sourceVersion": 1,
+                  "id": "013f6c85-958b-47d3-8f46-839eb32b229f",
+                  "rubricVersion": 1,
+                  "createdAt": 1794794963467,
+                  "createdBy": "d6bc4293-5202-4520-885a-86e8e5db81f9",
+                  "supersedes": null
+                }
+              ]
+            }
+          ],
+          "appeals": [],
+          "policy": {
+            "revision": 1,
+            "offlineResponses": false,
+            "externalAI": false,
+            "scorer": "nabu-assignment-exact-v1"
+          },
+          "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+          "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+          "canReview": false,
+          "rawResponsesVisible": true,
+          "directObservations": 1,
+          "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+          "rubrics": [
+            {
+              "tenant_id": "arabic_pilot",
+              "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+              "version": 1,
+              "payload": {
+                "acceptedAnswers": [
+                  "Take your time"
+                ],
+                "answerIndex": null,
+                "normalization": "nfc-casefold-space"
+              },
+              "reason": "Initial authored rubric",
+              "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+              "created_at": 1794794963416
+            }
+          ],
+          "decision": {
+            "policyVersion": "assignment-next-action-v1",
+            "action": "offer_review",
+            "assessmentId": "013f6c85-958b-47d3-8f46-839eb32b229f",
+            "reason": "A non-match may reflect the answer or the rubric; offer review before inferring inability.",
+            "learnerModelUpdated": false
+          }
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/assignments",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "e1678ca3-4fe5-4df1-9b91-333bae89dabb",
+          "tenantId": "arabic_pilot",
+          "learnerId": "f55aa5b4-141e-41e9-80d4-cae4ec844f6a",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "offered",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963473,
+          "acceptedAt": null,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/assignments/e1678ca3-4fe5-4df1-9b91-333bae89dabb/acceptance",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "e1678ca3-4fe5-4df1-9b91-333bae89dabb",
+          "tenantId": "arabic_pilot",
+          "learnerId": "f55aa5b4-141e-41e9-80d4-cae4ec844f6a",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963473,
+          "acceptedAt": 1794794963478,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts",
+      "status": 200,
+      "response": {
+        "acknowledgedId": "6c53661c-155a-48ab-8441-9d018293bf83",
+        "duplicate": false,
+        "record": {
+          "schemaVersion": 1,
+          "assignment": {
+            "id": "e1678ca3-4fe5-4df1-9b91-333bae89dabb",
+            "tenantId": "arabic_pilot",
+            "learnerId": "f55aa5b4-141e-41e9-80d4-cae4ec844f6a",
+            "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "rubricVersion": 1,
+            "status": "accepted",
+            "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "createdAt": 1794794963473,
+            "acceptedAt": 1794794963478,
+            "objective": "Understand this particular request.",
+            "sharing": "responses",
+            "reviewers": [
+              {
+                "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "handle": "demo_instructor"
+              }
+            ],
+            "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+          },
+          "task": {
+            "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "mode": "recall",
+            "options": [],
+            "prompt": "Give a short English meaning.",
+            "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "sourceVersion": 1,
+            "sourceVisible": true,
+            "title": "Interpret the request"
+          },
+          "source": {
+            "attribution": "Original fictional demo fixture",
+            "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "language": "ar",
+            "rights": "Original short fixture",
+            "text": "خذي وقتك.",
+            "title": "A fictional request",
+            "version": 1
+          },
+          "attempts": [
+            {
+              "id": "6c53661c-155a-48ab-8441-9d018293bf83",
+              "observation": {
+                "assignmentId": "e1678ca3-4fe5-4df1-9b91-333bae89dabb",
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "choice": null,
+                "id": "6c53661c-155a-48ab-8441-9d018293bf83",
+                "occurredAt": 1794794963480,
+                "offline": false,
+                "response": "No rush",
+                "retryOf": null
+              },
+              "receivedAt": 1794794963484,
+              "assessments": [
+                {
+                  "assistance": {
+                    "hint": false,
+                    "other": false,
+                    "previousFeedback": false,
+                    "sourceAvailable": true,
+                    "sourceConsulted": false,
+                    "translation": false
+                  },
+                  "assisted": true,
+                  "conditionsVerified": false,
+                  "firstResponse": true,
+                  "interpretation": "Does not match this rubric; another valid answer may need review.",
+                  "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                  "mastery": null,
+                  "matched": false,
+                  "modality": "reading",
+                  "mode": "recall",
+                  "reason": "Initial assessment",
+                  "scorerVersion": "nabu-assignment-exact-v1",
+                  "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                  "sourceVersion": 1,
+                  "id": "ca9968db-4914-43e5-acac-7e6f6a9224eb",
+                  "rubricVersion": 1,
+                  "createdAt": 1794794963484,
+                  "createdBy": "f55aa5b4-141e-41e9-80d4-cae4ec844f6a",
+                  "supersedes": null
+                }
+              ]
+            }
+          ],
+          "appeals": [],
+          "policy": {
+            "revision": 1,
+            "offlineResponses": false,
+            "externalAI": false,
+            "scorer": "nabu-assignment-exact-v1"
+          },
+          "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+          "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+          "canReview": false,
+          "rawResponsesVisible": true,
+          "directObservations": 1,
+          "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+          "rubrics": [
+            {
+              "tenant_id": "arabic_pilot",
+              "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+              "version": 1,
+              "payload": {
+                "acceptedAnswers": [
+                  "Take your time"
+                ],
+                "answerIndex": null,
+                "normalization": "nfc-casefold-space"
+              },
+              "reason": "Initial authored rubric",
+              "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+              "created_at": 1794794963416
+            }
+          ],
+          "decision": {
+            "policyVersion": "assignment-next-action-v1",
+            "action": "offer_review",
+            "assessmentId": "ca9968db-4914-43e5-acac-7e6f6a9224eb",
+            "reason": "A non-match may reflect the answer or the rubric; offer review before inferring inability.",
+            "learnerModelUpdated": false
+          }
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/assignments",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "8f19ea95-3439-4963-b20b-e08a82a0d288",
+          "tenantId": "arabic_pilot",
+          "learnerId": "915dae34-f091-40cb-a8b5-29508dfa6031",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "offered",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963489,
+          "acceptedAt": null,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/assignments/8f19ea95-3439-4963-b20b-e08a82a0d288/acceptance",
+      "status": 200,
+      "response": {
+        "assignment": {
+          "id": "8f19ea95-3439-4963-b20b-e08a82a0d288",
+          "tenantId": "arabic_pilot",
+          "learnerId": "915dae34-f091-40cb-a8b5-29508dfa6031",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963489,
+          "acceptedAt": 1794794963494,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts",
+      "status": 200,
+      "response": {
+        "acknowledgedId": "dc79be35-3466-4632-b177-aa2154ecbd08",
+        "duplicate": false,
+        "record": {
+          "schemaVersion": 1,
+          "assignment": {
+            "id": "8f19ea95-3439-4963-b20b-e08a82a0d288",
+            "tenantId": "arabic_pilot",
+            "learnerId": "915dae34-f091-40cb-a8b5-29508dfa6031",
+            "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "rubricVersion": 1,
+            "status": "accepted",
+            "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "createdAt": 1794794963489,
+            "acceptedAt": 1794794963494,
+            "objective": "Understand this particular request.",
+            "sharing": "responses",
+            "reviewers": [
+              {
+                "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "handle": "demo_instructor"
+              }
+            ],
+            "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+          },
+          "task": {
+            "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "mode": "recall",
+            "options": [],
+            "prompt": "Give a short English meaning.",
+            "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "sourceVersion": 1,
+            "sourceVisible": true,
+            "title": "Interpret the request"
+          },
+          "source": {
+            "attribution": "Original fictional demo fixture",
+            "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "language": "ar",
+            "rights": "Original short fixture",
+            "text": "خذي وقتك.",
+            "title": "A fictional request",
+            "version": 1
+          },
+          "attempts": [
+            {
+              "id": "dc79be35-3466-4632-b177-aa2154ecbd08",
+              "observation": {
+                "assignmentId": "8f19ea95-3439-4963-b20b-e08a82a0d288",
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "choice": null,
+                "id": "dc79be35-3466-4632-b177-aa2154ecbd08",
+                "occurredAt": 1794794963496,
+                "offline": false,
+                "response": "No rush",
+                "retryOf": null
+              },
+              "receivedAt": 1794794963500,
+              "assessments": [
+                {
+                  "assistance": {
+                    "hint": false,
+                    "other": false,
+                    "previousFeedback": false,
+                    "sourceAvailable": true,
+                    "sourceConsulted": false,
+                    "translation": false
+                  },
+                  "assisted": true,
+                  "conditionsVerified": false,
+                  "firstResponse": true,
+                  "interpretation": "Does not match this rubric; another valid answer may need review.",
+                  "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                  "mastery": null,
+                  "matched": false,
+                  "modality": "reading",
+                  "mode": "recall",
+                  "reason": "Initial assessment",
+                  "scorerVersion": "nabu-assignment-exact-v1",
+                  "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                  "sourceVersion": 1,
+                  "id": "4ac91d1d-db98-4847-8819-4a280ead6c6b",
+                  "rubricVersion": 1,
+                  "createdAt": 1794794963500,
+                  "createdBy": "915dae34-f091-40cb-a8b5-29508dfa6031",
+                  "supersedes": null
+                }
+              ]
+            }
+          ],
+          "appeals": [],
+          "policy": {
+            "revision": 1,
+            "offlineResponses": false,
+            "externalAI": false,
+            "scorer": "nabu-assignment-exact-v1"
+          },
+          "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+          "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+          "canReview": false,
+          "rawResponsesVisible": true,
+          "directObservations": 1,
+          "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+          "rubrics": [
+            {
+              "tenant_id": "arabic_pilot",
+              "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+              "version": 1,
+              "payload": {
+                "acceptedAnswers": [
+                  "Take your time"
+                ],
+                "answerIndex": null,
+                "normalization": "nfc-casefold-space"
+              },
+              "reason": "Initial authored rubric",
+              "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+              "created_at": 1794794963416
+            }
+          ],
+          "decision": {
+            "policyVersion": "assignment-next-action-v1",
+            "action": "offer_review",
+            "assessmentId": "4ac91d1d-db98-4847-8819-4a280ead6c6b",
+            "reason": "A non-match may reflect the answer or the rubric; offer review before inferring inability.",
+            "learnerModelUpdated": false
+          }
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/department-support",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "status": "insufficient",
+        "minimumParticipants": 5,
+        "participantBand": null,
+        "denominator": "Current members who opted in and have at least one accepted assignment.",
+        "categories": [
+          {
+            "key": "correction_pending",
+            "label": "Correction requests need review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "review_rubric",
+            "label": "First responses need rubric review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "awaiting_response",
+            "label": "Some accepted tasks await evidence",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "assisted_evidence",
+            "label": "Matches include available or reported help",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "task_matches",
+            "label": "First responses match these task rubrics",
+            "status": "suppressed",
+            "band": null
+          }
+        ],
+        "recommendations": [
+          {
+            "action": "insufficient_information",
+            "reason": "There is not enough releasable group evidence to select targeted support. Offer optional general help without inferring individual ability or participation."
+          }
+        ],
+        "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+        "learnerModelUpdated": false,
+        "conditionsVerified": false
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/support-consent",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "revision": 1,
+        "enabled": false,
+        "terms": "Optional: include your past and future accepted assignment results in this workspace in coarse departmental support summaries visible to the workspace owner. These summaries include task-specific match, assistance, missing-response and correction-request categories; they exclude your raw answers, private reading, notes, vocabulary and intentions. At least five opted-in current learners with accepted assignments are required, and small categories are suppressed. This is not anonymity or differential privacy: repeated summaries and other knowledge may reveal information. You may withdraw from future summaries without leaving the workspace; withdrawal cannot erase summaries already seen or exported. This choice does not change the named reviewers or terms of your individual assignments. Choice changes are recorded with your account identifier in the owner-visible audit log; participation is not anonymous."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/assignments/351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+      "status": 403,
+      "response": {
+        "detail": "Only this learner and the named current reviewers can read this record."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/department-support",
+      "status": 403,
+      "response": {
+        "detail": "Current workspace membership with owner authority is required."
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/support-consent",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "revision": 2,
+        "enabled": true,
+        "terms": "Optional: include your past and future accepted assignment results in this workspace in coarse departmental support summaries visible to the workspace owner. These summaries include task-specific match, assistance, missing-response and correction-request categories; they exclude your raw answers, private reading, notes, vocabulary and intentions. At least five opted-in current learners with accepted assignments are required, and small categories are suppressed. This is not anonymity or differential privacy: repeated summaries and other knowledge may reveal information. You may withdraw from future summaries without leaving the workspace; withdrawal cannot erase summaries already seen or exported. This choice does not change the named reviewers or terms of your individual assignments. Choice changes are recorded with your account identifier in the owner-visible audit log; participation is not anonymous."
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/support-consent",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "revision": 2,
+        "enabled": true,
+        "terms": "Optional: include your past and future accepted assignment results in this workspace in coarse departmental support summaries visible to the workspace owner. These summaries include task-specific match, assistance, missing-response and correction-request categories; they exclude your raw answers, private reading, notes, vocabulary and intentions. At least five opted-in current learners with accepted assignments are required, and small categories are suppressed. This is not anonymity or differential privacy: repeated summaries and other knowledge may reveal information. You may withdraw from future summaries without leaving the workspace; withdrawal cannot erase summaries already seen or exported. This choice does not change the named reviewers or terms of your individual assignments. Choice changes are recorded with your account identifier in the owner-visible audit log; participation is not anonymous."
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/support-consent",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "revision": 2,
+        "enabled": true,
+        "terms": "Optional: include your past and future accepted assignment results in this workspace in coarse departmental support summaries visible to the workspace owner. These summaries include task-specific match, assistance, missing-response and correction-request categories; they exclude your raw answers, private reading, notes, vocabulary and intentions. At least five opted-in current learners with accepted assignments are required, and small categories are suppressed. This is not anonymity or differential privacy: repeated summaries and other knowledge may reveal information. You may withdraw from future summaries without leaving the workspace; withdrawal cannot erase summaries already seen or exported. This choice does not change the named reviewers or terms of your individual assignments. Choice changes are recorded with your account identifier in the owner-visible audit log; participation is not anonymous."
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/support-consent",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "revision": 2,
+        "enabled": true,
+        "terms": "Optional: include your past and future accepted assignment results in this workspace in coarse departmental support summaries visible to the workspace owner. These summaries include task-specific match, assistance, missing-response and correction-request categories; they exclude your raw answers, private reading, notes, vocabulary and intentions. At least five opted-in current learners with accepted assignments are required, and small categories are suppressed. This is not anonymity or differential privacy: repeated summaries and other knowledge may reveal information. You may withdraw from future summaries without leaving the workspace; withdrawal cannot erase summaries already seen or exported. This choice does not change the named reviewers or terms of your individual assignments. Choice changes are recorded with your account identifier in the owner-visible audit log; participation is not anonymous."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/department-support",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "status": "insufficient",
+        "minimumParticipants": 5,
+        "participantBand": null,
+        "denominator": "Current members who opted in and have at least one accepted assignment.",
+        "categories": [
+          {
+            "key": "correction_pending",
+            "label": "Correction requests need review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "review_rubric",
+            "label": "First responses need rubric review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "awaiting_response",
+            "label": "Some accepted tasks await evidence",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "assisted_evidence",
+            "label": "Matches include available or reported help",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "task_matches",
+            "label": "First responses match these task rubrics",
+            "status": "suppressed",
+            "band": null
+          }
+        ],
+        "recommendations": [
+          {
+            "action": "insufficient_information",
+            "reason": "There is not enough releasable group evidence to select targeted support. Offer optional general help without inferring individual ability or participation."
+          }
+        ],
+        "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+        "learnerModelUpdated": false,
+        "conditionsVerified": false
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/support-consent",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "revision": 2,
+        "enabled": true,
+        "terms": "Optional: include your past and future accepted assignment results in this workspace in coarse departmental support summaries visible to the workspace owner. These summaries include task-specific match, assistance, missing-response and correction-request categories; they exclude your raw answers, private reading, notes, vocabulary and intentions. At least five opted-in current learners with accepted assignments are required, and small categories are suppressed. This is not anonymity or differential privacy: repeated summaries and other knowledge may reveal information. You may withdraw from future summaries without leaving the workspace; withdrawal cannot erase summaries already seen or exported. This choice does not change the named reviewers or terms of your individual assignments. Choice changes are recorded with your account identifier in the owner-visible audit log; participation is not anonymous."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/department-support",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "status": "available",
+        "minimumParticipants": 5,
+        "participantBand": {
+          "lower": 5,
+          "upper": 9,
+          "label": "5–9"
+        },
+        "denominator": "Current members who opted in and have at least one accepted assignment.",
+        "categories": [
+          {
+            "key": "correction_pending",
+            "label": "Correction requests need review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "review_rubric",
+            "label": "First responses need rubric review",
+            "status": "released",
+            "band": {
+              "lower": 5,
+              "upper": 9,
+              "label": "5–9"
+            }
+          },
+          {
+            "key": "awaiting_response",
+            "label": "Some accepted tasks await evidence",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "assisted_evidence",
+            "label": "Matches include available or reported help",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "task_matches",
+            "label": "First responses match these task rubrics",
+            "status": "suppressed",
+            "band": null
+          }
+        ],
+        "recommendations": [
+          {
+            "action": "review_rubrics",
+            "reason": "Review the authored rubric and acceptable alternatives before offering targeted practice; a non-match is not proof of inability."
+          }
+        ],
+        "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+        "learnerModelUpdated": false,
+        "conditionsVerified": false
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/department-support?learnerId=44d6d377-08df-4a66-a554-0bd8c05abdbe",
+      "status": 422,
+      "response": {
+        "detail": "Department support is whole-workspace only. Filters and drilldown are not supported."
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts",
+      "status": 200,
+      "response": {
+        "acknowledgedId": "d95fad5f-9ece-4380-835d-d25a00edea09",
+        "duplicate": false,
+        "record": {
+          "schemaVersion": 1,
+          "assignment": {
+            "id": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+            "tenantId": "arabic_pilot",
+            "learnerId": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+            "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "rubricVersion": 1,
+            "status": "accepted",
+            "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "createdAt": 1794794963422,
+            "acceptedAt": 1794794963428,
+            "objective": "Understand this particular request.",
+            "sharing": "responses",
+            "reviewers": [
+              {
+                "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "handle": "demo_instructor"
+              }
+            ],
+            "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+          },
+          "task": {
+            "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "mode": "recall",
+            "options": [],
+            "prompt": "Give a short English meaning.",
+            "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "sourceVersion": 1,
+            "sourceVisible": true,
+            "title": "Interpret the request"
+          },
+          "source": {
+            "attribution": "Original fictional demo fixture",
+            "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "language": "ar",
+            "rights": "Original short fixture",
+            "text": "خذي وقتك.",
+            "title": "A fictional request",
+            "version": 1
+          },
+          "attempts": [
+            {
+              "id": "63d82b8f-0c47-4b91-8789-1c978f497b43",
+              "observation": {
+                "assignmentId": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "choice": null,
+                "id": "63d82b8f-0c47-4b91-8789-1c978f497b43",
+                "occurredAt": 1794794963429,
+                "offline": false,
+                "response": "No rush",
+                "retryOf": null
+              },
+              "receivedAt": 1794794963434,
+              "assessments": [
+                {
+                  "assistance": {
+                    "hint": false,
+                    "other": false,
+                    "previousFeedback": false,
+                    "sourceAvailable": true,
+                    "sourceConsulted": false,
+                    "translation": false
+                  },
+                  "assisted": true,
+                  "conditionsVerified": false,
+                  "firstResponse": true,
+                  "interpretation": "Does not match this rubric; another valid answer may need review.",
+                  "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                  "mastery": null,
+                  "matched": false,
+                  "modality": "reading",
+                  "mode": "recall",
+                  "reason": "Initial assessment",
+                  "scorerVersion": "nabu-assignment-exact-v1",
+                  "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                  "sourceVersion": 1,
+                  "id": "14689bbe-721e-4163-8388-bf95b6b53e8b",
+                  "rubricVersion": 1,
+                  "createdAt": 1794794963434,
+                  "createdBy": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+                  "supersedes": null
+                }
+              ]
+            },
+            {
+              "id": "d95fad5f-9ece-4380-835d-d25a00edea09",
+              "observation": {
+                "assignmentId": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "choice": null,
+                "id": "d95fad5f-9ece-4380-835d-d25a00edea09",
+                "occurredAt": 1794794963559,
+                "offline": false,
+                "response": "Take your time",
+                "retryOf": "63d82b8f-0c47-4b91-8789-1c978f497b43"
+              },
+              "receivedAt": 1794794963563,
+              "assessments": [
+                {
+                  "assistance": {
+                    "hint": false,
+                    "other": false,
+                    "previousFeedback": true,
+                    "sourceAvailable": true,
+                    "sourceConsulted": false,
+                    "translation": false
+                  },
+                  "assisted": true,
+                  "conditionsVerified": false,
+                  "firstResponse": false,
+                  "interpretation": "Matches this rubric.",
+                  "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                  "mastery": null,
+                  "matched": true,
+                  "modality": "reading",
+                  "mode": "recall",
+                  "reason": "Initial assessment",
+                  "scorerVersion": "nabu-assignment-exact-v1",
+                  "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                  "sourceVersion": 1,
+                  "id": "fa74ba71-d411-475f-a60e-a8b14301db77",
+                  "rubricVersion": 1,
+                  "createdAt": 1794794963563,
+                  "createdBy": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+                  "supersedes": null
+                }
+              ]
+            }
+          ],
+          "appeals": [],
+          "policy": {
+            "revision": 1,
+            "offlineResponses": false,
+            "externalAI": false,
+            "scorer": "nabu-assignment-exact-v1"
+          },
+          "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+          "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+          "canReview": false,
+          "rawResponsesVisible": true,
+          "directObservations": 1,
+          "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+          "rubrics": [
+            {
+              "tenant_id": "arabic_pilot",
+              "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+              "version": 1,
+              "payload": {
+                "acceptedAnswers": [
+                  "Take your time"
+                ],
+                "answerIndex": null,
+                "normalization": "nfc-casefold-space"
+              },
+              "reason": "Initial authored rubric",
+              "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+              "created_at": 1794794963416
+            }
+          ],
+          "decision": {
+            "policyVersion": "assignment-next-action-v1",
+            "action": "continue",
+            "assessmentId": "fa74ba71-d411-475f-a60e-a8b14301db77",
+            "reason": "Continue after this task-specific match.",
+            "learnerModelUpdated": false
+          }
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/department-support",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "status": "available",
+        "minimumParticipants": 5,
+        "participantBand": {
+          "lower": 5,
+          "upper": 9,
+          "label": "5–9"
+        },
+        "denominator": "Current members who opted in and have at least one accepted assignment.",
+        "categories": [
+          {
+            "key": "correction_pending",
+            "label": "Correction requests need review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "review_rubric",
+            "label": "First responses need rubric review",
+            "status": "released",
+            "band": {
+              "lower": 5,
+              "upper": 9,
+              "label": "5–9"
+            }
+          },
+          {
+            "key": "awaiting_response",
+            "label": "Some accepted tasks await evidence",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "assisted_evidence",
+            "label": "Matches include available or reported help",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "task_matches",
+            "label": "First responses match these task rubrics",
+            "status": "suppressed",
+            "band": null
+          }
+        ],
+        "recommendations": [
+          {
+            "action": "review_rubrics",
+            "reason": "Review the authored rubric and acceptable alternatives before offering targeted practice; a non-match is not proof of inability."
+          }
+        ],
+        "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+        "learnerModelUpdated": false,
+        "conditionsVerified": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/tasks/22c2b0da-c6b7-4a3f-9325-e140e22434f3/rubrics",
+      "status": 200,
+      "response": {
+        "version": 2,
+        "notice": "Existing results are unchanged until a named reviewer explicitly reassesses them."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/department-support",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "status": "available",
+        "minimumParticipants": 5,
+        "participantBand": {
+          "lower": 5,
+          "upper": 9,
+          "label": "5–9"
+        },
+        "denominator": "Current members who opted in and have at least one accepted assignment.",
+        "categories": [
+          {
+            "key": "correction_pending",
+            "label": "Correction requests need review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "review_rubric",
+            "label": "First responses need rubric review",
+            "status": "released",
+            "band": {
+              "lower": 5,
+              "upper": 9,
+              "label": "5–9"
+            }
+          },
+          {
+            "key": "awaiting_response",
+            "label": "Some accepted tasks await evidence",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "assisted_evidence",
+            "label": "Matches include available or reported help",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "task_matches",
+            "label": "First responses match these task rubrics",
+            "status": "suppressed",
+            "band": null
+          }
+        ],
+        "recommendations": [
+          {
+            "action": "review_rubrics",
+            "reason": "Review the authored rubric and acceptable alternatives before offering targeted practice; a non-match is not proof of inability."
+          }
+        ],
+        "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+        "learnerModelUpdated": false,
+        "conditionsVerified": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts/63d82b8f-0c47-4b91-8789-1c978f497b43/reassess",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "assignment": {
+          "id": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+          "tenantId": "arabic_pilot",
+          "learnerId": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963422,
+          "acceptedAt": 1794794963428,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        },
+        "task": {
+          "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "mode": "recall",
+          "options": [],
+          "prompt": "Give a short English meaning.",
+          "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "sourceVersion": 1,
+          "sourceVisible": true,
+          "title": "Interpret the request"
+        },
+        "source": {
+          "attribution": "Original fictional demo fixture",
+          "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "language": "ar",
+          "rights": "Original short fixture",
+          "text": "خذي وقتك.",
+          "title": "A fictional request",
+          "version": 1
+        },
+        "attempts": [
+          {
+            "id": "63d82b8f-0c47-4b91-8789-1c978f497b43",
+            "observation": {
+              "assignmentId": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+              "assistance": {
+                "hint": false,
+                "other": false,
+                "sourceConsulted": false,
+                "translation": false
+              },
+              "choice": null,
+              "id": "63d82b8f-0c47-4b91-8789-1c978f497b43",
+              "occurredAt": 1794794963429,
+              "offline": false,
+              "response": "No rush",
+              "retryOf": null
+            },
+            "receivedAt": 1794794963434,
+            "assessments": [
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Does not match this rubric; another valid answer may need review.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": false,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Initial assessment",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "14689bbe-721e-4163-8388-bf95b6b53e8b",
+                "rubricVersion": 1,
+                "createdAt": 1794794963434,
+                "createdBy": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+                "supersedes": null
+              },
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Matches this rubric.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": true,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Apply the reviewed rubric to the original response.",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "064df5dd-5ff5-441d-bb62-0b0ba93fc84a",
+                "rubricVersion": 2,
+                "createdAt": 1794794963586,
+                "createdBy": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "supersedes": "14689bbe-721e-4163-8388-bf95b6b53e8b"
+              }
+            ]
+          },
+          {
+            "id": "d95fad5f-9ece-4380-835d-d25a00edea09",
+            "observation": {
+              "assignmentId": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+              "assistance": {
+                "hint": false,
+                "other": false,
+                "sourceConsulted": false,
+                "translation": false
+              },
+              "choice": null,
+              "id": "d95fad5f-9ece-4380-835d-d25a00edea09",
+              "occurredAt": 1794794963559,
+              "offline": false,
+              "response": "Take your time",
+              "retryOf": "63d82b8f-0c47-4b91-8789-1c978f497b43"
+            },
+            "receivedAt": 1794794963563,
+            "assessments": [
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": true,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": false,
+                "interpretation": "Matches this rubric.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": true,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Initial assessment",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "fa74ba71-d411-475f-a60e-a8b14301db77",
+                "rubricVersion": 1,
+                "createdAt": 1794794963563,
+                "createdBy": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+                "supersedes": null
+              }
+            ]
+          }
+        ],
+        "appeals": [],
+        "policy": {
+          "revision": 1,
+          "offlineResponses": false,
+          "externalAI": false,
+          "scorer": "nabu-assignment-exact-v1"
+        },
+        "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+        "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+        "canReview": true,
+        "rawResponsesVisible": true,
+        "directObservations": 1,
+        "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+        "rubrics": [
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 1,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Initial authored rubric",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963416
+          },
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 2,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time",
+                "No rush"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Include the appropriate paraphrase for this fictional request.",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963576
+          }
+        ],
+        "decision": {
+          "policyVersion": "assignment-next-action-v1",
+          "action": "continue",
+          "assessmentId": "fa74ba71-d411-475f-a60e-a8b14301db77",
+          "reason": "Continue after this task-specific match.",
+          "learnerModelUpdated": false
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts/de36b812-c0ea-4a1d-b345-494a75bee163/reassess",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "assignment": {
+          "id": "eae0a2ec-9470-4a54-a73f-f624acf3d246",
+          "tenantId": "arabic_pilot",
+          "learnerId": "a66791b0-3a8b-4d30-a19b-27e0cb3976d8",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963440,
+          "acceptedAt": 1794794963445,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        },
+        "task": {
+          "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "mode": "recall",
+          "options": [],
+          "prompt": "Give a short English meaning.",
+          "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "sourceVersion": 1,
+          "sourceVisible": true,
+          "title": "Interpret the request"
+        },
+        "source": {
+          "attribution": "Original fictional demo fixture",
+          "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "language": "ar",
+          "rights": "Original short fixture",
+          "text": "خذي وقتك.",
+          "title": "A fictional request",
+          "version": 1
+        },
+        "attempts": [
+          {
+            "id": "de36b812-c0ea-4a1d-b345-494a75bee163",
+            "observation": {
+              "assignmentId": "eae0a2ec-9470-4a54-a73f-f624acf3d246",
+              "assistance": {
+                "hint": false,
+                "other": false,
+                "sourceConsulted": false,
+                "translation": false
+              },
+              "choice": null,
+              "id": "de36b812-c0ea-4a1d-b345-494a75bee163",
+              "occurredAt": 1794794963446,
+              "offline": false,
+              "response": "No rush",
+              "retryOf": null
+            },
+            "receivedAt": 1794794963450,
+            "assessments": [
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Does not match this rubric; another valid answer may need review.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": false,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Initial assessment",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "94045c84-af72-4631-9fdb-a5ceeeef07d4",
+                "rubricVersion": 1,
+                "createdAt": 1794794963450,
+                "createdBy": "a66791b0-3a8b-4d30-a19b-27e0cb3976d8",
+                "supersedes": null
+              },
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Matches this rubric.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": true,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Apply the reviewed rubric to the original response.",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "c6f300ed-e720-4b4e-8540-8e20680362d8",
+                "rubricVersion": 2,
+                "createdAt": 1794794963593,
+                "createdBy": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "supersedes": "94045c84-af72-4631-9fdb-a5ceeeef07d4"
+              }
+            ]
+          }
+        ],
+        "appeals": [],
+        "policy": {
+          "revision": 1,
+          "offlineResponses": false,
+          "externalAI": false,
+          "scorer": "nabu-assignment-exact-v1"
+        },
+        "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+        "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+        "canReview": true,
+        "rawResponsesVisible": true,
+        "directObservations": 1,
+        "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+        "rubrics": [
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 1,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Initial authored rubric",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963416
+          },
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 2,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time",
+                "No rush"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Include the appropriate paraphrase for this fictional request.",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963576
+          }
+        ],
+        "decision": {
+          "policyVersion": "assignment-next-action-v1",
+          "action": "continue",
+          "assessmentId": "c6f300ed-e720-4b4e-8540-8e20680362d8",
+          "reason": "Continue after this task-specific match.",
+          "learnerModelUpdated": false
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts/ff5b7917-4d96-49d7-9e0b-464fe075277c/reassess",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "assignment": {
+          "id": "2115a73a-2e92-422f-9af1-ea3e39ed2a34",
+          "tenantId": "arabic_pilot",
+          "learnerId": "d6bc4293-5202-4520-885a-86e8e5db81f9",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963456,
+          "acceptedAt": 1794794963462,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        },
+        "task": {
+          "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "mode": "recall",
+          "options": [],
+          "prompt": "Give a short English meaning.",
+          "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "sourceVersion": 1,
+          "sourceVisible": true,
+          "title": "Interpret the request"
+        },
+        "source": {
+          "attribution": "Original fictional demo fixture",
+          "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "language": "ar",
+          "rights": "Original short fixture",
+          "text": "خذي وقتك.",
+          "title": "A fictional request",
+          "version": 1
+        },
+        "attempts": [
+          {
+            "id": "ff5b7917-4d96-49d7-9e0b-464fe075277c",
+            "observation": {
+              "assignmentId": "2115a73a-2e92-422f-9af1-ea3e39ed2a34",
+              "assistance": {
+                "hint": false,
+                "other": false,
+                "sourceConsulted": false,
+                "translation": false
+              },
+              "choice": null,
+              "id": "ff5b7917-4d96-49d7-9e0b-464fe075277c",
+              "occurredAt": 1794794963463,
+              "offline": false,
+              "response": "No rush",
+              "retryOf": null
+            },
+            "receivedAt": 1794794963467,
+            "assessments": [
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Does not match this rubric; another valid answer may need review.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": false,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Initial assessment",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "013f6c85-958b-47d3-8f46-839eb32b229f",
+                "rubricVersion": 1,
+                "createdAt": 1794794963467,
+                "createdBy": "d6bc4293-5202-4520-885a-86e8e5db81f9",
+                "supersedes": null
+              },
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Matches this rubric.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": true,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Apply the reviewed rubric to the original response.",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "67b94824-6375-49d7-b870-7523f43f0a55",
+                "rubricVersion": 2,
+                "createdAt": 1794794963599,
+                "createdBy": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "supersedes": "013f6c85-958b-47d3-8f46-839eb32b229f"
+              }
+            ]
+          }
+        ],
+        "appeals": [],
+        "policy": {
+          "revision": 1,
+          "offlineResponses": false,
+          "externalAI": false,
+          "scorer": "nabu-assignment-exact-v1"
+        },
+        "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+        "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+        "canReview": true,
+        "rawResponsesVisible": true,
+        "directObservations": 1,
+        "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+        "rubrics": [
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 1,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Initial authored rubric",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963416
+          },
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 2,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time",
+                "No rush"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Include the appropriate paraphrase for this fictional request.",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963576
+          }
+        ],
+        "decision": {
+          "policyVersion": "assignment-next-action-v1",
+          "action": "continue",
+          "assessmentId": "67b94824-6375-49d7-b870-7523f43f0a55",
+          "reason": "Continue after this task-specific match.",
+          "learnerModelUpdated": false
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts/6c53661c-155a-48ab-8441-9d018293bf83/reassess",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "assignment": {
+          "id": "e1678ca3-4fe5-4df1-9b91-333bae89dabb",
+          "tenantId": "arabic_pilot",
+          "learnerId": "f55aa5b4-141e-41e9-80d4-cae4ec844f6a",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963473,
+          "acceptedAt": 1794794963478,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        },
+        "task": {
+          "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "mode": "recall",
+          "options": [],
+          "prompt": "Give a short English meaning.",
+          "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "sourceVersion": 1,
+          "sourceVisible": true,
+          "title": "Interpret the request"
+        },
+        "source": {
+          "attribution": "Original fictional demo fixture",
+          "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "language": "ar",
+          "rights": "Original short fixture",
+          "text": "خذي وقتك.",
+          "title": "A fictional request",
+          "version": 1
+        },
+        "attempts": [
+          {
+            "id": "6c53661c-155a-48ab-8441-9d018293bf83",
+            "observation": {
+              "assignmentId": "e1678ca3-4fe5-4df1-9b91-333bae89dabb",
+              "assistance": {
+                "hint": false,
+                "other": false,
+                "sourceConsulted": false,
+                "translation": false
+              },
+              "choice": null,
+              "id": "6c53661c-155a-48ab-8441-9d018293bf83",
+              "occurredAt": 1794794963480,
+              "offline": false,
+              "response": "No rush",
+              "retryOf": null
+            },
+            "receivedAt": 1794794963484,
+            "assessments": [
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Does not match this rubric; another valid answer may need review.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": false,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Initial assessment",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "ca9968db-4914-43e5-acac-7e6f6a9224eb",
+                "rubricVersion": 1,
+                "createdAt": 1794794963484,
+                "createdBy": "f55aa5b4-141e-41e9-80d4-cae4ec844f6a",
+                "supersedes": null
+              },
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Matches this rubric.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": true,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Apply the reviewed rubric to the original response.",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "2a4c3a28-1feb-4cd7-a0b5-3673da58bd29",
+                "rubricVersion": 2,
+                "createdAt": 1794794963605,
+                "createdBy": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "supersedes": "ca9968db-4914-43e5-acac-7e6f6a9224eb"
+              }
+            ]
+          }
+        ],
+        "appeals": [],
+        "policy": {
+          "revision": 1,
+          "offlineResponses": false,
+          "externalAI": false,
+          "scorer": "nabu-assignment-exact-v1"
+        },
+        "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+        "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+        "canReview": true,
+        "rawResponsesVisible": true,
+        "directObservations": 1,
+        "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+        "rubrics": [
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 1,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Initial authored rubric",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963416
+          },
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 2,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time",
+                "No rush"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Include the appropriate paraphrase for this fictional request.",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963576
+          }
+        ],
+        "decision": {
+          "policyVersion": "assignment-next-action-v1",
+          "action": "continue",
+          "assessmentId": "2a4c3a28-1feb-4cd7-a0b5-3673da58bd29",
+          "reason": "Continue after this task-specific match.",
+          "learnerModelUpdated": false
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/attempts/dc79be35-3466-4632-b177-aa2154ecbd08/reassess",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "assignment": {
+          "id": "8f19ea95-3439-4963-b20b-e08a82a0d288",
+          "tenantId": "arabic_pilot",
+          "learnerId": "915dae34-f091-40cb-a8b5-29508dfa6031",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963489,
+          "acceptedAt": 1794794963494,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        },
+        "task": {
+          "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "mode": "recall",
+          "options": [],
+          "prompt": "Give a short English meaning.",
+          "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "sourceVersion": 1,
+          "sourceVisible": true,
+          "title": "Interpret the request"
+        },
+        "source": {
+          "attribution": "Original fictional demo fixture",
+          "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "language": "ar",
+          "rights": "Original short fixture",
+          "text": "خذي وقتك.",
+          "title": "A fictional request",
+          "version": 1
+        },
+        "attempts": [
+          {
+            "id": "dc79be35-3466-4632-b177-aa2154ecbd08",
+            "observation": {
+              "assignmentId": "8f19ea95-3439-4963-b20b-e08a82a0d288",
+              "assistance": {
+                "hint": false,
+                "other": false,
+                "sourceConsulted": false,
+                "translation": false
+              },
+              "choice": null,
+              "id": "dc79be35-3466-4632-b177-aa2154ecbd08",
+              "occurredAt": 1794794963496,
+              "offline": false,
+              "response": "No rush",
+              "retryOf": null
+            },
+            "receivedAt": 1794794963500,
+            "assessments": [
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Does not match this rubric; another valid answer may need review.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": false,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Initial assessment",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "4ac91d1d-db98-4847-8819-4a280ead6c6b",
+                "rubricVersion": 1,
+                "createdAt": 1794794963500,
+                "createdBy": "915dae34-f091-40cb-a8b5-29508dfa6031",
+                "supersedes": null
+              },
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Matches this rubric.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": true,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Apply the reviewed rubric to the original response.",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "7b1f264c-3c6a-481f-b5a8-78291096d4d4",
+                "rubricVersion": 2,
+                "createdAt": 1794794963611,
+                "createdBy": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "supersedes": "4ac91d1d-db98-4847-8819-4a280ead6c6b"
+              }
+            ]
+          }
+        ],
+        "appeals": [],
+        "policy": {
+          "revision": 1,
+          "offlineResponses": false,
+          "externalAI": false,
+          "scorer": "nabu-assignment-exact-v1"
+        },
+        "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+        "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+        "canReview": true,
+        "rawResponsesVisible": true,
+        "directObservations": 1,
+        "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+        "rubrics": [
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 1,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Initial authored rubric",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963416
+          },
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 2,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time",
+                "No rush"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Include the appropriate paraphrase for this fictional request.",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963576
+          }
+        ],
+        "decision": {
+          "policyVersion": "assignment-next-action-v1",
+          "action": "continue",
+          "assessmentId": "7b1f264c-3c6a-481f-b5a8-78291096d4d4",
+          "reason": "Continue after this task-specific match.",
+          "learnerModelUpdated": false
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/department-support",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "status": "available",
+        "minimumParticipants": 5,
+        "participantBand": {
+          "lower": 5,
+          "upper": 9,
+          "label": "5–9"
+        },
+        "denominator": "Current members who opted in and have at least one accepted assignment.",
+        "categories": [
+          {
+            "key": "correction_pending",
+            "label": "Correction requests need review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "review_rubric",
+            "label": "First responses need rubric review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "awaiting_response",
+            "label": "Some accepted tasks await evidence",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "assisted_evidence",
+            "label": "Matches include available or reported help",
+            "status": "released",
+            "band": {
+              "lower": 5,
+              "upper": 9,
+              "label": "5–9"
+            }
+          },
+          {
+            "key": "task_matches",
+            "label": "First responses match these task rubrics",
+            "status": "suppressed",
+            "band": null
+          }
+        ],
+        "recommendations": [
+          {
+            "action": "offer_optional_unassisted_check",
+            "reason": "If useful and agreed, offer a later unassisted task. Source availability and self-reported help limit the interpretation of a match."
+          }
+        ],
+        "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+        "learnerModelUpdated": false,
+        "conditionsVerified": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/assignments/eae0a2ec-9470-4a54-a73f-f624acf3d246/replay",
+      "status": 200,
+      "response": {
+        "record": {
+          "schemaVersion": 1,
+          "assignment": {
+            "id": "eae0a2ec-9470-4a54-a73f-f624acf3d246",
+            "tenantId": "arabic_pilot",
+            "learnerId": "a66791b0-3a8b-4d30-a19b-27e0cb3976d8",
+            "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "rubricVersion": 1,
+            "status": "accepted",
+            "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "createdAt": 1794794963440,
+            "acceptedAt": 1794794963445,
+            "objective": "Understand this particular request.",
+            "sharing": "responses",
+            "reviewers": [
+              {
+                "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "handle": "demo_instructor"
+              }
+            ],
+            "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+          },
+          "task": {
+            "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "mode": "recall",
+            "options": [],
+            "prompt": "Give a short English meaning.",
+            "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "sourceVersion": 1,
+            "sourceVisible": true,
+            "title": "Interpret the request"
+          },
+          "source": {
+            "attribution": "Original fictional demo fixture",
+            "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+            "language": "ar",
+            "rights": "Original short fixture",
+            "text": "خذي وقتك.",
+            "title": "A fictional request",
+            "version": 1
+          },
+          "attempts": [
+            {
+              "id": "de36b812-c0ea-4a1d-b345-494a75bee163",
+              "observation": {
+                "assignmentId": "eae0a2ec-9470-4a54-a73f-f624acf3d246",
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "choice": null,
+                "id": "de36b812-c0ea-4a1d-b345-494a75bee163",
+                "occurredAt": 1794794963446,
+                "offline": false,
+                "response": "No rush",
+                "retryOf": null
+              },
+              "receivedAt": 1794794963450,
+              "assessments": [
+                {
+                  "assistance": {
+                    "hint": false,
+                    "other": false,
+                    "previousFeedback": false,
+                    "sourceAvailable": true,
+                    "sourceConsulted": false,
+                    "translation": false
+                  },
+                  "assisted": true,
+                  "conditionsVerified": false,
+                  "firstResponse": true,
+                  "interpretation": "Does not match this rubric; another valid answer may need review.",
+                  "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                  "mastery": null,
+                  "matched": false,
+                  "modality": "reading",
+                  "mode": "recall",
+                  "reason": "Initial assessment",
+                  "scorerVersion": "nabu-assignment-exact-v1",
+                  "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                  "sourceVersion": 1,
+                  "id": "94045c84-af72-4631-9fdb-a5ceeeef07d4",
+                  "rubricVersion": 1,
+                  "createdAt": 1794794963450,
+                  "createdBy": "a66791b0-3a8b-4d30-a19b-27e0cb3976d8",
+                  "supersedes": null
+                },
+                {
+                  "assistance": {
+                    "hint": false,
+                    "other": false,
+                    "previousFeedback": false,
+                    "sourceAvailable": true,
+                    "sourceConsulted": false,
+                    "translation": false
+                  },
+                  "assisted": true,
+                  "conditionsVerified": false,
+                  "firstResponse": true,
+                  "interpretation": "Matches this rubric.",
+                  "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                  "mastery": null,
+                  "matched": true,
+                  "modality": "reading",
+                  "mode": "recall",
+                  "reason": "Apply the reviewed rubric to the original response.",
+                  "scorerVersion": "nabu-assignment-exact-v1",
+                  "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                  "sourceVersion": 1,
+                  "id": "c6f300ed-e720-4b4e-8540-8e20680362d8",
+                  "rubricVersion": 2,
+                  "createdAt": 1794794963593,
+                  "createdBy": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                  "supersedes": "94045c84-af72-4631-9fdb-a5ceeeef07d4"
+                }
+              ]
+            }
+          ],
+          "appeals": [],
+          "policy": {
+            "revision": 1,
+            "offlineResponses": false,
+            "externalAI": false,
+            "scorer": "nabu-assignment-exact-v1"
+          },
+          "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+          "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+          "canReview": true,
+          "rawResponsesVisible": true,
+          "directObservations": 1,
+          "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+          "rubrics": [
+            {
+              "tenant_id": "arabic_pilot",
+              "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+              "version": 1,
+              "payload": {
+                "acceptedAnswers": [
+                  "Take your time"
+                ],
+                "answerIndex": null,
+                "normalization": "nfc-casefold-space"
+              },
+              "reason": "Initial authored rubric",
+              "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+              "created_at": 1794794963416
+            },
+            {
+              "tenant_id": "arabic_pilot",
+              "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+              "version": 2,
+              "payload": {
+                "acceptedAnswers": [
+                  "Take your time",
+                  "No rush"
+                ],
+                "answerIndex": null,
+                "normalization": "nfc-casefold-space"
+              },
+              "reason": "Include the appropriate paraphrase for this fictional request.",
+              "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+              "created_at": 1794794963576
+            }
+          ],
+          "decision": {
+            "policyVersion": "assignment-next-action-v1",
+            "action": "continue",
+            "assessmentId": "c6f300ed-e720-4b4e-8540-8e20680362d8",
+            "reason": "Continue after this task-specific match.",
+            "learnerModelUpdated": false
+          }
+        },
+        "checks": [
+          {
+            "assessmentId": "94045c84-af72-4631-9fdb-a5ceeeef07d4",
+            "matches": true,
+            "scorerVersion": "nabu-assignment-exact-v1"
+          },
+          {
+            "assessmentId": "c6f300ed-e720-4b4e-8540-8e20680362d8",
+            "matches": true,
+            "scorerVersion": "nabu-assignment-exact-v1"
+          }
+        ],
+        "allMatch": true,
+        "assessmentCount": 2,
+        "notice": "Replay checks this stored scorer contract; it does not independently validate the rubric or the learner model."
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/support-consent",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "revision": 3,
+        "enabled": false,
+        "terms": "Optional: include your past and future accepted assignment results in this workspace in coarse departmental support summaries visible to the workspace owner. These summaries include task-specific match, assistance, missing-response and correction-request categories; they exclude your raw answers, private reading, notes, vocabulary and intentions. At least five opted-in current learners with accepted assignments are required, and small categories are suppressed. This is not anonymity or differential privacy: repeated summaries and other knowledge may reveal information. You may withdraw from future summaries without leaving the workspace; withdrawal cannot erase summaries already seen or exported. This choice does not change the named reviewers or terms of your individual assignments. Choice changes are recorded with your account identifier in the owner-visible audit log; participation is not anonymous."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/department-support",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "status": "insufficient",
+        "minimumParticipants": 5,
+        "participantBand": null,
+        "denominator": "Current members who opted in and have at least one accepted assignment.",
+        "categories": [
+          {
+            "key": "correction_pending",
+            "label": "Correction requests need review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "review_rubric",
+            "label": "First responses need rubric review",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "awaiting_response",
+            "label": "Some accepted tasks await evidence",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "assisted_evidence",
+            "label": "Matches include available or reported help",
+            "status": "suppressed",
+            "band": null
+          },
+          {
+            "key": "task_matches",
+            "label": "First responses match these task rubrics",
+            "status": "suppressed",
+            "band": null
+          }
+        ],
+        "recommendations": [
+          {
+            "action": "insufficient_information",
+            "reason": "There is not enough releasable group evidence to select targeted support. Offer optional general help without inferring individual ability or participation."
+          }
+        ],
+        "notice": "Descriptive assignment support only; not mastery, proficiency, a Bayesian estimate or a learning-gain measure. Each eligible learner contributes to one priority category. Only first responses and their latest assessments are used for match/assistance evidence; retries do not add learners. Bands and small-group suppression are not anonymity or differential privacy. Repeated summaries and other knowledge may reveal information. No raw answers, learner identifiers or private learning history are returned.",
+        "learnerModelUpdated": false,
+        "conditionsVerified": false
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/assignments/351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "assignment": {
+          "id": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+          "tenantId": "arabic_pilot",
+          "learnerId": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+          "taskId": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "rubricVersion": 1,
+          "status": "accepted",
+          "createdBy": "26ddea41-f6b0-4814-9f2b-615d42505438",
+          "createdAt": 1794794963422,
+          "acceptedAt": 1794794963428,
+          "objective": "Understand this particular request.",
+          "sharing": "responses",
+          "reviewers": [
+            {
+              "id": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+              "handle": "demo_instructor"
+            }
+          ],
+          "terms": "The named reviewers can see results and your submitted answers and correction requests. Private reading, notes, vocabulary and intentions are outside this assignment."
+        },
+        "task": {
+          "id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+          "mode": "recall",
+          "options": [],
+          "prompt": "Give a short English meaning.",
+          "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "sourceVersion": 1,
+          "sourceVisible": true,
+          "title": "Interpret the request"
+        },
+        "source": {
+          "attribution": "Original fictional demo fixture",
+          "id": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+          "language": "ar",
+          "rights": "Original short fixture",
+          "text": "خذي وقتك.",
+          "title": "A fictional request",
+          "version": 1
+        },
+        "attempts": [
+          {
+            "id": "63d82b8f-0c47-4b91-8789-1c978f497b43",
+            "observation": {
+              "assignmentId": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+              "assistance": {
+                "hint": false,
+                "other": false,
+                "sourceConsulted": false,
+                "translation": false
+              },
+              "choice": null,
+              "id": "63d82b8f-0c47-4b91-8789-1c978f497b43",
+              "occurredAt": 1794794963429,
+              "offline": false,
+              "response": "No rush",
+              "retryOf": null
+            },
+            "receivedAt": 1794794963434,
+            "assessments": [
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Does not match this rubric; another valid answer may need review.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": false,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Initial assessment",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "14689bbe-721e-4163-8388-bf95b6b53e8b",
+                "rubricVersion": 1,
+                "createdAt": 1794794963434,
+                "createdBy": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+                "supersedes": null
+              },
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": false,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": true,
+                "interpretation": "Matches this rubric.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": true,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Apply the reviewed rubric to the original response.",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "064df5dd-5ff5-441d-bb62-0b0ba93fc84a",
+                "rubricVersion": 2,
+                "createdAt": 1794794963586,
+                "createdBy": "5bb1b24e-97c3-4622-a384-b7caa860219a",
+                "supersedes": "14689bbe-721e-4163-8388-bf95b6b53e8b"
+              }
+            ]
+          },
+          {
+            "id": "d95fad5f-9ece-4380-835d-d25a00edea09",
+            "observation": {
+              "assignmentId": "351d2b5a-66d2-4a05-835e-ab5f93c9e22d",
+              "assistance": {
+                "hint": false,
+                "other": false,
+                "sourceConsulted": false,
+                "translation": false
+              },
+              "choice": null,
+              "id": "d95fad5f-9ece-4380-835d-d25a00edea09",
+              "occurredAt": 1794794963559,
+              "offline": false,
+              "response": "Take your time",
+              "retryOf": "63d82b8f-0c47-4b91-8789-1c978f497b43"
+            },
+            "receivedAt": 1794794963563,
+            "assessments": [
+              {
+                "assistance": {
+                  "hint": false,
+                  "other": false,
+                  "previousFeedback": true,
+                  "sourceAvailable": true,
+                  "sourceConsulted": false,
+                  "translation": false
+                },
+                "assisted": true,
+                "conditionsVerified": false,
+                "firstResponse": false,
+                "interpretation": "Matches this rubric.",
+                "limits": "Exact authored rubric. Assistance is partly self-reported. No proctoring, proficiency certification, or learning-gain estimate.",
+                "mastery": null,
+                "matched": true,
+                "modality": "reading",
+                "mode": "recall",
+                "reason": "Initial assessment",
+                "scorerVersion": "nabu-assignment-exact-v1",
+                "sourceId": "59ad9cb4-402c-4509-ae61-9563f6d74a86",
+                "sourceVersion": 1,
+                "id": "fa74ba71-d411-475f-a60e-a8b14301db77",
+                "rubricVersion": 1,
+                "createdAt": 1794794963563,
+                "createdBy": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+                "supersedes": null
+              }
+            ]
+          }
+        ],
+        "appeals": [],
+        "policy": {
+          "revision": 1,
+          "offlineResponses": false,
+          "externalAI": false,
+          "scorer": "nabu-assignment-exact-v1"
+        },
+        "sourceSha256": "43c1233ccc80c3ba8fe371149b2b9b0d577f12e9a11b58252ca4963478183e5f",
+        "taskSha256": "f27a390e8959926717e4fbeddce640c954c6075dc11825ce67441b5511f8f277",
+        "canReview": true,
+        "rawResponsesVisible": true,
+        "directObservations": 1,
+        "claim": "Task-specific rubric results only. Retries are retained and never increase the first-response count; statistical independence is not established.",
+        "rubrics": [
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 1,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Initial authored rubric",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963416
+          },
+          {
+            "tenant_id": "arabic_pilot",
+            "task_id": "22c2b0da-c6b7-4a3f-9325-e140e22434f3",
+            "version": 2,
+            "payload": {
+              "acceptedAnswers": [
+                "Take your time",
+                "No rush"
+              ],
+              "answerIndex": null,
+              "normalization": "nfc-casefold-space"
+            },
+            "reason": "Include the appropriate paraphrase for this fictional request.",
+            "created_by": "26ddea41-f6b0-4814-9f2b-615d42505438",
+            "created_at": 1794794963576
+          }
+        ],
+        "decision": {
+          "policyVersion": "assignment-next-action-v1",
+          "action": "continue",
+          "assessmentId": "fa74ba71-d411-475f-a60e-a8b14301db77",
+          "reason": "Continue after this task-specific match.",
+          "learnerModelUpdated": false
+        }
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/workspaces/arabic_pilot/members/44d6d377-08df-4a66-a554-0bd8c05abdbe",
+      "status": 200,
+      "response": {
+        "revoked": true,
+        "notice": "Server access revoked. Previously downloaded or copied data cannot be remotely erased."
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspaces/arabic_pilot/members",
+      "status": 200,
+      "response": {
+        "userId": "44d6d377-08df-4a66-a554-0bd8c05abdbe",
+        "added": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspaces/arabic_pilot/support-consent",
+      "status": 200,
+      "response": {
+        "schemaVersion": 1,
+        "policyVersion": "department-support-v1",
+        "revision": 4,
+        "enabled": false,
+        "terms": "Optional: include your past and future accepted assignment results in this workspace in coarse departmental support summaries visible to the workspace owner. These summaries include task-specific match, assistance, missing-response and correction-request categories; they exclude your raw answers, private reading, notes, vocabulary and intentions. At least five opted-in current learners with accepted assignments are required, and small categories are suppressed. This is not anonymity or differential privacy: repeated summaries and other knowledge may reveal information. You may withdraw from future summaries without leaving the workspace; withdrawal cannot erase summaries already seen or exported. This choice does not change the named reviewers or terms of your individual assignments. Choice changes are recorded with your account identifier in the owner-visible audit log; participation is not anonymous."
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspaces/arabic_pilot/support-consent",
+      "status": 409,
+      "response": {
+        "detail": "Your reporting choice changed. Reload before saving."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/read",
+      "status": 200,
+      "response": {
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 1928553
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/council",
+      "status": 503,
+      "response": {
+        "detail": "Council dialogue needs an authorized conversational AI provider and credential. This release has translation and speech adapters only. Lookup, saving and notes remain available."
+      }
+    }
+  ]
+}

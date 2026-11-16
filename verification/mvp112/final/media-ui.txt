@@ -1,0 +1,21 @@
+PASS Words route selected in shipping router
+PASS Show meaning in context opens a real dictionary/context panel
+PASS Missing context produces visible instruction, not silent click
+PASS Transliteration show, use and hide controls change actual state
+PASS Context, note, reading and image persist in existing local store
+PASS Clip art image actually decodes
+PASS Device TTS invokes utterance with selected text (voice fixture)
+PASS Save failure keeps editable note and retry enabled
+PASS Retry saves the retained edit
+PASS Context dialog fits mobile width
+PASS Denied microphone has a visible error and retry
+PASS Record and stop create an audio preview and stop all tracks (media fixture)
+PASS Missing model disables transcription with explicit setup instructions
+PASS Edited transcript enters existing translator without auto-submitting
+PASS Account change clears retained recording and draft
+PASS Authenticated transcription response fills editable transcript (model stub)
+PASS Transcript correction survives transfer to translator
+PASS Connection UI creates real account-bound credential
+PASS Extension capture appears in existing library with private source, timestamp and note
+PASS Revoke UI invalidates actual token
+PASS No uncaught application errors
