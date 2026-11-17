@@ -2,7 +2,9 @@
 
 Read or resume content → select a word or phrase → understand it in context → listen when available → save → continue.
 
-**Release:** 1.17.0. **Build:** `nabu-pages-1.17-20261116-r3`.
+**Release:** 1.17.0. **Build:** `nabu-pages-1.17-20261117-support-cycle-r1`.
+
+**Support-aware retrieval:** optional checks now distinguish recognition, meaning recall, form recall and contextual production under the cues actually available before each answer. Open **Read/Explore → Optional learning tools → What stays available without help?**, or use the matching Library/Review panel. Existing media retain their authored tasks and source versions; the French dialogue provides a correction/replay walkthrough. Run `npm run demo:support` for the deterministic scenario. See [design, assumptions and runnable examples](docs/SUPPORT_CYCLE.md) and [verification](docs/SUPPORT_CYCLE_VERIFICATION.md). Parameters remain provisional; supported success does not establish independent ability or prove learning.
 
 **Overnight build r2:** optional learner consent and a coarse departmental support summary, plus corrected history/export behavior. See `docs/RELEASE_NOTES_1.17_OVERNIGHT.md` and `docs/VERIFICATION_OVERNIGHT.md` for current scope and evidence.
 
