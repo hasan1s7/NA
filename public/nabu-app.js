@@ -6,6 +6,7 @@ import * as Explore from './nabu-explore-ui.js';
 import * as IntentUI from './nabu-intent-ui.js';
 import * as NextStepUI from './nabu-next-step-ui.js';
 import * as LearnerUI from './nabu-learner-ui.js';
+import * as SupportUI from './nabu-support-ui.js';
 import * as X from './nabu-content.js';
 import * as T from './nabu-transliteration.js';
 import * as U from './nabu-reading-ui.js';
@@ -57,7 +58,7 @@ const state = {activityCount:0,activityKnown:false,reader:{text:'',title:'',draf
 };
 let toastTimer, renderedReviewRevision, refreshTimer, pendingSpeech, renderedReaderTokens=null;
 let readerReturnFocus=null, readerSelection=null;
-let nextSteps=null,learner=null;
+let nextSteps=null,learner=null,supportCycle=null;
 const deviceSpeaker=M.createDeviceSpeaker({onMessage:message=>toast(message,'',null,true)});
 const speaker=S.createSpeaker({loadAudio:requestSpeech,onMessage:message=>toast(message,'',null,true)});
 // Cross-tab notifications are optional; a privacy setting must not stop startup.
@@ -112,9 +113,9 @@ function render() {
  const expanded=openDisclosures(main);
  renderNav();document.body.dataset.view=state.view;
  // Passive saves and lookups must never replace the learner's document or move focus.
- if(state.view==='reader' && !state.reader.editing && $('#reader-text') && renderedReaderTokens===state.reader.tokens){nextSteps?.refresh();learner?.refresh();updateOutput();updateReaderSelection();return;}
+ if(state.view==='reader' && !state.reader.editing && $('#reader-text') && renderedReaderTokens===state.reader.tokens){nextSteps?.refresh();learner?.refresh();supportCycle?.refresh();updateOutput();updateReaderSelection();return;}
  parkWordPanel();
- main.innerHTML=({explore:()=>explore.render(),translate:renderTranslate,reader:renderReader,graph:renderGraph,library:renderLibrary,review:renderFocusedReview,exchange:renderSocial,settings:renderSettings}[state.view])()+(['explore','reader'].includes(state.view)?'<details class="reading-tools" data-disclosure-key="reading-tools"><summary>Optional learning tools · intentions, next steps & evidence</summary>'+intents.render()+nextSteps.render()+(learner?.render()||'')+'</details>':'');
+ main.innerHTML=({explore:()=>explore.render(),translate:renderTranslate,reader:renderReader,graph:renderGraph,library:renderLibrary,review:renderFocusedReview,exchange:renderSocial,settings:renderSettings}[state.view])()+(['explore','reader'].includes(state.view)?'<details class="reading-tools" data-disclosure-key="reading-tools"><summary>Optional learning tools · intentions, next steps & evidence</summary>'+intents.render()+nextSteps.render()+(learner?.render()||'')+(supportCycle?.render()||'')+'</details>':['library','review'].includes(state.view)?supportCycle?.render()||'':'');
  renderedReaderTokens=state.view==='reader'?state.reader.tokens:null;
  restoreDisclosures(main,expanded);
  if(state.view==='reader'){updateReaderSelection();placeWordPanel();mountReaderMedia();queueReaderSession();}
@@ -1026,6 +1027,11 @@ function nextStepSource(){
 }
 nextSteps=NextStepUI.installNextSteps({state,DB,C,E,actions,api,$,intents,explore,getSource:nextStepSource,showModal,closeModal});
 learner=LearnerUI.installLearnerSupport({state,C,E,actions,$,explore,intents,showModal,closeModal,download,stopSpeech:()=>{deviceSpeaker.stop();speaker.stop();}});
+supportCycle=SupportUI.installSupportCycle({state,C,E,actions,$,explore,intents,showModal,closeModal,download,
+ stopSpeech:()=>{deviceSpeaker.stop();speaker.stop();window.speechSynthesis?.cancel?.();},
+ readerExposesForm:task=>(main.innerText||main.textContent||'').includes(task.savedSource||task.source),
+ currentMediaRef:()=>state.view==='reader'&&explore.active()?{id:explore.active().id,version:explore.active().version}:null,
+ savePassage:async task=>{await DB.addCards([{front:task.savedSource||task.source,back:task.meaning,sourceLang:task.language,targetLang:'en',context:task.source,deck:'Saved media',learningMode:'reference',note:task.provenance,tags:['support-cycle']}]);await changed(false);}});
 W.install({actions,state,C,DB,G,E,$,showModal,closeModal,modalError,toast,api,loadData,render,navigate,speak,openAuth,invalidateTranslation,readTranscript:(text,language)=>{state.translation.sourceLang=language;if(state.translation.targetLang===language)state.translation.targetLang=language==='en'?'es':'en';state.reader={text,draft:text,title:'',titleDraft:'',tokens:readingTokens(text,language),selectedIndex:-1,lookup:false,panelOpen:false,editing:false,example:false,syntaxHistory:{}};invalidateTranslation(true);navigate('reader');}});
 let syncRenderTimer;
 

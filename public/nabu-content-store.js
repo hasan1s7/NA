@@ -21,7 +21,7 @@ export function createContentStore({getMeta,setMeta,uid,now=()=>Date.now(),locks
  const emit=()=>onChange({owner,status,message,pending:pending.length});
  const locked=(who,fn)=>locks?.request?locks.request(key(who),fn):fn();
  function serial(fn){const run=chain.catch(()=>{}).then(fn);chain=run;return run;}
- function checkOwner(rows,who){for(const event of rows)if(event.evidence&&event.evidence.actor.userId!==(who==='guest'?null:who))throw Error('An evidence record belongs to a different account.');}
+ function checkOwner(rows,who){for(const event of rows){const envelope=event.evidence||event.cycle;if(envelope&&envelope.actor.userId!==(who==='guest'?null:who))throw Error('An evidence record belongs to a different account.');}}
  async function read(who){
   const data=await getMeta(key(who),{events:[],pending:[]}),rows=X.mergeEvents([],data.events||[]);checkOwner(rows,who);
   const queue=data.pending??[];
