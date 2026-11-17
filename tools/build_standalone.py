@@ -4,10 +4,11 @@ The three deployment files are index.html, nabu-sw.js, nabu-repair.html.
 The original JS modules remain editable sources, not startup dependencies.
 """
 from pathlib import Path
-import base64, hashlib, json, re
+import base64, hashlib, json, re, runpy
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC=ROOT/'public'
-BUILD='nabu-pages-1.17-20261116-r3'
+BUILD='nabu-pages-1.17-20261117-about-r1'
+runpy.run_path(str(ROOT/'tools/build_about.py'))
 # The integrity registry is source data, bundled locally with the structural
 # bridge. Rebuilding never requires a third-party service or runtime fetch.
 integrity=json.loads((ROOT/'data/graph-integrity.json').read_text(encoding='utf-8'))
