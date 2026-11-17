@@ -1,5 +1,6 @@
 """1.16 capability and packaging boundaries: no generative-provider side effects."""
 from pathlib import Path
+import re
 from fastapi.testclient import TestClient
 from server import create_app
 
@@ -19,7 +20,8 @@ def test_missing_council_is_truthful_and_does_not_block_other_routes(tmp_path):
 def test_rebuilt_shell_contains_modes_local_art_and_all_sources_without_remote_asset_dependency():
     root=Path(__file__).resolve().parents[1]
     html=(root/'public/index.html').read_text()
-    assert 'nabu-workspaces-1.17-' in html
+    build=re.search(r"^BUILD='([^']+)'",(root/'tools/build_standalone.py').read_text(),re.M).group(1)
+    assert 'data-nabu-build="'+build+'"' in html
     assert 'At a glance' in html and 'In depth' in html
     assert 'scribe-art' in html and 'scribe-stylus' in html
     assert 'Emily Dickinson' in html and 'Celso Cunha' in html
