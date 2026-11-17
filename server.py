@@ -400,7 +400,7 @@ def create_app(database: str | Path | None = None, origin: str | None = None,
     @app.get('/api/config')
     def config():
         return {'service': 'nabu', 'releaseVersion': '1.17.0', 'institutionWorkspaces': True, 'version': 1, 'inviteRequired': bool(invite),
-                **service_settings.public_config(), 'librarySync': True, 'friends': True, 'sharedLibraries': True, 'offlineSync': True, 'recoveryCodes': True, 'collaboration': True, 'shortLinks': True, 'cleanRoutes': True, 'council': {'enabled': False, 'reason': 'No authorized conversational AI adapter is configured. DeepL and ElevenLabs do not generate council dialogue.'}, 'contentProgress': True, 'intentLayer': True, 'nextStepInputs': True, 'evidenceEvents': True, **app.state.media_config()}
+                **service_settings.public_config(), 'librarySync': True, 'friends': True, 'sharedLibraries': True, 'offlineSync': True, 'recoveryCodes': True, 'collaboration': True, 'shortLinks': True, 'cleanRoutes': True, 'council': {'enabled': False, 'reason': 'No authorized conversational AI adapter is configured. DeepL and ElevenLabs do not generate council dialogue.'}, 'contentProgress': True, 'intentLayer': True, 'nextStepInputs': True, 'evidenceEvents': True, 'supportCycles': True, **app.state.media_config()}
 
     @app.get('/api/session')
     def session(request: Request):
