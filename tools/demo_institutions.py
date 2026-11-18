@@ -1,4 +1,4 @@
-"""Exercise Nabu 1.17 through its real local launcher and HTTP API.
+"""Exercise Nabu 1.18 through its real local launcher and HTTP API.
 
 Creates only temporary fictional accounts and a temporary database, disables
 providers and backups, then removes the database. Does not touch your Nabu data.
@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT / 'verification/1.17/institution-http.json')
+    parser.add_argument('--output', type=Path, default=ROOT / 'verification/1.18/institution-http.json')
     args = parser.parse_args()
     checks = []
 
@@ -73,7 +73,7 @@ def main():
                 teacher, tid = account('department_demo')
                 employer, eid = account('company_demo')
                 learner, lid = account('learner_demo')
-                check('Actual local launcher reports Nabu 1.17.0', valid(learner.get('/api/health'))['version'] == '1.17.0')
+                check('Actual local launcher reports Nabu 1.18.0', valid(learner.get('/api/health'))['version'] == '1.18.0')
                 personal = {'front': 'water', 'back': 'agua', 'sourceLang': 'en', 'targetLang': 'es', 'note': 'Private poetry note'}
                 # Use the ordinary library API; no institution owns this card.
                 at = int(time.time()*1000)
@@ -134,7 +134,7 @@ def main():
                 except subprocess.TimeoutExpired:
                     process.kill(); process.wait()
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps({'release': '1.17.0', 'passed': len(checks), 'checks': checks, 'scope': 'Real loopback HTTP through the local launcher; fictional accounts; temporary SQLite; no external provider calls; no browser layout claim.'}, indent=2) + '\n')
+    args.output.write_text(json.dumps({'release': '1.18.0', 'passed': len(checks), 'checks': checks, 'scope': 'Real loopback HTTP through the local launcher; fictional accounts; temporary SQLite; no external provider calls; no browser layout claim.'}, indent=2) + '\n')
     print(f'{len(checks)} checks passed. Report: {args.output}')
 
 
