@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-nabu-build="nabu-pages-1.18.0-new-user-r1">
+<html lang="en" data-nabu-build="nabu-pages-1.18.0-new-user-r2">
 <head>
   <meta charset="utf-8">
   <!--NABU_BASE-->
@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#324f7b">
   <meta name="description" content="Read what you love. Understand what you need. Nabu keeps language support close to your content.">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ALTeCiF+5O2xq9uvkNUVMiLOcD8QdmFqxBtJAZNccCE=' 'sha256-vs+XS6zZIcSI5TbChG4qoO6qlUdi4/cpDsAfM3NeJzI='; script-src-attr 'none'; style-src 'self' 'sha256-SCHPq6pdD+Q1BnWlLtX2lZoWmjyMYcQ/ehc9mTM8yDg='; img-src 'self' data:; connect-src 'self' https://api.mymemory.translated.net; media-src 'self' blob:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self'; manifest-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ALTeCiF+5O2xq9uvkNUVMiLOcD8QdmFqxBtJAZNccCE=' 'sha256-iHyUkTdxiTnFCM9G6uzFskjpWK2klr6jS1ZWRmymej8='; script-src-attr 'none'; style-src 'self' 'sha256-SCHPq6pdD+Q1BnWlLtX2lZoWmjyMYcQ/ehc9mTM8yDg='; img-src 'self' data:; connect-src 'self' https://api.mymemory.translated.net; media-src 'self' blob:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self'; manifest-src 'self'">
   <title>Nabu 1.18 · Stay with the story</title>
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQyIiBmaWxsPSIjMTAzYTM1Ii8+PGNpcmNsZSBjeD0iMTQyIiBjeT0iNDkiIHI9IjE1IiBmaWxsPSIjZWZiZDY4Ii8+PHBhdGggZD0iTTI1IDE1MWgxNDJNMzkgMTM2aDExNGwtMTMtMjFINTJ6TTU3IDExMGg3OGwtMTMtMjBINzB6TTc1IDg1aDQybC0xMC0xOUg4NXoiIGZpbGw9IiNmMmM0NzciLz48cGF0aCBkPSJNODggNjZoMTZsOSAxOUg3OXpNNzAgOTBoNTJsMTMgMjBINTd6TTUyIDExNWg4OGwxMyAyMUgzOXoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzEwM2EzNSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZD0iTTkzIDE1MXYtMjVoMTR2MjUiIGZpbGw9IiMxMDNhMzUiLz48L3N2Zz4=" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
@@ -4038,8 +4038,108 @@ const MOMENT_SCENES = Object.freeze([
     nextContext: "A different person recalls a journey.",
     nextMeaning: "In my dream, the train was leaving an empty station.",
   },
+  {
+    key: "search-en", language: "en", variety: "English",
+    title: "Before leaving home",
+    source: "I'm looking for my keys. I left them by the door.",
+    phrase: "looking for", meaning: "I am trying to find my keys. I left them near the door.",
+    context: "Someone is getting ready to leave home.",
+    nextTitle: "At the station",
+    nextSource: "Maya is looking for her ticket. The train leaves soon.",
+    nextContext: "Maya is getting ready to board a train.",
+    nextMeaning: "Maya is trying to find her ticket before the train leaves.",
+  },
+  {
+    key: "table-zh", language: "zh-CN", variety: "Mandarin Chinese · Simplified",
+    title: "Finding the key",
+    source: "钥匙在桌子上，在杯子旁边。", phrase: "在桌子上",
+    meaning: "The key is on the table, next to the cup.",
+    context: "Someone explains where to find a key.",
+    nextTitle: "A book by the window",
+    nextSource: "书在窗边的桌子上。",
+    nextContext: "Someone is looking for a book.",
+    nextMeaning: "The book is on the table by the window.",
+  },
+  {
+    key: "table-ru", language: "ru", variety: "Russian",
+    title: "Finding the key",
+    source: "Ключ лежит на столе, рядом с чашкой.", phrase: "на столе",
+    meaning: "The key is on the table, next to the cup.",
+    context: "Someone explains where to find a key.",
+    nextTitle: "A book by the window",
+    nextSource: "Книга лежит на столе у окна.",
+    nextContext: "Someone is looking for a book.",
+    nextMeaning: "The book is on the table by the window.",
+  },
+  {
+    key: "table-de", language: "de", variety: "German",
+    title: "Finding the key",
+    source: "Der Schlüssel liegt auf dem Tisch neben der Tasse.", phrase: "auf dem Tisch",
+    meaning: "The key is on the table next to the cup.",
+    context: "Someone explains where to find a key.",
+    nextTitle: "A book by the window",
+    nextSource: "Das Buch liegt auf dem Tisch am Fenster.",
+    nextContext: "Someone is looking for a book.",
+    nextMeaning: "The book is on the table by the window.",
+  },
+  {
+    key: "table-it", language: "it", variety: "Italian",
+    title: "Finding the key",
+    source: "La chiave è sul tavolo, accanto alla tazza.", phrase: "sul tavolo",
+    meaning: "The key is on the table, next to the cup.",
+    context: "Someone explains where to find a key.",
+    nextTitle: "A book in the kitchen",
+    nextSource: "Il libro è sul tavolo della cucina.",
+    nextContext: "Someone is looking for a book.",
+    nextMeaning: "The book is on the kitchen table.",
+  },
+  {
+    key: "table-ja", language: "ja", variety: "Japanese",
+    title: "Finding the key",
+    source: "鍵はテーブルの上にあります。カップの隣です。", phrase: "テーブルの上",
+    meaning: "The key is on the table. It is next to the cup.",
+    context: "Someone explains where to find a key.",
+    nextTitle: "A book by the window",
+    nextSource: "本は窓のそばのテーブルの上にあります。",
+    nextContext: "Someone is looking for a book.",
+    nextMeaning: "The book is on the table by the window.",
+  },
+  {
+    key: "table-ko", language: "ko", variety: "Korean",
+    title: "Finding the key",
+    source: "열쇠는 탁자 위에 있어요. 컵 옆에 있어요.", phrase: "탁자 위",
+    meaning: "The key is on the table. It is next to the cup.",
+    context: "Someone explains where to find a key.",
+    nextTitle: "A book by the window",
+    nextSource: "책은 창가에 있는 탁자 위에 있어요.",
+    nextContext: "Someone is looking for a book.",
+    nextMeaning: "The book is on the table by the window.",
+  },
+  {
+    key: "table-pt", language: "pt", variety: "Brazilian Portuguese",
+    title: "Finding the key",
+    source: "A chave está em cima da mesa, ao lado da xícara.", phrase: "em cima da mesa",
+    meaning: "The key is on the table, next to the cup.",
+    context: "Someone explains where to find a key.",
+    nextTitle: "A book in the kitchen",
+    nextSource: "O livro está em cima da mesa da cozinha.",
+    nextContext: "Someone is looking for a book.",
+    nextMeaning: "The book is on the kitchen table.",
+  },
+  {
+    key: "table-tr", language: "tr", variety: "Turkish",
+    title: "Finding the key",
+    source: "Anahtar masanın üstünde, fincanın yanında.", phrase: "masanın üstünde",
+    meaning: "The key is on the table, next to the cup.",
+    context: "Someone explains where to find a key.",
+    nextTitle: "A book in the kitchen",
+    nextSource: "Kitap mutfaktaki masanın üstünde.",
+    nextContext: "Someone is looking for a book.",
+    nextMeaning: "The book is on the table in the kitchen.",
+  },
 ]);
 const sceneByKey = (key) => MOMENT_SCENES.find((s) => s.key === key);
+const sceneByLanguage = (language) => MOMENT_SCENES.find((s) => s.language === language);
 const modes = ["practice", "reference", "familiar"];
 const idPattern = /^moment:(?:[a-z][a-z0-9-]{0,50}|own:[a-f0-9]{64})$/;
 const stringOK = (v, n) =>
@@ -4270,7 +4370,7 @@ async function anchorExcerpt({
   return { id, version: 1, source };
 }
 
-return {MOMENT_DAY,MOMENT_IMAGES,MOMENT_VERSION,MOMENT_SCENES,sceneByKey,validateMomentEvent,validateMomentSequence,projectMoments,pilotCounts,anchorExcerpt};
+return {MOMENT_DAY,MOMENT_IMAGES,MOMENT_VERSION,MOMENT_SCENES,sceneByKey,sceneByLanguage,validateMomentEvent,validateMomentSequence,projectMoments,pilotCounts,anchorExcerpt};
 })();
 const MomentTasks=(()=>{
 /** Original authored checks. Returning to an unanalysed excerpt never creates a rubric. */
@@ -4324,6 +4424,42 @@ const definitions = [
     ["En un sueño.", "En el camino al trabajo.", "En un plano."],
     0,
   ],
+  ["search-en", "first", "What is the speaker trying to find?",
+    ["Their keys.", "Their ticket.", "Their cup."], 0],
+  ["search-en", "next", "What is Maya trying to find?",
+    ["Her coat.", "Her ticket.", "Her keys."], 1],
+  ["table-zh", "first", "钥匙在哪里？",
+    ["在书包里。", "在桌子上。", "在椅子下面。"], 1],
+  ["table-zh", "next", "书在哪里？",
+    ["在书包里。", "在椅子下面。", "在窗边的桌子上。"], 2],
+  ["table-ru", "first", "Где лежит ключ?",
+    ["В сумке.", "На столе.", "Под стулом."], 1],
+  ["table-ru", "next", "Где лежит книга?",
+    ["На столе у окна.", "В сумке.", "Под стулом."], 0],
+  ["table-de", "first", "Wo liegt der Schlüssel?",
+    ["In der Tasche.", "Auf dem Tisch.", "Unter dem Stuhl."], 1],
+  ["table-de", "next", "Wo liegt das Buch?",
+    ["Unter dem Stuhl.", "In der Tasche.", "Auf dem Tisch am Fenster."], 2],
+  ["table-it", "first", "Dov'è la chiave?",
+    ["Sul tavolo.", "Nella borsa.", "Sotto la sedia."], 0],
+  ["table-it", "next", "Dov'è il libro?",
+    ["Nella borsa.", "Sul tavolo della cucina.", "Sotto la sedia."], 1],
+  ["table-ja", "first", "鍵はどこにありますか。",
+    ["バッグの中です。", "テーブルの上です。", "椅子の下です。"], 1],
+  ["table-ja", "next", "本はどこにありますか。",
+    ["窓のそばのテーブルの上です。", "椅子の下です。", "バッグの中です。"], 0],
+  ["table-ko", "first", "열쇠는 어디에 있나요?",
+    ["가방 안에 있어요.", "탁자 위에 있어요.", "의자 아래에 있어요."], 1],
+  ["table-ko", "next", "책은 어디에 있나요?",
+    ["탁자 아래에 있어요.", "가방 안에 있어요.", "창가에 있는 탁자 위에 있어요."], 2],
+  ["table-pt", "first", "Onde está a chave?",
+    ["Dentro da bolsa.", "Embaixo da cadeira.", "Em cima da mesa."], 2],
+  ["table-pt", "next", "Onde está o livro?",
+    ["Em cima da mesa da cozinha.", "Dentro da bolsa.", "Embaixo da cadeira."], 0],
+  ["table-tr", "first", "Anahtar nerede?",
+    ["Çantanın içinde.", "Masanın üstünde.", "Sandalyenin altında."], 1],
+  ["table-tr", "next", "Kitap nerede?",
+    ["Sandalyenin altında.", "Çantanın içinde.", "Mutfaktaki masanın üstünde."], 2],
 ];
 const correctionText =
   "Camille could have heard about the departure elsewhere. The dialogue establishes only what this speaker told Camille.";
@@ -4402,7 +4538,7 @@ const readingTasks = definitions.map(
           : []),
         {
           id: "translation",
-          type: "translation",
+          type: scene.language === "en" ? "paraphrase" : "translation",
           visibility: "hidden",
           role: "extra",
           text: meaning,
@@ -10873,8 +11009,8 @@ function installSupportCycle(h) {
       return `<p class="nu-result-label">A SMALL CHECK, COMPLETED</p><h3>${E(title)}</h3><p class="nu-feedback">${E(detail)}</p><p class="nu-small">${row?.independent ? 'You answered with the passage and choices, without opening extra help.' : 'Your answer is saved together with the help or recent examples available to you.'} A later visit can show what stays available.</p><div class="nu-cue"><button class="text-button" data-action="support-feedback">${c.feedback?'Explanation opened':'See the explanation'}</button>${c.feedback?`<blockquote lang="${E(t.language)}" dir="auto">${E(t.source)}</blockquote><p>${E(t.meaning)}</p><button class="text-button" data-action="support-retry">Try again</button>`:''}</div><div class="nu-check-footer"><button class="button primary" data-action="support-finish">Back to my first steps</button></div>`;
     }
     const source = c.readOnly || t.supports.some(s=>s.id==='source') ? `<blockquote lang="${E(t.language)}" dir="auto">${E(t.source)}</blockquote>` : '';
-    const help = c.supports.filter(s=>s.role==='extra' && s.visibility==='hidden').map(s=>`<div class="nu-cue"><button class="text-button" data-action="support-cue" data-id="${E(s.id)}">${E(c.opened.has(s.id)?'Meaning opened':s.type==='translation'?'See meaning in English':'Open '+(s.label||s.type))}</button>${c.opened.has(s.id)?`<p>${E(s.text)}</p>`:''}</div>`).join('');
-    return `<p class="eyebrow">${E(t.title)} · Nabu example</p><h3>${E(c.readOnly?'Stay with the story.':t.prompt)}</h3>${t.image?`<figure class="moment-check-image"><img src="${Moments.MOMENT_IMAGES[t.image]}" alt="${E(t.alt)}"></figure>`:''}${source}${c.readOnly?'':t.options?`<fieldset class="support-options"><legend>Choose what fits</legend>${t.options.map((option,i)=>`<label><input type="radio" name="support-choice" value="${i}"><span lang="${E(t.language)}" dir="auto">${E(option)}</span></label>`).join('')}</fieldset>`:'<label for="support-answer">Your answer</label><textarea class="input" id="support-answer" maxlength="300" rows="3"></textarea>'}${help}<div class="nu-check-footer">${c.readOnly?'<button class="button primary" data-action="support-finish">Back to my first steps</button>':'<button class="button primary" data-action="support-submit">Check my answer</button><button class="text-button" data-action="support-finish">Leave this for later</button>'}</div><p class="nu-small">${c.readOnly?'Take the help you need. Reading this is not a test.':'Help is always available. Nabu remembers when you opened it.'}</p>`;
+    const help = c.supports.filter(s=>s.role==='extra' && s.visibility==='hidden').map(s=>`<div class="nu-cue"><button class="text-button" data-action="support-cue" data-id="${E(s.id)}">${E(c.opened.has(s.id)?'Meaning opened':s.type==='translation'?'See meaning in English':s.type==='paraphrase'?'See a simpler explanation':'Open '+(s.label||s.type))}</button>${c.opened.has(s.id)?`<p>${E(s.text)}</p>`:''}</div>`).join('');
+    return `<p class="eyebrow">${E(t.title)} · Nabu example</p><h3 lang="${c.readOnly?'en':E(t.language)}" dir="auto">${E(c.readOnly?'Stay with the story.':t.prompt)}</h3>${t.image?`<figure class="moment-check-image"><img src="${Moments.MOMENT_IMAGES[t.image]}" alt="${E(t.alt)}"></figure>`:''}${source}${c.readOnly?'':t.options?`<fieldset class="support-options"><legend>Choose what fits</legend>${t.options.map((option,i)=>`<label><input type="radio" name="support-choice" value="${i}"><span lang="${E(t.language)}" dir="auto">${E(option)}</span></label>`).join('')}</fieldset>`:'<label for="support-answer">Your answer</label><textarea class="input" id="support-answer" maxlength="300" rows="3"></textarea>'}${help}<div class="nu-check-footer">${c.readOnly?'<button class="button primary" data-action="support-finish">Back to my first steps</button>':'<button class="button primary" data-action="support-submit">Check my answer</button><button class="text-button" data-action="support-finish">Leave this for later</button>'}</div><p class="nu-small">${c.readOnly?'Take the help you need. Reading this is not a test.':'Help is always available. Nabu remembers when you opened it.'}</p>`;
   }
   function renderCheck() {
     const c = check;
@@ -11328,7 +11464,7 @@ function installNewUser(h) {
   function chosen() {
     if (!selection) {
       const recent = saved().find(m => Moments.sceneByKey(m.id.replace('moment:','')));
-      selection = recent?.id.replace('moment:','') || Moments.MOMENT_SCENES.find(s => s.language === state.settings.targetLang)?.key || 'dream';
+      selection = recent?.id.replace('moment:','') || Moments.sceneByLanguage(state.settings.targetLang)?.key || 'dream';
       draft.language = state.settings.targetLang || 'es';
     }
     return Moments.sceneByKey(selection);
@@ -11375,7 +11511,7 @@ function installNewUser(h) {
     if (!ready) action = '<button class="button primary" disabled>Waiting for your library</button>';
     const date = p.item ? `<div class="nu-saved-note" role="status"><span aria-hidden="true">✓</span><div><strong>${p.item.mode==='practice'?'Kept for another visit':'Already in your Library'}</strong><p>${E(returnCopy(p.item))}</p></div></div>` : '';
     const piece = scene ? `<section class="nu-piece" aria-labelledby="nu-piece-title"><div class="nu-piece-label"><span>${E(scene.variety.toUpperCase())}</span><span>Original Nabu example</span></div><h2 id="nu-piece-title">${E(scene.title)}</h2><p class="nu-context">${E(scene.context)}</p><blockquote class="nu-source" lang="${scene.language}" dir="auto">${phrase(scene)}</blockquote><p class="nu-tap-note">The highlighted phrase is a good place to start.</p><div class="nu-piece-actions">${action}${p.encountered?button('nu-help','Open the help again','text-button'):''}</div>${date}${p.item?`<div class="nu-secondary-actions">${!h.support().practiceExcluded() && (p.attempted || p.item.mode !== 'practice' || !p.encountered)?button('nu-practice',p.attempted?'Try another check':'Practice now','text-button'):''}${button('nu-preference','Change how this is kept','text-button')}</div>`:''}</section>` : intake();
-    return `<div id="new-user-experience" data-generation="${generation}" class="nu-page"><header class="nu-heading"><p class="eyebrow">WELCOME TO NABU</p><h1>Start with something<br>that matters <em>to you.</em></h1><p>Understand a little. Keep what clicks. Find it again.</p></header><div class="nu-choices" role="group" aria-label="Choose your starting point">${[['dream','Spanish'],['camille','French'],['bend','Arabic'],['own','Your own text']].map(([key,label])=>`<button type="button" data-action="nu-select" data-key="${key}" aria-pressed="${selection===key}">${key==='own'?'<span aria-hidden="true">＋</span> ':''}${label}</button>`).join('')}</div>${blocked?`<p class="nu-status" role="status">${E(blocked)}</p>`:''}<p id="nu-error" class="support-error" role="alert"${error?'':' hidden'}>${E(error)}</p><div class="nu-layout">${piece}${steps(p)}</div><footer class="nu-bottom"><span>No placement test. No need to learn the whole app.</span><button type="button" class="text-button" data-action="go" data-view="explore">Explore the rest of Nabu <span aria-hidden="true">↗</span></button></footer></div>`;
+    return `<div id="new-user-experience" data-generation="${generation}" class="nu-page"><header class="nu-heading"><p class="eyebrow">WELCOME TO NABU</p><h1>Start with something<br>that matters <em>to you.</em></h1><p>Understand a little. Keep what clicks. Find it again.</p></header><div class="nu-choices" role="group" aria-label="Choose your starting point">${[...C.LANGUAGES.map(([language,label])=>[Moments.sceneByLanguage(language).key,label]),['own','Your own text']].map(([key,label])=>`<button type="button" data-action="nu-select" data-key="${key}" aria-pressed="${selection===key}">${key==='own'?'<span aria-hidden="true">＋</span> ':''}${label}</button>`).join('')}</div>${blocked?`<p class="nu-status" role="status">${E(blocked)}</p>`:''}<p id="nu-error" class="support-error" role="alert"${error?'':' hidden'}>${E(error)}</p><div class="nu-layout">${piece}${steps(p)}</div><footer class="nu-bottom"><span>No placement test. No need to learn the whole app.</span><button type="button" class="text-button" data-action="go" data-view="explore">Explore the rest of Nabu <span aria-hidden="true">↗</span></button></footer></div>`;
   }
   function capture() {
     if ($('#new-user-experience')?.dataset.generation !== String(generation)) return;
