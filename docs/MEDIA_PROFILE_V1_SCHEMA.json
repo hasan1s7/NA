@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nabu:media-profile:v1",
+  "title": "Nabu read-only surface media profile, version 1",
+  "description": "Source-level description only. Not a learner assessment, validated morphology, or causal estimate.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "analyzer", "source", "quality", "segments", "recurrences", "frames", "authoredOccurrences", "limits"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "analyzer": {"const": "surface-preflight-v1"},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "version", "language", "mediaType", "segmentCount", "title", "sourceStatus"],
+      "properties": {
+        "id": {"type": ["string", "null"]},
+        "version": {"type": ["integer", "null"], "minimum": 1},
+        "language": {"enum": ["en", "ar", "zh-CN", "fr", "ru", "es", "de", "it", "ja", "ko", "pt", "tr"]},
+        "mediaType": {"type": "string"},
+        "segmentCount": {"type": "integer", "minimum": 1, "maximum": 128},
+        "title": {"type": ["string", "null"]},
+        "sourceStatus": {"type": "string"}
+      }
+    },
+    "quality": {
+      "type": "object", "additionalProperties": false,
+      "required": ["surfaceSegmentation", "analysisStatus", "authoredAnchorsValidated", "authoredAnchorsRejected", "rejectedAnchorIds", "semanticParsing", "learnerConditioning"],
+      "properties": {
+        "surfaceSegmentation": {"enum": ["intl-segmenter", "unavailable"]},
+        "analysisStatus": {"enum": ["surface-only", "partial", "abstained"]},
+        "authoredAnchorsValidated": {"type": "integer", "minimum": 0},
+        "authoredAnchorsRejected": {"type": "integer", "minimum": 0},
+        "rejectedAnchorIds": {"type": "array", "items": {"type": "string"}},
+        "semanticParsing": {"const": "not-attempted"},
+        "learnerConditioning": {"const": "not-attempted"}
+      }
+    },
+    "segments": {"type": "array", "items": {"$ref": "#/$defs/segment"}, "maxItems": 128},
+    "recurrences": {"type": "array", "items": {"$ref": "#/$defs/recurrence"}, "maxItems": 20},
+    "frames": {"type": "array", "items": {"$ref": "#/$defs/frame"}, "maxItems": 20},
+    "authoredOccurrences": {"type": "array", "items": {"$ref": "#/$defs/authored"}},
+    "limits": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+  },
+  "$defs": {
+    "segment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "surfaceOccurrences", "firstSurfaceOccurrences", "returningSurfaceOccurrences", "firstSurfaceRate"],
+      "properties": {
+        "id": {"type": "string"},
+        "surfaceOccurrences": {"type": "integer", "minimum": 0},
+        "firstSurfaceOccurrences": {"type": "integer", "minimum": 0},
+        "returningSurfaceOccurrences": {"type": "integer", "minimum": 0},
+        "firstSurfaceRate": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+      }
+    },
+    "recurrence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["text", "count", "segmentCount", "kind"],
+      "properties": {
+        "text": {"type": "string"},
+        "count": {"type": "integer", "minimum": 2},
+        "segmentCount": {"type": "integer", "minimum": 1},
+        "kind": {"const": "exact-surface"}
+      }
+    },
+    "frame": {
+      "type": "object", "additionalProperties": false,
+      "required": ["text", "count", "width", "segmentCount", "followingVariants", "kind"],
+      "properties": {
+        "text": {"type": "string"},
+        "count": {"type": "integer", "minimum": 2},
+        "width": {"type": "integer", "minimum": 2, "maximum": 5},
+        "segmentCount": {"type": "integer", "minimum": 1},
+        "followingVariants": {"type": "integer", "minimum": 0},
+        "kind": {"const": "exact-surface-frame"}
+      }
+    },
+    "authored": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "segmentId", "quote", "meaning", "conceptId", "provenance"],
+      "properties": {
+        "id": {"type": "string"},
+        "segmentId": {"type": "string"},
+        "quote": {"type": "string"},
+        "meaning": {"type": ["string", "null"]},
+        "conceptId": {"type": ["string", "null"]},
+        "provenance": {"type": "string"}
+      }
+    }
+  }
+}
