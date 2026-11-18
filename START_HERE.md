@@ -1,8 +1,8 @@
-# Start Nabu 1.17
+# Start Nabu 1.18
 
 Extract the whole archive first. Do not run a launcher from inside a ZIP viewer.
 
-| Platform | Launch from the extracted Nabu-1.17 folder |
+| Platform | Launch from the extracted Nabu-1.18.0 folder |
 | --- | --- |
 | Windows | Double-click `Start-Nabu.cmd`, or run `py -3 start_local.py` |
 | macOS | Open `Start-Nabu.command`, or run `bash start-local.sh` |
@@ -12,16 +12,22 @@ Requires Python 3.11+. First setup downloads the unchanged pinned Python depende
 
 `python3 start_local.py --no-browser` suppresses browser opening. `python3 start_local.py --port 8001` uses another local port. On Windows substitute `py -3` for `python3`.
 
+## The first two minutes
+
+In **Explore**, tap the Arabic line on the road scene and return to the passage. Keep it for practice, open the doorway scene and try the question. For the French answer-key correction, exact excerpt saving and both videos, see [Review Nabu 1.18](docs/NABU_1.18.md).
+
+For an account-free review with Python's standard library, run `python -m http.server 8080 --directory public` from the extracted folder and visit `http://127.0.0.1:8080/`. The regular launcher includes the accounts backend. Use the same profile, address and port when returning.
+
 ## Upgrade without losing your work
 
 1. Stop the old Nabu process. Make a backup of the existing application folder and use Settings → Library backup for guest or unsynced browser words.
-2. Extract 1.17 separately. Copy your existing **`.data` directory and `.env.local` file** into the new Nabu-1.17 folder. Do not replace these with files from another account or machine. If `NABU_DB` points elsewhere, preserve that configuration and database location instead.
-3. Start 1.17 using the same port and exact browser origin as before, in the same browser/profile. `localhost` and `127.0.0.1` are different browser storage origins.
-4. Your saved cards, corrections, notes and review history remain in the existing stores. Startup adds institutional tables without rewriting the existing records. Reopen your usual route or choose Resume your text after saving a reading session in 1.17.
+2. Extract 1.18 separately. Copy your existing **`.data` directory and `.env.local` file** into the new Nabu-1.18.0 folder. Do not replace these with files from another account or machine. If `NABU_DB` points elsewhere, preserve that configuration and database location instead.
+3. Start 1.18 using the same port and exact browser origin as before, in the same browser/profile. `localhost` and `127.0.0.1` are different browser storage origins.
+4. Your saved cards, corrections, notes and review history remain in the existing stores. Startup adds institutional tables without rewriting the existing records. Reopen your usual route or choose Resume your text after saving a reading session.
 
 The launchers never overwrite `.env.local`. If an older cached page persists, use the existing **Repair app loading** page (`http://127.0.0.1:8000/nabu-repair.html`); do not clear site data.
 
-## Use the 1.17 backend workflow
+## Workspaces and assignments
 
 1. Open **Settings & data**. Sign in or create an account with the existing account controls.
 2. Choose **Open workspaces**. An owner creates a workspace and adds existing account handles under **Members & policy**. Use another browser profile to act as a different account; do not switch cookies while a response is being submitted.

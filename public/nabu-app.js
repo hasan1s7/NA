@@ -2,10 +2,14 @@ import * as Palette from './nabu-palette.js';
 import * as Workspaces from './nabu-institutions.js';
 import * as Local from './nabu-store.js';
 import * as Scribe from './nabu-scribe.js';
+import * as Avatars from './nabu-avatars.js';
 import * as Explore from './nabu-explore-ui.js';
 import * as IntentUI from './nabu-intent-ui.js';
 import * as NextStepUI from './nabu-next-step-ui.js';
 import * as LearnerUI from './nabu-learner-ui.js';
+import * as MomentUI from './nabu-moment-ui.js';
+import * as SupportUI from './nabu-support-ui.js';
+import * as NewUserUI from './nabu-new-user.js';
 import * as X from './nabu-content.js';
 import * as T from './nabu-transliteration.js';
 import * as U from './nabu-reading-ui.js';
@@ -57,7 +61,7 @@ const state = {activityCount:0,activityKnown:false,reader:{text:'',title:'',draf
 };
 let toastTimer, renderedReviewRevision, refreshTimer, pendingSpeech, renderedReaderTokens=null;
 let readerReturnFocus=null, readerSelection=null;
-let nextSteps=null,learner=null;
+let nextSteps=null,learner=null,supportCycle=null,moments=null,newUser=null;
 const deviceSpeaker=M.createDeviceSpeaker({onMessage:message=>toast(message,'',null,true)});
 const speaker=S.createSpeaker({loadAudio:requestSpeech,onMessage:message=>toast(message,'',null,true)});
 // Cross-tab notifications are optional; a privacy setting must not stop startup.
@@ -83,7 +87,7 @@ function showModal(title,body) {$('#modal-title').textContent=title;$('#modal-bo
 function closeModal() {modal.close();$('#modal-body').replaceChildren();state.receiving=null;}
 modal.addEventListener('close',()=>{if(modal.querySelector('#device-speech-player'))deviceSpeaker.stop();if(modal.querySelector('#speech-player'))speaker.stop();if(!modal.open){$('#modal-body').replaceChildren();placeWordPanel();}});
 function navigate(view, push=true) {
- if(!['explore','translate','reader','graph','library','review','exchange','settings'].includes(view))view='translate';
+ if(!['new-user','explore','translate','reader','graph','library','review','exchange','settings'].includes(view))view='translate';
  if(state.view==='reader'&&view!=='reader'){flushReaderSession();pauseSourceMedia();parkWordPanel();state.reader.panelOpen=false;}
  state.view=view;
  if(push)history.pushState({view},'',L.viewURL(view,location.href,!!state.backend?.cleanRoutes&&!window.NabuNative));
@@ -92,13 +96,37 @@ function navigate(view, push=true) {
  render();main.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});
  if(view==='exchange' && state.user)refreshSocial().catch(e=>{state.exchangeError=e.message;if(state.view==='exchange')render();});
 }
+let shownAvatar = null;
+let avatarSaving = false;
+function avatarOwner() {
+ return state.user?.id || (state.accountHint ? null : 'guest');
+}
+function currentAvatar() {
+ return shownAvatar?.owner === avatarOwner() ? shownAvatar.choice : null;
+}
+async function loadAvatar() {
+ const owner = avatarOwner();
+ shownAvatar = null;
+ if (!owner) return;
+ try {
+  const saved = await DB.getMeta('nabu.avatar.v1:' + owner, null);
+  if (owner === avatarOwner() && saved && C.isLanguage(saved.language) && ['feminine','masculine'].includes(saved.form))
+   shownAvatar = {owner,choice:saved};
+ } catch (error) {
+  console.warn('Avatar preference unavailable.', error);
+ }
+}
 function renderNav() {
  const due=new Set(C.practiceQueue(state.cards,state.logs,Date.now(),state.settings.newLimit,'',state.settings.speechProvider==='device'||!!state.backend?.speechEnabled).map(x=>x.card.id)).size;
  $('#navigation').innerHTML=[['explore','Explore'],['reader','Read'],['translate','Translate'],['library','Library'],['review','Review'],['exchange','Friends']].map(([id,label])=>`<button class="nav-item${(state.view===id||id==='translate'&&['graph'].includes(state.view))?' active':''}" data-action="go" data-view="${id}"${state.view===id?' aria-current="page"':''}>${icon(id)}<span>${label}</span>${id==='review'&&due?`<span class="badge">${due}</span>`:id==='exchange'&&state.activityCount?`<span class="badge" aria-label="${state.activityCount} pending items">${state.activityCount}</span>`:''}</button>`).join('');
- $('.breadcrumb').textContent=({explore:'Something worth understanding',reader:'Your reading space',translate:'Quick lookup',graph:'Word bank',library:'Your saved words',review:'A moment to remember',exchange:'Learning together',settings:'Make Nabu yours'}[state.view]);
+ $('.breadcrumb').textContent=({'new-user':'Your first steps',explore:'Something worth understanding',reader:'Your reading space',translate:'Quick lookup',graph:'Word bank',library:'Your saved words',review:'A moment to remember',exchange:'Learning together',settings:'Make Nabu yours'}[state.view]);
+ const startTab=$('#new-user-tab');if(startTab){if(state.view==='new-user')startTab.setAttribute('aria-current','page');else startTab.removeAttribute('aria-current');}
  $('#settings-nav').innerHTML=`${icon('settings')}<span>Settings & data</span>`;
  $('#settings-nav').classList.toggle('active',state.view==='settings');
- $('#avatar').textContent=(state.settings.alias || state.user?.handle || 'N')[0].toUpperCase();
+ const portrait=currentAvatar(), badge=$('#avatar');
+ badge.classList.toggle('with-portrait',!!portrait);
+ if(portrait) badge.innerHTML=Avatars.avatarSvg(portrait.language,portrait.form);
+ else badge.textContent=(state.settings.alias || state.user?.handle || 'N')[0].toUpperCase();
  const sync=DB.syncStatus(),statusLabel=sync.pending?sync.pending+' pending':({synced:'synced',cached:'last synced on device',offline:'offline cache',connecting:'connecting',syncing:'syncing',locked:'sign in required',paused:'paused',conflict:'needs attention'}[sync.state]||'on this device');
  $('#connection').textContent=state.user?`@${state.user.handle} / ${statusLabel}`:!navigator.onLine?'Offline':state.backend?'Sign in':'On this device';
  $('#connection').setAttribute('data-action',state.user?'sync-panel':'account');$('#connection').setAttribute('role','button');$('#connection').setAttribute('tabindex','0');
@@ -112,9 +140,9 @@ function render() {
  const expanded=openDisclosures(main);
  renderNav();document.body.dataset.view=state.view;
  // Passive saves and lookups must never replace the learner's document or move focus.
- if(state.view==='reader' && !state.reader.editing && $('#reader-text') && renderedReaderTokens===state.reader.tokens){nextSteps?.refresh();learner?.refresh();updateOutput();updateReaderSelection();return;}
+ if(state.view==='reader' && !state.reader.editing && $('#reader-text') && renderedReaderTokens===state.reader.tokens){nextSteps?.refresh();learner?.refresh();supportCycle?.refresh();updateOutput();updateReaderSelection();return;}
  parkWordPanel();
- main.innerHTML=({explore:()=>explore.render(),translate:renderTranslate,reader:renderReader,graph:renderGraph,library:renderLibrary,review:renderFocusedReview,exchange:renderSocial,settings:renderSettings}[state.view])()+(['explore','reader'].includes(state.view)?'<details class="reading-tools" data-disclosure-key="reading-tools"><summary>Optional learning tools · intentions, next steps & evidence</summary>'+intents.render()+nextSteps.render()+(learner?.render()||'')+'</details>':'');
+ main.innerHTML=({'new-user':()=>newUser.render(),explore:()=>explore.render(),translate:renderTranslate,reader:renderReader,graph:renderGraph,library:()=> (moments?.shelf('library')||'')+renderLibrary(),review:()=> (moments?.shelf('review')||'')+renderFocusedReview(),exchange:renderSocial,settings:renderSettings}[state.view])()+(['explore','reader'].includes(state.view)?'<details class="reading-tools" data-disclosure-key="reading-tools"><summary>Optional learning tools · intentions, next steps & evidence</summary>'+intents.render()+nextSteps.render()+(learner?.render()||'')+(supportCycle?.render()||'')+'</details>':['library','review'].includes(state.view)?supportCycle?.render()||'':'');
  renderedReaderTokens=state.view==='reader'?state.reader.tokens:null;
  restoreDisclosures(main,expanded);
  if(state.view==='reader'){updateReaderSelection();placeWordPanel();mountReaderMedia();queueReaderSession();}
@@ -319,7 +347,20 @@ function selectReview(){const r=state.review;const listen=state.settings.speechP
 function renderInbox(){const list=state.exchangeTab==='inbox'?state.inbox:state.sent;
  return `<section class="recent-section"><div class="section-topline"><h2>Your exchange</h2><button class="text-button" data-action="refresh-inbox">${icon('review')} Refresh</button></div>${state.exchangeError?`<div class="error-banner" role="alert">${E(state.exchangeError)}</div>`:''}<div class="inbox-tabs"><button class="button ${state.exchangeTab==='inbox'?'soft':'secondary'}" data-action="exchange-tab" data-tab="inbox">Inbox (${state.inbox.length})</button><button class="button ${state.exchangeTab==='sent'?'soft':'secondary'}" data-action="exchange-tab" data-tab="sent">Sent (${state.sent.length})</button></div>${!list.length?`<div class="empty-state space-top">${icon('inbox')}<h2>${state.exchangeTab==='inbox'?'No incoming words':'No sent words'}</h2><p>Tell a friend your handle: @${E(state.user.handle)}. Only words sent to you appear in your inbox.</p></div>`:`<div class="inbox-list">${list.map(item=>`<article class="inbox-item"><div class="inbox-meta"><span>${state.exchangeTab==='inbox'?'From':'To'} @${E(state.exchangeTab==='inbox'?item.sender:item.recipient)} &middot; account message</span><span>${E(item.status)}</span></div><div class="inbox-word" dir="auto">${E(item.card.front)}</div><p class="inbox-meaning" dir="auto">${E(item.card.back)}</p>${item.message?`<p class="inbox-message" dir="auto">${E(item.message)}</p>`:''}${state.exchangeTab==='inbox'?`<div class="button-row">${item.status==='pending'?`<button class="button primary" data-action="accept-exchange" data-id="${item.id}">${icon('plus')} Add to my words</button><button class="button secondary" data-action="decline-exchange" data-id="${item.id}">Decline</button>`:''}<button class="text-button" data-action="block-user" data-handle="${E(item.sender)}">Block sender</button></div>`:''}</article>`).join('')}</div>`}</section>`;
 }
+function avatarChoices(language) {
+ const chosen=currentAvatar();
+ return ['feminine','masculine'].map(form => {
+  const label=form==='feminine'?'Feminine':'Masculine';
+  return `<button type="button" class="avatar-option" data-action="choose-avatar" data-language="${E(language)}" data-form="${form}" aria-pressed="${chosen?.language===language&&chosen.form===form}" aria-label="${label} · ${E(Avatars.AVATAR_TRADITIONS[language])}"><span class="avatar-preview" aria-hidden="true">${Avatars.avatarSvg(language,form)}</span><span>${label}</span></button>`;
+ }).join('');
+}
+function renderAvatarPicker() {
+ if(!avatarOwner()) return '';
+ const language=currentAvatar()?.language || state.settings.sourceLang;
+ return `<section class="panel settings-panel avatar-panel" aria-labelledby="avatar-heading"><h2 id="avatar-heading">Your avatar</h2><p>Choose a portrait of Nabu, the Mesopotamian scribe. Each pair is a contemporary interpretation inspired by a different artistic tradition.</p><label for="avatar-language">Art collection</label><select class="select" id="avatar-language">${C.LANGUAGES.map(([code,name])=>`<option value="${E(code)}"${code===language?' selected':''}>${E(name)} · ${E(Avatars.AVATAR_TRADITIONS[code])}</option>`).join('')}</select><div id="avatar-choices" class="avatar-choices" role="group" aria-label="Portraits">${avatarChoices(language)}</div><button type="button" class="text-button" data-action="choose-avatar" data-form="initial" aria-pressed="${!currentAvatar()}">Use my initial</button><span class="small-print">Saved for this profile on this device.</span></section>`;
+}
 function renderSettings(){return `${pageHeading('','Settings','')}
+ ${renderAvatarPicker()}
  <section class="panel settings-panel" aria-labelledby="palette-heading"><h2 id="palette-heading">Colour palette</h2><p>Choose a palette template. Original green is the default; your choice is remembered on this device.</p><div class="palette-options" role="group" aria-label="Colour palette templates">${Palette.PALETTES.map(p=>`<button type="button" class="palette-option" data-action="set-palette" data-palette="${p.id}" aria-pressed="${Palette.normalizePalette(state.settings.palette)===p.id}"><span class="palette-swatches" aria-hidden="true"><span></span><span></span><span></span></span><strong>${p.name}</strong><small>${p.description}</small></button>`).join('')}</div><p id="palette-status" class="palette-status" role="status" aria-live="polite">Current palette: ${Palette.PALETTES.find(p=>p.id===Palette.normalizePalette(state.settings.palette)).name}.</p></section>
  ${Palette.isPagesHost(location.hostname)?'<p class="pages-notice"><strong>GitHub Pages · local learning.</strong> Reading, offline word help, saving, notes, review and palettes work in this browser. Accounts, departmental workspaces and cloud services need the full Nabu server. Export a library backup before changing devices or site addresses.</p>':''}
  <section class="panel settings-panel"><h2>Workspaces & assignments</h2><p>Keep private learning separate from organization tasks. Manage reporting agreements, submissions and correction history.</p><button class="button secondary" data-action="workspaces">Open workspaces</button></section>
@@ -609,6 +650,7 @@ async function activateAccount(user,csrf=''){
  if(state.backend?.librarySync)DB.configure(user?api:null,user?.id||user?.handle||'',{offline:!!state.backend?.offlineSync});else DB.configure(null,'');
  if(user){await DB.rememberAccount(user);if(csrf)await DB.setMeta('account-auth-required:'+user.id,false);}
  state.accountHint=user?.handle||'';await DB.setMeta('accountHint',state.accountHint);
+ await loadAvatar();
  try{await loadData(false);}catch(error){state.libraryError=error.message;}
  await explore.configure();await intents.configure();await loadReaderSession();
  render();
@@ -756,6 +798,24 @@ const actions={
  'confirm-local-import':async b=>{b.disabled=true;try{const result=await DB.mergeImport(state.localImport);closeModal();await changed();toast(`${result.added} cards copied to your account. Local cards remain on this device.`);}finally{b.disabled=false;}}
 
 };
+actions['choose-avatar']=async button=>{
+ const owner=avatarOwner(), {language,form}=button.dataset;
+ if(!owner || avatarSaving || (form!=='initial' && (!C.isLanguage(language)||!['feminine','masculine'].includes(form)))) return;
+ const choice=form==='initial'?null:{language,form};
+ avatarSaving=true;
+ try {
+  await DB.setMeta('nabu.avatar.v1:'+owner,choice);
+  if(avatarOwner()!==owner) return;
+  shownAvatar={owner,choice};
+  renderNav();
+  const picker=$('#avatar-language');
+  if(picker) {
+   for(const b of document.querySelectorAll('[data-action="choose-avatar"]'))
+    b.setAttribute('aria-pressed',String(choice?b.dataset.language===choice.language&&b.dataset.form===choice.form:b.dataset.form==='initial'));
+  }
+  toast('Avatar saved.');
+ } finally {avatarSaving=false;}
+};
 actions['set-palette']=async button=>{
  const id=Palette.normalizePalette(button.dataset.palette);
  state.settings.palette=Palette.applyPalette(id);
@@ -803,7 +863,7 @@ function renderReader(){
  const r=state.reader,reading=r.tokens.length&&!r.editing;
  const intro=reading?`<div class="reading-heading reading-active"><p>Read at your own pace.</p><button class="button secondary" data-action="edit-reader">${icon('edit')} Edit text</button></div>`:`<div class="reading-heading"><div><p class="eyebrow">AT YOUR OWN PACE</p><h1>Make it your reading.</h1><p>An article, a passage, a transcript. Something you want to understand.</p></div></div>`;
  if(!reading)return `${renderTranslateTabs()}${intro}<section class="panel reader-intake"><div class="intake-intro"><h2>${r.editing?'Your text, your pace.':'Bring something you want to read.'}</h2><p>Paste a passage from your content. Choose any word while you read; its meaning stays close by.</p></div>${languageBar()}<div class="form-field"><label for="reader-title">Title <span class="muted">(optional)</span></label><input id="reader-title" class="input" maxlength="180" dir="auto" value="${E(r.titleDraft??r.title??'')}" placeholder="The title of your article or passage"></div><label for="reader-input">Text to read</label><textarea class="input" id="reader-input" rows="7" maxlength="15000" dir="auto" placeholder="Paste your article excerpt or transcript here...">${E(r.draft??r.text)}</textarea><div id="reader-input-error" class="support-error" role="alert" hidden></div><div class="intake-bottom"><button class="button primary" data-action="read-text">${r.editing?'Return to reading':'Start reading'} ${icon('arrow')}</button><div class="button-row"><button class="text-button" data-action="record-excerpt">Record an excerpt</button>${r.editing?'<button class="text-button" data-action="cancel-reader-edit">Cancel edit</button>':''}</div></div><p class="privacy-note">${icon('lock')}<span>Your text and place are saved in this browser for this profile. Only a word you ask to translate and its surrounding sentence may go to your configured service. No automatic article or video import.</span></p><details><summary>Just exploring?</summary><p class="small-print">Open a clearly labeled sample, or start with your own content above.</p><button class="text-button" data-action="reader-example">Try an example</button></details></section>`;
- return `${renderTranslateTabs()}${intro}<div class="reader-layout"><article class="reader-panel"><div class="reader-toolbar">${languageBar()}<button class="text-button" data-action="reader-selection" id="reader-selection-button" hidden>Look up selection ${icon('arrow')}</button></div>${readerMediaMarkup()}<div class="reader-body"><p class="source-tag">${icon('book')} ${r.example?'Sample text':'Your text'}</p>${r.title?`<h1 class="reader-title" dir="auto">${E(r.title)}</h1>`:''}<div id="reader-text" class="reading-text" dir="${U.textDirection(r.text)}" lang="${state.translation.sourceLang}">${U.readingMarkup(r.tokens,r.selectedIndex)}</div></div><div class="reader-hint">${icon('spark')}<span>Tap a word for a short meaning. Nabu also surfaces known phrases around it; highlight any phrase to look it up together.</span></div></article><aside id="word-panel-host" aria-label="Word support"><section class="word-support reader-result" id="translation-output" aria-live="polite" aria-atomic="false">${renderWordSupport(state.translation,'reader')}</section></aside></div>`;
+ return `${renderTranslateTabs()}${intro}<div class="reader-layout"><article class="reader-panel"><div class="reader-toolbar">${languageBar()}<button class="text-button" data-action="moment-capture">I want to understand this part</button><button class="text-button" data-action="reader-selection" id="reader-selection-button" hidden>Look up selection ${icon('arrow')}</button></div>${readerMediaMarkup()}<div class="reader-body"><p class="source-tag">${icon('book')} ${r.example?'Sample text':'Your text'}</p>${r.title?`<h1 class="reader-title" dir="auto">${E(r.title)}</h1>`:''}<div id="reader-text" class="reading-text" dir="${U.textDirection(r.text)}" lang="${state.translation.sourceLang}">${U.readingMarkup(r.tokens,r.selectedIndex)}</div></div><div class="reader-hint">${icon('spark')}<span>Tap a word for a short meaning. Nabu also surfaces known phrases around it; highlight any phrase to look it up together.</span></div></article><aside id="word-panel-host" aria-label="Word support"><section class="word-support reader-result" id="translation-output" aria-live="polite" aria-atomic="false">${renderWordSupport(state.translation,'reader')}</section></aside></div>`;
 }
 async function lookupReading(text,context,index=-1,start=null){
  if(!text.trim())throw new Error('Select a word or phrase inside your text.');
@@ -1007,7 +1067,7 @@ async function handleUpgradeForm(form,data){
 }
 const workspaces=Workspaces.createWorkspaceUI({api,getUser:()=>state.user,getMeta:DB.getMeta,mutateMeta:Local.mutateMeta,showModal,closeModal,download,escapeHTML:E,uid:C.uid});
 const intents=IntentUI.installIntents({state,DB,C,E,actions,api,$});
-const explore=Explore.installExplore({getIntentContext:()=>intents.getContext(),state,DB,C,U,E,actions,$,render,navigate,readingTokens,renderWordSupport,updateOutput,updateReaderSelection,placeWordPanel,invalidateTranslation,showModal,closeModal,api,download,icon,toast,stopSpeech:()=>{deviceSpeaker.stop();speaker.stop();},returnFocus:el=>{readerReturnFocus=el;},sameWord:(a,b)=>U.sameIdentity(a,b,C.identity),contentURL:(id,version)=>{const u=L.viewURL('reader',location.href,!!state.backend?.cleanRoutes&&!window.NabuNative);u.searchParams.set('content',id);u.searchParams.set('version',version);history.replaceState({view:'reader'},'',u);}});
+const explore=Explore.installExplore({momentHome:()=>moments?.home()||'',getIntentContext:()=>intents.getContext(),state,DB,C,U,E,actions,$,render,navigate,readingTokens,renderWordSupport,updateOutput,updateReaderSelection,placeWordPanel,invalidateTranslation,showModal,closeModal,api,download,icon,toast,stopSpeech:()=>{deviceSpeaker.stop();speaker.stop();},returnFocus:el=>{readerReturnFocus=el;},sameWord:(a,b)=>U.sameIdentity(a,b,C.identity),contentURL:(id,version)=>{const u=L.viewURL('reader',location.href,!!state.backend?.cleanRoutes&&!window.NabuNative);u.searchParams.set('content',id);u.searchParams.set('version',version);history.replaceState({view:'reader'},'',u);}});
 function nextStepSource(){
  const r=state.reader,reading=state.view==='reader'&&!r.editing&&!!r.text;
  if(!reading)return {sourceLang:null,targetLang:state.translation.targetLang,hasMedia:false,format:'text'};
@@ -1026,6 +1086,24 @@ function nextStepSource(){
 }
 nextSteps=NextStepUI.installNextSteps({state,DB,C,E,actions,api,$,intents,explore,getSource:nextStepSource,showModal,closeModal});
 learner=LearnerUI.installLearnerSupport({state,C,E,actions,$,explore,intents,showModal,closeModal,download,stopSpeech:()=>{deviceSpeaker.stop();speaker.stop();}});
+supportCycle=SupportUI.installSupportCycle({state,C,E,actions,$,explore,intents,showModal,closeModal,download,
+ stopSpeech:()=>{deviceSpeaker.stop();speaker.stop();window.speechSynthesis?.cancel?.();},
+ readerExposesForm:task=>[main,modal.open?modal:null].some(el=>el&&(el.innerText||el.textContent||'').includes(task.savedSource||task.source)),
+ currentMediaRef:()=>state.view==='reader'&&explore.active()?{id:explore.active().id,version:explore.active().version}:null,
+ savePassage:async task=>{await DB.addCards([{front:task.savedSource||task.source,back:task.meaning,sourceLang:task.language,targetLang:'en',context:task.sourceContext||task.source,provenance:'Nabu source: '+task.mediaRef.id+'@'+task.mediaRef.version+'; analysis: '+task.analysisRef.id+'@'+task.analysisRef.version,deck:'Saved media',learningMode:'reference',note:task.provenance,tags:['support-cycle']}]);await changed(false);}});
+moments=MomentUI.installMoments({state,actions,store:explore.store,E,$,error:showError,showModal,closeModal,uid:C.uid,download,render,navigate,
+ support:()=>supportCycle,refreshShelf:()=>{if(['explore','review','library'].includes(state.view))render();},
+ readerSource:()=>{const source=nextStepSource(),r=state.reader,media=$('#reader-media-player video, #reader-media-player audio');
+   return {...source,title:r.title||explore.active()?.titleTranslation||'',firstOffset:r.tokens[r.selectedIndex]?.start||0,seconds:media&&Number.isFinite(media.currentTime)?Math.floor(media.currentTime):null};},
+ readOwn:openPersonalSource
+});
+function openPersonalSource(source){
+ pauseSourceMedia();invalidateTranslation(true);readerSelection=null;readerReturnFocus=null;
+ state.translation.sourceLang=source.language;if(state.translation.targetLang===source.language)state.translation.targetLang=source.language==='en'?'es':'en';
+ state.reader={text:source.text,draft:source.text,title:source.title,momentStartSeconds:source.seconds,tokens:readingTokens(source.text,source.language),selectedIndex:-1,lookup:false,panelOpen:false,editing:false,syntaxHistory:{}};
+ navigate('reader');
+}
+newUser=NewUserUI.installNewUser({state,actions,store:explore.store,C,E,$,render,navigate,support:()=>supportCycle,openReader:openPersonalSource});
 W.install({actions,state,C,DB,G,E,$,showModal,closeModal,modalError,toast,api,loadData,render,navigate,speak,openAuth,invalidateTranslation,readTranscript:(text,language)=>{state.translation.sourceLang=language;if(state.translation.targetLang===language)state.translation.targetLang=language==='en'?'es':'en';state.reader={text,draft:text,title:'',titleDraft:'',tokens:readingTokens(text,language),selectedIndex:-1,lookup:false,panelOpen:false,editing:false,example:false,syntaxHistory:{}};invalidateTranslation(true);navigate('reader');}});
 let syncRenderTimer;
 
@@ -1114,6 +1192,7 @@ document.addEventListener('input',event=>{
 document.addEventListener('change',async event=>{
  const el=event.target;
  try{
+  if(el.id==='avatar-language' && C.isLanguage(el.value)){$('#avatar-choices').innerHTML=avatarChoices(el.value);return;}
   if(el.id==='graph-azimuth'||el.id==='graph-tilt'){$('#graph-main-canvas').innerHTML=renderConceptGraph();return;}
   if(el.id==='translation-formality'){invalidateTranslation();state.translation.formality=el.value;updateOutput();}
   if(el.id==='source-language'||el.id==='target-language'){
@@ -1235,7 +1314,7 @@ document.addEventListener('change',e=>{
  if(e.target.id!=='reader-media-file')return;const file=e.target.files?.[0];if(!file)return;
  if(!/^(audio|video)\//.test(file.type)){$('#reader-media-message').textContent='Choose a browser-recognized audio or video file.';return;}
  pauseSourceMedia();deviceSpeaker.stop();speaker.stop();if(readerMediaURL)URL.revokeObjectURL(readerMediaURL);
- const key=JSON.stringify([file.name,file.size,file.lastModified]);const time=state.reader.media?.key===key?state.reader.media.time:0;
+ const key=JSON.stringify([file.name,file.size,file.lastModified]);const time=state.reader.media?.key===key?state.reader.media.time:(state.reader.momentStartSeconds||0);state.reader.momentStartSeconds=null;
  readerMediaKey=key;readerMediaURL=URL.createObjectURL(file);state.reader.media={key,name:file.name,type:file.type,time};$('#reader-media-player').replaceChildren();mountReaderMedia();queueReaderSession();
 });
 window.addEventListener('scroll',()=>{if(!$('#word-sheet')?.open)queueReaderSession();},{passive:true});
@@ -1261,6 +1340,7 @@ async function boot(){
   Palette.applyPalette(state.settings.palette);
   state.translation.sourceLang=state.settings.sourceLang;state.translation.targetLang=state.settings.targetLang;
   await loadData(false);state.accountHint=await DB.getMeta('accountHint','');
+  await loadAvatar();
   if(state.accountHint){DB.lock();state.cards=[];state.logs=[];state.history=[];state.libraryError='Reconnecting to @'+state.accountHint+'...';}
   await explore.configure();await intents.configure();
   navigate(L.viewFromURL(location.href),false);

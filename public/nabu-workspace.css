@@ -199,3 +199,15 @@ dialog::backdrop{background:#17291f55;backdrop-filter:blur(2px)}.modal-header{pa
 .syntax-result p{font-size:11px;line-height:1.55;margin:0 0 4px}.syntax-result small{display:block;font-size:9px;line-height:1.5;color:var(--muted)}
 .syntax-lens-footer{padding-top:4px;border-top:1px dashed var(--line)}.syntax-lens-footer .text-button{margin-top:6px;padding-inline:0}
 @media(max-width:560px){.syntax-analyses{grid-template-columns:1fr}.syntax-lens>summary{align-items:flex-start;flex-direction:column;gap:2px}.syntax-lens>summary small{text-align:start}.syntax-explain{display:block}.syntax-explain span{display:block;margin-top:2px}}
+
+.avatar-panel { margin-block: 1rem; }
+.avatar-panel > p { max-width: 65ch; margin: .5rem 0 1rem; }
+.avatar-panel > label { display: block; margin-bottom: .35rem; font-weight: 600; }
+.avatar-panel > select { max-width: 27rem; width: 100%; }
+.avatar-choices { display: flex; flex-wrap: wrap; align-items: start; gap: .8rem; margin-block: 1rem .5rem; }
+.avatar-option { display: grid; justify-items: center; gap: .35rem; width: 7.5rem; padding: .65rem; border: 2px solid var(--line); border-radius: 14px; background: var(--white); }
+.avatar-option[aria-pressed="true"] { border-color: var(--green); box-shadow: inset 0 0 0 1px var(--green); font-weight: 700; }
+.avatar-preview { width: 5.2rem; height: 5.2rem; }
+.avatar.with-portrait { display: grid; place-items: center; padding: 0; overflow: hidden; }
+.avatar.with-portrait .nabu-avatar-art,.avatar-preview .nabu-avatar-art { display: block; width: 100%; height: 100%; stroke: none; }
+.avatar-panel > .small-print { display: block; margin: .55rem 0 0; }

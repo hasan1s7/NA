@@ -6,6 +6,8 @@ from pathlib import Path
 import json, re, time, math
 from fastapi import Depends, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
+from moments import validate_moment, validate_moment_sequence
+from support_cycles import validate_support_event, validate_support_sequence
 
 CATALOG=json.loads((Path(__file__).parent/'data/explore.json').read_text(encoding='utf-8'))
 ITEMS={(p['id'],p['version']):p for p in CATALOG['items']}
@@ -186,7 +188,9 @@ def validate_evidence(event):
 
 
 def _authorize_evidence(conn,uid,event,check_references=True):
-    evidence=event.get('evidence')
+    if event.get('kind')=='moment' and event['moment']['userId']!=uid:
+        raise HTTPException(403,'A moment belongs to its authenticated owner.')
+    evidence=event.get('evidence') or event.get('cycle')
     if evidence is None:return
     actor=evidence['actor'];tenant=actor['tenantId']
     if actor['userId']!=uid:raise HTTPException(403,'Evidence belongs to the authenticated learner only.')
@@ -240,6 +244,14 @@ def _check_evidence_identity(event,history):
         seen.add(cursor);cursor=parents[cursor]
 
 def validate_event(e):
+    if e.get('kind')=='moment':
+        validate_moment(e)
+        if e['at']>(time.time()+86400)*1000:_invalid('Invalid event time.')
+        return e
+    if e.get('kind')=='support-cycle':
+        validate_support_event(e)
+        if e['at']>(time.time()+86400)*1000:_invalid('Invalid event time.')
+        return e
     common={'id','contentId','version','kind','at'}
     extra={'opened':{'evidence'},'position':{'segmentId','fraction'},'finished':{'value'},'preference':{'value'},
            'help':{'activityId','sessionId','help','evidence'},'attempt':{'activityId','sessionId','answer','choice','assisted','skipped','evidence'},
@@ -319,7 +331,7 @@ def install_content_progress(app,connection,authenticated,rate):
             c.execute('BEGIN IMMEDIATE')
             try:
                 count=c.execute('SELECT COUNT(*) FROM content_events WHERE user_id=?',(uid,)).fetchone()[0]
-                history=[json.loads(row['payload']) for row in c.execute('SELECT payload FROM content_events WHERE user_id=?',(uid,)).fetchall()] if any('evidence' in event for event in events) else []
+                history=[json.loads(row['payload']) for row in c.execute('SELECT payload FROM content_events WHERE user_id=?',(uid,)).fetchall()] if any('evidence' in event or 'cycle' in event or 'moment' in event for event in events) else []
                 for event in events:
                     encoded=json.dumps(event,ensure_ascii=False,separators=(',',':'),sort_keys=True)
                     old=c.execute('SELECT payload FROM content_events WHERE user_id=? AND event_id=?',(uid,event['id'])).fetchone()
@@ -332,8 +344,10 @@ def install_content_progress(app,connection,authenticated,rate):
                         continue
                     if count>=MAX_EVENTS:raise HTTPException(409,'Progress history is full. Export your history; existing records are intact.')
                     _check_evidence_identity(event,history)
+                    if event['kind']=='moment':validate_moment_sequence([*history,event])
+                    if event['kind']=='support-cycle':validate_support_sequence([*history,event])
                     c.execute('INSERT INTO content_events VALUES(?,?,?,?,?,?)',(uid,event['id'],event['contentId'],event['version'],encoded,int(time.time()*1000)));count+=1
-                    if 'evidence' in event:history.append(event)
+                    if 'evidence' in event or 'cycle' in event or 'moment' in event:history.append(event)
                 c.commit()
             except Exception:
                 c.rollback();raise

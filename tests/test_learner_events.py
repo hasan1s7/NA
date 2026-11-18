@@ -41,7 +41,7 @@ def test_actual_learner_task_round_trips_and_replays_idempotently(env):
     assert send(owner, [event]).status_code == 200
     assert persisted(owner) == [event]
     assert next_inputs(owner).json()["contentEvents"] == [event]
-    assert owner.get("/api/config").json()["releaseVersion"] == "1.17.0"
+    assert owner.get("/api/config").json()["releaseVersion"] == "1.18.0"
 
 
 def test_actual_conditioned_task_preserves_assistance_and_account_boundary(env):

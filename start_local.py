@@ -112,7 +112,7 @@ def main(argv=None):
     for module in ('fastapi', 'uvicorn', 'httpx'):
         if importlib.util.find_spec(module) is None:
             raise RuntimeError('Dependencies are missing. Run start_local.py without --ready.')
-    print('\nNabu 1.17 - local application', flush=True)
+    print('\nNabu 1.18 - local application', flush=True)
     print(f'Open: {origin}/explore\nDatabase: {database}\nPrivate configuration: .env.local', flush=True)
     print('DeepL: ' + ('key configured (not validated)' if os.environ.get('DEEPL_API_KEY') else 'off; built-in bank works without a key'))
     print('Cloud speech: ' + ('key configured (not validated)' if os.environ.get('ELEVENLABS_API_KEY') else 'off; device voices can be selected in Settings'))

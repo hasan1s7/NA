@@ -7,7 +7,7 @@ from pathlib import Path
 import base64, hashlib, json, re, runpy
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC=ROOT/'public'
-BUILD='nabu-pages-1.17-20261117-about-r1'
+BUILD='nabu-pages-1.18.0-new-user-r2'
 runpy.run_path(str(ROOT/'tools/build_about.py'))
 # The integrity registry is source data, bundled locally with the structural
 # bridge. Rebuilding never requires a third-party service or runtime fetch.
@@ -27,6 +27,7 @@ assignment_outbox=module(read('nabu-assignment-outbox.js'))
 workspaces=module(read('nabu-institutions.js'),'const {createAssignmentOutbox}=AssignmentOutbox;\n')
 palette=module(read('nabu-palette.js'))
 scribe=module(read('nabu-scribe.js'))
+avatars=module(read('nabu-avatars.js'))
 core=module(read('nabu-core.js'))
 store=module(read('nabu-store.js'), 'const {cardContent,newCard,identity,scheduleReview,uid,VERSION,applyReview}=C;\n')
 sync=module(read('nabu-sync.js'))
@@ -43,6 +44,17 @@ clipart=module(read('nabu-clipart.js'))
 illustrations=module(read('nabu-illustrations.js'))
 reading_ui=module(read('nabu-reading-ui.js'))
 observations=module(read('nabu-observations.js'))
+moments=module(read('nabu-moments.js'))
+for frame in ('bend','doorway'):
+    name='moment-media/'+frame+'.webp'
+    moments=moments.replace('./'+name,'data:image/webp;base64,'+base64.b64encode((PUBLIC/name).read_bytes()).decode())
+moment_tasks=module(read('nabu-moment-tasks.js'))
+moment_ui=module(read('nabu-moment-ui.js'))
+support_cycle=module(read('nabu-support-cycle.js'))
+support_tasks=module(read('nabu-support-tasks.js'),'const {CATALOG}=Catalog;\n')
+support_model=module(read('nabu-support-model.js'))
+support_ui=module(read('nabu-support-ui.js'))
+new_user_ui=module(read('nabu-new-user.js'))
 evidence_tasks=module(read('nabu-evidence-tasks.js'))
 evidence_policy=module(read('nabu-evidence-policy.js'))
 evidence_ui=module(read('nabu-evidence-ui.js'))
@@ -67,9 +79,9 @@ learner_policy=module(read('nabu-learner-policy.js'))
 learner_ui=module(read('nabu-learner-ui.js'))
 word_tools=module(read('nabu-word-tools.js'))
 app=re.sub(r'^import .*;\n','',read('nabu-app.js'),flags=re.M)
-runtime='(function(){\n"use strict";\nconst Palette='+palette+';\nconst AssignmentOutbox='+assignment_outbox+';\nconst Workspaces='+workspaces+';\nconst Scribe='+scribe+';\nconst C='+core+';\nconst Local='+store+';\nconst Sync='+sync+';\nconst DB='+account_store+';\nconst S='+speech+';\nconst G='+graph+';\nconst L='+links+';\nconst F='+feature_tree+';\nconst Spatial='+spatial+';\nconst Syntax='+syntax+';\nconst T='+transliteration+';\nconst M='+media+';\nconst Art='+clipart+';\nconst I='+illustrations+';\nconst U='+reading_ui+';\nconst W='+word_tools+';\nconst Observations='+observations+';\nconst Catalog='+catalogue+';\nconst X='+content+';\nconst P='+content_store+';\nconst EvidenceTasks='+evidence_tasks+';\nconst EvidencePolicy='+evidence_policy+';\nconst EvidenceUI='+evidence_ui+';\nconst Explore='+explore_ui+';\nconst Intent='+intent_model+';\nconst IntentStore='+intent_store+';\nconst IntentUI='+intent_ui+';\nconst StructureData='+structure_data+';\nconst Structure='+structure+';\nconst GraphKernel='+graph_kernel+';\nconst TaskMaterialData='+task_material_data+';\nconst StructureQuery='+structure_query+';\nconst NextStep='+next_step+';\nconst NextStepUI='+next_step_ui+';\nconst LearnerTasks='+learner_tasks+';\nconst LearnerObservations='+learner_observations+';\nconst LearnerModel='+learner_model+';\nconst LearnerPolicy='+learner_policy+';\nconst LearnerUI='+learner_ui+';\n'+app+'\n})();'
+runtime='(function(){\n"use strict";\nconst Palette='+palette+';\nconst AssignmentOutbox='+assignment_outbox+';\nconst Workspaces='+workspaces+';\nconst Scribe='+scribe+';\nconst Avatars='+avatars+';\nconst C='+core+';\nconst Local='+store+';\nconst Sync='+sync+';\nconst DB='+account_store+';\nconst S='+speech+';\nconst G='+graph+';\nconst L='+links+';\nconst F='+feature_tree+';\nconst Spatial='+spatial+';\nconst Syntax='+syntax+';\nconst T='+transliteration+';\nconst M='+media+';\nconst Art='+clipart+';\nconst I='+illustrations+';\nconst U='+reading_ui+';\nconst W='+word_tools+';\nconst Observations='+observations+';\nconst Moments='+moments+';\nconst MomentTasks='+moment_tasks+';\nconst SupportCycle='+support_cycle+';\nconst Catalog='+catalogue+';\nconst SupportTasks='+support_tasks+';\nconst SupportModel='+support_model+';\nconst X='+content+';\nconst P='+content_store+';\nconst EvidenceTasks='+evidence_tasks+';\nconst EvidencePolicy='+evidence_policy+';\nconst EvidenceUI='+evidence_ui+';\nconst Explore='+explore_ui+';\nconst Intent='+intent_model+';\nconst IntentStore='+intent_store+';\nconst IntentUI='+intent_ui+';\nconst StructureData='+structure_data+';\nconst Structure='+structure+';\nconst GraphKernel='+graph_kernel+';\nconst TaskMaterialData='+task_material_data+';\nconst StructureQuery='+structure_query+';\nconst NextStep='+next_step+';\nconst NextStepUI='+next_step_ui+';\nconst LearnerTasks='+learner_tasks+';\nconst LearnerObservations='+learner_observations+';\nconst LearnerModel='+learner_model+';\nconst LearnerPolicy='+learner_policy+';\nconst LearnerUI='+learner_ui+';\nconst MomentUI='+moment_ui+';\nconst SupportUI='+support_ui+';\nconst NewUserUI='+new_user_ui+';\n'+app+'\n})();'
 startup=(ROOT/'tools/startup.js').read_text(encoding='utf-8')
-css=read('nabu-institutions.css')+'\n'+read('nabu.css')+'\n'+read('nabu-workspace.css')+'\n'+read('nabu-explore.css')+'\n'+read('nabu-intent.css')+'\n'+read('nabu-next-step.css')+'\n'+read('nabu-evidence.css')+'\n'+read('nabu-learner.css')+'\n'+read('nabu-scribe.css')+'\n'+read('nabu-palette.css')+'\n.startup-help{max-width:560px;margin:24px auto;text-align:center;font-size:13px;line-height:1.7}.startup-help summary{cursor:pointer;color:var(--green);font-weight:600}.startup-help a{color:var(--green);font-weight:700}.fatal .button-row{margin:24px 0}.fatal .small-print{margin-top:18px}.fatal #startup-error{overflow-wrap:anywhere}\n'
+css=read('nabu-institutions.css')+'\n'+read('nabu.css')+'\n'+read('nabu-workspace.css')+'\n'+read('nabu-explore.css')+'\n'+read('nabu-intent.css')+'\n'+read('nabu-next-step.css')+'\n'+read('nabu-evidence.css')+'\n'+read('nabu-learner.css')+'\n'+read('nabu-moment.css')+'\n'+read('nabu-support.css')+'\n'+read('nabu-scribe.css')+'\n'+read('nabu-palette.css')+'\n'+read('nabu-new-user.css')+'\n.startup-help{max-width:560px;margin:24px auto;text-align:center;font-size:13px;line-height:1.7}.startup-help summary{cursor:pointer;color:var(--green);font-weight:600}.startup-help a{color:var(--green);font-weight:700}.fatal .button-row{margin:24px 0}.fatal .small-print{margin-top:18px}.fatal #startup-error{overflow-wrap:anywhere}\n'
 def policy(scripts,style):
     return "default-src 'self'; script-src 'self' "+' '.join(signature(x) for x in scripts)+"; script-src-attr 'none'; style-src 'self' "+signature(style)+"; img-src 'self' data:; connect-src 'self' https://api.mymemory.translated.net; media-src 'self' blob:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self'; manifest-src 'self'"
 html=(ROOT/'tools/index.template.html').read_text(encoding='utf-8').replace('<html lang="en">',f'<html lang="en" data-nabu-build="{BUILD}">')

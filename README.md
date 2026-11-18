@@ -1,18 +1,18 @@
-# Nabu 1.17
+# Nabu 1.18 · Everywhere Capture
 
-Read or resume content → select a word or phrase → understand it in context → listen when available → save → continue.
+Open a line in a scene, ask what it means there, keep the passage, and come back to it in another context. The website opens in **Explore**. The top **New user** tab offers a complete first-use path in every supported language: English, Arabic, Chinese, French, Russian, Spanish, German, Italian, Japanese, Korean, Portuguese and Turkish. It also accepts a learner's own passage through the existing reader.
 
-**Release:** 1.17.0. **Build:** `nabu-pages-1.17-20261116-r3`.
+**Release 1.18.0** · build `nabu-pages-1.18.0-new-user-r2`. The runnable walkthrough and the scrolling Capture demo are both available on Explore. The French example lets you challenge an unfair answer key and replay the evidence. See [the release guide](docs/NABU_1.18.md) for the review path and provisional assumptions.
 
-**Overnight build r2:** optional learner consent and a coarse departmental support summary, plus corrected history/export behavior. See `docs/RELEASE_NOTES_1.17_OVERNIGHT.md` and `docs/VERIFICATION_OVERNIGHT.md` for current scope and evidence.
+Run `npm run demo:moments` for a fictional 23-hour/25-hour return through the shipping code. Run `npm run demo:support` to examine the underlying support-aware model. The full backend uses the existing private event and saved-word stores.
 
 ## GitHub Pages and colours
 
-Open **https://hasan1s7.github.io/NA/**. GitHub Pages publishes the generated entry files from `main` / repository root. Editable application modules remain in `public/`; run `python3 tools/build_pages.py` after editing them and commit both source and generated entry files. The optional `.github/workflows/nabu-pages.yml` deployment is manual only; the active publisher is branch Pages. On Pages, reading, the offline word bank, guest saving, notes, review, local media and colour palettes run in the browser. Accounts, departmental workspaces, sync and server-backed providers require the full Python application; Pages does not run that backend.
+The website address is **https://hasan1s7.github.io/NA/**. GitHub Pages publishes the generated entry files from `main` / repository root. Editable application modules remain in `public/`; run `python3 tools/build_pages.py` after editing them and commit both source and generated entry files. The optional `.github/workflows/nabu-pages.yml` deployment is manual only; the active publisher is branch Pages. On Pages, reading, the offline word bank, guest saving, notes, review, local media and colour palettes run in the browser. Accounts, departmental workspaces, sync and server-backed providers require the full Python application; Pages does not run that backend.
 
 The original green theme is the default. Open **Settings & data → Colour palette** to choose Original green, Lapis, Clay or Plum. The preference saves on this device. Palette templates are defined in `public/nabu-palette.js` and `public/nabu-palette.css`; they use shared semantic colour tokens and ship locally.
 
-The deployed green build passed live Chromium checks for lookup, saving, notes, reader/mode restoration and palette persistence after refresh. Local verification passed 872 JavaScript tests, 106 DOM tests and 14 launcher/HTTP checks. See [Pages release report](docs/PAGES_AND_PALETTES_1.17.md) for exact limits.
+The earlier 1.17 green build passed live Chromium checks for lookup, saving, notes, reader/mode restoration and palette persistence after refresh. Local verification passed 872 JavaScript tests, 106 DOM tests and 14 launcher/HTTP checks. See [Pages release report](docs/PAGES_AND_PALETTES_1.17.md) for exact limits.
 
 ## Start
 
@@ -24,7 +24,7 @@ The launcher creates a local Python environment and installs the unchanged pinne
 
 If double-click launching is unavailable, run `py -3 start_local.py` on Windows or `python3 start_local.py` on macOS/Linux. To suppress browser opening, add `--no-browser`. If port 8000 is occupied, add `--port 8001`; changing the port creates a different browser storage origin, so preserve/export guest work first.
 
-See [START_HERE.md](START_HERE.md) for exact upgrade instructions, [release notes](docs/RELEASE_NOTES_1.17_OVERNIGHT.md) for current changes, and [verification](docs/VERIFICATION_OVERNIGHT.md) for actual results and limits.
+See [START_HERE.md](START_HERE.md) for exact upgrade instructions, [the Moments guide](docs/NABU_3_MOMENTS.md) for current changes and reproducible checks, and [the support-cycle guide](docs/SUPPORT_CYCLE.md) for the model and correction contracts.
 
 ## Workspaces & assignments
 

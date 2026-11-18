@@ -25,7 +25,9 @@ html=html.replace(/<link rel="manifest"[^>]+>/,'');
 await fs.mkdir('mobile/www',{recursive:true});
 await fs.writeFile('mobile/www/index.html',html);
 await fs.cp('public/icons','mobile/www/icons',{recursive:true});
-await fs.copyFile('public/nabu-icon.svg','mobile/www/nabu-icon.svg');
-await fs.copyFile('public/nabu-repair.html','mobile/www/nabu-repair.html');
+const staticFiles = ['nabu-icon.svg', 'nabu-repair.html', 'nabu-scribe.svg', 'about.html', 'about.css',
+  'patrick.html', 'patrick.js', 'patrick-profile.json', 'capture-demo.html', 'capture-reels-demo.mp4',
+  'nabu-3-walkthrough.mp4', 'nabu-3-walkthrough.vtt'];
+for (const name of staticFiles) await fs.copyFile(path.join('public', name), path.join('mobile/www', name));
 await fs.writeFile('mobile/build-info.json',JSON.stringify({version:JSON.parse(await fs.readFile('package.json','utf8')).version,apiOrigin:origin,offlineOnly:!origin,bundled:true},null,2)+'\n');
 console.log('Bundled mobile app prepared. '+(origin?'API origin configured.':'Offline-only build: accounts require NABU_API_ORIGIN.'));

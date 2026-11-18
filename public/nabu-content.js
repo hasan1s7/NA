@@ -4,6 +4,8 @@
  */
 import {CATALOG} from './nabu-content-catalogue.js';
 import * as Observations from './nabu-observations.js';
+import * as Moments from './nabu-moments.js';
+import * as SupportCycle from './nabu-support-cycle.js';
 export const INTERESTS = Object.freeze({feeling:'Feel something',story:'Follow a story',useful:'Say something useful',discover:'Discover something interesting'});
 export const POLICY_VERSION = 'content-support-v1';
 export const ITEMS = CATALOG.items;
@@ -63,7 +65,7 @@ export function emptyProgress(){return {started:false,finished:false,lastSegment
 export function progressFor(item,events){
  const p=emptyProgress();const seen=new Set();
  for(const e of [...events].sort((a,b)=>a.at-b.at||a.id.localeCompare(b.id))){
-  if(e.kind==='evidence')continue;
+  if(e.kind==='evidence'||e.kind==='support-cycle'||e.kind==='moment')continue;
   if(seen.has(e.id)||e.contentId!==item.id||e.version!==item.version)continue;seen.add(e.id);p.lastAt=Math.max(p.lastAt,e.at);
   if(e.kind==='opened')p.started=true;
   if(e.kind==='position'){p.lastSegment=e.segmentId;p.fraction=e.fraction;}
@@ -82,6 +84,8 @@ export function nextSupport(item,events){
  return {activityId:recall.id,reason:last.assisted?'You used help last time. Try recalling it again; help is still available.':'Your last recall did not match. Revisit the expression and try again when ready.',policy:POLICY_VERSION};
 }
 export function validateEvent(e){
+ if(e?.kind==='moment')return Moments.validateMomentEvent(e);
+ if(e?.kind==='support-cycle')return SupportCycle.validateSupportEvent(e);
  if(e?.kind==='evidence')return Observations.validateEvidenceEvent(e);
  const enveloped=!!e&&Object.hasOwn(e,'evidence');if(enveloped)Observations.validateEvidenceEvent(e);
  const item=itemById(e.contentId,e.version);
@@ -112,7 +116,7 @@ function canonicalEvent(value){
  }
  throw Error('Progress records must contain only JSON data.');
 }
-export function mergeEvents(a,b){const map=new Map();for(const raw of [...a,...b]){const e=validateEvent(raw),canonical=canonicalEvent(e),old=map.get(e.id);if(old&&canonicalEvent(old)!==canonical)throw Error('A progress ID was reused with different data.');map.set(e.id,e);}const merged=[...map.values()].sort((a,b)=>a.at-b.at||a.id.localeCompare(b.id));Observations.validateEvidenceSequence(merged);return merged;}
+export function mergeEvents(a,b){const map=new Map();for(const raw of [...a,...b]){const e=validateEvent(raw),canonical=canonicalEvent(e),old=map.get(e.id);if(old&&canonicalEvent(old)!==canonical)throw Error('A progress ID was reused with different data.');map.set(e.id,e);}const merged=[...map.values()].sort((a,b)=>a.at-b.at||a.id.localeCompare(b.id));Observations.validateEvidenceSequence(merged);SupportCycle.validateSupportSequence(merged);Moments.validateMomentSequence(merged);return merged;}
 /** Preference is an explicit content choice, never an estimate of knowledge. */
 export function recommendNext(item,events){
  const preferred=new Set(ITEMS.filter(x=>progressFor(x,events).preference).map(x=>x.interest));
