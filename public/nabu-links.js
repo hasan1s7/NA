@@ -1,14 +1,15 @@
 /* Shared URL rules. Pure functions: no history, network or browser globals. */
-export const ROUTES = Object.freeze({explore:'explore',translate:'', reader:'read', graph:'words', library:'library', review:'review', exchange:'friends', settings:'settings'});
+export const ROUTES = Object.freeze({'new-user':'new-user',explore:'explore',translate:'translate', reader:'read', graph:'words', library:'library', review:'review', exchange:'friends', settings:'settings'});
 export function viewFromURL(href) {
  const u=new URL(href), old=u.searchParams.get('view');
  if(Object.hasOwn(ROUTES,old))return old;
  const part=u.hash.replace(/^#\/?/,'')||u.pathname.replace(/\/$/,'').split('/').pop();
+ if(!u.hash && (part==='index.html'||u.pathname.endsWith('/')&&!Object.values(ROUTES).includes(part)))return 'explore';
  return Object.keys(ROUTES).find(key=>ROUTES[key]===part)||'translate';
 }
 export function appBase(href) {
  const u=new URL(href);u.search='';u.hash='';
- const match=u.pathname.match(/^(.*\/)(?:w\/[A-Za-z0-9_-]+|explore|translate|read|words|library|review|friends|settings)\/?$/);
+ const match=u.pathname.match(/^(.*\/)(?:w\/[A-Za-z0-9_-]+|new-user|explore|translate|read|words|library|review|friends|settings)\/?$/);
  if(match)u.pathname=match[1];else u.pathname=u.pathname.slice(0,u.pathname.lastIndexOf('/')+1);
  return u;
 }
@@ -45,6 +46,6 @@ export function incomingAppURL(value,apiOrigin) {
  const expected=validateAPIOrigin(apiOrigin);let u;try{u=new URL(value);}catch{return null;}
  if(u.origin!==expected||u.username||u.password)return null;
  if(shareSlug(u.href))return u.pathname;
- if(Object.values(ROUTES).includes(u.pathname.replace(/^\//,'').replace(/\/$/,'')))return u.pathname;
+ if(u.pathname==='/'||Object.values(ROUTES).includes(u.pathname.replace(/^\//,'').replace(/\/$/,'')))return u.pathname;
  return null;
 }

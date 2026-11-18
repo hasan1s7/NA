@@ -70,6 +70,6 @@ export async function exportPending(){return Sync.exportPending();}
 export async function resolveConflict(choice){return Sync.resolveConflict(choice);}
 export async function rememberAccount(user){return Sync.rememberAccount(user);}
 export async function lastAccount(){return Sync.lastAccount();}
-export async function forgetAccount(uid){if(uid){await Local.setMeta('nabu.content.v1:'+uid,null);await Local.setMeta('nabu.reader.v1:'+uid,null);}return Sync.forget(uid);}
+export async function forgetAccount(uid){if(uid){await Local.setMeta('nabu.content.v1:'+uid,null);await Local.setMeta('nabu.reader.v1:'+uid,null);await Local.setMeta('nabu.avatar.v1:'+uid,null);}return Sync.forget(uid);}
 
 export function clearCachedTranslations(){cache.clear();}
