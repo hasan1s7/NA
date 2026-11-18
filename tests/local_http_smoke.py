@@ -69,9 +69,9 @@ def main():
             a = httpx.Client(base_url=origin, headers={'Origin':origin}, trust_env=False)
             b = httpx.Client(base_url=origin, headers={'Origin':origin}, trust_env=False)
             password = 'Ephemeral HTTP test password 123!'
-            check('Local launcher starts the full API and reports release 1.17.0', valid(a.get('/api/health'))['version']=='1.17.0')
+            check('Local launcher starts the full API and reports release 1.18.0', valid(a.get('/api/health'))['version']=='1.18.0')
             html = a.get('/')
-            check('Actual HTTP serves the rebuilt standalone app and CSP', html.status_code==200 and 'nabu-pages-1.17-20261116-r3' in html.text and 'Content-Security-Policy' in html.headers)
+            check('Actual HTTP serves the rebuilt standalone app and CSP', html.status_code==200 and 'nabu-pages-1.18.0-capture-r1' in html.text and 'Content-Security-Policy' in html.headers)
             check('Private source/config/database paths are not served', all(a.get(p).status_code==404 for p in ['/.env.local','/server.py','/.data/nabu.sqlite3','/translation_memory.py']))
             aa=valid(a.post('/api/register',json={'handle':'alphatest','password':password}),201)
             a.headers['X-CSRF-Token']=aa['csrf'];a.headers['X-Nabu-Account']=aa['user']['id']

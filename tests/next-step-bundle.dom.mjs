@@ -13,6 +13,8 @@ import {installIDBFixture} from './idb-fixture.js';
 
 const {JSDOM,VirtualConsole}=await import(process.env.NABU_TEST_JSDOM?pathToFileURL(process.env.NABU_TEST_JSDOM).href:'jsdom');
 const html=await readFile(new URL('../public/index.html',import.meta.url),'utf8');
+const buildSource=await readFile(new URL('../tools/build_standalone.py',import.meta.url),'utf8');
+const currentBuild=buildSource.match(/^BUILD='([^']+)'/m)[1];
 const mama='I want to meet my girlfriend Alexandra’s Mexican mother and make a good impression.';
 
 async function until(predicate,label='condition'){
@@ -67,7 +69,7 @@ async function boot(){
  };
  try{
   await until(()=>startupFinished&&$('#nabu-next-step-panel')&&$('#nabu-intent-panel')&&$('[data-action="intent-toggle"]')&&!$('[data-action="intent-toggle"]').disabled,'shipping Explore controls');
-  assert.equal(d.documentElement.dataset.nabuBuild,'nabu-pages-1.17-20261116-r3','Use the current self-contained graph and learner integration build');
+  assert.equal(d.documentElement.dataset.nabuBuild,currentBuild,'Use the current self-contained graph and learner integration build');
   assert.equal(d.querySelectorAll('.content-card').length,6,'Boot the real curated catalogue');
   h.assertNoErrors();return h;
  }catch(error){try{h.assertNoErrors();}finally{h.close();}throw error;}

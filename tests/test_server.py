@@ -44,6 +44,15 @@ def test_public_config_contains_no_secrets(env):
     assert not data['translationEnabled']
     assert 'key' not in json.dumps(data).lower()
 
+
+def test_new_user_route_serves_the_app_shell_without_caching_personal_state(env):
+    response = env[1].get('/new-user')
+    assert response.status_code == 200
+    assert 'no-store' in response.headers['cache-control']
+    assert '<base href="/">' in response.text
+    assert 'id="new-user-tab"' in response.text
+    assert 'nabu-pages-1.18.0-new-user-r2' in response.text
+
 def test_no_anonymous_inbox(env):
     assert env[1].get('/api/exchanges').status_code==401
 
