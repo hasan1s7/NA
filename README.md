@@ -1,8 +1,8 @@
 # Nabu 1.18 · Everywhere Capture
 
-Open a line in a scene, ask what it means there, keep the passage, and come back to it in another context. The website opens in **Explore** with Lebanese Arabic, French and Spanish scenes. It also accepts a learner's own passage through the existing reader.
+Open a line in a scene, ask what it means there, keep the passage, and come back to it in another context. The website opens in **Explore**. The top **New user** tab offers a complete first-use path in every supported language: English, Arabic, Chinese, French, Russian, Spanish, German, Italian, Japanese, Korean, Portuguese and Turkish. It also accepts a learner's own passage through the existing reader.
 
-**Release 1.18.0** · build `nabu-pages-1.18.0-capture-r1`. The runnable walkthrough and the scrolling Capture demo are both available on Explore. The French example lets you challenge an unfair answer key and replay the evidence. See [the release guide](docs/NABU_1.18.md) for the review path and provisional assumptions.
+**Release 1.18.0** · build `nabu-pages-1.18.0-new-user-r2`. The runnable walkthrough and the scrolling Capture demo are both available on Explore. The French example lets you challenge an unfair answer key and replay the evidence. See [the release guide](docs/NABU_1.18.md) for the review path and provisional assumptions.
 
 Run `npm run demo:moments` for a fictional 23-hour/25-hour return through the shipping code. Run `npm run demo:support` to examine the underlying support-aware model. The full backend uses the existing private event and saved-word stores.
 
