@@ -1,0 +1,94 @@
+{
+  "package": "Nabu media preflight + learner UX white paper",
+  "date": "2026-11-18",
+  "source_repo": "hasan1s7/NA",
+  "source_head_checked": "c624841475dfd584d231bf355d40d7b06cc83f7a",
+  "status": "local verified additive package; not pushed or deployed",
+  "safe_integration": "run tools/apply_media_preflight.py --check, then --apply from a feature branch",
+  "files": {
+    "README_MEDIA_PREFLIGHT.md": {
+      "bytes": 8117,
+      "sha256": "ca159f976e21ccf5497c9c82715559f2c864aea03aa372364a17a9a4d158249b"
+    },
+    "public/nabu-media-profile.js": {
+      "bytes": 10143,
+      "sha256": "1e2103ed05be4f67957293546ec30b754dde0beb328af86ce144abf9ddfa91b1"
+    },
+    "public/nabu-ux-whitepaper.html": {
+      "bytes": 32719,
+      "sha256": "1d775fdaa64dbf83204b5fea91b0ce727ffd4e33e973d1aa71a461fd9cbb70b2"
+    },
+    "tests/media-profile.test.mjs": {
+      "bytes": 6170,
+      "sha256": "97576ee6008357c791a55990bece52d87725531eafb3cf90fcbe3127dc4a29f0"
+    },
+    "tests/test_media_preflight_installer.py": {
+      "bytes": 5923,
+      "sha256": "c33c36774b5bd05f9d3e38aac0e94437733a5b0ab17b87cad88600092ba36621"
+    },
+    "tools/apply_media_preflight.py": {
+      "bytes": 7443,
+      "sha256": "7dc3964642aab1056d390d54463de3670e74d635f3a67bed90aea9c7d71e7d85"
+    },
+    "docs/MEDIA_PROFILE_V1_SCHEMA.json": {
+      "bytes": 4333,
+      "sha256": "8a53dc14fef6135afbf6ae3a66e23c646caab09e3146afbb6f0ded1ba9e3bfc0"
+    },
+    "docs/NABU_MEDIA_PREFLIGHT_REPORT.md": {
+      "bytes": 33515,
+      "sha256": "fcea67b6ad54101b5635db4874bbe445271eaae6f663dcaba29dd5dde23585f6"
+    },
+    "docs/PATRICK_LONDON_BRIEF.md": {
+      "bytes": 4596,
+      "sha256": "843b6f2bfac7062a5b3b321919341b9e2b104534693e511c9fc75afc2f501e46"
+    },
+    "docs/WHITEPAPER_VERIFICATION.md": {
+      "bytes": 2916,
+      "sha256": "e7ccdcdd414a58b7fea91905684ff9370ba323b55b4ef12b09e5cf86e4fc3630"
+    },
+    "demo/index.html": {
+      "bytes": 10151,
+      "sha256": "b4686a06865f3e758d838061971609ded874d594e2525f39c7de965d321f0681"
+    },
+    "demo/capture_preview.py": {
+      "bytes": 2652,
+      "sha256": "1be091df5267e190dcdb4f5a3477857d0984b0aa490740569aad2ff178a86a5b"
+    },
+    "demo/capture_whitepaper.py": {
+      "bytes": 2030,
+      "sha256": "9c0b413da55dcddaa72cc3c7ef725acb1c7a18d4784189a65e819a72d9888b72"
+    },
+    "demo/screenshot-desktop.png": {
+      "bytes": 143310,
+      "sha256": "579cacdb1508bff9fe4720186e3a849f288a456d3fe5c93ab49a326118d972b0"
+    },
+    "demo/screenshot-mobile.png": {
+      "bytes": 125955,
+      "sha256": "b83fe88d9099b59e81795dfebc0ae921d9934a28b43b74d1d18c8862c22711d0"
+    },
+    "demo/whitepaper-desktop.png": {
+      "bytes": 436200,
+      "sha256": "077d69aa42bc75b5efbf378e0e1654594f60d5bc8a05cd4da1e9f8d933047cc7"
+    },
+    "demo/whitepaper-mobile.png": {
+      "bytes": 1259894,
+      "sha256": "2385f7ce89bdacf77b4b7253b492276c3d87fd520591dde25d7920d7c0d1f381"
+    },
+    "demo/whitepaper-mobile-top.png": {
+      "bytes": 240784,
+      "sha256": "a219f6ebafc9d174e0a89aeed8492503a1b3a72b4f95e1f9e885f60f6c04dfe7"
+    },
+    "demo/whitepaper-circuit.png": {
+      "bytes": 600401,
+      "sha256": "34e4bcb3e0b3c201136085b442164c8e7a41d12871bc3eee27cf315d35e25e0c"
+    },
+    "demo/preflight-browser-check.txt": {
+      "bytes": 393,
+      "sha256": "ecdab5d435c2087efa07e364f81349e7fd4cbe76743976b5c1c077cc46c90c4a"
+    },
+    "demo/profile-test-results.txt": {
+      "bytes": 2457,
+      "sha256": "6c89772743c76b217ac4825c73f5438662ce7656b49018894b0aa995048cbd03"
+    }
+  }
+}
