@@ -233,7 +233,7 @@ class GuardMiddleware:
                 else:
                     page_name = 'nabu-repair.html' if scope['path'] == '/nabu-repair.html' else 'index.html'
                     values += [(b'content-security-policy', self.page_policies[page_name])]
-                    if scope['path'] in ('/', '/index.html', '/nabu-repair.html', '/nabu-sw.js', '/explore', '/translate', '/read', '/words', '/library', '/review', '/friends', '/settings') or scope['path'].startswith('/w/'):
+                    if scope['path'] in ('/', '/index.html', '/nabu-repair.html', '/nabu-sw.js', '/new-user', '/explore', '/translate', '/read', '/words', '/library', '/review', '/friends', '/settings') or scope['path'].startswith('/w/'):
                         values += [(b'cache-control', b'no-cache')]
                 if self.origin.startswith('https://'):
                     values += [(b'strict-transport-security', b'max-age=31536000')]
@@ -330,7 +330,7 @@ def create_app(database: str | Path | None = None, origin: str | None = None,
             backup_stop.set()
             if backup_thread:backup_thread.join(timeout=2)
 
-    app = FastAPI(title='Nabu', version='1.17.0', lifespan=lifespan,
+    app = FastAPI(title='Nabu', version='1.18.0', lifespan=lifespan,
                   docs_url=None, redoc_url=None, openapi_url=None)
     @app.exception_handler(RequestValidationError)
     async def invalid_request(request: Request, error: RequestValidationError):
@@ -399,8 +399,8 @@ def create_app(database: str | Path | None = None, origin: str | None = None,
 
     @app.get('/api/config')
     def config():
-        return {'service': 'nabu', 'releaseVersion': '1.17.0', 'institutionWorkspaces': True, 'version': 1, 'inviteRequired': bool(invite),
-                **service_settings.public_config(), 'librarySync': True, 'friends': True, 'sharedLibraries': True, 'offlineSync': True, 'recoveryCodes': True, 'collaboration': True, 'shortLinks': True, 'cleanRoutes': True, 'council': {'enabled': False, 'reason': 'No authorized conversational AI adapter is configured. DeepL and ElevenLabs do not generate council dialogue.'}, 'contentProgress': True, 'intentLayer': True, 'nextStepInputs': True, 'evidenceEvents': True, **app.state.media_config()}
+        return {'service': 'nabu', 'releaseVersion': '1.18.0', 'institutionWorkspaces': True, 'version': 1, 'inviteRequired': bool(invite),
+                **service_settings.public_config(), 'librarySync': True, 'friends': True, 'sharedLibraries': True, 'offlineSync': True, 'recoveryCodes': True, 'collaboration': True, 'shortLinks': True, 'cleanRoutes': True, 'council': {'enabled': False, 'reason': 'No authorized conversational AI adapter is configured. DeepL and ElevenLabs do not generate council dialogue.'}, 'contentProgress': True, 'intentLayer': True, 'nextStepInputs': True, 'evidenceEvents': True, 'supportCycles': True, 'moments': True, **app.state.media_config()}
 
     @app.get('/api/session')
     def session(request: Request):
@@ -579,7 +579,7 @@ def create_app(database: str | Path | None = None, origin: str | None = None,
     def health():
         with connection() as conn:
             conn.execute('SELECT 1 FROM users LIMIT 1').fetchone()
-        return {'ok': True, 'service': 'nabu', 'version': '1.17.0'}
+        return {'ok': True, 'service': 'nabu', 'version': '1.18.0'}
 
     @app.post('/api/council')
     def council_unavailable():
@@ -655,7 +655,7 @@ def create_app(database: str | Path | None = None, origin: str | None = None,
         html = html.replace('<!--NABU_BASE-->', '<base href="/">')
         return HTMLResponse(html, headers={'Cache-Control':'no-store', 'X-Robots-Tag':'noindex, nofollow'})
 
-    for route in ('/explore','/translate','/read','/words','/library','/review','/friends','/settings'):
+    for route in ('/new-user','/explore','/translate','/read','/words','/library','/review','/friends','/settings'):
         app.add_api_route(route, app_shell, methods=['GET'], include_in_schema=False)
 
     @app.get('/w/{slug}')

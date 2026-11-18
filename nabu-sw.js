@@ -1,9 +1,9 @@
 /* Self-contained HTML release. Never cache API responses or personal library data. */
-const BUILD = 'nabu-pages-1.17-20261117-about-r1';
+const BUILD = 'nabu-pages-1.18.0-new-user-r1';
 const BASE = new URL('./', self.location.href);
 const INDEX = new URL('./index.html', BASE).href;
 const CACHE = 'nabu-translate-shell-' + encodeURIComponent(BASE.pathname) + '-' + BUILD;
-const DOCUMENTS = new Set(['','index.html','explore','translate','read','words','library','review','friends','settings'].map(p=>BASE.pathname+p));
+const DOCUMENTS = new Set(['','index.html','new-user','explore','translate','read','words','library','review','friends','settings'].map(p=>BASE.pathname+p));
 function appDocument(pathname){return DOCUMENTS.has(pathname)||pathname.startsWith(BASE.pathname+'w/')&&/^w\/[a-z0-9][a-z0-9-]{0,63}-[A-Za-z0-9_-]{16}$/.test(pathname.slice(BASE.pathname.length));}
 async function validShell(response) {
   return response.ok && (response.headers.get('content-type') || '').includes('text/html') &&

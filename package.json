@@ -1,6 +1,6 @@
 {
   "name": "nabu-translate-remember",
-  "version": "1.17.0",
+  "version": "1.18.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -39,7 +39,10 @@
     "evaluate:learner": "node tools/evaluate_learner.mjs --output docs/learner-evaluation/results.json",
     "test:scribe": "node --test tests/scribe.test.mjs tests/scribe-bundle.dom.mjs && python -m pytest -q tests/test_scribe_release.py",
     "test:dom": "node --test --test-concurrency=1 tests/*.dom.mjs",
-    "test:institutions": "python -m pytest -q tests/test_institutions.py && node --test tests/assignment-outbox.test.mjs tests/institutions.dom.mjs"
+    "test:institutions": "python -m pytest -q tests/test_institutions.py && node --test tests/assignment-outbox.test.mjs tests/institutions.dom.mjs",
+    "demo:support": "node tools/demo_support_cycle.mjs",
+    "demo:moments": "node tools/demo_moments.mjs",
+    "test:support": "node --test --test-concurrency=1 tests/support-cycle.test.mjs tests/support-cycle.dom.mjs tests/support-cycle-bundle.dom.mjs"
   },
   "engines": {
     "node": "^22.22.2 || ^24.15.0 || >=26.0.0"

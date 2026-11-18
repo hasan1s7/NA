@@ -1,12 +1,16 @@
-NABU 1.17
+NABU 1.18 · EVERYWHERE CAPTURE
 
-Extract the entire archive.
-Windows: double-click Start-Nabu.cmd.
-macOS: open Start-Nabu.command, or run bash start-local.sh.
-Linux: run bash start-local.sh.
-Requires Python 3.11+; first setup needs internet for the existing pinned dependencies.
+Extract the whole folder before starting.
+Windows users can double-click Start-Nabu.cmd.
+On macOS open Start-Nabu.command. On macOS or Linux you can run bash start-local.sh.
+The full app uses Python 3.11 or newer and downloads its pinned dependencies on first setup.
 Open http://127.0.0.1:8000/explore and keep the terminal open.
 
-Read START_HERE.md before upgrading. Preserve your .data, .env.local, browser profile and exact origin.
-New backend: Settings & data > Workspaces & assignments > Open workspaces.
-Release scope, tests and limitations are in docs/RELEASE_NOTES_1.17.md and docs/VERIFICATION_1.17.md.
+For a guest preview with Python and no dependency downloads, run
+python -m http.server 8080 --directory public
+from this folder and open http://127.0.0.1:8080/.
+
+On Explore, open The bend in the road and tap its line, or select Watch the Moments walkthrough.
+The scrolling Capture demo is linked under the film and in the sidebar.
+START_HERE.md explains upgrading with your existing .data, .env.local, profile and exact origin.
+docs/NABU_1.18.md contains the examples, measurements, assumptions and replay instructions.
